@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notas de um Estudante de Direito</title>
+  <style>
+    :root{
+      --bg:#f7f7f5;
+      --paper:#ffffff;
+      --ink:#1f1f1f;
+      --muted:#666;
+      --line:#deded8;
+      --accent:#222;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.7;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+    header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      min-height:72px;gap:20px;flex-wrap:wrap;
+    }
+    .brand{font-size:1.15rem;font-weight:700;letter-spacing:.01em}
+    nav a{
+      color:var(--ink);text-decoration:none;margin-left:18px;font-size:.96rem;
+    }
+    nav a:hover{text-decoration:underline}
+    .hero{padding:88px 0 64px}
+    .eyebrow{
+      display:inline-block;border:1px solid var(--line);border-radius:999px;
+      padding:6px 12px;font-size:.9rem;color:var(--muted);background:#fff;
+    }
+    h1{
+      font-size:clamp(2.3rem, 5vw, 4.5rem);
+      line-height:1.08;margin:18px 0 18px;
+      max-width:900px;
+    }
+    .lead{
+      font-size:1.18rem;color:#444;max-width:780px;
+    }
+    .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;padding:12px 18px;border-radius:14px;
+      text-decoration:none;border:1px solid var(--ink);font-weight:600;
+    }
+    .btn.dark{background:var(--ink);color:#fff}
+    .btn.light{background:#fff;color:var(--ink)}
+    section{padding:52px 0}
+    .section-title{font-size:2rem;margin:0 0 10px}
+    .section-text{color:var(--muted);max-width:760px}
+    .grid{
+      display:grid;gap:24px;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      margin-top:28px;
+    }
+    .card{
+      background:var(--paper);border:1px solid var(--line);
+      border-radius:22px;padding:24px;
+      box-shadow:0 8px 24px rgba(0,0,0,.04);
+    }
+    .card h3{margin:0 0 10px;font-size:1.2rem}
+    .card p{margin:0;color:var(--muted)}
+    .post-tag{font-size:.9rem;color:var(--muted)}
+    .post-title{font-size:1.35rem;margin:.4rem 0}
+    .two{
+      display:grid;grid-template-columns:1.35fr .9fr;gap:24px;
+    }
+    .darkbox{
+      background:#1f1f1f;color:#f1f1f1;
+      border-radius:22px;padding:26px;border:1px solid #1f1f1f;
+    }
+    .darkbox ul{padding-left:18px;margin:12px 0 0}
+    footer{
+      border-top:1px solid var(--line);
+      margin-top:24px;background:#fff;
+    }
+    .foot{padding:24px 0;color:var(--muted);font-size:.95rem}
+    @media (max-width: 820px){
+      .two{grid-template-columns:1fr}
+      nav{width:100%}
+      nav a{margin-left:0;margin-right:14px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Notas de um Estudante de Direito</div>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#textos">Textos</a>
+        <a href="#direito">Estudos de Direito</a>
+        <a href="#filosofia">Filosofia e Política</a>
+        <a href="#leituras">Leituras</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio" class="wrap">
+    <section class="hero">
+      <span class="eyebrow">João Victor B. N. · site acadêmico-pessoal</span>
+      <h1>Notas de um Estudante de Direito</h1>
+      <p class="lead">
+        Um espaço para registrar estudos, elaborar reflexões e compartilhar textos sobre Direito,
+        filosofia política, teoria do Estado, direitos humanos e formação intelectual.
+      </p>
+      <div class="cta">
+        <a class="btn dark" href="#textos">Ler textos</a>
+        <a class="btn light" href="#sobre">Sobre o projeto</a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Propósito do site</h2>
+      <p class="section-text">
+        Este projeto reúne aprendizado acadêmico e reflexão pessoal. A ideia é transformar estudo em
+        escrita, leitura em investigação e conhecimento em diálogo aberto, com linguagem clara, rigor conceitual
+        e disposição para ensinar e aprender.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Direito em formação</h3>
+          <p>Notas sobre temas do curso, conceitos jurídicos, instituições, teoria da norma, interpretação e prática argumentativa.</p>
+        </article>
+        <article class="card">
+          <h3>Política e filosofia</h3>
+          <p>Textos sobre Estado, poder, democracia, legitimidade, justiça, constitucionalismo e autores centrais da tradição política.</p>
+        </article>
+        <article class="card">
+          <h3>Ensinar e aprender</h3>
+          <p>Um caderno público de estudos: compartilhar ideias, organizar leituras e amadurecer pensamento por meio da escrita.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="textos">
+      <h2 class="section-title">Textos em destaque</h2>
+      <p class="section-text">Ensaios, anotações e reflexões sobre os temas que orientam minha formação.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="post-tag">Direito</div>
+          <h3 class="post-title">O juiz cria, descobre ou constrói o direito?</h3>
+          <p>Uma reflexão inicial sobre interpretação jurídica, decisão judicial e os limites entre aplicação e produção do direito.</p>
+        </article>
+        <article class="card">
+          <div class="post-tag">Filosofia Política</div>
+          <h3 class="post-title">Direitos humanos e Revolução Francesa</h3>
+          <p>Relações entre modernidade política, universalização dos direitos e tensões entre discurso emancipatório e exclusão histórica.</p>
+        </article>
+        <article class="card">
+          <div class="post-tag">Teoria do Estado</div>
+          <h3 class="post-title">Estado, poder e legitimidade</h3>
+          <p>Notas sobre soberania, instituições, legalidade, autoridade e os fundamentos do poder político.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="two" id="sobre">
+      <article class="card">
+        <h2 class="section-title" style="margin-top:0">Sobre este projeto</h2>
+        <p>
+          Este site nasce do desejo de estudar com mais profundidade e, ao mesmo tempo, tornar o conhecimento compartilhável.
+          Aqui, o aprendizado não aparece como algo fechado, mas como processo: ler, escrever, interpretar, revisar e dialogar.
+        </p>
+        <p>
+          A proposta é reunir textos autorais, registros de estudo, comentários de obras e reflexões sobre problemas jurídicos,
+          filosóficos e políticos. Mais do que expor opiniões, o objetivo é construir pensamento com fundamento.
+        </p>
+        <p>
+          <strong>Autor:</strong> João Victor B. N.
+        </p>
+      </article>
+
+      <aside class="darkbox">
+        <h2 style="margin-top:0">Áreas de interesse</h2>
+        <ul>
+          <li>Filosofia do Direito</li>
+          <li>Teoria do Estado</li>
+          <li>Direitos Humanos</li>
+          <li>Constitucionalismo</li>
+          <li>Filosofia Política</li>
+          <li>Interpretação jurídica</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">© 2026 — João Victor B. N. · Notas de um Estudante de Direito</div>
+  </footer>
+</body>
+</html>
