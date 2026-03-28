@@ -225,5 +225,17 @@ Diante do exposto, entendo que não há impedimento jurídico que afaste a legit
 </section>
 
 </main>
+  <script>
+  const botao = document.querySelector(".menu-botao");
+  const menu = document.querySelector(".menu-links");
+
+  botao.addEventListener("click", () => {
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  });
+</script>
 </body>
 </html>
