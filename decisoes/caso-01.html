@@ -118,6 +118,21 @@ h1 {
   text-indent: 0;
   margin-bottom: 6px;
 }
+  .menu-topo {
+  position: relative;
+}
+
+.menu-botao {
+  background: none;
+  border: 1px solid #000;
+  padding: 6px 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-links {
+  display: none;
+}
 </style>
 </head>
 
@@ -130,16 +145,20 @@ h1 {
     Notas de um Estudante de Direito
   </a>
 </div>
-    <nav>
-  <a href="/#inicio">Início</a>
-  <a href="/#textos">Textos</a>
-  <a href="/#direito">Estudos de Direito</a>
- <a href="/filosofia/primeiro-texto.html#inicio">Filosofia</a>
-  <a href="/#politica">Política</a>
-  <a href="/#decisoes">Decisões</a>
-  <a href="/#leituras">Leituras</a>
-  <a href="/#sobre">Sobre</a>
-</nav>
+    <div class="menu-topo">
+  <button class="menu-botao" aria-label="Abrir menu">☰</button>
+
+  <nav class="menu-links">
+    <a href="/#inicio">Início</a>
+    <a href="/#textos">Textos</a>
+    <a href="/#direito">Estudos de Direito</a>
+    <a href="/filosofia/primeiro-texto.html#inicio">Filosofia</a>
+    <a href="/#politica">Política</a>
+    <a href="/#decisoes">Decisões</a>
+    <a href="/#leituras">Leituras</a>
+    <a href="/#sobre">Sobre</a>
+  </nav>
+</div>
   </div>
 </header>
 
