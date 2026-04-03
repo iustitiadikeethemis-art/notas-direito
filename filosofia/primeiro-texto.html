@@ -143,35 +143,7 @@ p{
 </head>
 
 <body>
-    <header>
-  <div class="wrap nav">
-    <div class="brand">
-      <a href="/#inicio" style="text-decoration:none; color:inherit;">
-        Notas de um Estudante de Direito
-      </a>
-    </div>
-
-    <div class="menu-topo">
-      <button class="menu-botao" aria-label="Abrir menu">☰</button>
-    </div>
-  </div>
-
-  <nav class="menu-links">
-    <div class="menu-header">
-      <button class="menu-fechar" aria-label="Fechar menu">×</button>
-    </div>
-
-    <a href="/#inicio">Início</a>
-    <a href="/#textos">Textos</a>
-    <a href="/#direito">Estudos de Direito</a>
-    <a href="/filosofia/primeiro-texto.html">Filosofia</a>
-    <a href="/#politica">Política</a>
-    <a href="/#decisoes">Decisões Monocráticas</a>
-    <a href="/#leituras">Leituras</a>
-    <a href="/#sobre">Sobre</a>
-  </nav>
-</header>
-
+    <div id="header-container"></div>
 <div class="container">
 
 <h1>A Ordem do Céu, a Justiça dos Homens e o Silêncio dos Deuses</h1>
@@ -342,6 +314,13 @@ Ela apenas se afasta quando deixa de ser honrada.
 </div>
 
 </div>
+<script>
+  fetch("/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-container").innerHTML = data;
+    });
+</script>
 <script src="/menu.js"></script>
 </body>
     
