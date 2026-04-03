@@ -236,6 +236,13 @@ Diante do exposto, entendo que não há impedimento jurídico que afaste a legit
 </section>
 
 </main>
-  <script src="/menu.js"></script>
+  <script>
+  fetch("/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-container").innerHTML = data;
+    });
+</script>
+<script src="/menu.js"></script>
 </body>
 </html>
