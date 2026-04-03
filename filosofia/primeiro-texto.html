@@ -323,6 +323,27 @@ Ela apenas se afasta quando deixa de ser honrada.
 </div>
 
 </div>
+<script>
+  const botao = document.querySelector(".menu-botao");
+  const menu = document.querySelector(".menu-links");
+  const botaoFechar = document.querySelector(".menu-fechar");
 
+  botao.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  botaoFechar.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+
+  document.addEventListener("click", (e) => {
+    const clicouDentroMenu = menu.contains(e.target);
+    const clicouNoBotao = botao.contains(e.target);
+
+    if (!clicouDentroMenu && !clicouNoBotao) {
+      menu.classList.remove("active");
+    }
+  });
+</script>
 </body>
 </html>
