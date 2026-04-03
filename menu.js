@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
   const botao = document.querySelector(".menu-botao");
   const botaoFechar = document.querySelector(".menu-fechar");
@@ -21,4 +21,4 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.classList.remove("active");
     }
   });
-});
+}
