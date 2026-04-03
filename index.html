@@ -191,6 +191,13 @@ section{
 </section>
 
 </main>
+<script>
+  const botao = document.querySelector(".menu-botao");
+  const menu = document.querySelector(".menu-links");
 
+  botao.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
 </body>
 </html>
