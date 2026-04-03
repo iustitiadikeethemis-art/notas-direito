@@ -26,18 +26,12 @@ header {
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .brand {
   font-weight: bold;
-}
-
-nav a {
-  margin-left: 16px;
-  text-decoration: none;
-  color: #000;
 }
 
 section {
@@ -124,6 +118,27 @@ h1 {
 }
 
 .menu-botao {
+  .menu-header{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.menu-fechar{
+  background:none;
+  border:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.menu-links a{
+  display:block;
+  margin:14px 0;
+  font-size:22px;
+  text-decoration:none;
+  color:#000;
+}
   background: none;
   border: 1px solid #000;
   padding: 6px 10px;
