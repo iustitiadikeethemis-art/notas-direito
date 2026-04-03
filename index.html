@@ -210,6 +210,10 @@ section{
 <script>
   const botao = document.querySelector(".menu-botao");
   const menu = document.querySelector(".menu-links");
+  const botaoFechar = document.querySelector(".menu-fechar");
+  botaoFechar.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
 
   botao.addEventListener("click", () => {
     menu.classList.toggle("active");
