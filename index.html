@@ -202,26 +202,6 @@ section{
 </section>
 
 </main>
-<script>
-  const botao = document.querySelector(".menu-botao");
-  const menu = document.querySelector(".menu-links");
-  const botaoFechar = document.querySelector(".menu-fechar");
-  botaoFechar.addEventListener("click", () => {
-  menu.classList.remove("active");
-});
-
-  botao.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
-
-  document.addEventListener("click", (e) => {
-    const clicouDentroMenu = menu.contains(e.target);
-    const clicouNoBotao = botao.contains(e.target);
-
-    if (!clicouDentroMenu && !clicouNoBotao) {
-      menu.classList.remove("active");
-    }
-  });
-</script>
+<script src="/menu.js"></script>
 </body>
 </html>
