@@ -198,6 +198,15 @@ section{
   botao.addEventListener("click", () => {
     menu.classList.toggle("active");
   });
+
+  document.addEventListener("click", (e) => {
+    const clicouDentroMenu = menu.contains(e.target);
+    const clicouNoBotao = botao.contains(e.target);
+
+    if (!clicouDentroMenu && !clicouNoBotao) {
+      menu.classList.remove("active");
+    }
+  });
 </script>
 </body>
 </html>
