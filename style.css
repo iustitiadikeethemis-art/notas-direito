@@ -20,3 +20,6 @@
   text-align: justify;
 }
 /* atualização de deploy */
+.texto{
+  border: 3px solid red;
+}
