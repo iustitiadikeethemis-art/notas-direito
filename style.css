@@ -489,10 +489,16 @@ section{
   font-family: Georgia, "Times New Roman", serif;
   font-size:16px;
   cursor:pointer;
-  .assinatura-texto{
-  margin-top: 30pt !important;
 }
-  .assinatura-texto{
+
+/* assinatura na tela */
+.assinatura-texto{
   margin-top: 60px;
 }
+
+/* assinatura na impressão */
+@media print {
+  .assinatura-texto{
+    margin-top: 30pt !important;
+  }
 }
