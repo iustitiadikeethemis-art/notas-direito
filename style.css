@@ -400,24 +400,20 @@ section{
     text-decoration: none !important;
   }
 }
-.botao-imprimir {
-  display: inline-block;
-  margin: 10px 0 30px;
-  padding: 10px 16px;
-  border: 1px solid #000;
-  background: #fff;
-  color: #000;
+.botao-imprimir{
+  display:inline-block;
+  margin:20px 0 30px;
+  padding:10px 16px;
+  border:1px solid #000;
+  background:#fff;
+  color:#000;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
-  cursor: pointer;
+  font-size:16px;
+  cursor:pointer;
 }
 
 @media print {
-  .botao-imprimir {
-    display: none !important;
+  .botao-imprimir{
+    display:none !important;
   }
-}
-.botao-imprimir{
-  display:inline-block;
-  margin-top:20px;
 }
