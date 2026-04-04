@@ -286,18 +286,131 @@ section{
     margin: 1.8cm;
   }
 
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  #header-container,
+  .menu-topo,
+  .menu-links,
+  .menu-botao,
+  .menu-fechar,
+  .botao-imprimir {
+    display: none !important;
+  }
+
+  .wrap,
+  .texto,
+  .texto-ilustrado,
   .decisao {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding: 16pt 18pt !important;
+    padding: 0 !important;
+  }
+
+  section {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hero {
+    padding: 0 0 16pt !important;
+    margin: 0 !important;
+  }
+
+  .logo-trabalho {
+    margin-bottom: 14pt !important;
+  }
+
+  .logo-trabalho img {
+    max-width: 95px !important;
+  }
+
+  .categoria {
+    font-size: 10.5pt !important;
+    color: #444 !important;
+    margin-bottom: 6pt !important;
+  }
+
+  .titulo-principal {
+    color: #000 !important;
+    font-size: 18pt !important;
+    line-height: 1.2 !important;
+    margin: 0 0 10pt 0 !important;
+  }
+
+  .subtitulo {
+    font-size: 11pt !important;
+    color: #444 !important;
+    margin: 0 0 10pt 0 !important;
+  }
+
+  .texto h2,
+  .decisao h2 {
+    color: #000 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .texto h3 {
+    color: #000 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  img,
+  .epilogo,
+  .assinatura,
+  .cabecalho {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .texto p {
+    color: #000 !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .imagem-texto {
+    max-width: 100% !important;
+    margin: 14pt 0 8pt !important;
+    border-radius: 0 !important;
+  }
+
+  .caption {
+    font-size: 9.5pt !important;
+    color: #444 !important;
+    margin: 0 0 14pt 0 !important;
+    text-align: center !important;
+  }
+
+  .epilogo {
+    background: #fff !important;
+    border-left: 2px solid #000 !important;
+    padding: 12pt !important;
+    margin-top: 18pt !important;
+  }
+
+  .decisao {
     background: #fff !important;
     border: 1px solid #000 !important;
     box-shadow: none !important;
     box-sizing: border-box !important;
+    padding: 16pt 18pt !important;
+    margin-top: 0 !important;
   }
 
   .decisao h1 {
+    color: #000 !important;
     font-size: 16pt !important;
     text-align: center !important;
     margin: 0 0 18pt 0 !important;
@@ -311,8 +424,6 @@ section{
     padding-bottom: 3pt !important;
     letter-spacing: 0.5px !important;
     border-bottom: 1px solid #000 !important;
-    page-break-after: avoid;
-    break-after: avoid;
   }
 
   .decisao p {
@@ -333,6 +444,7 @@ section{
 
   .brasao {
     width: 72px !important;
+    height: auto !important;
     margin: 0 auto 10pt auto !important;
   }
 
@@ -359,9 +471,17 @@ section{
     margin-bottom: 4pt !important;
     text-align: right !important;
   }
+
+  a,
+  a:visited {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+}
+
 .botao-imprimir{
   display:inline-block;
-  margin:20px 0 30px;
+  margin:20px auto 30px;
   padding:10px 16px;
   border:1px solid #000;
   background:#fff;
@@ -370,7 +490,6 @@ section{
   font-size:16px;
   cursor:pointer;
 }
-
 @media print {
   .botao-imprimir{
     display:none !important;
