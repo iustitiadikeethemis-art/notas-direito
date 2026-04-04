@@ -166,8 +166,8 @@ section{
 
 .logo-trabalho img{
   max-width:160px;
-}
   height:auto;
   display:block;
+  margin:0 auto;
   opacity:0.95;
 }
