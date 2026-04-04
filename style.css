@@ -171,3 +171,31 @@ section{
   margin:0 auto;
   opacity:0.95;
 }
+/* ===== TEXTO FILOSÓFICO ILUSTRADO ===== */
+
+.texto-ilustrado{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.imagem-texto{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 40px 0 18px;
+  border-radius: 10px;
+}
+
+.caption{
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.epilogo{
+  margin-top: 50px;
+  padding: 25px;
+  background: #f1f1f1;
+  border-left: 4px solid #333;
+}
