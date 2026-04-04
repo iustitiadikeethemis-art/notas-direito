@@ -4,254 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Primeiro Caso</title>
-  <style>
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: #f7f7f5;
-  color: #1f1f1f;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.wrap {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand {
-  font-weight: bold;
-}
-
-section {
-  margin-top: 40px;
-}
-
-h1 {
-  font-size: 36px;
-}
-
-p {
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-    .decisao h2 {
-  margin-top: 35px;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 1px solid #000;
-  padding-bottom: 4px;
-}
-    .decisao h2 + p {
-  margin-top: 10px;
-}
-    .decisao p {
-  text-align: justify;
-  text-indent: 2.5em;
-  line-height: 1.9;
-  margin-bottom: 16px;
-}
-.cabecalho {
-  text-align: center;
-  margin-bottom: 50px;
-  border-bottom: 1px solid #000;
-padding-bottom: 20px;
-}
-.brasao {
-  display: block;
-  margin: 0 auto 15px auto;
-  width: 140px;
-}
-.orgao {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.orgao strong {
-  font-size: 18px;
-  letter-spacing: 2px;
-}
-
-.orgao p {
-  font-size: 13px;
-  margin: 2px;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.decisao {
-  background: #fff;
-  border: 1px solid #000;
-  padding: 50px;
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-.assinatura {
-  margin-top: 50px;
-  text-align: right;
-}
-.assinatura p {
-  text-indent: 0;
-  margin-bottom: 6px;
-}
-  .menu-topo {
-  position: relative;
-  margin-left: 10px;
-}
-
-.menu-botao {
-  background: none;
-  border: 1px solid #000;
-  padding: 6px 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.menu-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.menu-fechar {
-  background: none;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-.menu-links a {
-  display: block;
-  margin: 14px 0;
-  font-size: 22px;
-  text-decoration: none;
-  color: #000;
-}
-.menu-links {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 100vh;
-  background: #fff;
-  border-right: 1px solid #000;
-  padding: 60px 25px 25px;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.12);
-  z-index: 9999;
-
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-
-.menu-links.active {
-  transform: translateX(0);
-}
-</style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-
 <div id="header-container"></div>
 
 <main class="wrap">
+  <section class="decisao">
 
- <section class="decisao">
-
-  <div class="cabecalho">
-    <img src="/imagens/seu-simbolo.png" class="brasao">
-    <div class="orgao">
-      <p><strong>Notas de um Estudante de Direito</strong></p>
-      <p>Decisão Monocrática</p>
+    <div class="cabecalho">
+      <img src="/imagens/seu-simbolo-transparente.png" class="brasao" alt="Símbolo do autor">
+      <div class="orgao">
+        <p><strong>Notas de um Estudante de Direito</strong></p>
+        <p>Decisão Monocrática</p>
+      </div>
     </div>
-  </div>
 
-  <h1>Decisão Monocrática nº 1 – Caso 1</h1>
+    <h1>Decisão Monocrática nº 1 – Caso 1</h1>
 
-   <h2>Relatório</h2>
+    <h2>Relatório</h2>
     <p>
-Trata-se de controvérsia acerca da legitimidade da Deputada Federal Erika Hilton para presidir a Comissão de Defesa dos Direitos da Mulher na Câmara dos Deputados.
-</p>
+      Trata-se de controvérsia acerca da legitimidade da Deputada Federal Erika Hilton para presidir a Comissão de Defesa dos Direitos da Mulher na Câmara dos Deputados.
+    </p>
 
-<p>
-A eleição da parlamentar suscitou divergências no âmbito social e político, havendo quem sustente a plena legitimidade da nomeação, destacando a ampliação da representatividade no espaço político, enquanto outros questionam sua adequação ao cargo, sob o argumento de que a vivência biológica e social de mulheres cisgênero seria requisito relevante para a condução das pautas da comissão.
-</p>
+    <p>
+      A eleição da parlamentar suscitou divergências no âmbito social e político, havendo quem sustente a plena legitimidade da nomeação, destacando a ampliação da representatividade no espaço político, enquanto outros questionam sua adequação ao cargo, sob o argumento de que a vivência biológica e social de mulheres cisgênero seria requisito relevante para a condução das pautas da comissão.
+    </p>
 
-<p>
-É o relatório. Decido.
-</p>
+    <p>
+      É o relatório. Decido.
+    </p>
 
     <h2>Fundamentação</h2>
-   <p>
-A controvérsia não deve ser analisada apenas a partir de percepções subjetivas sobre quem representaria, de forma mais legítima, os interesses das mulheres, mas sobretudo a partir da natureza institucional do cargo em questão.
-</p>
+    <p>
+      A controvérsia não deve ser analisada apenas a partir de percepções subjetivas sobre quem representaria, de forma mais legítima, os interesses das mulheres, mas sobretudo a partir da natureza institucional do cargo em questão.
+    </p>
 
-<p>
-A presidência de uma comissão legislativa não se confunde com um poder absoluto de definição material das pautas ou dos resultados políticos do colegiado. Trata-se, em larga medida, de função técnica, organizacional e administrativa, voltada à condução dos trabalhos, à organização da pauta e ao cumprimento do regimento.
-</p>
+    <p>
+      A presidência de uma comissão legislativa não se confunde com um poder absoluto de definição material das pautas ou dos resultados políticos do colegiado. Trata-se, em larga medida, de função técnica, organizacional e administrativa, voltada à condução dos trabalhos, à organização da pauta e ao cumprimento do regimento.
+    </p>
 
-<p>
-Nesse contexto, parece insuficiente sustentar que a presidência da Comissão da Mulher deva ser reservada exclusivamente a partir de um critério de vivência biológica ou social específica. Ainda que a experiência pessoal tenha relevância no debate político, ela não pode ser convertida, por si só, em requisito jurídico de legitimidade para o exercício da função.
-</p>
+    <p>
+      Nesse contexto, parece insuficiente sustentar que a presidência da Comissão da Mulher deva ser reservada exclusivamente a partir de um critério de vivência biológica ou social específica. Ainda que a experiência pessoal tenha relevância no debate político, ela não pode ser convertida, por si só, em requisito jurídico de legitimidade para o exercício da função.
+    </p>
 
-<p>
-Além disso, a experiência parlamentar demonstra que identidade pessoal e posição política não se confundem necessariamente. Mulheres, sejam cisgênero ou transgênero, podem adotar posições divergentes sobre pautas relacionadas aos direitos das mulheres, conforme suas convicções ideológicas, partidárias ou morais. Assim, a eficácia da atuação parlamentar não depende apenas da identidade de quem ocupa a presidência, mas também de sua capacidade técnica, de sua condução democrática e da deliberação coletiva dos membros da comissão.
-</p>
+    <p>
+      Além disso, a experiência parlamentar demonstra que identidade pessoal e posição política não se confundem necessariamente. Mulheres, sejam cisgênero ou transgênero, podem adotar posições divergentes sobre pautas relacionadas aos direitos das mulheres, conforme suas convicções ideológicas, partidárias ou morais. Assim, a eficácia da atuação parlamentar não depende apenas da identidade de quem ocupa a presidência, mas também de sua capacidade técnica, de sua condução democrática e da deliberação coletiva dos membros da comissão.
+    </p>
 
-<p>
-Por essa razão, entendo que a legitimidade para presidir o colegiado não pode ser negada com fundamento exclusivo em objeções identitárias, sobretudo quando inexiste vedação normativa específica e quando a função exercida possui caráter essencialmente institucional.
-</p>
+    <p>
+      Por essa razão, entendo que a legitimidade para presidir o colegiado não pode ser negada com fundamento exclusivo em objeções identitárias, sobretudo quando inexiste vedação normativa específica e quando a função exercida possui caráter essencialmente institucional.
+    </p>
 
     <h2>Dispositivo</h2>
-<p>
-Diante do exposto, entendo que não há impedimento jurídico que afaste a legitimidade da deputada para presidir a comissão, sendo a controvérsia apresentada insuficiente para invalidar sua atuação institucional.
-</p>
+    <p>
+      Diante do exposto, entendo que não há impedimento jurídico que afaste a legitimidade da deputada para presidir a comissão, sendo a controvérsia apresentada insuficiente para invalidar sua atuação institucional.
+    </p>
 
-<div class="assinatura">
-  <p>São Paulo, 19 de março de 2026.</p>
-  <br>
-  <p><strong>João Victor B. N.</strong></p>
-  <p>Estudante de Direito</p>
-</div>
+    <div class="assinatura">
+      <p>São Paulo, 19 de março de 2026.</p>
+      <br>
+      <p><strong>João Victor B. N.</strong></p>
+      <p>Estudante de Direito</p>
+    </div>
 
-</section>
-
+  </section>
 </main>
-  <script>
-  fetch("/header.html")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Erro ao carregar o header");
-      }
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById("header-container").innerHTML = data;
-      iniciarMenu();
-    })
-    .catch(error => {
-      console.error(error);
-    });
+
+<script>
+fetch("/header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-container").innerHTML = data;
+    iniciarMenu();
+  });
 </script>
+
 <script src="/menu.js"></script>
 </body>
 </html>
