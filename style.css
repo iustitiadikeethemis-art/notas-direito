@@ -135,6 +135,24 @@ section{
   margin-top:40px;
   font-size:22px;
 }
+.categoria{
+  font-size:14px;
+  color:#666;
+  margin-bottom:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.titulo-principal{
+  font-size:34px;
+  line-height:1.3;
+  margin-bottom:16px;
+}
+
+.subtitulo{
+  font-size:18px;
+  color:#666;
+}
 
 .texto p{
   margin:18px 0;
