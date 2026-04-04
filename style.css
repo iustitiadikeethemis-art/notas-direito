@@ -199,3 +199,82 @@ section{
   background: #f1f1f1;
   border-left: 4px solid #333;
 }
+/* ===== DECISÃO MONOCRÁTICA ===== */
+
+.decisao{
+  background:#fff;
+  border:1px solid #000;
+  padding:50px;
+  max-width:750px;
+  margin:40px auto 0;
+}
+
+.decisao h1{
+  font-size:36px;
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:30px;
+}
+
+.decisao h2{
+  margin-top:35px;
+  margin-bottom:10px;
+  font-size:18px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  border-bottom:1px solid #000;
+  padding-bottom:4px;
+}
+
+.decisao h2 + p{
+  margin-top:10px;
+}
+
+.decisao p{
+  font-size:18px;
+  text-align:justify;
+  text-indent:2.5em;
+  line-height:1.9;
+  margin-bottom:16px;
+}
+
+.cabecalho{
+  text-align:center;
+  margin-bottom:50px;
+  border-bottom:1px solid #000;
+  padding-bottom:20px;
+}
+
+.brasao{
+  display:block;
+  margin:0 auto 15px auto;
+  width:140px;
+  height:auto;
+}
+
+.orgao{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.orgao strong{
+  font-size:18px;
+  letter-spacing:2px;
+}
+
+.orgao p{
+  font-size:13px;
+  margin:2px;
+  text-indent:0;
+}
+
+.assinatura{
+  margin-top:50px;
+  text-align:right;
+}
+
+.assinatura p{
+  text-indent:0;
+  margin-bottom:6px;
+}
