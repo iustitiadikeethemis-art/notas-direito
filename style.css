@@ -417,3 +417,7 @@ section{
     display:none !important;
   }
 }
+.botao-imprimir{
+  display:inline-block;
+  margin:20px auto 30px;
+}
