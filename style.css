@@ -158,3 +158,15 @@ section{
   margin:18px 0;
   text-align:justify;
 }
+.logo-trabalho{
+  display:flex;
+  justify-content:center;
+  margin-bottom:30px;
+}
+
+.logo-trabalho img{
+  max-width:120px;
+  height:auto;
+  display:block;
+  opacity:0.95;
+}
