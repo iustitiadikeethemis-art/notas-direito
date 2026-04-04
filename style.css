@@ -278,10 +278,19 @@ section{
   text-indent:0;
   margin-bottom:6px;
 }
+/* ===== IMPRESSÃO ===== */
+
 @media print {
+  @page {
+    size: A4;
+    margin: 2cm;
+  }
+
   body {
     background: #fff !important;
     color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
   }
 
   #header-container,
@@ -299,51 +308,112 @@ section{
     max-width: 100% !important;
     width: 100% !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero {
     padding: 0 0 20px !important;
   }
 
+  .categoria {
+    color: #444 !important;
+    font-size: 11pt !important;
+  }
+
   .titulo-principal,
-  .decisao h1,
+  .decisao h1 {
+    color: #000 !important;
+    font-size: 18pt !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .subtitulo {
+    color: #444 !important;
+    font-size: 11pt !important;
+  }
+
   .texto h2,
+  .decisao h2 {
+    color: #000 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
   .texto h3 {
     color: #000 !important;
     page-break-after: avoid;
+    break-after: avoid;
   }
 
   p,
   h1,
   h2,
   h3,
-  img {
-    break-inside: avoid;
+  img,
+  .epilogo,
+  .assinatura,
+  .cabecalho {
     page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .texto p,
+  .decisao p {
+    color: #000 !important;
+    orphans: 3;
+    widows: 3;
   }
 
   .imagem-texto {
     max-width: 100% !important;
     margin: 20px 0 10px !important;
+    border-radius: 0 !important;
   }
 
   .caption {
-    font-size: 12px;
     color: #444 !important;
-  }
-
-  .decisao {
-    border: 1px solid #000 !important;
-    box-shadow: none !important;
+    font-size: 10pt !important;
+    margin-bottom: 20px !important;
   }
 
   .epilogo {
     background: #fff !important;
     border-left: 3px solid #000 !important;
+    padding: 16px !important;
   }
 
-  @page {
-    size: A4;
-    margin: 2cm;
+  .decisao {
+    background: #fff !important;
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+    margin-top: 0 !important;
+  }
+
+  .brasao {
+    width: 110px !important;
+  }
+
+  a,
+  a:visited {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+}
+.botao-imprimir {
+  display: inline-block;
+  margin: 10px 0 30px;
+  padding: 10px 16px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media print {
+  .botao-imprimir {
+    display: none !important;
   }
 }
