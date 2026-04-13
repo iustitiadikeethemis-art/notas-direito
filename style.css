@@ -518,3 +518,16 @@ section{
   font-style: normal !important;
   color: #666 !important;
 }
+.texto figure {
+  margin: 36px 0;
+  text-align: center;
+}
+
+.texto figure img {
+  max-width: 820px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
