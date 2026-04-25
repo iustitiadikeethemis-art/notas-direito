@@ -21,59 +21,43 @@
 .item-meta span{background:#f3efe6;color:#4c463c;padding:5px 10px;border-radius:999px;font-size:13px;}
 .item-portfolio h3{font-size:24px;margin:0 0 12px;}
 .item-portfolio p{font-size:17px;color:#3a3732;}
-.certificado-box{margin-top:22px;padding:18px;background:#faf9f6;border:1px solid #e3ddd2;border-radius:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.7);}
+.certificado-box{margin-top:22px;padding:18px;background:#faf9f6;border:1px solid #e3ddd2;border-radius:16px;}
 .certificado-box img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #ddd;background:#fff;}
 .certificado-legenda{font-size:14px;color:#666;margin:10px 2px 0;}
-@media(max-width:760px){.portfolio-hero-novo{padding:38px 26px}.portfolio-hero-novo h1{font-size:34px}.timeline-portfolio{padding-left:16px}.item-portfolio::before{left:-27px}}
 </style>
 </head>
 
 <body>
 <div id="header-container"></div>
-
 <main class="portfolio-page">
-
 <section class="portfolio-hero-novo">
 <span class="portfolio-selo">Portfólio acadêmico e formativo</span>
 <h1>Diário de bordo da minha formação jurídica</h1>
 <p>Registro organizado de cursos concluídos, atividades práticas, visitas técnicas, eventos e experiências que integram minha formação em Direito.</p>
 </section>
-
 <section class="portfolio-secao">
 <h2>Registros</h2>
-
 <div class="timeline-portfolio">
-
 <article class="item-portfolio">
-<div class="item-meta">
-<span>Curso livre</span><span>Concluído</span><span>2026</span><span>2h</span>
-</div>
+<div class="item-meta"><span>Curso livre</span><span>Concluído</span><span>2026</span><span>2h</span></div>
 <h3>Desjudicialização e o Futuro da Advocacia</h3>
 <p><strong>Instituição:</strong> Conselho Federal da OAB / ESA Nacional.</p>
 <p><strong>Descrição:</strong> curso voltado ao estudo da desjudicialização e dos novos caminhos da advocacia contemporânea.</p>
-
 <div class="certificado-box">
-<img src="/imagens/portfolio/certificado-desjudicialização-oab.jpg" alt="Certificado do curso Desjudicialização e o Futuro da Advocacia">
+<img src="/imagens/portfolio/certificado-desjudicializacao-oab-real.jpg" alt="Certificado do curso Desjudicialização e o Futuro da Advocacia">
 <p class="certificado-legenda">Certificado incorporado ao portfólio como comprovação documental da atividade.</p>
 </div>
-
 </article>
-
 <article class="item-portfolio">
-<div class="item-meta">
-<span>Visita institucional</span><span>2026</span>
-</div>
+<div class="item-meta"><span>Visita institucional</span><span>2026</span></div>
 <h3>Visita ao Tribunal de Justiça de São Paulo</h3>
 <p><strong>Tipo:</strong> observação institucional.</p>
 <p><strong>Descrição:</strong> contato direto com o ambiente do Poder Judiciário paulista, voltado à observação de sua dinâmica institucional e de sua organização funcional.</p>
 <p><strong>Contribuição formativa:</strong> a experiência auxilia na compreensão concreta da função jurisdicional e aproxima o estudo teórico do Direito da realidade institucional dos tribunais.</p>
 </article>
-
 </div>
 </section>
-
 </main>
-
 <script>
 fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});
 </script>
