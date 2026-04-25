@@ -100,29 +100,16 @@ section{
   padding:100px 0;
 }
 
-.hero{
-  position:relative;
+.hero h1{
+  font-size:42px;
 }
 
-.simbolo-home{
-  position:absolute;
-  top:28px;
-  left:24px;
+.simbolo-home-inline{
   width:64px;
   height:auto;
   opacity:0.78;
-  pointer-events:none;
-  z-index:0;
-}
-
-.hero-conteudo{
-  position:relative;
-  z-index:1;
-  padding-left:96px;
-}
-
-.hero h1{
-  font-size:42px;
+  display:block;
+  margin:0 0 18px 0;
 }
 
 .section-title{
@@ -179,15 +166,9 @@ section{
 }
 
 @media(max-width:760px){
-  .simbolo-home{
-    position:static;
+  .simbolo-home-inline{
     width:58px;
     margin-bottom:18px;
-    display:block;
-  }
-
-  .hero-conteudo{
-    padding-left:0;
   }
 }
 </style>
@@ -198,18 +179,16 @@ section{
 <main class="wrap">
 <!-- INÍCIO -->
 <section id="inicio" class="hero">
-  <img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor" class="simbolo-home">
-  <div class="hero-conteudo">
-    <span>João Victor B. N.</span>
-    <h1>Notas de um Estudante de Direito</h1>
-    <p>
-      Direito, filosofia e formação intelectual.
-    </p>
+  <img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor" class="simbolo-home-inline">
+  <span>João Victor B. N.</span>
+  <h1>Notas de um Estudante de Direito</h1>
+  <p>
+    Direito, filosofia e formação intelectual.
+  </p>
 
-    <div class="contato-home">
-      <strong>Contato acadêmico e institucional</strong>
-      <p>Para contato acadêmico, institucional ou profissional, escreva para <a href="mailto:joaovictorbrandonovais@gmail.com">joaovictorbrandonovais@gmail.com</a>.</p>
-    </div>
+  <div class="contato-home">
+    <strong>Contato acadêmico e institucional</strong>
+    <p>Para contato acadêmico, institucional ou profissional, escreva para <a href="mailto:joaovictorbrandonovais@gmail.com">joaovictorbrandonovais@gmail.com</a>.</p>
   </div>
 </section>
 <!-- SOBRE -->
