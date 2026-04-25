@@ -100,6 +100,19 @@ section{
   padding:100px 0;
 }
 
+.hero{
+  position:relative;
+}
+
+.simbolo-home{
+  position:absolute;
+  top:42px;
+  left:0;
+  width:72px;
+  height:auto;
+  opacity:0.82;
+}
+
 .hero h1{
   font-size:42px;
 }
@@ -156,6 +169,15 @@ section{
   text-decoration:none;
   border-bottom:1px solid var(--ink);
 }
+
+@media(max-width:760px){
+  .simbolo-home{
+    position:static;
+    width:58px;
+    margin-bottom:18px;
+    display:block;
+  }
+}
 </style>
 </head>
 
@@ -164,6 +186,7 @@ section{
 <main class="wrap">
 <!-- INÍCIO -->
 <section id="inicio" class="hero">
+  <img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor" class="simbolo-home">
   <span>João Victor B. N.</span>
 <h1>Notas de um Estudante de Direito</h1>
 <p>
