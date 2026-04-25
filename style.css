@@ -193,11 +193,81 @@ section{
   text-align: center;
 }
 
+.imagem-capa-filosofica{
+  max-width:720px;
+  margin:36px auto 44px;
+  text-align:center;
+}
+
+.imagem-capa-filosofica img{
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+
+.imagem-capa-filosofica figcaption{
+  margin-top:10px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.bloco-conceitual{
+  margin: 0 auto 42px;
+  padding:24px 28px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:4px solid #333;
+  border-radius:12px;
+}
+
+.bloco-conceitual p{
+  margin:8px 0;
+  text-align:left;
+}
+
+.deusa-retrato{
+  width:280px;
+  margin:28px auto 32px;
+  text-align:center;
+}
+
+.deusa-retrato img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:8px;
+  box-sizing:border-box;
+}
+
+.deusa-retrato figcaption{
+  margin-top:8px;
+  font-size:14px;
+  color:var(--muted);
+  font-style:italic;
+}
+
 .epilogo{
   margin-top: 50px;
   padding: 25px;
   background: #f1f1f1;
   border-left: 4px solid #333;
+}
+
+.epilogo-filosofico{
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:4px solid #333;
+  border-radius:12px;
 }
 
 /* ===== RETRATOS DE AUTORES ===== */
@@ -408,20 +478,44 @@ section{
     widows: 3;
   }
 
-  .autor-retrato{
+  .autor-retrato,
+  .deusa-retrato{
     width: 160px !important;
     margin: 14pt auto 16pt !important;
   }
 
-  .autor-retrato img{
+  .autor-retrato img,
+  .deusa-retrato img{
     height: 205px !important;
     padding: 4pt !important;
     border-radius: 0 !important;
   }
 
-  .autor-retrato figcaption{
+  .autor-retrato figcaption,
+  .deusa-retrato figcaption{
     font-size: 9.5pt !important;
     color: #444 !important;
+  }
+
+  .imagem-capa-filosofica{
+    max-width:100% !important;
+    margin:14pt 0 16pt !important;
+  }
+
+  .imagem-capa-filosofica img{
+    max-height:220pt !important;
+    border-radius:0 !important;
+  }
+
+  .imagem-capa-filosofica figcaption{
+    font-size:9.5pt !important;
+    color:#444 !important;
+  }
+
+  .bloco-conceitual{
+    padding:12pt !important;
+    margin:0 0 14pt !important;
+    border-left:2px solid #000 !important;
   }
 
   .imagem-texto {
@@ -562,12 +656,12 @@ section{
   font-style: normal !important;
   color: #666 !important;
 }
-.texto figure:not(.autor-retrato) {
+.texto figure:not(.autor-retrato):not(.deusa-retrato) {
   margin: 36px 0;
   text-align: center;
 }
 
-.texto figure:not(.autor-retrato) img {
+.texto figure:not(.autor-retrato):not(.deusa-retrato) img {
   max-width: 820px;
   width: 100%;
   height: auto;
