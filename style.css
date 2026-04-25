@@ -201,9 +201,9 @@ section{
 
 .imagem-capa-filosofica img{
   width:100%;
-  max-height:420px;
-  object-fit:cover;
-  object-position:center;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
   display:block;
   border-radius:14px;
   border:1px solid var(--line);
@@ -503,7 +503,8 @@ section{
   }
 
   .imagem-capa-filosofica img{
-    max-height:220pt !important;
+    height:auto !important;
+    max-height:none !important;
     border-radius:0 !important;
   }
 
