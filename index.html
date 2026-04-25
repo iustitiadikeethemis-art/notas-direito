@@ -96,6 +96,21 @@ header{
   color: #000;
 }
 
+.aviso-menu{
+  position:fixed;
+  top:82px;
+  left:24px;
+  z-index:10;
+  font-size:13px;
+  color:var(--muted);
+  opacity:0.65;
+  pointer-events:none;
+}
+
+body:has(.menu-links) .aviso-menu{
+  display:none;
+}
+
 section{
   padding:100px 0;
 }
@@ -175,12 +190,19 @@ body:has(.menu-links.active) .simbolo-home-inline{
     width:58px;
     margin-bottom:18px;
   }
+
+  .aviso-menu{
+    top:76px;
+    left:24px;
+    font-size:12px;
+  }
 }
 </style>
 </head>
 
 <body>
 <div id="header-container"></div>
+<div class="aviso-menu">O menu pode levar alguns instantes para carregar.</div>
 <main class="wrap">
 <!-- INÍCIO -->
 <section id="inicio" class="hero">
