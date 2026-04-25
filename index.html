@@ -106,11 +106,19 @@ section{
 
 .simbolo-home{
   position:absolute;
-  top:42px;
-  left:0;
-  width:72px;
+  top:28px;
+  left:24px;
+  width:64px;
   height:auto;
-  opacity:0.82;
+  opacity:0.78;
+  pointer-events:none;
+  z-index:1;
+}
+
+.hero-conteudo{
+  position:relative;
+  z-index:2;
+  padding-left:96px;
 }
 
 .hero h1{
@@ -177,6 +185,10 @@ section{
     margin-bottom:18px;
     display:block;
   }
+
+  .hero-conteudo{
+    padding-left:0;
+  }
 }
 </style>
 </head>
@@ -187,16 +199,18 @@ section{
 <!-- INÍCIO -->
 <section id="inicio" class="hero">
   <img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor" class="simbolo-home">
-  <span>João Victor B. N.</span>
-<h1>Notas de um Estudante de Direito</h1>
-<p>
-  Direito, filosofia e formação intelectual.
-</p>
+  <div class="hero-conteudo">
+    <span>João Victor B. N.</span>
+    <h1>Notas de um Estudante de Direito</h1>
+    <p>
+      Direito, filosofia e formação intelectual.
+    </p>
 
-<div class="contato-home">
-  <strong>Contato acadêmico e institucional</strong>
-  <p>Para contato acadêmico, institucional ou profissional, escreva para <a href="mailto:joaovictorbrandonovais@gmail.com">joaovictorbrandonovais@gmail.com</a>.</p>
-</div>
+    <div class="contato-home">
+      <strong>Contato acadêmico e institucional</strong>
+      <p>Para contato acadêmico, institucional ou profissional, escreva para <a href="mailto:joaovictorbrandonovais@gmail.com">joaovictorbrandonovais@gmail.com</a>.</p>
+    </div>
+  </div>
 </section>
 <!-- SOBRE -->
 </main>
