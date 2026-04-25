@@ -46,6 +46,7 @@ header{
   .menu-topo{
   display:flex;
   align-items:center;
+  gap:10px;
 }
 
 .menu-botao{
@@ -97,15 +98,29 @@ header{
 }
 
 .aviso-menu{
-  position:fixed;
-  top:82px;
-  left:24px;
-  z-index:10;
-  font-size:13px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 9px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fafafa;
+  font-size:12px;
+  line-height:1;
   color:var(--muted);
-  opacity:0.65;
+  opacity:0.72;
   pointer-events:none;
+  white-space:nowrap;
   transition:opacity 0.3s ease;
+}
+
+.status-ponto{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#777;
+  opacity:0.65;
+  display:inline-block;
 }
 
 section{
@@ -189,9 +204,8 @@ body:has(.menu-links.active) .simbolo-home-inline{
   }
 
   .aviso-menu{
-    top:76px;
-    left:24px;
-    font-size:12px;
+    font-size:11px;
+    padding:4px 7px;
   }
 }
 </style>
@@ -199,7 +213,6 @@ body:has(.menu-links.active) .simbolo-home-inline{
 
 <body>
 <div id="header-container"></div>
-<div id="aviso-menu" class="aviso-menu">O menu pode levar alguns instantes para carregar.</div>
 <main class="wrap">
 <!-- INÍCIO -->
 <section id="inicio" class="hero">
@@ -218,10 +231,12 @@ body:has(.menu-links.active) .simbolo-home-inline{
 <!-- SOBRE -->
 </main>
   <script>
-  const avisoMenu = document.getElementById("aviso-menu");
   const inicioAviso = Date.now();
 
   function esconderAvisoMenu(){
+    const avisoMenu = document.getElementById("aviso-menu");
+    if(!avisoMenu) return;
+
     const tempoDecorrido = Date.now() - inicioAviso;
     const tempoRestante = Math.max(1500 - tempoDecorrido, 0);
 
