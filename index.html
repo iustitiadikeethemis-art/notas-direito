@@ -107,10 +107,6 @@ header{
   pointer-events:none;
 }
 
-body:has(.menu-links) .aviso-menu{
-  display:none;
-}
-
 section{
   padding:100px 0;
 }
@@ -202,7 +198,7 @@ body:has(.menu-links.active) .simbolo-home-inline{
 
 <body>
 <div id="header-container"></div>
-<div class="aviso-menu">O menu pode levar alguns instantes para carregar.</div>
+<div id="aviso-menu" class="aviso-menu">O menu pode levar alguns instantes para carregar.</div>
 <main class="wrap">
 <!-- INÍCIO -->
 <section id="inicio" class="hero">
@@ -230,6 +226,7 @@ body:has(.menu-links.active) .simbolo-home-inline{
     })
     .then(data => {
       document.getElementById("header-container").innerHTML = data;
+      document.getElementById("aviso-menu").style.display = "none";
       iniciarMenu();
     })
     .catch(error => {
