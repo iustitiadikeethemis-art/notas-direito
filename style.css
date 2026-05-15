@@ -331,7 +331,9 @@ section{
   transform:translateX(-50%);
   text-align:center;
 }
-
+.figura-media{
+  width:min(760px, 92vw);
+}
 .figura-larga img{
   width:100%;
   height:auto;
