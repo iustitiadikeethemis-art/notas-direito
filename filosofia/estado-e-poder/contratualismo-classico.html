@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contratualismo clássico | Estado e Poder</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+<section class="hero">
+<div class="logo-trabalho"><img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor"></div>
+<p class="categoria">Disciplina: Estado e Poder</p>
+<h1 class="titulo-principal">Uma análise do contratualismo em Hobbes, Locke e Rousseau</h1>
+<p class="subtitulo">Trabalho acadêmico desenvolvido na disciplina Estado e Poder.</p>
+<button class="botao-imprimir" onclick="window.print()">🖨️ Imprimir</button>
+</section>
+<section><article class="texto">
+<p>Este texto foi reorganizado como página própria da série Estado e Poder. A versão integral será mantida em desenvolvimento editorial para preservar o conteúdo acadêmico original e melhorar a navegação do site.</p>
+<p><a href="/filosofia/estado-e-poder.html">Voltar para Estado e Poder</a></p>
+<div class="assinatura-texto"><p>João Victor Brando Novais</p><p class="local-data">São Paulo, 2026</p></div>
+</article></section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
