@@ -748,3 +748,19 @@ section{
   margin: 0 auto;
   border-radius: 10px;
 }
+.link-retorno{
+  margin-top: 28px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.link-retorno a{
+  color: #777;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.link-retorno a:hover{
+  color: #333;
+  text-decoration: underline;
+}
