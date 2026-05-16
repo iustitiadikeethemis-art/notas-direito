@@ -332,7 +332,7 @@ section{
   text-align:center;
 }
 .figura-media{
-  width:min(760px, 92vw);
+  width:min(620px, 88vw);
 }
 .figura-larga img{
   width:100%;
