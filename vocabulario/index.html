@@ -78,6 +78,9 @@
 }
 .vocab-sidebar h2{font-size:18px;margin:0 0 12px;}
 .vocab-sidebar p{font-size:15px;color:#555;margin:0 0 18px;line-height:1.6;}
+.grupo-links{display:flex;flex-direction:column;gap:10px;margin:14px 0 22px;}
+.grupo-links a{display:block;padding:10px 12px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:#2d2a24;background:#faf8f3;font-size:15px;}
+.grupo-links a:hover{background:#eee7d9;}
 .atalhos-az{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;}
 .atalhos-az a{
   width:32px;height:32px;display:flex;align-items:center;justify-content:center;
@@ -97,7 +100,31 @@
 .vocab-main{
   display:flex;
   flex-direction:column;
-  gap:28px;
+  gap:34px;
+}
+.secao-vocab{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.titulo-secao-vocab{
+  padding:28px 30px;
+  border-radius:22px;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow:0 10px 28px rgba(0,0,0,0.035);
+}
+.titulo-secao-vocab h2{
+  font-size:30px;
+  line-height:1.15;
+  margin:0 0 8px;
+}
+.titulo-secao-vocab p{
+  font-size:17px;
+  color:#4d4942;
+  line-height:1.7;
+  margin:0;
+  text-align:left;
 }
 .letra-bloco{
   background:#fff;
@@ -141,7 +168,7 @@
 @media print{
   .vocab-sidebar,#header-container,.busca-vocabulario,.resultado-busca{display:none!important;}
   .vocab-layout{display:block;}
-  .vocab-hero,.letra-bloco{box-shadow:none;border:1px solid #000;}
+  .vocab-hero,.letra-bloco,.titulo-secao-vocab{box-shadow:none;border:1px solid #000;}
 }
 </style>
 </head>
@@ -151,7 +178,7 @@
 <section class="vocab-hero">
 <p class="categoria">Seção de apoio</p>
 <h1>Vocabulário Jurídico e Latim</h1>
-<p>Glossário progressivo de conceitos jurídicos, expressões latinas, etimologias e termos técnicos encontrados ao longo da formação acadêmica. A organização principal será em ordem alfabética, com verbetes curtos, técnicos e revisáveis.</p>
+<p>Glossário progressivo de conceitos jurídicos, expressões latinas, etimologias e termos técnicos encontrados ao longo da formação acadêmica. A página é dividida entre termos jurídicos e expressões em latim, com organização alfabética interna.</p>
 </section>
 
 <div class="nota-vocab">
@@ -160,7 +187,7 @@
 
 <div class="busca-vocabulario">
   <label for="campo-busca-vocabulario">Pesquisar no vocabulário</label>
-  <input id="campo-busca-vocabulario" type="search" placeholder="Digite um termo, área ou expressão em latim..." autocomplete="off">
+  <input id="campo-busca-vocabulario" type="search" placeholder="Digite um termo jurídico, área ou expressão em latim..." autocomplete="off">
 </div>
 
 <div id="resultado-busca" class="resultado-busca">
@@ -169,10 +196,16 @@
 
 <section class="vocab-layout">
 <aside class="vocab-sidebar">
+<h2>Seções</h2>
+<p>Escolha entre os termos jurídicos gerais ou as expressões em latim.</p>
+<div class="grupo-links">
+<a href="#termos-juridicos">Termos Jurídicos</a>
+<a href="#expressoes-latinas">Expressões em Latim</a>
+</div>
 <h2>Índice alfabético</h2>
-<p>Use as letras para navegar pelos grupos de verbetes. Novos termos serão inseridos progressivamente conforme os estudos avançarem.</p>
+<p>As letras indicam os grupos disponíveis em cada seção.</p>
 <div class="atalhos-az">
-<a href="#A">A</a><a href="#C">C</a><a href="#D">D</a><a href="#H">H</a><a href="#I">I</a><a href="#J">J</a><a href="#N">N</a><a href="#R">R</a>
+<a href="#A-juridico">A</a><a href="#C-juridico">C</a><a href="#D-juridico">D</a><a href="#J-juridico">J</a><a href="#R-juridico">R</a><a href="#H-latim">H</a><a href="#I-latim">I</a><a href="#N-latim">N</a>
 </div>
 <div class="latim-box">
 <h3>Estudo de Latim</h3>
@@ -183,7 +216,13 @@
 
 <div class="vocab-main">
 
-<div class="letra-bloco" id="A">
+<section class="secao-vocab" id="termos-juridicos">
+<div class="titulo-secao-vocab">
+<h2>Termos Jurídicos</h2>
+<p>Conceitos técnicos utilizados no estudo do Direito, organizados em ordem alfabética. Aqui entram institutos, garantias, categorias processuais, expressões doutrinárias e noções fundamentais.</p>
+</div>
+
+<div class="letra-bloco" id="A-juridico">
 <h2>A</h2>
 <div class="verbete">
 <h3>ANPP</h3>
@@ -199,7 +238,7 @@
 </div>
 </div>
 
-<div class="letra-bloco" id="C">
+<div class="letra-bloco" id="C-juridico">
 <h2>C</h2>
 <div class="verbete">
 <h3>Contraditório</h3>
@@ -209,7 +248,7 @@
 </div>
 </div>
 
-<div class="letra-bloco" id="D">
+<div class="letra-bloco" id="D-juridico">
 <h2>D</h2>
 <div class="verbete">
 <h3>Devido processo legal</h3>
@@ -219,33 +258,7 @@
 </div>
 </div>
 
-<div class="letra-bloco" id="H">
-<h2>H</h2>
-<div class="verbete">
-<h3>Habeas corpus</h3>
-<p class="origem">Expressão latina tradicionalmente associada à ideia de “que tenhas o corpo” ou “apresente-se o corpo”.</p>
-<p>Remédio constitucional destinado à proteção da liberdade de locomoção contra ilegalidade ou abuso de poder. É cabível quando alguém sofre ou se encontra ameaçado de sofrer constrangimento ilegal em seu direito de ir, vir ou permanecer.</p>
-<div class="etiquetas"><span>Latim jurídico</span><span>Remédio constitucional</span></div>
-</div>
-<div class="verbete">
-<h3>Habeas data</h3>
-<p class="origem">Expressão latina moderna relacionada à ideia de acesso a dados.</p>
-<p>Remédio constitucional destinado a assegurar conhecimento, retificação ou complementação de informações relativas à pessoa do impetrante constantes de registros ou bancos de dados de entidades governamentais ou de caráter público.</p>
-<div class="etiquetas"><span>Latim jurídico</span><span>Dados pessoais</span></div>
-</div>
-</div>
-
-<div class="letra-bloco" id="I">
-<h2>I</h2>
-<div class="verbete">
-<h3>In dubio pro reo</h3>
-<p class="origem">Expressão latina: na dúvida, em favor do réu.</p>
-<p>Máxima ligada ao processo penal segundo a qual, persistindo dúvida razoável sobre autoria, materialidade ou responsabilidade penal, a solução deve favorecer o acusado.</p>
-<div class="etiquetas"><span>Latim jurídico</span><span>Processo Penal</span></div>
-</div>
-</div>
-
-<div class="letra-bloco" id="J">
+<div class="letra-bloco" id="J-juridico">
 <h2>J</h2>
 <div class="verbete">
 <h3>Jurisdição</h3>
@@ -255,18 +268,7 @@
 </div>
 </div>
 
-<div class="letra-bloco" id="N">
-<h2>N</h2>
-<div class="verbete">
-<h3>Nemo tenetur se detegere</h3>
-<p class="origem">Expressão latina: ninguém é obrigado a se revelar, expor-se ou produzir prova contra si mesmo.</p>
-<p>Princípio relacionado ao direito ao silêncio e à vedação da autoincriminação. Em termos simples, significa que uma pessoa investigada ou acusada não pode ser obrigada pelo Estado a colaborar ativamente para a própria condenação.</p>
-<p>Esse princípio não impede toda atividade investigativa estatal, mas limita métodos de coerção que transformem o próprio acusado em instrumento compulsório de prova contra si.</p>
-<div class="etiquetas"><span>Latim jurídico</span><span>Processo Penal</span><span>Direito ao silêncio</span></div>
-</div>
-</div>
-
-<div class="letra-bloco" id="R">
+<div class="letra-bloco" id="R-juridico">
 <h2>R</h2>
 <div class="verbete">
 <h3>Reincidência</h3>
@@ -287,6 +289,51 @@
 <div class="etiquetas"><span>Distinção técnica</span><span>Vocabulário</span></div>
 </div>
 </div>
+</section>
+
+<section class="secao-vocab" id="expressoes-latinas">
+<div class="titulo-secao-vocab">
+<h2>Expressões em Latim</h2>
+<p>Expressões latinas utilizadas no vocabulário jurídico, com tradução aproximada, sentido técnico e observações de uso. Algumas delas também são institutos jurídicos autônomos, como habeas corpus e habeas data.</p>
+</div>
+
+<div class="letra-bloco" id="H-latim">
+<h2>H</h2>
+<div class="verbete">
+<h3>Habeas corpus</h3>
+<p class="origem">Expressão latina tradicionalmente associada à ideia de “que tenhas o corpo” ou “apresente-se o corpo”.</p>
+<p>Remédio constitucional destinado à proteção da liberdade de locomoção contra ilegalidade ou abuso de poder. É cabível quando alguém sofre ou se encontra ameaçado de sofrer constrangimento ilegal em seu direito de ir, vir ou permanecer.</p>
+<div class="etiquetas"><span>Latim jurídico</span><span>Remédio constitucional</span></div>
+</div>
+<div class="verbete">
+<h3>Habeas data</h3>
+<p class="origem">Expressão latina moderna relacionada à ideia de acesso a dados.</p>
+<p>Remédio constitucional destinado a assegurar conhecimento, retificação ou complementação de informações relativas à pessoa do impetrante constantes de registros ou bancos de dados de entidades governamentais ou de caráter público.</p>
+<div class="etiquetas"><span>Latim jurídico</span><span>Dados pessoais</span></div>
+</div>
+</div>
+
+<div class="letra-bloco" id="I-latim">
+<h2>I</h2>
+<div class="verbete">
+<h3>In dubio pro reo</h3>
+<p class="origem">Expressão latina: na dúvida, em favor do réu.</p>
+<p>Máxima ligada ao processo penal segundo a qual, persistindo dúvida razoável sobre autoria, materialidade ou responsabilidade penal, a solução deve favorecer o acusado.</p>
+<div class="etiquetas"><span>Latim jurídico</span><span>Processo Penal</span></div>
+</div>
+</div>
+
+<div class="letra-bloco" id="N-latim">
+<h2>N</h2>
+<div class="verbete">
+<h3>Nemo tenetur se detegere</h3>
+<p class="origem">Expressão latina: ninguém é obrigado a se revelar, expor-se ou produzir prova contra si mesmo.</p>
+<p>Princípio relacionado ao direito ao silêncio e à vedação da autoincriminação. Em termos simples, significa que uma pessoa investigada ou acusada não pode ser obrigada pelo Estado a colaborar ativamente para a própria condenação.</p>
+<p>Esse princípio não impede toda atividade investigativa estatal, mas limita métodos de coerção que transformem o próprio acusado em instrumento compulsório de prova contra si.</p>
+<div class="etiquetas"><span>Latim jurídico</span><span>Processo Penal</span><span>Direito ao silêncio</span></div>
+</div>
+</div>
+</section>
 
 </div>
 </section>
@@ -305,6 +352,7 @@ const campoBusca = document.getElementById("campo-busca-vocabulario");
 const avisoResultado = document.getElementById("resultado-busca");
 const verbetes = Array.from(document.querySelectorAll(".verbete"));
 const blocosLetras = Array.from(document.querySelectorAll(".letra-bloco"));
+const secoesVocab = Array.from(document.querySelectorAll(".secao-vocab"));
 
 campoBusca.addEventListener("input", () => {
   const termo = normalizarTexto(campoBusca.value.trim());
@@ -320,6 +368,11 @@ campoBusca.addEventListener("input", () => {
   blocosLetras.forEach(bloco => {
     const possuiVerbeteVisivel = Array.from(bloco.querySelectorAll(".verbete")).some(verbete => verbete.style.display !== "none");
     bloco.style.display = possuiVerbeteVisivel ? "block" : "none";
+  });
+
+  secoesVocab.forEach(secao => {
+    const possuiBlocoVisivel = Array.from(secao.querySelectorAll(".letra-bloco")).some(bloco => bloco.style.display !== "none");
+    secao.style.display = possuiBlocoVisivel ? "flex" : "none";
   });
 
   avisoResultado.style.display = termo !== "" && encontrados === 0 ? "block" : "none";
