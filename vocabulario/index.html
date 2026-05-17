@@ -79,8 +79,25 @@
 .vocab-sidebar h2{font-size:18px;margin:0 0 12px;}
 .vocab-sidebar p{font-size:15px;color:#555;margin:0 0 18px;line-height:1.6;}
 .grupo-links{display:flex;flex-direction:column;gap:10px;margin:14px 0 22px;}
-.grupo-links a{display:block;padding:10px 12px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:#2d2a24;background:#faf8f3;font-size:15px;}
-.grupo-links a:hover{background:#eee7d9;}
+.filtro-vocab{
+  display:block;
+  width:100%;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  text-align:left;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:15px;
+  color:#2d2a24;
+  background:#faf8f3;
+  cursor:pointer;
+}
+.filtro-vocab:hover{background:#eee7d9;}
+.filtro-vocab.ativo{
+  background:#1f1f1f;
+  color:#fff;
+  border-color:#1f1f1f;
+}
 .atalhos-az{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;}
 .atalhos-az a{
   width:32px;height:32px;display:flex;align-items:center;justify-content:center;
@@ -196,11 +213,12 @@
 
 <section class="vocab-layout">
 <aside class="vocab-sidebar">
-<h2>Seções</h2>
-<p>Escolha entre os termos jurídicos gerais ou as expressões em latim.</p>
+<h2>Filtros</h2>
+<p>Escolha o tipo de conteúdo que deseja visualizar.</p>
 <div class="grupo-links">
-<a href="#termos-juridicos">Termos Jurídicos</a>
-<a href="#expressoes-latinas">Expressões em Latim</a>
+<button type="button" class="filtro-vocab ativo" data-filtro="todos">Tudo</button>
+<button type="button" class="filtro-vocab" data-filtro="termos-juridicos">Termos Jurídicos</button>
+<button type="button" class="filtro-vocab" data-filtro="expressoes-latinas">Expressões em Latim</button>
 </div>
 <h2>Índice alfabético</h2>
 <p>As letras indicam os grupos disponíveis em cada seção.</p>
@@ -216,7 +234,7 @@
 
 <div class="vocab-main">
 
-<section class="secao-vocab" id="termos-juridicos">
+<section class="secao-vocab" id="termos-juridicos" data-categoria="termos-juridicos">
 <div class="titulo-secao-vocab">
 <h2>Termos Jurídicos</h2>
 <p>Conceitos técnicos utilizados no estudo do Direito, organizados em ordem alfabética. Aqui entram institutos, garantias, categorias processuais, expressões doutrinárias e noções fundamentais.</p>
@@ -291,7 +309,7 @@
 </div>
 </section>
 
-<section class="secao-vocab" id="expressoes-latinas">
+<section class="secao-vocab" id="expressoes-latinas" data-categoria="expressoes-latinas">
 <div class="titulo-secao-vocab">
 <h2>Expressões em Latim</h2>
 <p>Expressões latinas utilizadas no vocabulário jurídico, com tradução aproximada, sentido técnico e observações de uso. Algumas delas também são institutos jurídicos autônomos, como habeas corpus e habeas data.</p>
@@ -350,33 +368,54 @@ function normalizarTexto(texto){
 
 const campoBusca = document.getElementById("campo-busca-vocabulario");
 const avisoResultado = document.getElementById("resultado-busca");
-const verbetes = Array.from(document.querySelectorAll(".verbete"));
-const blocosLetras = Array.from(document.querySelectorAll(".letra-bloco"));
+const botoesFiltro = Array.from(document.querySelectorAll(".filtro-vocab"));
 const secoesVocab = Array.from(document.querySelectorAll(".secao-vocab"));
+const verbetes = Array.from(document.querySelectorAll(".verbete"));
+let filtroAtual = "todos";
 
-campoBusca.addEventListener("input", () => {
+function aplicarFiltros(){
   const termo = normalizarTexto(campoBusca.value.trim());
   let encontrados = 0;
 
-  verbetes.forEach(verbete => {
-    const conteudo = normalizarTexto(verbete.textContent);
-    const corresponde = termo === "" || conteudo.includes(termo);
-    verbete.style.display = corresponde ? "block" : "none";
-    if(corresponde) encontrados++;
-  });
-
-  blocosLetras.forEach(bloco => {
-    const possuiVerbeteVisivel = Array.from(bloco.querySelectorAll(".verbete")).some(verbete => verbete.style.display !== "none");
-    bloco.style.display = possuiVerbeteVisivel ? "block" : "none";
-  });
-
   secoesVocab.forEach(secao => {
-    const possuiBlocoVisivel = Array.from(secao.querySelectorAll(".letra-bloco")).some(bloco => bloco.style.display !== "none");
-    secao.style.display = possuiBlocoVisivel ? "flex" : "none";
+    const categoria = secao.dataset.categoria;
+    const categoriaPermitida = filtroAtual === "todos" || filtroAtual === categoria;
+    let encontradosNaSecao = 0;
+
+    const verbetesDaSecao = Array.from(secao.querySelectorAll(".verbete"));
+    verbetesDaSecao.forEach(verbete => {
+      const conteudo = normalizarTexto(verbete.textContent);
+      const correspondeBusca = termo === "" || conteudo.includes(termo);
+      const deveMostrar = categoriaPermitida && correspondeBusca;
+      verbete.style.display = deveMostrar ? "block" : "none";
+      if(deveMostrar){
+        encontrados++;
+        encontradosNaSecao++;
+      }
+    });
+
+    Array.from(secao.querySelectorAll(".letra-bloco")).forEach(bloco => {
+      const possuiVerbeteVisivel = Array.from(bloco.querySelectorAll(".verbete")).some(verbete => verbete.style.display !== "none");
+      bloco.style.display = possuiVerbeteVisivel ? "block" : "none";
+    });
+
+    secao.style.display = categoriaPermitida && (termo === "" || encontradosNaSecao > 0) ? "flex" : "none";
   });
 
   avisoResultado.style.display = termo !== "" && encontrados === 0 ? "block" : "none";
+}
+
+botoesFiltro.forEach(botao => {
+  botao.addEventListener("click", () => {
+    filtroAtual = botao.dataset.filtro;
+    botoesFiltro.forEach(item => item.classList.remove("ativo"));
+    botao.classList.add("ativo");
+    aplicarFiltros();
+  });
 });
+
+campoBusca.addEventListener("input", aplicarFiltros);
+aplicarFiltros();
 </script>
 <script src="/menu.js"></script>
 </body>
