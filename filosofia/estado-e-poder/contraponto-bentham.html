@@ -7,6 +7,15 @@
 <link rel="stylesheet" href="/style.css">
 <style>
 .figure-bentham-retrato img{max-width:360px;width:100%;}
+.layout-leitura{display:grid;grid-template-columns:250px 1fr;gap:28px;align-items:start;}
+.controle-texto{position:sticky;top:92px;align-self:start;background:#fff;border:1px solid #ded8cc;border-radius:18px;padding:18px;box-shadow:0 12px 32px rgba(0,0,0,0.045);}
+.controle-texto h2{font-size:18px;line-height:1.2;margin:0 0 12px;}
+.controle-texto p{font-size:14px;line-height:1.55;color:#5a544b;margin:0 0 14px;text-align:left;}
+.controle-texto a{display:block;text-decoration:none;color:#2d2a24;padding:9px 11px;margin:7px 0;border:1px solid #ded8cc;border-radius:12px;background:#faf8f3;font-size:14px;line-height:1.35;}
+.controle-texto a:hover{background:#eee7d9;}
+.conteudo-leitura{min-width:0;}
+@media(max-width:900px){.layout-leitura{grid-template-columns:1fr;}.controle-texto{position:static;}}
+@media print{.controle-texto{display:none!important;}.layout-leitura{display:block;}}
 </style>
 </head>
 <body>
@@ -19,9 +28,25 @@
 <p class="subtitulo">Utilitarismo, crítica ao contrato social e limites constitucionais da maximização do bem-estar coletivo.</p>
 <button class="botao-imprimir" onclick="window.print()">🖨️ Imprimir</button>
 </section>
-<section><article class="texto">
-<h2>1 INTRODUÇÃO</h2>
-<h3>1.1 Breve biografia e contexto histórico</h3>
+<section class="layout-leitura">
+<aside class="controle-texto">
+<h2>Navegação</h2>
+<p>Use o controle para acompanhar a construção crítica do pensamento de Bentham.</p>
+<a href="#introducao">Introdução</a>
+<a href="#biografia">Biografia e contexto</a>
+<a href="#obras">Obras principais</a>
+<a href="#utilidade">Princípio da utilidade</a>
+<a href="#hedonismo">Hedonismo</a>
+<a href="#calculo">Cálculo utilitarista</a>
+<a href="#direito">Aplicação ao direito</a>
+<a href="#metodo">Método analítico</a>
+<a href="#critica">Análise crítica</a>
+<a href="#conclusao">Conclusão</a>
+</aside>
+<div class="conteudo-leitura">
+<article class="texto">
+<h2 id="introducao">1 INTRODUÇÃO</h2>
+<h3 id="biografia">1.1 Breve biografia e contexto histórico</h3>
 <figure class="autor-retrato figure-bentham-retrato"><img src="/imagens/Jeremy_Bentham_by_Henry_William.jpg" alt="Retrato de Jeremy Bentham"><figcaption>Jeremy Bentham (1748–1832), jurista e filósofo inglês associado à formulação clássica do utilitarismo.</figcaption></figure>
 <p>Jeremy Bentham (1748–1832) foi um filósofo e jurista inglês cuja obra exerceu profunda influência na formação do pensamento jurídico moderno, sobretudo no que diz respeito à relação entre direito, moral e organização política. Nascido em Londres, em uma família ligada à advocacia, Bentham demonstrou desde cedo inclinação para os estudos, tendo ingressado ainda jovem na Universidade de Oxford. Apesar de sua formação jurídica tradicional, rapidamente passou a criticar o modo como o direito era concebido na Inglaterra, marcado pelo apego à tradição, ao uso de conceitos vagos e à autoridade de autores consagrados, frequentemente sem o devido rigor analítico. Sua produção intelectual desenvolveu-se, assim, como um esforço sistemático de reconstrução dos fundamentos do direito e da política, orientado pela busca de clareza conceitual e pela análise das consequências práticas das normas e instituições.</p>
 <p>O pensamento de Bentham insere-se no contexto mais amplo do Iluminismo britânico, período caracterizado pela valorização da razão e pela tentativa de submeter as instituições sociais a critérios racionais de análise. Nesse ambiente intelectual, destaca-se também a obra de Adam Smith, cuja reflexão sobre a economia política enfatiza o papel do interesse individual na organização da vida social. Embora atuem em campos distintos, Bentham e Smith compartilham a rejeição de explicações metafísicas ou teológicas para os fenômenos sociais, partindo ambos da observação do comportamento humano como base de suas teorias. No entanto, enquanto Smith tende a identificar no funcionamento espontâneo do mercado um princípio de organização social, Bentham propõe uma intervenção racional nas instituições jurídicas e políticas, orientada pelo princípio da utilidade, segundo o qual a legitimidade das normas deve ser avaliada a partir de seus efeitos sobre o bem-estar coletivo.</p>
@@ -31,7 +56,7 @@
 <p>O presente trabalho analisa a teoria utilitarista de Jeremy Bentham, com foco em sua aplicação ao direito. Parte-se do princípio da utilidade, segundo o qual a validade das normas deve ser aferida por seus efeitos concretos, sobretudo quanto à promoção da felicidade do maior número. Busca-se, assim, mostrar como Bentham rompe com fundamentos tradicionais — autoridade, tradição e contrato social — ao substituí-los por um critério objetivo baseado nas consequências das normas e das instituições.</p>
 <p>Paralelamente, propõe-se uma crítica ao modelo, sustentando que a centralidade da utilidade pode relativizar garantias individuais e direitos fundamentais. Ao priorizar o resultado coletivo, o utilitarismo tende a subordinar interesses individuais, abrindo espaço para a justificação de restrições a direitos, inclusive de minorias, em nome de benefícios sociais mais amplos.</p>
 <p>Nessa perspectiva, examina-se a relação entre utilitarismo e direito, destacando, de um lado, sua contribuição para compreender o direito como instrumento racional de organização social e, de outro, seus limites na proteção de direitos individuais. O objetivo é avaliar a atualidade da teoria de Bentham no direito contemporâneo, à luz das exigências de dignidade humana e liberdades fundamentais.</p>
-<h2>2 DESENVOLVIMENTO</h2>
+<h2 id="obras">2 DESENVOLVIMENTO</h2>
 <p>O presente desenvolvimento inicia-se com uma visão panorâmica das principais obras de Jeremy Bentham, com o objetivo de situar o leitor no conjunto de sua produção intelectual.</p>
 <h3>2.1 Visão panorâmica das obras</h3>
 <h3>2.2 A Fragment on Government (1776)</h3>
@@ -47,20 +72,20 @@
 <p>Nessa obra, Bentham aprofunda sua análise do direito processual e do sistema probatório. Seu objetivo é reformar o modo como as provas são produzidas, avaliadas e utilizadas no processo judicial, criticando o formalismo excessivo e as regras arbitrárias do direito inglês. Bentham defende que o sistema jurídico deve buscar a verdade dos fatos de maneira mais direta e eficiente, eliminando obstáculos desnecessários à produção de provas. A obra reforça a ideia de que o direito deve ser funcional e orientado por resultados, sendo estruturado de modo a promover decisões mais justas e úteis para a sociedade.</p>
 <h3>2.7 Nonsense upon Stilts (1795, publicado posteriormente)</h3>
 <p>Em Nonsense upon Stilts, Bentham realiza uma crítica contundente à noção de direitos naturais, especialmente à forma como esses direitos foram proclamados em documentos políticos como a Declaração dos Direitos do Homem e do Cidadão. Para ele, a ideia de direitos naturais é desprovida de fundamento racional, sendo uma construção retórica que pode gerar instabilidade política. Bentham defende que os direitos não existem por natureza, mas são produtos do direito positivo, devendo ser justificados por sua utilidade social. Essa posição é central para a compreensão de sua teoria e também constitui um dos pontos mais controversos, especialmente quando analisada à luz das garantias individuais e dos direitos humanos.</p>
-<h3>2.8 Fundamento do utilitarismo: o princípio da utilidade</h3>
+<h3 id="utilidade">2.8 Fundamento do utilitarismo: o princípio da utilidade</h3>
 <p>O utilitarismo de Jeremy Bentham tem como ponto de partida o princípio da utilidade, segundo o qual toda ação — seja individual, seja institucional — deve ser avaliada conforme sua tendência de produzir prazer ou dor. Esse princípio opera como critério geral de julgamento, substituindo fundamentos tradicionais como direitos naturais, vontade divina ou autoridade histórica. A utilidade, nesse sentido, não é apenas um conceito moral, mas um critério normativo que orienta tanto a conduta individual quanto a estrutura do direito. O que torna uma norma válida não é sua origem, mas sua capacidade de promover o bem-estar coletivo, entendido como a maior felicidade do maior número.</p>
-<h3>2.9 Hedonismo e estrutura da motivação humana</h3>
+<h3 id="hedonismo">2.9 Hedonismo e estrutura da motivação humana</h3>
 <p>Bentham parte de uma concepção hedonista da natureza humana, segundo a qual os indivíduos são governados por dois senhores soberanos: o prazer e a dor. Toda ação humana pode ser explicada por essa dinâmica, o que permite ao autor construir um modelo analítico para compreender o comportamento e, a partir dele, orientar a elaboração das normas jurídicas. Nesse contexto, o direito passa a ser concebido como instrumento de direcionamento das ações humanas, mediante a distribuição de incentivos e desincentivos, com o objetivo de maximizar resultados socialmente desejáveis.</p>
-<h3>2.10 O cálculo utilitarista (felicific calculus)</h3>
+<h3 id="calculo">2.10 O cálculo utilitarista (felicific calculus)</h3>
 <p>Um dos aspectos mais característicos do utilitarismo benthamiano é a tentativa de sistematizar a avaliação das consequências por meio de um cálculo. Bentham propõe que o prazer e a dor podem ser analisados segundo critérios como intensidade, duração, certeza, proximidade, fecundidade, pureza e extensão. Esses elementos permitem comparar diferentes ações ou normas, atribuindo-lhes maior ou menor valor conforme seus efeitos. Embora não se trate de um cálculo matemático no sentido estrito, a estrutura proposta revela uma clara intenção de tornar a moral e o direito campos suscetíveis de análise racional e comparativa, reduzindo o espaço para decisões baseadas em intuições ou tradições não examinadas.</p>
-<h3>2.11 Aplicação ao direito: função instrumental das normas</h3>
+<h3 id="direito">2.11 Aplicação ao direito: função instrumental das normas</h3>
 <p>No âmbito jurídico, o utilitarismo redefine a função do direito, que deixa de ser visto como expressão de uma ordem natural ou de princípios absolutos, passando a ser compreendido como instrumento de organização social. As normas jurídicas são justificadas na medida em que contribuem para a maximização da utilidade, o que implica avaliar suas consequências concretas. Nesse modelo, conceitos como justiça, obrigação e legitimidade são reinterpretados à luz de seus efeitos práticos, e não de sua conformidade com princípios pré-estabelecidos. O direito, portanto, assume um caráter essencialmente funcional, orientado por resultados.</p>
-<h3>2.12 Método em A Fragment on Government: estrutura lógica e analítica</h3>
+<h3 id="metodo">2.12 Método em A Fragment on Government: estrutura lógica e analítica</h3>
 <p>A abordagem adotada por Bentham em A Fragment on Government revela um método marcadamente lógico, com forte inclinação analítica. O autor procede à decomposição dos argumentos de Blackstone em suas partes constitutivas, examinando definições, pressupostos e conclusões de forma sequencial. Esse procedimento se assemelha a uma estrutura quase matemática, na medida em que busca identificar inconsistências internas, contradições e lacunas conceituais a partir da própria organização do discurso analisado. Bentham frequentemente parte de definições aparentemente aceitas e demonstra que, levadas às suas consequências lógicas, conduzem a resultados insustentáveis.</p>
 <p>Esse método se caracteriza por três elementos principais: precisão terminológica, análise das relações lógicas entre conceitos e atenção às consequências das proposições. Ao invés de aceitar categorias tradicionais, Bentham questiona seu significado e sua aplicabilidade, revelando que muitas delas não possuem conteúdo definido. A crítica não se limita, portanto, ao conteúdo das ideias, mas atinge o modo como elas são formuladas, expondo o caráter retórico de grande parte da teoria política clássica.</p>
 <h3>2.13 Relação entre método e utilitarismo</h3>
 <p>O método analítico empregado por Bentham não é separado de sua teoria, mas constitui sua base. A exigência de clareza conceitual e de coerência lógica é condição para a aplicação do princípio da utilidade, pois somente conceitos bem definidos permitem a avaliação de consequências. Nesse sentido, a aproximação com a lógica e com uma estrutura quase matemática não é meramente formal, mas instrumental: trata-se de tornar o direito e a moral passíveis de análise racional. Assim, o utilitarismo não é apenas um conteúdo normativo, mas também um modo de pensar, que exige rigor, clareza e orientação para resultados.</p>
-<h2>3 ANÁLISE CRÍTICA</h2>
+<h2 id="critica">3 ANÁLISE CRÍTICA</h2>
 <p>A teoria utilitarista de Jeremy Bentham, quando analisada sob o prisma lógico, apresenta-se como um modelo coerente e funcional para a resolução de conflitos sociais e para a tomada de decisões orientadas por critérios racionais, na medida em que propõe a avaliação das ações com base em suas consequências. Conforme estabelece o próprio autor, “it is the greatest happiness of the greatest number that is the measure of right and wrong” (BENTHAM, 1789), o que demonstra a centralidade do critério utilitário em sua construção teórica. Entretanto, esse mesmo modelo revela limitações relevantes ao desconsiderar a dimensão subjetiva do indivíduo, bem como a existência de grupos minoritários que, enquanto sujeitos de direito, demandam proteção independentemente de sua contribuição para o bem-estar coletivo.</p>
 <p>Nesse sentido, observa-se que a própria crítica elaborada por Bentham às teorias contratualistas — especialmente no que diz respeito à impossibilidade de se conceber uma vontade comum plenamente compartilhada por todos os indivíduos — pode ser, em certa medida, dirigida ao seu próprio modelo. Ao questionar fundamentos abstratos e construções teóricas que não encontram correspondência na realidade, Bentham demonstra que conceitos políticos frequentemente carecem de precisão e aplicabilidade prática. Tal procedimento pode ser observado quando o autor expõe a fragilidade de categorias tradicionais ao levá-las às suas últimas consequências lógicas, evidenciando que muitas delas não se sustentam empiricamente (BENTHAM, 1776).</p>
 <p>Dessa forma, em uma sociedade composta por interesses diversos e frequentemente conflitantes, a identificação do que constitui a “maior felicidade do maior número” não se apresenta como um dado objetivo plenamente mensurável, mas como resultado de interpretações que podem refletir a perspectiva de grupos predominantes. Assim, ainda que o utilitarismo se proponha como um critério racional e objetivo, sua aplicação prática pode implicar a prevalência de determinados interesses em detrimento de outros, o que suscita questionamentos quanto à sua capacidade de garantir, de forma efetiva, a proteção de direitos individuais e de minorias.</p>
@@ -69,7 +94,7 @@
 <p>Na teoria de Jeremy Bentham, o conceito de justiça não se apresenta como um valor autônomo ou absoluto, mas como uma derivação do princípio da utilidade. O que é considerado justo corresponde, em última análise, àquilo que contribui para a maximização da felicidade coletiva, sendo a justiça reduzida a um critério de resultado. Nesse sentido, a relação entre moral e direito torna-se direta, pois ambos passam a ser avaliados segundo o mesmo parâmetro: a produção de prazer ou a redução da dor. O direito, portanto, não se fundamenta em princípios superiores ou direitos inerentes, mas na sua capacidade de gerar efeitos socialmente úteis. Essa perspectiva, embora apresente coerência lógica, reforça a crítica anteriormente desenvolvida, na medida em que subordina a noção de justiça a um cálculo coletivo, potencialmente incapaz de proteger de forma adequada interesses individuais ou minoritários.</p>
 <p>No que diz respeito à liberdade e à responsabilidade humana, Bentham adota uma concepção funcional, segundo a qual os indivíduos são motivados por incentivos e desincentivos estruturados pelo sistema jurídico. A liberdade não é entendida como um valor absoluto, mas como uma condição que pode ser restringida sempre que isso se mostrar útil para o conjunto da sociedade. De forma correlata, a responsabilidade decorre da previsibilidade das consequências das ações, sendo o direito responsável por organizar essas consequências de modo a orientar o comportamento humano. A organização política e jurídica resultante desse modelo tende, portanto, a assumir caráter instrumental e racionalizado, estruturando-se como um sistema voltado à maximização de resultados, no qual normas e instituições são avaliadas conforme sua eficiência e utilidade social.</p>
 <p>Por fim, as ideias de Bentham ainda contribuem para a compreensão de diversos problemas jurídicos contemporâneos, especialmente no campo do direito penal, das políticas públicas e da análise econômica do direito. A lógica utilitarista pode ser observada, por exemplo, na formulação de penas com base em critérios de prevenção e redução da criminalidade, bem como em decisões que buscam equilibrar custos e benefícios sociais. No entanto, sua aplicação também evidencia limites relevantes, sobretudo quando confrontada com a proteção de direitos fundamentais. Situações em que a restrição de direitos individuais é justificada em nome do interesse coletivo — como em políticas de segurança, vigilância estatal ou restrições a liberdades civis — demonstram a atualidade da crítica aqui desenvolvida, revelando que o utilitarismo, embora útil como ferramenta analítica, pode entrar em tensão com a ideia de direitos humanos como limites ao poder estatal.</p>
-<h2>4 CONCLUSÃO</h2>
+<h2 id="conclusao">4 CONCLUSÃO</h2>
 <p>A análise da teoria utilitarista de Jeremy Bentham evidencia a relevância de seu esforço em submeter o direito a critérios racionais e verificáveis, rompendo com fundamentos baseados na tradição, na autoridade e em construções abstratas. Ao estabelecer o princípio da utilidade como parâmetro central, Bentham contribui para a compreensão do direito como instrumento de organização social orientado por resultados, perspectiva que ainda se manifesta em diversos campos do pensamento jurídico contemporâneo. No entanto, quando essa lógica é confrontada com o modelo constitucional brasileiro, especialmente à luz da Constituição de 1988, tornam-se evidentes limitações estruturais de sua teoria.</p>
 <p>O ordenamento jurídico brasileiro, em especial por meio do art. 5º da Constituição Federal, estabelece um conjunto de direitos e garantias fundamentais que não se subordinam a critérios meramente utilitaristas. Direitos como a inviolabilidade da vida, da liberdade, da igualdade e da segurança jurídica são assegurados como limites ao exercício do poder estatal, independentemente de eventuais benefícios coletivos que poderiam decorrer de sua restrição. Nesse sentido, a lógica benthamiana, ao admitir a possibilidade de que interesses individuais sejam sacrificados em nome da maximização do bem-estar geral, entra em tensão direta com a estrutura do Estado Democrático de Direito, cuja finalidade não se limita à produção de resultados agregados, mas à preservação de direitos fundamentais como núcleo irredutível da ordem jurídica.</p>
 <p>Nesse contexto, é possível observar que a aplicação irrestrita do princípio da utilidade pode conduzir, em sua forma mais radical, a uma dinâmica próxima da oclocracia, entendida como a prevalência dos interesses da maioria de forma desordenada e potencialmente opressiva. Isso porque, ao priorizar a maximização quantitativa do bem-estar, o modelo utilitarista tende a atribuir maior peso aos interesses majoritários, abrindo espaço para a legitimação de decisões que, embora benéficas para muitos, podem implicar a supressão de direitos de minorias. Tal possibilidade revela um descompasso entre o utilitarismo e o modelo constitucional contemporâneo, que se estrutura justamente para limitar o poder das maiorias e assegurar a proteção de todos os indivíduos, independentemente de sua posição numérica.</p>
@@ -78,8 +103,10 @@
 <div class="assinatura-texto"><p>João Victor Brando Novais</p><p class="local-data">São Paulo, 2026</p></div>
 <p class="link-retorno">
   <a href="/filosofia/estado-e-poder.html">Voltar para página anterior</a>
-</p>  
-</article></section>
+</p>
+</article>
+</div>
+</section>
 </main>
 <script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
 <script src="/menu.js"></script>
