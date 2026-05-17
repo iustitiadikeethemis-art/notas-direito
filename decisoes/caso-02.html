@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segundo Caso</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<div id="header-container"></div>
+
+<main class="wrap">
+
+  <button class="botao-imprimir" onclick="window.print()">
+    🖨️ Imprimir
+  </button>
+
+  <section class="decisao">
+<div class="cabecalho">
+      <img src="/imagens/seu-simbolo-transparente.png" class="brasao" alt="Símbolo do autor">
+      <div class="orgao">
+        <p><strong>Notas de um Estudante de Direito</strong></p>
+        <p>Decisão Monocrática</p>
+      </div>
+    </div>
+
+    <h1>Decisão Monocrática nº 2 – Caso 2</h1>
+
+    <h2>Relatório</h2>
+    <p>
+      Trata-se de controvérsia acerca da reprovação de candidato com nanismo em teste de aptidão física realizado em concurso público para o cargo de Delegado de Polícia Civil.
+    </p>
+
+    <p>
+      A discussão ganhou relevância em razão da necessidade de compatibilizar a exigência de aptidão física mínima para carreiras policiais com o direito da pessoa com deficiência à adaptação razoável em concursos públicos.
+    </p>
+
+    <p>
+      No caso analisado, parte-se da segunda reprovação do candidato, ocorrida após a realização de exame físico com critérios adaptados. Assim, a controvérsia não se limita à existência do direito à adaptação razoável, mas ao alcance desse direito diante da exigência de aptidão física mínima para o exercício de função policial.
+    </p>
+
+    <p>
+      É o relatório. Decido.
+    </p>
+
+    <h2>Fundamentação</h2>
+    <p>
+      Inicialmente, reconheço que pessoas com deficiência, inclusive pessoas com nanismo, possuem direito à participação em concursos públicos em igualdade de oportunidades. Essa igualdade, contudo, não deve ser compreendida apenas em sentido formal, como se todos os candidatos devessem ser tratados exatamente da mesma maneira, mas também em sentido material, admitindo-se adaptações quando necessárias para compensar barreiras decorrentes da deficiência.
+    </p>
+
+    <p>
+      No presente caso, portanto, entendo que o candidato tinha direito à análise de sua condição específica e à aplicação de adaptação razoável no exame físico. A adaptação razoável, porém, não significa aprovação automática, tampouco dispensa integral da aptidão física mínima exigida para o cargo público pretendido.
+    </p>
+
+    <p>
+      O cargo de Delegado de Polícia Civil, embora possua forte conteúdo jurídico, decisório e administrativo, integra carreira policial. A atividade policial civil está ligada à segurança pública, à investigação criminal, ao cumprimento de diligências, ao enfrentamento de situações de risco, à atuação em plantões e à possibilidade de chamados em condições adversas. Por isso, a exigência de capacidade física mínima não se mostra, por si só, ilegítima.
+    </p>
+
+    <p>
+      Desse modo, a Administração Pública possui fundamento para exigir exame físico em concurso de carreira policial, desde que o faça de maneira razoável e compatível com as atribuições do cargo. O ponto central não é afastar completamente o teste físico, mas verificar se o candidato foi avaliado de forma compatível com sua condição pessoal e com as necessidades reais da função pública.
+    </p>
+
+    <p>
+      No caso analisado, a solução adequada não seria dispensar o candidato do exame físico, mas submetê-lo a avaliação adaptada. Tendo havido adaptação razoável nos testes aplicados, a permanência da reprovação pode ser mantida caso o candidato, mesmo diante dos critérios ajustados, não tenha alcançado o desempenho mínimo previsto.
+    </p>
+
+    <p>
+      Assim, entendo que a reprovação não decorre simplesmente da condição de pessoa com nanismo, mas do não preenchimento da aptidão física mínima exigida para o cargo após a aplicação de critérios adaptados. A deficiência do candidato deve ser considerada para fins de igualdade material, mas não pode afastar completamente requisito funcional considerado legítimo para carreira policial.
+    </p>
+
+    <p>
+      A adaptação razoável garante uma avaliação justa, mas não transforma a deficiência em causa automática de aprovação. Em carreiras policiais, a Administração deve evitar discriminação indireta, mas também pode exigir capacidade mínima compatível com a segurança do serviço público, da equipe policial, do próprio candidato e da população.
+    </p>
+
+    <h2>Dispositivo</h2>
+    <p>
+      Diante do exposto, nego provimento ao recurso, mantendo a reprovação do candidato no exame de aptidão física, sem prejuízo do reconhecimento de seu direito à adaptação razoável e à avaliação compatível com sua condição de pessoa com deficiência.
+    </p>
+
+    <div class="assinatura">
+      <p>São Paulo, 17 de maio de 2026.</p>
+      <br>
+      <p><strong>João Victor B. N.</strong></p>
+      <p>Estudante de Direito</p>
+    </div>
+
+  </section>
+</main>
+
+<script>
+fetch("/header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-container").innerHTML = data;
+    iniciarMenu();
+  });
+</script>
+
+<script src="/menu.js"></script>
+</body>
+</html>
