@@ -5,6 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contratualismo clássico | Estado e Poder</title>
 <link rel="stylesheet" href="/style.css">
+<style>
+.layout-leitura{
+  display:grid;
+  grid-template-columns:250px 1fr;
+  gap:28px;
+  align-items:start;
+}
+.controle-texto{
+  position:sticky;
+  top:92px;
+  align-self:start;
+  background:#fff;
+  border:1px solid #ded8cc;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 12px 32px rgba(0,0,0,0.045);
+}
+.controle-texto h2{
+  font-size:18px;
+  line-height:1.2;
+  margin:0 0 12px;
+}
+.controle-texto p{
+  font-size:14px;
+  line-height:1.55;
+  color:#5a544b;
+  margin:0 0 14px;
+  text-align:left;
+}
+.controle-texto a{
+  display:block;
+  text-decoration:none;
+  color:#2d2a24;
+  padding:10px 12px;
+  margin:8px 0;
+  border:1px solid #ded8cc;
+  border-radius:12px;
+  background:#faf8f3;
+  font-size:15px;
+  line-height:1.35;
+}
+.controle-texto a:hover{background:#eee7d9;}
+.conteudo-leitura{min-width:0;}
+@media(max-width:900px){
+  .layout-leitura{grid-template-columns:1fr;}
+  .controle-texto{position:static;}
+}
+@media print{.controle-texto{display:none!important;}.layout-leitura{display:block;}}
+</style>
 </head>
 <body>
 <div id="header-container"></div>
@@ -16,8 +65,20 @@
 <p class="subtitulo">Trabalho acadêmico desenvolvido na disciplina Estado e Poder.</p>
 <button class="botao-imprimir" onclick="window.print()">🖨️ Imprimir</button>
 </section>
-<section><article class="texto">
-<h2>1 INTRODUÇÃO</h2>
+<section class="layout-leitura">
+<aside class="controle-texto">
+<h2>Navegação</h2>
+<p>Use o controle para acompanhar a comparação entre os contratualistas clássicos.</p>
+<a href="#introducao">Introdução</a>
+<a href="#desenvolvimento">Desenvolvimento</a>
+<a href="#hobbes">Thomas Hobbes</a>
+<a href="#locke">John Locke</a>
+<a href="#rousseau">Jean-Jacques Rousseau</a>
+<a href="#consideracoes">Considerações finais</a>
+</aside>
+<div class="conteudo-leitura">
+<article class="texto">
+<h2 id="introducao">1 INTRODUÇÃO</h2>
 <p>Seja por razões religiosas, econômicas ou políticas, a história da humanidade é marcada por acontecimentos que exerceram profunda influência na forma de pensar e na construção da organização política e econômica dos Estados. O próprio conceito de Estado, ainda hoje, apresenta múltiplas interpretações e abordagens teóricas.</p>
 <p>Ao longo do tempo, diversos pensadores se dedicaram a compreender a constituição do Estado, sua origem e os fundamentos que explicam a submissão dos indivíduos às estruturas de poder. Dentre essas reflexões, destaca-se a teoria contratualista, que será abordada no presente trabalho.</p>
 <p>Embora não seja possível determinar com exatidão o surgimento de uma corrente de pensamento, é possível, sob uma perspectiva histórico-material, identificar um processo de desenvolvimento do contratualismo, no qual diferentes autores dialogam entre si, influenciados por seus contextos históricos, econômicos e políticos.</p>
@@ -25,9 +86,9 @@
 <p>Observa-se que acontecimentos históricos marcados por profundas transformações políticas tendem a exercer influência duradoura sobre o pensamento filosófico e jurídico. Nesse sentido, a Revolução Francesa, ocorrida aproximadamente um século após a Guerra Civil dos Três Reinos e a Revolução Gloriosa, apresenta semelhanças estruturais com esses eventos, sobretudo no que diz respeito à ruptura com modelos tradicionais de poder.</p>
 <p>É nesse contexto de intensas transformações políticas e sociais que Jean-Jacques Rousseau publica uma de suas obras mais influentes, Do Contrato Social (1762), na qual desenvolve uma teoria política centrada na soberania popular e na vontade geral.</p>
 <p>Portanto, o presente trabalho tem como objetivo analisar comparativamente as concepções de Thomas Hobbes, John Locke e Jean-Jacques Rousseau acerca do estado de natureza, do contrato social e da formação do Estado, buscando compreender suas principais diferenças, bem como suas contribuições para o pensamento político moderno e para a compreensão dos fundamentos do direito.</p>
-<h2>2 DESENVOLVIMENTO</h2>
+<h2 id="desenvolvimento">2 DESENVOLVIMENTO</h2>
 <p>Considerando as constantes mudanças nos detentores do poder durante o período em que viveram os autores do contratualismo clássico, especialmente nas relações entre monarquia e Parlamento, observa-se um cenário de instabilidade política marcado pelo descontentamento popular e por frequentes conflitos. Essas tensões resultaram em sucessivas guerras e na ausência de uma ordem social estável.</p>
-<h3>2.1 Thomas Hobbes</h3>
+<h3 id="hobbes">2.1 Thomas Hobbes</h3>
 <figure class="autor-retrato"><img src="/imagens/thomas-hobbes1.jpg" alt="Retrato de Thomas Hobbes"><figcaption>Thomas Hobbes (1588–1679)</figcaption></figure>
 <p>Nesse contexto, destaca-se Thomas Hobbes, que inaugura uma linha de pensamento posteriormente denominada contratualismo. Sua teoria pode ser compreendida como uma tentativa de oferecer uma resposta racional ao problema da desordem política, propondo um caminho para a pacificação social.</p>
 <p>Durante o século XVII, o modelo de governo predominante na Inglaterra era a monarquia, na qual o rei exercia o poder, mas dependia do apoio da nobreza, sobretudo em razão da ausência de um exército próprio e da necessidade de arrecadação de impostos. Esse arranjo político levou à crescente exigência de participação dos nobres nas decisões estatais, especialmente em matérias tributárias, contribuindo para a consolidação do Parlamento como instituição política.</p>
@@ -36,21 +97,21 @@
 <p>Dessa forma, em um estado no qual cada indivíduo possui liberdade plena, sem a existência de uma autoridade comum que limite suas ações, Hobbes entende que o resultado inevitável é o conflito generalizado. A busca pela autopreservação leva os indivíduos a uma condição de permanente insegurança, marcada pela violência e pela competição, tornando inviável a convivência social.</p>
 <p>Nesse sentido, afirma o autor que “durante o tempo em que os homens vivem sem um poder comum capaz de os manter a todos em respeito, eles se encontram naquela condição a que se chama guerra” (HOBBES, 1651). Tal cenário evidencia a necessidade de instituição de um poder soberano capaz de garantir a ordem e a segurança.</p>
 <p>Diante desse cenário, Hobbes conclui que os indivíduos, visando à preservação da própria vida, transferem seus direitos ao soberano por meio de um pacto, instituindo o Estado como forma de garantir a segurança e evitar o retorno ao estado de guerra.</p>
-<h3>2.2 John Locke</h3>
+<h3 id="locke">2.2 John Locke</h3>
 <figure class="autor-retrato"><img src="/imagens/john-locke1.jpg" alt="Retrato de John Locke"><figcaption>John Locke (1632–1704)</figcaption></figure>
 <p>John Locke, em sua obra Segundo Tratado sobre o Governo Civil, também aborda o conceito de estado de natureza, apresentando uma perspectiva distinta daquela desenvolvida por Hobbes. O tratado inicia-se com uma crítica ao pensamento de Sir Robert Filmer, que defendia a monarquia absoluta baseada no direito divino e na hereditariedade, sendo refutado por Locke por meio de argumentos que negam a origem divina do poder político.</p>
 <p>Na concepção lockeana, o estado de natureza caracteriza-se por uma condição de liberdade e igualdade entre os indivíduos, fundamentada no direito natural. Nesse estado, todos os homens são iguais em direitos e estão submetidos a uma mesma lei natural, orientada pela razão, que impõe limites à conduta humana. Como afirma o autor: “Ninguém deve lesar o outro em sua vida, sua saúde, sua liberdade ou seus bens [...]” (LOCKE, 1689).</p>
 <p>Diferentemente de Hobbes, para quem o estado de natureza conduz inevitavelmente ao conflito, Locke sustenta que essa condição não implica necessariamente um estado de guerra permanente. Ao contrário, trata-se de um estado de relativa ordem, no qual os indivíduos, guiados pela razão, são capazes de reconhecer limites morais e respeitar os direitos alheios.</p>
 <p>Contudo, apesar dessa ordem relativa, o estado de natureza apresenta fragilidades. A ausência de uma autoridade comum faz com que cada indivíduo seja responsável por julgar e punir eventuais violações da lei natural, o que pode gerar conflitos e insegurança. Diante dessa limitação, torna-se necessária a criação de um poder político organizado.</p>
 <p>Assim, o contrato social em Locke surge como um instrumento destinado à proteção dos direitos naturais, especialmente a vida, a liberdade e a propriedade. Diferentemente da proposta hobbesiana, o Estado não possui poder absoluto, devendo atuar de forma limitada e subordinada à vontade dos governados. Nesse modelo, o poder político é legítimo apenas quando exerce a função de garantir os direitos individuais, podendo ser contestado caso ultrapasse esses limites.</p>
-<h3>2.3 Jean Jacques Rousseau</h3>
+<h3 id="rousseau">2.3 Jean Jacques Rousseau</h3>
 <figure class="autor-retrato"><img src="/imagens/rousseau.png" alt="Retrato de Jean-Jacques Rousseau"><figcaption>Jean-Jacques Rousseau (1712–1778)</figcaption></figure>
 <p>Diferentemente de Hobbes e Locke, Jean-Jacques Rousseau desenvolve uma concepção própria acerca do contrato social, deslocando o foco da segurança e da propriedade para a organização coletiva da sociedade. Embora o autor não aprofunde o estado de natureza na obra Do Contrato Social, é possível compreender, a partir de seus escritos, que o homem em sua condição natural é livre e não corrompido, sendo a sociedade a responsável pela origem das desigualdades.</p>
 <p>Nesse sentido, o pensamento rousseauniano apresenta-se como uma crítica à concepção hobbesiana de conflito permanente, ao mesmo tempo em que se distancia da perspectiva lockeana ao questionar a propriedade como fundamento da organização social. Para Rousseau, a formação da sociedade civil não deve resultar na perda da liberdade, mas em sua reorganização sob novas bases.</p>
 <p>Assim, o contrato social proposto por Rousseau não consiste na simples transferência de direitos a um soberano, como em Hobbes, nem na criação de um Estado limitado voltado à proteção da propriedade, como em Locke. Ao contrário, trata-se de um pacto por meio do qual os indivíduos se unem para formar um corpo coletivo, no qual cada cidadão participa da construção da vontade comum.</p>
 <p>É nesse contexto que surge o conceito central de vontade geral, entendido como a expressão do interesse coletivo, que não se confunde com a vontade da maioria ou com interesses individuais. A vontade geral representa aquilo que é melhor para a comunidade como um todo, devendo orientar a elaboração das leis e a organização do Estado.</p>
 <p>Dessa forma, a soberania, para Rousseau, reside no povo e é inalienável, ou seja, não pode ser transferida a um governante. O poder político legítimo é aquele que expressa a vontade geral, sendo a lei a sua principal manifestação. Nesse modelo, o Estado assume uma configuração democrática, na qual os cidadãos participam ativamente da vida política, garantindo que o poder permaneça vinculado ao interesse coletivo.</p>
-<h2>3 CONSIDERAÇÕES FINAIS</h2>
+<h2 id="consideracoes">3 CONSIDERAÇÕES FINAIS</h2>
 <p>À luz da contemporaneidade, e considerando o contexto histórico e político brasileiro — marcado pela superação do regime monárquico e pela consolidação de um Estado democrático de direito —, a concepção hobbesiana de um poder soberano absoluto mostra-se de difícil compatibilização com os valores atuais. Não propriamente em relação à descrição do estado de natureza, mas sobretudo quanto à centralização do poder na figura de um soberano dotado de amplas prerrogativas, inclusive no uso da força.</p>
 <p>Ainda assim, é inegável que o pensamento de Thomas Hobbes exerceu significativa influência na formação das teorias políticas modernas, sendo compreensível à luz do contexto de instabilidade em que foi desenvolvido. Contudo, com a evolução do pensamento jurídico e político, especialmente a partir de autores posteriores, como John Locke, Jean-Jacques Rousseau e, mais recentemente, John Rawls, observa-se uma progressiva limitação do poder estatal e maior valorização dos direitos individuais e da participação popular.</p>
 <p>As teorias de John Locke e Jean-Jacques Rousseau apresentam maior compatibilidade com os modelos políticos contemporâneos, sendo frequentemente mobilizadas por diferentes correntes ideológicas. Nesse sentido, é amplamente reconhecida a influência do pensamento lockeano na formação do constitucionalismo moderno, especialmente na estrutura política dos Estados Unidos, cuja organização institucional foi fortemente marcada pela valorização dos direitos naturais.</p>
@@ -67,7 +128,9 @@
 <p class="link-retorno">
   <a href="/filosofia/estado-e-poder.html">Voltar para página anterior</a>
 </p>  
-</article></section>
+</article>
+</div>
+</section>
 </main>
 <script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
 <script src="/menu.js"></script>
