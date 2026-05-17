@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decisões Monocráticas</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<div id="header-container"></div>
+
+<main class="wrap">
+
+  <section class="decisao">
+<div class="cabecalho">
+      <img src="/imagens/seu-simbolo-transparente.png" class="brasao" alt="Símbolo do autor">
+      <div class="orgao">
+        <p><strong>Notas de um Estudante de Direito</strong></p>
+        <p>Decisões Monocráticas</p>
+      </div>
+    </div>
+
+    <h1>Decisões Monocráticas</h1>
+
+    <h2>Apresentação</h2>
+    <p>
+      Esta seção reúne exercícios de análise jurídica elaborados durante minha formação acadêmica. As decisões aqui publicadas não pretendem representar posicionamentos definitivos, mas registros de estudo, reflexão e amadurecimento progressivo do raciocínio jurídico.
+    </p>
+
+    <p>
+      Cada caso parte de uma controvérsia concreta ou hipotética, organizada em relatório, fundamentação e dispositivo, com o objetivo de exercitar a identificação do problema jurídico, a ponderação dos argumentos e a construção de uma conclusão fundamentada.
+    </p>
+
+    <h2>Casos disponíveis</h2>
+    <p>
+      <a href="/decisoes/caso-01.html">Decisão Monocrática nº 1 – Caso 1</a><br>
+      Legitimidade da Deputada Federal Erika Hilton para presidir a Comissão de Defesa dos Direitos da Mulher na Câmara dos Deputados.
+    </p>
+
+    <p>
+      <a href="/decisoes/caso-02.html">Decisão Monocrática nº 2 – Caso 2</a><br>
+      Reprovação de candidato com nanismo em teste de aptidão física adaptado para carreira policial.
+    </p>
+
+    <div class="assinatura">
+      <p><strong>João Victor B. N.</strong></p>
+      <p>Estudante de Direito</p>
+    </div>
+
+  </section>
+</main>
+
+<script>
+fetch("/header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-container").innerHTML = data;
+    iniciarMenu();
+  });
+</script>
+
+<script src="/menu.js"></script>
+</body>
+</html>
