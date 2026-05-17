@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livros Lidos</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+.catalogo-estado{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:34px;}
+.card-estado{display:flex;flex-direction:column;justify-content:space-between;min-height:285px;padding:26px;border:1px solid #ded8cc;border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,0.045);text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease;}
+.card-estado:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,0.075);}
+.card-estado .tag{display:inline-block;width:max-content;margin-bottom:14px;padding:5px 10px;border-radius:999px;background:#f3efe6;color:#4c463c;font-size:13px;}
+.card-estado h3{font-size:23px;line-height:1.2;margin:0 0 12px;}
+.card-estado p{font-size:16px;color:#4d4942;margin:0 0 18px;}
+.card-estado .ler{font-weight:600;color:#2d2a24;}
+.nota-secao{margin-top:22px;font-size:17px;color:#4d4942;}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+<section class="hero">
+<div class="logo-trabalho"><img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor"></div>
+<p class="categoria">Arquivo de leitura</p>
+<h1 class="titulo-principal">Livros Lidos</h1>
+<p class="subtitulo">Fichamentos e relatórios de leitura em padrão fixo de quatro páginas, voltados à organização da formação intelectual e jurídica.</p>
+</section>
+<section>
+<article class="texto">
+<h2>Apresentação</h2>
+<p class="nota-secao">Esta seção reúne registros de leitura elaborados ao longo da minha formação acadêmica e intelectual. Os textos não pretendem substituir as obras lidas nem apresentar crítica definitiva, mas organizar impressões, conceitos, argumentos e relações úteis ao estudo do Direito, da filosofia, da política e da cultura geral.</p>
+<p class="nota-secao">O padrão adotado será de quatro páginas por livro, independentemente da extensão da obra. A finalidade é exercitar síntese, disciplina intelectual e seleção do que é realmente relevante para consulta futura.</p>
+<h2>Modelo de fichamento</h2>
+<div class="catalogo-estado">
+<a class="card-estado" href="/livros/modelo-fichamento.html">
+<div><span class="tag">Padrão fixo</span><h3>Modelo de fichamento em quatro páginas</h3><p>Estrutura-base para todos os livros lidos: identificação, relatório da obra, ideias centrais, conceitos, crítica pessoal e relação com a formação jurídica.</p></div><span class="ler">Ver modelo →</span>
+</a>
+</div>
+<h2>Livros fichados</h2>
+<p class="nota-secao">Os fichamentos serão adicionados progressivamente nesta seção, conforme as leituras forem concluídas e organizadas.</p>
+<div class="assinatura-texto"><p>João Victor Brando Novais</p><p class="local-data">São Paulo, 2026</p></div>
+</article>
+</section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
