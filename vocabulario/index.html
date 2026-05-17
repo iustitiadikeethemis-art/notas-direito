@@ -18,6 +18,48 @@
 .vocab-hero .categoria{margin-bottom:10px;}
 .vocab-hero h1{font-size:42px;line-height:1.15;margin:0 0 14px;}
 .vocab-hero p{max-width:760px;font-size:18px;color:#4d4942;margin:0;}
+.busca-vocabulario{
+  max-width:980px;
+  margin:0 auto 26px;
+  padding:22px 24px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 10px 28px rgba(0,0,0,0.035);
+}
+.busca-vocabulario label{
+  display:block;
+  font-size:15px;
+  color:#5d554c;
+  margin-bottom:8px;
+}
+.busca-vocabulario input{
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid #d8d1c4;
+  border-radius:999px;
+  padding:14px 18px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  color:#1f1f1f;
+  background:#faf8f3;
+  outline:none;
+}
+.busca-vocabulario input:focus{
+  border-color:#6b6257;
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(107,98,87,0.10);
+}
+.resultado-busca{
+  display:none;
+  max-width:980px;
+  margin:0 auto 26px;
+  padding:16px 20px;
+  border-left:4px solid #333;
+  border-radius:12px;
+  background:#fff;
+  color:#4d4942;
+}
 .vocab-layout{
   display:grid;
   grid-template-columns:260px 1fr;
@@ -97,7 +139,7 @@
   .vocab-hero h1{font-size:34px;}
 }
 @media print{
-  .vocab-sidebar,#header-container{display:none!important;}
+  .vocab-sidebar,#header-container,.busca-vocabulario,.resultado-busca{display:none!important;}
   .vocab-layout{display:block;}
   .vocab-hero,.letra-bloco{box-shadow:none;border:1px solid #000;}
 }
@@ -116,12 +158,21 @@
   <p>Esta página funcionará como instrumento de consulta rápida. Cada verbete poderá ser ampliado com o tempo, especialmente quando aparecer em textos de Direitos Humanos, Filosofia do Direito, Estado e Poder, Decisões Monocráticas ou Livros Lidos.</p>
 </div>
 
+<div class="busca-vocabulario">
+  <label for="campo-busca-vocabulario">Pesquisar no vocabulário</label>
+  <input id="campo-busca-vocabulario" type="search" placeholder="Digite um termo, área ou expressão em latim..." autocomplete="off">
+</div>
+
+<div id="resultado-busca" class="resultado-busca">
+  Nenhum verbete encontrado para a busca realizada.
+</div>
+
 <section class="vocab-layout">
 <aside class="vocab-sidebar">
 <h2>Índice alfabético</h2>
 <p>Use as letras para navegar pelos grupos de verbetes. Novos termos serão inseridos progressivamente conforme os estudos avançarem.</p>
 <div class="atalhos-az">
-<a href="#A">A</a><a href="#C">C</a><a href="#D">D</a><a href="#H">H</a><a href="#I">I</a><a href="#J">J</a><a href="#R">R</a>
+<a href="#A">A</a><a href="#C">C</a><a href="#D">D</a><a href="#H">H</a><a href="#I">I</a><a href="#J">J</a><a href="#N">N</a><a href="#R">R</a>
 </div>
 <div class="latim-box">
 <h3>Estudo de Latim</h3>
@@ -204,6 +255,17 @@
 </div>
 </div>
 
+<div class="letra-bloco" id="N">
+<h2>N</h2>
+<div class="verbete">
+<h3>Nemo tenetur se detegere</h3>
+<p class="origem">Expressão latina: ninguém é obrigado a se revelar, expor-se ou produzir prova contra si mesmo.</p>
+<p>Princípio relacionado ao direito ao silêncio e à vedação da autoincriminação. Em termos simples, significa que uma pessoa investigada ou acusada não pode ser obrigada pelo Estado a colaborar ativamente para a própria condenação.</p>
+<p>Esse princípio não impede toda atividade investigativa estatal, mas limita métodos de coerção que transformem o próprio acusado em instrumento compulsório de prova contra si.</p>
+<div class="etiquetas"><span>Latim jurídico</span><span>Processo Penal</span><span>Direito ao silêncio</span></div>
+</div>
+</div>
+
 <div class="letra-bloco" id="R">
 <h2>R</h2>
 <div class="verbete">
@@ -229,7 +291,40 @@
 </div>
 </section>
 </main>
-<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script>
+fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});
+
+function normalizarTexto(texto){
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+const campoBusca = document.getElementById("campo-busca-vocabulario");
+const avisoResultado = document.getElementById("resultado-busca");
+const verbetes = Array.from(document.querySelectorAll(".verbete"));
+const blocosLetras = Array.from(document.querySelectorAll(".letra-bloco"));
+
+campoBusca.addEventListener("input", () => {
+  const termo = normalizarTexto(campoBusca.value.trim());
+  let encontrados = 0;
+
+  verbetes.forEach(verbete => {
+    const conteudo = normalizarTexto(verbete.textContent);
+    const corresponde = termo === "" || conteudo.includes(termo);
+    verbete.style.display = corresponde ? "block" : "none";
+    if(corresponde) encontrados++;
+  });
+
+  blocosLetras.forEach(bloco => {
+    const possuiVerbeteVisivel = Array.from(bloco.querySelectorAll(".verbete")).some(verbete => verbete.style.display !== "none");
+    bloco.style.display = possuiVerbeteVisivel ? "block" : "none";
+  });
+
+  avisoResultado.style.display = termo !== "" && encontrados === 0 ? "block" : "none";
+});
+</script>
 <script src="/menu.js"></script>
 </body>
 </html>
