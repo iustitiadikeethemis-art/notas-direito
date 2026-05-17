@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estudo de Latim</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+.latim-hero{
+  margin:56px auto 34px;
+  max-width:980px;
+  padding:42px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:#1f1f1f;
+  color:#fff;
+  box-shadow:0 18px 50px rgba(0,0,0,0.08);
+}
+.latim-hero .categoria{color:#d8cfbd;}
+.latim-hero h1{font-size:42px;line-height:1.15;margin:0 0 14px;}
+.latim-hero p{max-width:760px;font-size:18px;color:#e7e0d5;margin:0;}
+.latim-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:980px;margin:0 auto 70px;}
+.latim-card{padding:26px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,0.04);}
+.latim-card h2{font-size:23px;margin:0 0 12px;}
+.latim-card p{font-size:16px;color:#4d4942;line-height:1.7;margin:0;}
+.latim-nota{max-width:980px;margin:0 auto 28px;padding:20px 24px;border-left:4px solid #333;background:#fff;border-radius:12px;color:#4d4942;}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+<section class="latim-hero">
+<p class="categoria">Formação linguística</p>
+<h1>Estudo de Latim</h1>
+<p>Área destinada ao estudo gradual do latim, especialmente vocabulário, pronúncia, estrutura básica da língua e expressões úteis à formação jurídica.</p>
+</section>
+<div class="latim-nota">
+<p>Esta seção não será prioridade imediata, mas servirá como registro progressivo de estudo. O objetivo é desenvolver familiaridade com a língua latina sem perder de vista sua utilidade para a compreensão histórica, filosófica e jurídica.</p>
+</div>
+<section class="latim-grid">
+<div class="latim-card">
+<h2>1. Pronúncia e leitura</h2>
+<p>Registro das formas de pronúncia, leitura de palavras simples e comparação entre pronúncia clássica, eclesiástica e usos tradicionais no Direito.</p>
+</div>
+<div class="latim-card">
+<h2>2. Vocabulário essencial</h2>
+<p>Palavras básicas para formação de repertório: lex, ius, iustitia, corpus, civitas, res publica, homo, ratio, poena e outras expressões recorrentes.</p>
+</div>
+<div class="latim-card">
+<h2>3. Gramática inicial</h2>
+<p>Introdução gradual a substantivos, casos, declinações, verbos e estrutura da frase latina, sempre com exemplos simples.</p>
+</div>
+<div class="latim-card">
+<h2>4. Latim jurídico</h2>
+<p>Estudo de expressões como habeas corpus, in dubio pro reo, pacta sunt servanda, nulla poena sine lege, fumus boni iuris e periculum in mora.</p>
+</div>
+<div class="latim-card">
+<h2>5. Frases de leitura</h2>
+<p>Pequenas frases latinas acompanhadas de tradução literal, tradução técnica e comentário sobre o sentido jurídico ou filosófico.</p>
+</div>
+<div class="latim-card">
+<h2>6. Caderno progressivo</h2>
+<p>Espaço para registrar avanços, dúvidas, termos novos e conexões entre o latim, o Direito Romano, a filosofia e a linguagem jurídica contemporânea.</p>
+</div>
+</section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
