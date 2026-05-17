@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelo de Fichamento</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+<section class="hero">
+<div class="logo-trabalho"><img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor"></div>
+<p class="categoria">Livros Lidos</p>
+<h1 class="titulo-principal">Modelo de fichamento em quatro páginas</h1>
+<p class="subtitulo">Estrutura-base para relatórios de leitura, fichamentos críticos e registros de formação intelectual.</p>
+<button class="botao-imprimir" onclick="window.print()">🖨️ Imprimir</button>
+</section>
+<section>
+<article class="texto">
+<h2>Página 1 — Identificação da obra e motivo da leitura</h2>
+<p><strong>Identificação da obra.</strong> Autor, título, ano de publicação original, edição utilizada, editora, área principal da obra e tipo de leitura realizada: integral, parcial ou seletiva.</p>
+<p><strong>Motivo da leitura.</strong> Registro breve sobre a razão da escolha do livro: disciplina acadêmica, interesse pessoal, trabalho em andamento, formação jurídica, filosofia, política, literatura ou cultura geral.</p>
+<p><strong>Contexto mínimo.</strong> Apresentação do autor e da obra apenas na medida necessária para compreender sua importância. A finalidade não é fazer biografia longa, mas situar o leitor.</p>
+<p><strong>Pergunta orientadora.</strong> Formulação de uma pergunta simples para guiar o fichamento. Exemplo: qual problema esta obra procura enfrentar?</p>
+<h2>Página 2 — Relatório da obra</h2>
+<p><strong>Resumo estrutural.</strong> Apresentação da organização da obra. Aqui se explica como o livro começa, como desenvolve seus argumentos e para onde caminha.</p>
+<p><strong>Tese central.</strong> Identificação da ideia principal defendida pelo autor. A pergunta básica é: o que o autor quer demonstrar?</p>
+<p><strong>Desenvolvimento dos argumentos.</strong> Registro dos principais passos argumentativos da obra, evitando copiar capítulos inteiros. O objetivo é compreender a engrenagem do pensamento do autor.</p>
+<p><strong>Resultado da leitura.</strong> Indicação do que se compreendeu ao final da obra ou da parte lida.</p>
+<h2>Página 3 — Ideias centrais, conceitos e trechos relevantes</h2>
+<p><strong>Ideias centrais.</strong> Seleção de três a cinco ideias fundamentais da obra. Cada ideia deve ser explicada com suas próprias palavras.</p>
+<p><strong>Conceitos importantes.</strong> Registro dos principais conceitos utilizados pelo autor, com explicação curta. Exemplos: justiça, soberania, utilidade, liberdade, Estado, direito natural, norma, interpretação.</p>
+<p><strong>Trechos relevantes.</strong> Seleção de citações curtas, com indicação de página quando possível. Cada citação deve ser acompanhada de comentário explicando sua importância.</p>
+<p><strong>Vocabulário técnico.</strong> Registro de palavras difíceis, expressões estrangeiras ou termos técnicos que mereçam retorno posterior.</p>
+<h2>Página 4 — Comentário crítico e relação com a formação jurídica</h2>
+<p><strong>Comentário crítico pessoal.</strong> Registro da impressão do leitor: o que convenceu, o que pareceu insuficiente, quais dúvidas permaneceram e quais pontos merecem estudo posterior.</p>
+<p><strong>Relação com o Direito.</strong> Explicação de como a obra contribui para pensar o Direito, a justiça, a política, o Estado, a moral, a decisão jurídica ou a vida social.</p>
+<p><strong>Relações com outras leituras.</strong> Indicação de autores, obras ou temas que dialogam com o livro. Essa parte ajuda a construir repertório progressivo.</p>
+<p><strong>Conclusão provisória.</strong> Fechamento honesto e sintético: o que a leitura acrescentou, qual sua importância e se a obra deve ser retomada no futuro.</p>
+<h2>Síntese do padrão</h2>
+<p>O fichamento deve responder a três perguntas fundamentais: sobre o que é o livro, qual é a tese ou contribuição principal do autor e o que essa leitura acrescenta à minha formação intelectual e jurídica.</p>
+<div class="assinatura-texto"><p>João Victor Brando Novais</p><p class="local-data">São Paulo, 2026</p></div>
+</article>
+</section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
