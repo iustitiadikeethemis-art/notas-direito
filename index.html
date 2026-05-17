@@ -153,6 +153,82 @@ section{
   margin:0;
 }
 
+.pesquisa-home{
+  max-width:720px;
+  margin:32px 0 0;
+  padding:22px 24px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 10px 28px rgba(0,0,0,0.035);
+}
+
+.pesquisa-home label{
+  display:block;
+  margin-bottom:8px;
+  font-size:15px;
+  color:#5d554c;
+}
+
+.pesquisa-home input{
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid #d8d1c4;
+  border-radius:999px;
+  padding:14px 18px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  color:#1f1f1f;
+  background:#faf8f3;
+  outline:none;
+}
+
+.pesquisa-home input:focus{
+  border-color:#6b6257;
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(107,98,87,0.10);
+}
+
+.resultados-home{
+  display:none;
+  margin-top:16px;
+  border-top:1px solid var(--line);
+  padding-top:14px;
+}
+
+.resultado-item{
+  display:block;
+  padding:14px 0;
+  border-bottom:1px solid #eee9df;
+  text-decoration:none;
+  color:inherit;
+}
+
+.resultado-item:last-child{
+  border-bottom:none;
+}
+
+.resultado-item strong{
+  display:block;
+  font-size:18px;
+  line-height:1.3;
+}
+
+.resultado-item span{
+  display:block;
+  margin-top:4px;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+.resultado-vazio{
+  display:none;
+  margin-top:14px;
+  color:var(--muted);
+  font-size:15px;
+}
+
 .menu-links.active ~ main .simbolo-home-inline,
 body:has(.menu-links.active) .simbolo-home-inline{
   visibility:hidden;
@@ -226,6 +302,10 @@ body:has(.menu-links.active) .simbolo-home-inline{
     font-size:15px;
     padding:14px 16px;
   }
+
+  .pesquisa-home{
+    padding:18px;
+  }
 }
 </style>
 </head>
@@ -244,6 +324,13 @@ body:has(.menu-links.active) .simbolo-home-inline{
 
   <div class="mensagem-proposito">
     <p>Este site reúne estudos, textos, registros formativos e experiências acadêmicas ligadas à minha formação jurídica.</p>
+  </div>
+
+  <div class="pesquisa-home">
+    <label for="campo-busca-home">Pesquisar no site</label>
+    <input id="campo-busca-home" type="search" placeholder="Digite um tema, texto, conceito ou seção..." autocomplete="off">
+    <div id="resultados-home" class="resultados-home"></div>
+    <div id="resultado-vazio-home" class="resultado-vazio">Nenhum resultado encontrado para a busca realizada.</div>
   </div>
 
   <div class="contato-home">
@@ -286,6 +373,66 @@ body:has(.menu-links.active) .simbolo-home-inline{
     .catch(error => {
       console.error(error);
     });
+
+  function normalizarTexto(texto){
+    return texto
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  }
+
+  const indiceBusca = [
+    {titulo:"Filosofia do Direito", url:"/filosofia/", descricao:"Eixo com textos sobre justiça, direito, razão, moralidade e pensamento jurídico.", termos:"filosofia direito justiça themis dike iustitia rapsódia"},
+    {titulo:"A Ordem do Céu, a Justiça dos Homens e o Silêncio dos Deuses", url:"/filosofia/primeiro-texto.html", descricao:"Texto filosófico sobre Themis, Dike e Iustitia.", termos:"primeiro texto ordem céu justiça homens silêncio deuses themis dike iustitia"},
+    {titulo:"Uma rapsódia sobre o direito", url:"/filosofia/uma-rapsodia-sobre-o-direito.html", descricao:"Percurso histórico e filosófico sobre direito e justiça.", termos:"rapsódia direito justiça rawls sandel kelsen hart streck jusnaturalismo"},
+    {titulo:"Estado e Poder", url:"/filosofia/estado-e-poder.html", descricao:"Textos sobre Estado, legitimidade, soberania, contratualismo e separação dos poderes.", termos:"estado poder hobbes locke rousseau bentham montesquieu legalidade legitimidade"},
+    {titulo:"Direitos Humanos e Aplicações Práticas", url:"/direitos-humanos/", descricao:"Roteiro de textos sobre direitos fundamentais, garantias, execução penal e responsabilização internacional.", termos:"direitos humanos artigo 5 remédios constitucionais anpp lei 9099 hediondos progressão regime"},
+    {titulo:"Vocabulário Jurídico e Latim", url:"/vocabulario/", descricao:"Glossário de conceitos jurídicos, expressões latinas e etimologias.", termos:"vocabulário glossário latim habeas corpus nemo tenetur jurisdição contraditório remição reincidência"},
+    {titulo:"Estudo de Latim", url:"/latim/", descricao:"Área de estudo gradual de latim, pronúncia, vocabulário e expressões jurídicas.", termos:"latim lex ius iustitia corpus civitas res publica pronúncia gramática"},
+    {titulo:"Decisões Monocráticas", url:"/decisoes/", descricao:"Arquivo de exercícios de análise jurídica em formato de decisão.", termos:"decisões monocráticas caso decisão fundamentação relatório dispositivo"},
+    {titulo:"Decisão Monocrática nº 1", url:"/decisoes/caso-01.html", descricao:"Legitimidade de Erika Hilton para presidir a Comissão de Defesa dos Direitos da Mulher.", termos:"erika hilton comissão mulher legitimidade deputada"},
+    {titulo:"Decisão Monocrática nº 2", url:"/decisoes/caso-02.html", descricao:"Reprovação de candidato com nanismo em teste físico adaptado para carreira policial.", termos:"nanismo delegado polícia civil teste físico adaptação razoável"},
+    {titulo:"Livros Lidos", url:"/livros/", descricao:"Fichamentos e relatórios de leitura em padrão fixo de quatro páginas.", termos:"livros lidos fichamento relatório leitura quatro páginas"},
+    {titulo:"Modelo de fichamento em quatro páginas", url:"/livros/modelo-fichamento.html", descricao:"Estrutura-base para fichamentos e relatórios de leitura.", termos:"modelo fichamento identificação relatório ideias centrais conceitos comentário crítico"},
+    {titulo:"Portfólio", url:"/portfolio/", descricao:"Área de organização de produções, estudos e materiais do autor.", termos:"portfolio portfólio produção trabalhos"}
+  ];
+
+  const campoBuscaHome = document.getElementById("campo-busca-home");
+  const resultadosHome = document.getElementById("resultados-home");
+  const resultadoVazioHome = document.getElementById("resultado-vazio-home");
+
+  campoBuscaHome.addEventListener("input", () => {
+    const termo = normalizarTexto(campoBuscaHome.value.trim());
+    resultadosHome.innerHTML = "";
+
+    if(termo === ""){
+      resultadosHome.style.display = "none";
+      resultadoVazioHome.style.display = "none";
+      return;
+    }
+
+    const encontrados = indiceBusca.filter(item => {
+      const conteudo = normalizarTexto(`${item.titulo} ${item.descricao} ${item.termos}`);
+      return conteudo.includes(termo);
+    }).slice(0, 6);
+
+    if(encontrados.length === 0){
+      resultadosHome.style.display = "none";
+      resultadoVazioHome.style.display = "block";
+      return;
+    }
+
+    encontrados.forEach(item => {
+      const link = document.createElement("a");
+      link.href = item.url;
+      link.className = "resultado-item";
+      link.innerHTML = `<strong>${item.titulo}</strong><span>${item.descricao}</span>`;
+      resultadosHome.appendChild(link);
+    });
+
+    resultadosHome.style.display = "block";
+    resultadoVazioHome.style.display = "none";
+  });
 </script>
 <script src="/menu.js"></script>
 </body>
