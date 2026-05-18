@@ -356,6 +356,35 @@ section{
   line-height:1.6;
 }
 
+/* ===== CONTROLES LATERAIS EM TEXTOS LONGOS ===== */
+.controle-texto{
+  max-height:calc(100vh - 120px);
+  overflow-y:auto;
+  scrollbar-width:thin;
+  scrollbar-color:#c8bfae #f3efe6;
+}
+
+.controle-texto::-webkit-scrollbar{
+  width:8px;
+}
+
+.controle-texto::-webkit-scrollbar-track{
+  background:#f3efe6;
+  border-radius:999px;
+}
+
+.controle-texto::-webkit-scrollbar-thumb{
+  background:#c8bfae;
+  border-radius:999px;
+}
+
+@media(max-width:900px){
+  .controle-texto{
+    max-height:none;
+    overflow-y:visible;
+  }
+}
+
 /* ===== DECISÃO MONOCRÁTICA ===== */
 
 .decisao{
