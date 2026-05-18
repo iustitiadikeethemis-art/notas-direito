@@ -12,26 +12,12 @@ function aplicarAjustesDeNavegacaoLateral() {
       scrollbar-color:#7d6b64 #241d1c;
     }
 
-    .dh-nav::-webkit-scrollbar{
-      width:8px;
-    }
-
-    .dh-nav::-webkit-scrollbar-track{
-      background:#241d1c;
-      border-radius:999px;
-    }
-
-    .dh-nav::-webkit-scrollbar-thumb{
-      background:#7d6b64;
-      border-radius:999px;
-    }
+    .dh-nav::-webkit-scrollbar{width:8px;}
+    .dh-nav::-webkit-scrollbar-track{background:#241d1c;border-radius:999px;}
+    .dh-nav::-webkit-scrollbar-thumb{background:#7d6b64;border-radius:999px;}
 
     @media(max-width:900px){
-      .dh-nav{
-        max-height:none !important;
-        overflow-y:visible !important;
-        padding-right:18px !important;
-      }
+      .dh-nav{max-height:none !important;overflow-y:visible !important;padding-right:18px !important;}
     }
   `;
 
@@ -72,6 +58,21 @@ function inserirImagemMagnaCarta() {
   `);
 }
 
+function inserirImagemSeteBispos() {
+  if (!paginaHistoriaDireitosHumanos()) return;
+  if (document.querySelector(".dh-imagem-sete-bispos")) return;
+
+  const titulo = document.getElementById("habeas-corpus-act-e-bill-of-rights-consolidacao-inglesa-das-garantias");
+  if (!titulo) return;
+
+  titulo.insertAdjacentHTML("beforebegin", `
+    <figure class="dh-imagem-secao dh-imagem-sete-bispos">
+      <img src="/imagens/dh-sete-bispos-1688.jpg" alt="Representação histórica dos Sete Bispos no contexto da crise política inglesa de 1688.">
+      <figcaption>Representação histórica dos Sete Bispos no contexto da crise política inglesa de 1688. A cena simboliza a tensão entre autoridade da Coroa, liberdade de petição e consolidação de garantias jurídicas.</figcaption>
+    </figure>
+  `);
+}
+
 function aplicarEstiloImagensDireitosHumanos() {
   if (document.getElementById("estilo-imagens-direitos-humanos")) return;
 
@@ -79,71 +80,27 @@ function aplicarEstiloImagensDireitosHumanos() {
   estilo.id = "estilo-imagens-direitos-humanos";
   estilo.textContent = `
     .dh-capa-imagem{
-      margin:34px 0 42px;
-      padding:0;
-      border-radius:20px;
-      overflow:hidden;
-      background:#161313;
-      border:1px solid #2f2424;
-      box-shadow:0 16px 38px rgba(0,0,0,.14);
+      margin:34px 0 42px;padding:0;border-radius:20px;overflow:hidden;background:#161313;border:1px solid #2f2424;box-shadow:0 16px 38px rgba(0,0,0,.14);
     }
 
-    .dh-capa-imagem img{
-      display:block;
-      width:100%;
-      height:auto;
-      filter:grayscale(100%);
-    }
+    .dh-capa-imagem img{display:block;width:100%;height:auto;filter:grayscale(100%);}
 
     .dh-capa-imagem figcaption,
     .dh-imagem-secao figcaption{
-      margin:0;
-      padding:16px 20px 18px;
-      background:#1e1918;
-      color:#eadfd4;
-      font-size:14.5px;
-      line-height:1.65;
-      text-align:left;
-      border-top:1px solid rgba(255,255,255,.10);
+      margin:0;padding:16px 20px 18px;background:#1e1918;color:#eadfd4;font-size:14.5px;line-height:1.65;text-align:left;border-top:1px solid rgba(255,255,255,.10);
     }
 
     .dh-imagem-secao{
-      margin:48px auto 42px;
-      padding:0;
-      border-radius:20px;
-      overflow:hidden;
-      background:#161313;
-      border:1px solid #2f2424;
-      box-shadow:0 14px 34px rgba(0,0,0,.12);
+      margin:48px auto 42px;padding:0;border-radius:20px;overflow:hidden;background:#161313;border:1px solid #2f2424;box-shadow:0 14px 34px rgba(0,0,0,.12);
     }
 
-    .dh-imagem-secao img{
-      display:block;
-      width:100%;
-      height:auto;
-      filter:grayscale(100%);
-    }
-
-    .dh-imagem-vertical{
-      max-width:560px;
-    }
+    .dh-imagem-secao img{display:block;width:100%;height:auto;filter:grayscale(100%);}
+    .dh-imagem-vertical{max-width:560px;}
 
     @media(max-width:900px){
-      .dh-capa-imagem,
-      .dh-imagem-secao{
-        margin:28px 0 34px;
-        border-radius:16px;
-      }
-
-      .dh-capa-imagem figcaption,
-      .dh-imagem-secao figcaption{
-        font-size:13.5px;
-        padding:14px 16px 16px;
-      }
-
-      .dh-imagem-vertical{
-        max-width:100%;
-      }
+      .dh-capa-imagem,.dh-imagem-secao{margin:28px 0 34px;border-radius:16px;}
+      .dh-capa-imagem figcaption,.dh-imagem-secao figcaption{font-size:13.5px;padding:14px 16px 16px;}
+      .dh-imagem-vertical{max-width:100%;}
     }
   `;
 
@@ -154,6 +111,7 @@ aplicarAjustesDeNavegacaoLateral();
 aplicarEstiloImagensDireitosHumanos();
 inserirImagemCapaDireitosHumanos();
 inserirImagemMagnaCarta();
+inserirImagemSeteBispos();
 
 function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
