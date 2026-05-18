@@ -38,9 +38,12 @@ function aplicarAjustesDeNavegacaoLateral() {
   document.head.appendChild(estilo);
 }
 
+function paginaHistoriaDireitosHumanos() {
+  return location.pathname === "/direitos-humanos/historia-conceito-direitos-humanos.html" || location.pathname === "/direitos-humanos/historia-conceito-direitos-humanos";
+}
+
 function inserirImagemCapaDireitosHumanos() {
-  const paginaDireitosHumanos = location.pathname === "/direitos-humanos/historia-conceito-direitos-humanos.html" || location.pathname === "/direitos-humanos/historia-conceito-direitos-humanos";
-  if (!paginaDireitosHumanos) return;
+  if (!paginaHistoriaDireitosHumanos()) return;
   if (document.querySelector(".dh-capa-imagem")) return;
 
   const slot = document.querySelector(".dh-artigo .dh-image-slot");
@@ -54,11 +57,26 @@ function inserirImagemCapaDireitosHumanos() {
   `;
 }
 
-function aplicarEstiloImagemCapaDireitosHumanos() {
-  if (document.getElementById("estilo-capa-direitos-humanos")) return;
+function inserirImagemMagnaCarta() {
+  if (!paginaHistoriaDireitosHumanos()) return;
+  if (document.querySelector(".dh-imagem-magna-carta")) return;
+
+  const tituloMagnaCarta = document.getElementById("magna-carta-de-1215-limitacao-juridica-do-poder-real");
+  if (!tituloMagnaCarta) return;
+
+  tituloMagnaCarta.insertAdjacentHTML("beforebegin", `
+    <figure class="dh-imagem-secao dh-imagem-magna-carta dh-imagem-vertical">
+      <img src="/imagens/dh-magna-carta-runnymede.png" alt="Representação histórica de João Sem Terra diante dos barões em Runnymede, no contexto da Magna Carta de 1215.">
+      <figcaption>Representação histórica de João Sem Terra diante dos barões em Runnymede, no contexto da Magna Carta de 1215. A cena simboliza a contenção das arbitrariedades da Coroa e a afirmação de que o poder régio deveria submeter-se à lei.</figcaption>
+    </figure>
+  `);
+}
+
+function aplicarEstiloImagensDireitosHumanos() {
+  if (document.getElementById("estilo-imagens-direitos-humanos")) return;
 
   const estilo = document.createElement("style");
-  estilo.id = "estilo-capa-direitos-humanos";
+  estilo.id = "estilo-imagens-direitos-humanos";
   estilo.textContent = `
     .dh-capa-imagem{
       margin:34px 0 42px;
@@ -77,7 +95,8 @@ function aplicarEstiloImagemCapaDireitosHumanos() {
       filter:grayscale(100%);
     }
 
-    .dh-capa-imagem figcaption{
+    .dh-capa-imagem figcaption,
+    .dh-imagem-secao figcaption{
       margin:0;
       padding:16px 20px 18px;
       background:#1e1918;
@@ -88,15 +107,42 @@ function aplicarEstiloImagemCapaDireitosHumanos() {
       border-top:1px solid rgba(255,255,255,.10);
     }
 
+    .dh-imagem-secao{
+      margin:48px auto 42px;
+      padding:0;
+      border-radius:20px;
+      overflow:hidden;
+      background:#161313;
+      border:1px solid #2f2424;
+      box-shadow:0 14px 34px rgba(0,0,0,.12);
+    }
+
+    .dh-imagem-secao img{
+      display:block;
+      width:100%;
+      height:auto;
+      filter:grayscale(100%);
+    }
+
+    .dh-imagem-vertical{
+      max-width:560px;
+    }
+
     @media(max-width:900px){
-      .dh-capa-imagem{
+      .dh-capa-imagem,
+      .dh-imagem-secao{
         margin:28px 0 34px;
         border-radius:16px;
       }
 
-      .dh-capa-imagem figcaption{
+      .dh-capa-imagem figcaption,
+      .dh-imagem-secao figcaption{
         font-size:13.5px;
         padding:14px 16px 16px;
+      }
+
+      .dh-imagem-vertical{
+        max-width:100%;
       }
     }
   `;
@@ -105,8 +151,9 @@ function aplicarEstiloImagemCapaDireitosHumanos() {
 }
 
 aplicarAjustesDeNavegacaoLateral();
-aplicarEstiloImagemCapaDireitosHumanos();
+aplicarEstiloImagensDireitosHumanos();
 inserirImagemCapaDireitosHumanos();
+inserirImagemMagnaCarta();
 
 function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
