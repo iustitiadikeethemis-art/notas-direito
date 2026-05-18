@@ -73,6 +73,21 @@ function inserirImagemSeteBispos() {
   `);
 }
 
+function inserirImagemDeclaracaoIndependencia() {
+  if (!paginaHistoriaDireitosHumanos()) return;
+  if (document.querySelector(".dh-imagem-declaracao-independencia")) return;
+
+  const titulo = document.getElementById("revolucoes-americana-e-francesa-positivacao-dos-direitos");
+  if (!titulo) return;
+
+  titulo.insertAdjacentHTML("beforebegin", `
+    <figure class="dh-imagem-secao dh-imagem-declaracao-independencia">
+      <img src="/imagens/dh-declaracao-independencia-trumbull.jpg" alt="Pintura Declaration of Independence, de John Trumbull, representando a apresentação do projeto da Declaração de Independência ao Segundo Congresso Continental.">
+      <figcaption>John Trumbull, <em>Declaration of Independence</em>, 1819. A pintura representa a apresentação do projeto da Declaração de Independência ao Segundo Congresso Continental, em 1776, simbolizando a passagem das ideias revolucionárias de liberdade e direitos para a forma documental e política.</figcaption>
+    </figure>
+  `);
+}
+
 function aplicarEstiloImagensDireitosHumanos() {
   if (document.getElementById("estilo-imagens-direitos-humanos")) return;
 
@@ -97,6 +112,7 @@ function aplicarEstiloImagensDireitosHumanos() {
     .dh-imagem-secao img{display:block;width:100%;height:auto;filter:grayscale(100%);}
     .dh-imagem-sete-bispos{max-width:620px;}
     .dh-imagem-sete-bispos img{filter:brightness(0.99) contrast(1.03) saturate(0.97);}
+    .dh-imagem-declaracao-independencia img{filter:brightness(0.96) contrast(1.04) saturate(0.92);}
     .dh-imagem-vertical{max-width:560px;}
 
     @media(max-width:900px){
@@ -114,6 +130,7 @@ aplicarEstiloImagensDireitosHumanos();
 inserirImagemCapaDireitosHumanos();
 inserirImagemMagnaCarta();
 inserirImagemSeteBispos();
+inserirImagemDeclaracaoIndependencia();
 
 function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
