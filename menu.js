@@ -67,7 +67,7 @@ function inserirImagemSeteBispos() {
 
   titulo.insertAdjacentHTML("beforebegin", `
     <figure class="dh-imagem-secao dh-imagem-sete-bispos">
-      <img src="/imagens/dh-sete-bispos-1688.jpg" alt="Representação histórica dos Sete Bispos no contexto da crise política inglesa de 1688.">
+      <img src="/imagens/dh-sete-bispos-1688.png" alt="Representação histórica dos Sete Bispos no contexto da crise política inglesa de 1688.">
       <figcaption>Representação histórica dos Sete Bispos no contexto da crise política inglesa de 1688. A cena simboliza a tensão entre autoridade da Coroa, liberdade de petição e consolidação de garantias jurídicas.</figcaption>
     </figure>
   `);
@@ -95,8 +95,8 @@ function aplicarEstiloImagensDireitosHumanos() {
     }
 
     .dh-imagem-secao img{display:block;width:100%;height:auto;filter:grayscale(100%);}
-    .dh-imagem-sete-bispos{max-width:560px;}
-    .dh-imagem-sete-bispos img{filter:brightness(0.98) contrast(1.05) saturate(0.95);}
+    .dh-imagem-sete-bispos{max-width:620px;}
+    .dh-imagem-sete-bispos img{filter:brightness(0.99) contrast(1.03) saturate(0.97);}
     .dh-imagem-vertical{max-width:560px;}
 
     @media(max-width:900px){
