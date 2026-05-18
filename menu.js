@@ -95,6 +95,7 @@ function aplicarEstiloImagensDireitosHumanos() {
     }
 
     .dh-imagem-secao img{display:block;width:100%;height:auto;filter:grayscale(100%);}
+    .dh-imagem-sete-bispos img{filter:brightness(0.92) contrast(0.96) saturate(0.88);}
     .dh-imagem-vertical{max-width:560px;}
 
     @media(max-width:900px){
