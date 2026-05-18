@@ -95,13 +95,14 @@ function aplicarEstiloImagensDireitosHumanos() {
     }
 
     .dh-imagem-secao img{display:block;width:100%;height:auto;filter:grayscale(100%);}
-    .dh-imagem-sete-bispos img{filter:brightness(0.92) contrast(0.96) saturate(0.88);}
+    .dh-imagem-sete-bispos{max-width:560px;}
+    .dh-imagem-sete-bispos img{filter:brightness(0.98) contrast(1.05) saturate(0.95);}
     .dh-imagem-vertical{max-width:560px;}
 
     @media(max-width:900px){
       .dh-capa-imagem,.dh-imagem-secao{margin:28px 0 34px;border-radius:16px;}
       .dh-capa-imagem figcaption,.dh-imagem-secao figcaption{font-size:13.5px;padding:14px 16px 16px;}
-      .dh-imagem-vertical{max-width:100%;}
+      .dh-imagem-vertical,.dh-imagem-sete-bispos{max-width:100%;}
     }
   `;
 
