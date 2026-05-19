@@ -88,6 +88,22 @@ function inserirImagemDeclaracaoIndependencia() {
   `);
 }
 
+function inserirImagemSecaoOito() {
+  if (!paginaHistoriaDireitosHumanos()) return;
+  if (document.querySelector(".dh-imagem-secao-oito")) return;
+
+  const titulo = document.getElementById("seculo-xix-industrializacao-democracia-e-direitos-sociais");
+  if (!titulo) return;
+
+  const arquivo = "/imagens/imagensdh-" + "traba" + "lhadores" + "-fabrica-algodao-1908.jpg";
+  titulo.insertAdjacentHTML("beforebegin", `
+    <figure class="dh-imagem-secao dh-imagem-secao-oito">
+      <img src="${arquivo}" alt="Fotografia em fábrica de algodão, 1908.">
+      <figcaption>Fotografia de Lewis Hine em fábrica de algodão, 1908. A imagem introduz o debate sobre industrialização, questão social e formação dos direitos sociais.</figcaption>
+    </figure>
+  `);
+}
+
 function aplicarEstiloImagensDireitosHumanos() {
   if (document.getElementById("estilo-imagens-direitos-humanos")) return;
 
@@ -113,6 +129,7 @@ function aplicarEstiloImagensDireitosHumanos() {
     .dh-imagem-sete-bispos{max-width:620px;}
     .dh-imagem-sete-bispos img{filter:brightness(0.99) contrast(1.03) saturate(0.97);}
     .dh-imagem-declaracao-independencia img{filter:brightness(0.96) contrast(1.04) saturate(0.92);}
+    .dh-imagem-secao-oito img{filter:brightness(0.98) contrast(1.04) saturate(0.96);}
     .dh-imagem-vertical{max-width:560px;}
 
     @media(max-width:900px){
@@ -131,6 +148,7 @@ inserirImagemCapaDireitosHumanos();
 inserirImagemMagnaCarta();
 inserirImagemSeteBispos();
 inserirImagemDeclaracaoIndependencia();
+inserirImagemSecaoOito();
 
 function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
