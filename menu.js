@@ -121,6 +121,22 @@ function inserirImagemSecaoNove() {
   `);
 }
 
+function inserirImagemSecaoDez() {
+  if (!paginaHistoriaDireitosHumanos()) return;
+  if (document.querySelector(".dh-imagem-secao-dez")) return;
+
+  const titulo = document.getElementById("onu-e-declaracao-universal-de-1948");
+  if (!titulo) return;
+
+  const arquivo = "/imagens/imagensdh-" + "criancas-declaracao-universal-direitos-humanos.jpg";
+  titulo.insertAdjacentHTML("beforebegin", `
+    <figure class="dh-imagem-secao dh-imagem-secao-dez">
+      <img src="${arquivo}" alt="Crianças observam uma cópia da Declaração Universal dos Direitos Humanos.">
+      <figcaption>Crianças observam uma cópia da Declaração Universal dos Direitos Humanos. A imagem simboliza a passagem da experiência histórica da guerra para uma linguagem internacional de dignidade, educação, paz e proteção da pessoa humana.</figcaption>
+    </figure>
+  `);
+}
+
 function aplicarEstiloImagensDireitosHumanos() {
   if (document.getElementById("estilo-imagens-direitos-humanos")) return;
 
@@ -148,6 +164,7 @@ function aplicarEstiloImagensDireitosHumanos() {
     .dh-imagem-declaracao-independencia img{filter:brightness(0.96) contrast(1.04) saturate(0.92);}
     .dh-imagem-secao-oito img{filter:brightness(0.98) contrast(1.04) saturate(0.96);}
     .dh-imagem-secao-nove img{filter:grayscale(100%) brightness(0.94) contrast(1.08);}
+    .dh-imagem-secao-dez img{filter:grayscale(100%) brightness(1.02) contrast(0.98);}
     .dh-aviso-imagem{padding:12px 18px;background:#120f0f;color:#eadfd4;font-size:13px;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.12);}
     .dh-imagem-vertical{max-width:560px;}
 
@@ -169,6 +186,7 @@ inserirImagemSeteBispos();
 inserirImagemDeclaracaoIndependencia();
 inserirImagemSecaoOito();
 inserirImagemSecaoNove();
+inserirImagemSecaoDez();
 
 function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
