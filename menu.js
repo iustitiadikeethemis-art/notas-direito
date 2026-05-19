@@ -104,6 +104,23 @@ function inserirImagemSecaoOito() {
   `);
 }
 
+function inserirImagemSecaoNove() {
+  if (!paginaHistoriaDireitosHumanos()) return;
+  if (document.querySelector(".dh-imagem-secao-nove")) return;
+
+  const titulo = document.getElementById("seculo-xx-guerras-mundiais-e-crise-da-protecao-interna");
+  if (!titulo) return;
+
+  const arquivo = "/imagens/dh-ohrdruf-1945-crise-direitos-humanos.jpg";
+  titulo.insertAdjacentHTML("beforebegin", `
+    <figure class="dh-imagem-secao dh-imagem-secao-nove">
+      <div class="dh-aviso-imagem">Registro histórico sensível</div>
+      <img src="${arquivo}" alt="Registro histórico de Ohrdruf, Alemanha, abril de 1945.">
+      <figcaption>Registro histórico de Ohrdruf, Alemanha, abril de 1945. A imagem introduz a discussão sobre a crise da proteção interna dos direitos e a necessidade de uma ordem internacional fundada na dignidade humana.</figcaption>
+    </figure>
+  `);
+}
+
 function aplicarEstiloImagensDireitosHumanos() {
   if (document.getElementById("estilo-imagens-direitos-humanos")) return;
 
@@ -130,6 +147,8 @@ function aplicarEstiloImagensDireitosHumanos() {
     .dh-imagem-sete-bispos img{filter:brightness(0.99) contrast(1.03) saturate(0.97);}
     .dh-imagem-declaracao-independencia img{filter:brightness(0.96) contrast(1.04) saturate(0.92);}
     .dh-imagem-secao-oito img{filter:brightness(0.98) contrast(1.04) saturate(0.96);}
+    .dh-imagem-secao-nove img{filter:grayscale(100%) brightness(0.94) contrast(1.08);}
+    .dh-aviso-imagem{padding:12px 18px;background:#120f0f;color:#eadfd4;font-size:13px;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.12);}
     .dh-imagem-vertical{max-width:560px;}
 
     @media(max-width:900px){
@@ -149,6 +168,7 @@ inserirImagemMagnaCarta();
 inserirImagemSeteBispos();
 inserirImagemDeclaracaoIndependencia();
 inserirImagemSecaoOito();
+inserirImagemSecaoNove();
 
 function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
