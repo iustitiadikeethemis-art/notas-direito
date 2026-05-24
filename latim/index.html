@@ -20,17 +20,13 @@
 .latim-hero h1{font-size:42px;line-height:1.15;margin:0 0 14px;}
 .latim-hero p{max-width:760px;font-size:18px;color:#e7e0d5;margin:0;}
 .latim-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:980px;margin:0 auto 70px;}
-.latim-card{padding:26px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,0.04);}
+.latim-card{display:flex;flex-direction:column;justify-content:space-between;min-height:235px;padding:26px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,0.04);color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
 .latim-card h2{font-size:23px;margin:0 0 12px;}
-.latim-card h3{font-size:19px;line-height:1.3;margin:0 0 10px;color:#2d2a24;}
-.latim-card p{font-size:16px;color:#4d4942;line-height:1.7;margin:0;}
+.latim-card p{font-size:16px;color:#4d4942;line-height:1.7;margin:0 0 18px;text-align:left;}
+.latim-card .acessar{font-weight:600;color:#2d2a24;margin-top:auto;}
+a.latim-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,0.075);border-color:#cfc5b2;}
 .latim-nota{max-width:980px;margin:0 auto 28px;padding:20px 24px;border-left:4px solid #333;background:#fff;border-radius:12px;color:#4d4942;}
-.frase-estudo{margin-top:18px;padding:18px;border-left:4px solid #333;border-radius:14px;background:#faf8f3;}
-.frase-estudo p{margin:10px 0 0;text-align:left;}
-.frase-estudo p:first-child{margin-top:0;}
-.frase-original{font-style:italic;color:#2d2a24;}
-.frase-referencia{font-size:14px!important;color:#6a6258!important;}
-@media(max-width:760px){.latim-hero{padding:34px 26px}.latim-hero h1{font-size:34px}}
+@media(max-width:760px){.latim-hero{padding:34px 26px}.latim-hero h1{font-size:34px}.latim-card{min-height:auto}}
 </style>
 </head>
 <body>
@@ -46,36 +42,46 @@
 </div>
 <section class="latim-grid">
 <div class="latim-card">
+<div>
 <h2>1. Pronúncia e leitura</h2>
 <p>Registro das formas de pronúncia, leitura de palavras simples e comparação entre pronúncia clássica, eclesiástica e usos tradicionais no Direito.</p>
 </div>
+<span class="acessar">Em estruturação</span>
+</div>
 <div class="latim-card">
+<div>
 <h2>2. Vocabulário essencial</h2>
 <p>Palavras básicas para formação de repertório: lex, ius, iustitia, corpus, civitas, res publica, homo, ratio, poena e outras expressões recorrentes.</p>
 </div>
+<span class="acessar">Em estruturação</span>
+</div>
 <div class="latim-card">
+<div>
 <h2>3. Gramática inicial</h2>
 <p>Introdução gradual a substantivos, casos, declinações, verbos e estrutura da frase latina, sempre com exemplos simples.</p>
 </div>
+<span class="acessar">Em estruturação</span>
+</div>
 <div class="latim-card">
+<div>
 <h2>4. Latim jurídico</h2>
 <p>Estudo de expressões como habeas corpus, in dubio pro reo, pacta sunt servanda, nulla poena sine lege, fumus boni iuris e periculum in mora.</p>
 </div>
-<div class="latim-card">
+<span class="acessar">Em estruturação</span>
+</div>
+<a class="latim-card" href="/latim/frases-de-leitura/">
+<div>
 <h2>5. Frases de leitura</h2>
-<p>Pequenas frases latinas acompanhadas de tradução literal, tradução técnica e comentário sobre o sentido jurídico ou filosófico.</p>
-<div class="frase-estudo">
-<h3>Sêneca — pena, dignidade e correção</h3>
-<p class="frase-original">Ipsos facilius emendabis minore poena; diligentius enim vivit, cui aliquid integri superest. Nemo dignitati perditae parcit; impunitatis genus est iam non habere poenae locum.</p>
-<p><strong>Tradução técnica:</strong> Corrigirás os próprios culpados mais facilmente com uma pena menor; pois vive com mais cuidado aquele a quem ainda resta algo íntegro. Ninguém preserva a dignidade perdida; já é uma espécie de impunidade não haver mais lugar para a pena.</p>
-<p><strong>Sentido jurídico-filosófico:</strong> Em <em>De Clementia</em>, Sêneca aproxima a pena da ideia de correção racional. A sanção não deve ser simples destruição do condenado, pois a pena só conserva força moral quando ainda resta ao indivíduo algum horizonte de dignidade, responsabilidade e retorno à vida comum.</p>
-<p><strong>Nota de leitura:</strong> A formulação moderna “ninguém respeita a própria dignidade se a considera perdida para sempre” traduz bem o núcleo da passagem, mas deve ser tratada como tradução livre ou paráfrase, não como citação literal em português.</p>
-<p class="frase-referencia">Fonte: Sêneca, <em>De Clementia</em>, Livro I, XXII, 1. Estudo relacionado ao artigo “O jusnaturalismo clássico”, de Giovanne Henrique Bressan Schiavon, com remissão a Fausto Costa e José Corts Grau.</p>
+<p>Pequenas frases latinas acompanhadas de tradução literal, tradução técnica e comentário sobre o sentido jurídico ou filosófico. Os estudos ficam organizados em fichas internas para consulta posterior.</p>
 </div>
-</div>
+<span class="acessar">Acessar fichas →</span>
+</a>
 <div class="latim-card">
+<div>
 <h2>6. Caderno progressivo</h2>
 <p>Espaço para registrar avanços, dúvidas, termos novos e conexões entre o latim, o Direito Romano, a filosofia e a linguagem jurídica contemporânea.</p>
+</div>
+<span class="acessar">Em estruturação</span>
 </div>
 </section>
 </main>
