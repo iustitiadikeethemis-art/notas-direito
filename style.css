@@ -793,3 +793,16 @@ section{
   color: #333;
   text-decoration: underline;
 }
+
+/* ===== AJUSTE DE IMAGENS EM ARTIGOS DE DIREITOS HUMANOS ===== */
+.dh-artigo .dh-imagem-artigo{
+  max-width:640px !important;
+  margin:34px auto 42px !important;
+}
+
+@media(max-width:900px){
+  .dh-artigo .dh-imagem-artigo{
+    max-width:100% !important;
+    margin:28px auto 34px !important;
+  }
+}
