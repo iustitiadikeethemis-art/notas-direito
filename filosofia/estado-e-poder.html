@@ -6,49 +6,122 @@
 <title>Estado e Poder</title>
 <link rel="stylesheet" href="/style.css">
 <style>
-.catalogo-estado{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:34px;}
-.card-estado{display:flex;flex-direction:column;justify-content:space-between;min-height:285px;padding:26px;border:1px solid #ded8cc;border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,0.045);text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease;}
-.card-estado:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,0.075);}
-.card-estado .tag{display:inline-block;width:max-content;margin-bottom:14px;padding:5px 10px;border-radius:999px;background:#f3efe6;color:#4c463c;font-size:13px;}
-.card-estado h3{font-size:23px;line-height:1.2;margin:0 0 12px;}
-.card-estado p{font-size:16px;color:#4d4942;margin:0 0 18px;}
-.card-estado .ler{font-weight:600;color:#2d2a24;}
-.nota-secao{margin-top:22px;font-size:17px;color:#4d4942;}
+:root{
+  --ep-bg:#0b0d0f;
+  --ep-bg-2:#15181c;
+  --ep-panel:#1b1f24;
+  --ep-gold:#d6ad5c;
+  --ep-gold-soft:#f1d28a;
+  --ep-text:#f5f1e8;
+  --ep-muted:#c9c0ad;
+  --ep-line:rgba(214,173,92,.30);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(214,173,92,.14),transparent 31%),
+    radial-gradient(circle at 20% 24%,rgba(255,255,255,.075),transparent 24%),
+    linear-gradient(180deg,#1a1d22 0%,#101214 56%,#08090a 100%);
+  color:var(--ep-text);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.13;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:7px 7px;
+}
+header{background:rgba(10,12,14,.94);border-bottom:1px solid var(--ep-line);backdrop-filter:blur(8px);}
+.brand,.brand a,.menu-links a{color:var(--ep-text)!important;}
+.menu-botao{border-color:var(--ep-line);color:var(--ep-gold-soft);}
+.menu-links{background:#101214;border-right:1px solid var(--ep-line);}
+.menu-fechar{color:var(--ep-text);}
+main.wrap{max-width:1180px;}
+.ep-hero{
+  padding:80px 0 44px;
+  text-align:center;
+  border-bottom:1px solid var(--ep-line);
+}
+.ep-kicker{
+  display:inline-block;
+  margin-bottom:16px;
+  color:var(--ep-muted);
+  text-transform:uppercase;
+  letter-spacing:2.6px;
+  font-size:13px;
+}
+.ep-title{
+  margin:0;
+  color:var(--ep-text);
+  font-size:clamp(48px,7vw,86px);
+  line-height:.94;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-shadow:0 4px 15px rgba(0,0,0,.52);
+}
+.ep-title span{display:block;color:var(--ep-gold);}
+.ep-rule{width:min(760px,82%);height:1px;margin:24px auto 0;background:linear-gradient(90deg,transparent,var(--ep-line),transparent);}
+.ep-subtitle{max-width:850px;margin:22px auto 0;color:var(--ep-muted);font-size:20px;line-height:1.7;}
+.ep-section{padding:52px 0;}
+.ep-intro{
+  max-width:900px;
+  margin:0 auto 34px;
+  padding:28px 32px;
+  border:1px solid var(--ep-line);
+  background:rgba(255,255,255,.045);
+  color:var(--ep-muted);
+  font-size:18px;
+  line-height:1.76;
+}
+.ep-catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+.ep-card{
+  min-height:315px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:30px;
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.058),rgba(255,255,255,.018));
+  box-shadow:0 20px 48px rgba(0,0,0,.30);
+  color:inherit;
+  text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.ep-card:hover{transform:translateY(-4px);box-shadow:0 28px 62px rgba(0,0,0,.38);border-color:var(--ep-line);}
+.ep-tag{display:inline-block;width:max-content;margin-bottom:15px;padding:5px 11px;border:1px solid var(--ep-line);color:var(--ep-gold-soft);text-transform:uppercase;letter-spacing:1.45px;font-size:12px;}
+.ep-card h2{margin:0 0 13px;color:#f7f2e8;font-size:30px;line-height:1.12;}
+.ep-card p{margin:0 0 20px;color:var(--ep-muted);font-size:17px;line-height:1.66;}
+.ep-ler{color:var(--ep-gold-soft);font-weight:bold;}
+.ep-assinatura{margin:46px auto 0;text-align:center;color:var(--ep-muted);}
+.ep-assinatura p{margin:3px 0;}
+@media(max-width:760px){.ep-card{min-height:auto}.ep-hero{padding-top:56px}.brand{font-size:22px;}}
 </style>
 </head>
 <body>
 <div id="header-container"></div>
 <main class="wrap">
-<section class="hero">
-<div class="logo-trabalho"><img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor"></div>
-<p class="categoria">Disciplina: Estado e Poder</p>
-<h1 class="titulo-principal">Estado e Poder</h1>
-<p class="subtitulo">Ensaios e trabalhos sobre formação do Estado, legitimidade, soberania, separação de poderes e estruturas políticas.</p>
-</section>
-<section>
-<article class="texto">
-<h2>Textos da série</h2>
-<p class="nota-secao">Esta seção reúne trabalhos acadêmicos desenvolvidos no eixo Estado e Poder, organizados como um pequeno acervo temático. O objetivo é preservar os textos longos em páginas próprias, mantendo a navegação limpa e permitindo leitura individual de cada estudo.</p>
-<div class="catalogo-estado">
-<a class="card-estado" href="/filosofia/estado-e-poder/contratualismo-classico.html">
-<div><span class="tag">Contratualismo clássico</span><h3>Uma análise do contratualismo em Hobbes, Locke e Rousseau</h3><p>Estudo comparativo sobre estado de natureza, contrato social, soberania, direitos naturais e formação do Estado moderno.</p></div><span class="ler">Ler texto →</span>
-</a>
-<a class="card-estado" href="/filosofia/estado-e-poder/contraponto-bentham.html">
-<div><span class="tag">Utilitarismo e crítica</span><h3>Um contraponto ao contratualismo clássico em Jeremy Bentham</h3><p>Análise do utilitarismo benthamiano como alternativa crítica aos fundamentos tradicionais da autoridade política e do direito.</p></div><span class="ler">Ler texto →</span>
-</a>
-<a class="card-estado" href="/filosofia/estado-e-poder/triade-do-poder.html">
-<div><span class="tag">Separação dos poderes</span><h3>A Tríade do Poder</h3><p>Investigação sobre interdependência, equilíbrio institucional, presidencialismo de coalizão e funcionamento dos Poderes no Brasil contemporâneo.</p></div><span class="ler">Ler texto →</span>
-</a>
-<a class="card-estado" href="/filosofia/estado-e-poder/legalidade-legitimidade.html">
-<div><span class="tag">Legalidade e legitimidade</span><h3>O Equilíbrio do Poder</h3><p>Estudo sobre tensões e convergências entre legalidade, legitimidade, dominação racional-legal e estabilidade institucional.</p></div><span class="ler">Ler texto →</span>
-</a>
-<a class="card-estado" href="/filosofia/estado-e-poder/julgando-personalidades/">
-<div><span class="tag">Análise pública</span><h3>Julgando Personalidades</h3><p>Biografias críticas de figuras públicas, com separação entre fato documentado, controvérsia, interpretação política e opinião final.</p></div><span class="ler">Abrir seção →</span>
-</a>
-</div>
-<div class="assinatura-texto"><p>João Victor Brando Novais</p><p class="local-data">São Paulo, 2026</p></div>
-</article>
-</section>
+  <section class="ep-hero">
+    <span class="ep-kicker">Disciplina · Estado e Poder</span>
+    <h1 class="ep-title"><span>Estado</span> e Poder</h1>
+    <div class="ep-rule"></div>
+    <p class="ep-subtitle">Ensaios, análises institucionais e julgamentos críticos sobre formação do Estado, legitimidade, soberania, separação dos poderes e figuras públicas.</p>
+  </section>
+
+  <section class="ep-section">
+    <div class="ep-intro">
+      Esta área passa a funcionar como núcleo temático. A página principal concentra os caminhos internos do eixo; os textos acadêmicos ficam em biblioteca própria, e os julgamentos de personalidades ficam em seção separada, com método crítico e documental.
+    </div>
+    <div class="ep-catalogo">
+      <a class="ep-card" href="/filosofia/estado-e-poder/textos-e-analises/">
+        <div><span class="ep-tag">Biblioteca acadêmica</span><h2>Textos e Análises</h2><p>Ensaios sobre contratualismo, Bentham, separação dos poderes, legalidade, legitimidade e funcionamento das instituições políticas.</p></div><span class="ep-ler">Abrir biblioteca →</span>
+      </a>
+      <a class="ep-card" href="/filosofia/estado-e-poder/julgando-personalidades/">
+        <div><span class="ep-tag">Análise pública</span><h2>Julgando Personalidades</h2><p>Biografias críticas de figuras públicas, com separação entre fato documentado, controvérsia, interpretação política e opinião final.</p></div><span class="ep-ler">Abrir seção →</span>
+      </a>
+    </div>
+    <div class="ep-assinatura"><p>João Victor Brando Novais</p><p>São Paulo, 2026</p></div>
+  </section>
 </main>
 <script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
 <script src="/menu.js"></script>
