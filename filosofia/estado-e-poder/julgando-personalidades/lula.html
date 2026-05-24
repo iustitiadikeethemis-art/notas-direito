@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luiz Inácio Lula da Silva | Julgando Personalidades</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --jp-bg:#101214;
+  --jp-panel:#191b1e;
+  --jp-panel-2:#23262b;
+  --jp-gold:#d6ad5c;
+  --jp-gold-soft:#f1d28a;
+  --jp-text:#f5f1e8;
+  --jp-muted:#c9c0ad;
+  --jp-line:rgba(214,173,92,.30);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%, rgba(214,173,92,.13), transparent 28%),
+    linear-gradient(180deg,#1c1f23 0%,#111315 54%,#090a0b 100%);
+  color:var(--jp-text);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.14;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:7px 7px;
+}
+main.wrap{max-width:1180px;}
+.jp-hero{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  min-height:420px;
+  margin-top:38px;
+  border:1px solid var(--jp-line);
+  background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(0,0,0,.2));
+  box-shadow:0 26px 70px rgba(0,0,0,.38);
+  overflow:hidden;
+}
+.jp-retrato{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:360px;
+  background:
+    radial-gradient(circle at 45% 38%,rgba(214,173,92,.23),transparent 33%),
+    linear-gradient(140deg,rgba(255,255,255,.08),rgba(0,0,0,.35));
+  border-right:1px solid var(--jp-line);
+}
+.jp-retrato span{
+  font-size:82px;
+  color:rgba(245,241,232,.92);
+  letter-spacing:7px;
+  text-shadow:0 10px 22px rgba(0,0,0,.58);
+}
+.jp-hero-texto{
+  padding:58px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.jp-kicker{
+  display:inline-block;
+  width:max-content;
+  margin-bottom:18px;
+  padding:6px 12px;
+  border:1px solid var(--jp-line);
+  color:var(--jp-gold-soft);
+  text-transform:uppercase;
+  letter-spacing:1.7px;
+  font-size:12px;
+}
+.jp-hero h1{
+  margin:0;
+  font-size:clamp(34px,5vw,56px);
+  line-height:1.08;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+.jp-subtitle{
+  margin:18px 0 0;
+  color:var(--jp-muted);
+  font-size:20px;
+  line-height:1.65;
+}
+.jp-blocos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+  margin:34px 0 54px;
+}
+.jp-bloco{
+  padding:24px;
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  box-shadow:0 16px 34px rgba(0,0,0,.22);
+}
+.jp-bloco h2{
+  margin:0 0 10px;
+  color:var(--jp-gold-soft);
+  font-size:21px;
+  font-style:italic;
+}
+.jp-bloco p{
+  margin:0;
+  color:var(--jp-muted);
+  font-size:16px;
+  line-height:1.65;
+}
+.jp-conteudo{
+  max-width:870px;
+  margin:0 auto 70px;
+  padding:34px 38px;
+  border:1px solid var(--jp-line);
+  background:rgba(255,255,255,.045);
+}
+.jp-conteudo h2{
+  margin:0 0 16px;
+  font-size:30px;
+  color:#f7f2e8;
+}
+.jp-conteudo p{
+  margin:16px 0;
+  color:var(--jp-muted);
+  font-size:18px;
+  line-height:1.78;
+  text-align:left;
+}
+.jp-lista{
+  margin:22px 0 0;
+  padding-left:20px;
+  color:var(--jp-muted);
+  font-size:18px;
+  line-height:1.75;
+}
+.jp-lista li{margin-bottom:10px;}
+.jp-aviso{
+  margin-top:22px;
+  padding:18px 20px;
+  border-left:4px solid var(--jp-gold);
+  background:rgba(214,173,92,.08);
+  color:#eadfca;
+}
+.jp-voltar{
+  display:inline-block;
+  margin-top:24px;
+  color:var(--jp-gold-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--jp-gold-soft);
+}
+@media(max-width:850px){
+  .jp-hero{grid-template-columns:1fr;}
+  .jp-retrato{border-right:0;border-bottom:1px solid var(--jp-line);}
+  .jp-hero-texto{padding:36px 28px;}
+  .jp-conteudo{padding:28px 24px;}
+}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="jp-hero">
+    <div class="jp-retrato" aria-hidden="true"><span>LULA</span></div>
+    <div class="jp-hero-texto">
+      <span class="jp-kicker">Julgando Personalidades</span>
+      <h1>Luiz Inácio Lula da Silva</h1>
+      <p class="jp-subtitle">Biografia e análise crítica em construção. A página foi preparada para receber o dossiê completo, com fatos, controvérsias, fontes e conclusão final.</p>
+    </div>
+  </section>
+
+  <section class="jp-blocos" aria-label="Estrutura do julgamento">
+    <article class="jp-bloco"><h2>Origem e História</h2><p>Trajetória social, sindical, partidária e institucional.</p></article>
+    <article class="jp-bloco"><h2>Principais Realizações</h2><p>Políticas públicas, resultados de governo e legado político.</p></article>
+    <article class="jp-bloco"><h2>Controvérsias e Polêmicas</h2><p>Críticas, processos, disputas públicas e responsabilidades políticas.</p></article>
+    <article class="jp-bloco"><h2>O que é verdade?</h2><p>Separação entre fato documentado, versão política, interpretação e mito.</p></article>
+  </section>
+
+  <section class="jp-conteudo">
+    <h2>Nota metodológica</h2>
+    <p>Este julgamento ainda não contém o mérito da análise. A decisão correta, neste momento, é montar primeiro a arquitetura do estudo, para que o exame de Lula não se transforme em opinião apressada, panfleto partidário ou simples repetição de lugares-comuns.</p>
+    <p>O dossiê deverá ser preenchido com fontes primárias e confiáveis, incluindo documentos oficiais, dados governamentais, decisões judiciais, registros históricos e bibliografia crítica. A conclusão somente deverá aparecer depois da exposição dos argumentos favoráveis e desfavoráveis.</p>
+    <div class="jp-aviso">Status: página criada como estrutura inicial. O conteúdo substantivo será desenvolvido em etapa própria.</div>
+    <h2>Roteiro de preenchimento</h2>
+    <ol class="jp-lista">
+      <li>Levantar biografia básica e formação política.</li>
+      <li>Separar realizações por período de governo.</li>
+      <li>Mapear controvérsias com fonte e contexto.</li>
+      <li>Classificar cada ponto como fato, interpretação, acusação, defesa ou mito.</li>
+      <li>Redigir opinião final apenas depois da prova documental.</li>
+    </ol>
+    <a class="jp-voltar" href="/filosofia/estado-e-poder/julgando-personalidades/">Voltar para Julgando Personalidades</a>
+  </section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
