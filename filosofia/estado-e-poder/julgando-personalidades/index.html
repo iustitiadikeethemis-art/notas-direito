@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julgando Personalidades | Estado e Poder</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --jp-bg:#101214;
+  --jp-panel:#191b1e;
+  --jp-panel-2:#22252a;
+  --jp-gold:#d6ad5c;
+  --jp-gold-soft:#f1d28a;
+  --jp-text:#f5f1e8;
+  --jp-muted:#c9c0ad;
+  --jp-line:rgba(214,173,92,.28);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%, rgba(214,173,92,.12), transparent 30%),
+    radial-gradient(circle at 18% 32%, rgba(255,255,255,.08), transparent 22%),
+    linear-gradient(180deg,#1b1d20 0%,#101214 58%,#090a0b 100%);
+  color:var(--jp-text);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.17;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size:7px 7px;
+  mix-blend-mode:screen;
+}
+main.wrap{max-width:1180px;}
+.jp-hero{
+  padding:76px 0 38px;
+  text-align:center;
+  border-bottom:1px solid var(--jp-line);
+}
+.jp-kicker{
+  display:inline-block;
+  margin-bottom:16px;
+  color:var(--jp-muted);
+  text-transform:uppercase;
+  letter-spacing:2.6px;
+  font-size:13px;
+}
+.jp-title{
+  margin:0;
+  font-size:clamp(46px,7vw,82px);
+  line-height:.94;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-shadow:0 3px 12px rgba(0,0,0,.45);
+}
+.jp-title span:first-child{display:block;color:var(--jp-gold);}
+.jp-title span:last-child{display:block;color:#f7f2e8;}
+.jp-subtitle{
+  max-width:760px;
+  margin:24px auto 0;
+  color:var(--jp-muted);
+  font-size:19px;
+}
+.jp-rule{
+  width:min(760px,82%);
+  height:1px;
+  margin:22px auto 0;
+  background:linear-gradient(90deg,transparent,var(--jp-line),transparent);
+}
+.jp-section{padding:44px 0;}
+.jp-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+  margin-top:28px;
+}
+.jp-card{
+  min-height:210px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  box-shadow:0 18px 40px rgba(0,0,0,.22);
+  color:inherit;
+  text-decoration:none;
+}
+.jp-icon{
+  width:54px;
+  height:54px;
+  margin-bottom:16px;
+  color:var(--jp-gold);
+}
+.jp-card h2,.jp-card h3{margin:0 0 10px;color:#f7f2e8;font-size:22px;}
+.jp-card p{margin:0;color:var(--jp-muted);font-size:16px;line-height:1.65;}
+.jp-personagem{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 310px;
+  gap:26px;
+  align-items:stretch;
+  margin-top:24px;
+  border:1px solid var(--jp-line);
+  background:linear-gradient(135deg,rgba(214,173,92,.11),rgba(255,255,255,.04) 42%,rgba(0,0,0,.22));
+  box-shadow:0 26px 55px rgba(0,0,0,.32);
+  text-decoration:none;
+  color:inherit;
+}
+.jp-personagem-conteudo{padding:32px;}
+.jp-etiqueta{
+  display:inline-block;
+  margin-bottom:14px;
+  padding:5px 11px;
+  border:1px solid var(--jp-line);
+  color:var(--jp-gold-soft);
+  text-transform:uppercase;
+  letter-spacing:1.6px;
+  font-size:12px;
+}
+.jp-personagem h2{margin:0 0 12px;font-size:34px;line-height:1.14;}
+.jp-personagem p{margin:0 0 18px;color:var(--jp-muted);font-size:18px;}
+.jp-cta{display:inline-block;margin-top:4px;color:var(--jp-gold-soft);font-weight:bold;}
+.jp-retrato{
+  min-height:260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 50% 38%,rgba(214,173,92,.2),transparent 34%),
+    linear-gradient(180deg,rgba(255,255,255,.06),rgba(0,0,0,.24));
+  border-left:1px solid var(--jp-line);
+  overflow:hidden;
+}
+.jp-retrato span{
+  font-size:78px;
+  letter-spacing:6px;
+  color:rgba(245,241,232,.9);
+  text-shadow:0 8px 18px rgba(0,0,0,.55);
+}
+.jp-metodo{
+  max-width:900px;
+  margin:0 auto;
+  padding:30px 34px;
+  border:1px solid var(--jp-line);
+  background:rgba(255,255,255,.045);
+}
+.jp-metodo h2{margin:0 0 14px;font-size:30px;color:#f7f2e8;}
+.jp-metodo p{margin:14px 0;color:var(--jp-muted);font-size:18px;line-height:1.75;text-align:left;}
+.jp-voltar{display:inline-block;margin-top:26px;color:var(--jp-gold-soft);text-decoration:none;border-bottom:1px solid var(--jp-gold-soft);}
+@media(max-width:820px){
+  .jp-personagem{grid-template-columns:1fr;}
+  .jp-retrato{border-left:0;border-top:1px solid var(--jp-line);}
+  .jp-personagem-conteudo{padding:26px;}
+}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="jp-hero">
+    <span class="jp-kicker">Estado e Poder · análise pública</span>
+    <h1 class="jp-title"><span>Julgando</span><span>Personalidades</span></h1>
+    <div class="jp-rule"></div>
+    <p class="jp-subtitle">Biografias, realizações, controvérsias e juízos críticos sobre figuras públicas, com separação entre fato documentado, interpretação política e opinião final.</p>
+  </section>
+
+  <section class="jp-section">
+    <div class="jp-grid" aria-label="Eixos metodológicos da série">
+      <article class="jp-card">
+        <svg class="jp-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M14 14h36v39H14V14Z" stroke="currentColor" stroke-width="4"/><path d="M22 9v10M42 9v10M14 25h36M22 35h8M36 35h8M22 44h8M36 44h8" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+        <h2>Origem e História</h2>
+        <p>Reconstrução da trajetória pessoal, social e institucional da personalidade analisada.</p>
+      </article>
+      <article class="jp-card">
+        <svg class="jp-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M12 47h40M17 47V35M29 47V24M41 47V15" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M17 35l12-11 12-9 10-8" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h2>Principais Realizações</h2>
+        <p>Levantamento de feitos, resultados atribuídos, limites, continuidades e efeitos verificáveis.</p>
+      </article>
+      <article class="jp-card">
+        <svg class="jp-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M20 46h25M17 53h31M37 13l14 14M31 19l14 14M15 35l8 8 24-24-8-8-24 24Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h2>Controvérsias</h2>
+        <p>Análise das acusações, crises, disputas narrativas e responsabilidades político-institucionais.</p>
+      </article>
+      <article class="jp-card">
+        <svg class="jp-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="28" cy="28" r="16" stroke="currentColor" stroke-width="4"/><path d="M40 40l12 12M28 20v3M28 34h.1M25 27c0-3 2-5 5-5 3 0 5 2 5 5 0 4-4 4-6 6" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+        <h2>O que é verdade?</h2>
+        <p>Triagem entre fato comprovado, hipótese plausível, versão partidária, mito político e propaganda.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <div class="jp-metodo">
+      <h2>Primeiro julgamento da série</h2>
+      <p>O primeiro dossiê será dedicado a Luiz Inácio Lula da Silva. Nesta etapa inicial, a página foi criada como estrutura de trabalho: primeiro se monta o método, depois entram as fontes, e apenas ao final se formula o juízo crítico.</p>
+    </div>
+    <a class="jp-personagem" href="/filosofia/estado-e-poder/julgando-personalidades/lula.html">
+      <div class="jp-personagem-conteudo">
+        <span class="jp-etiqueta">Biografia e análise crítica</span>
+        <h2>Luiz Inácio Lula da Silva</h2>
+        <p>Julgamento em preparação, com divisão entre origem histórica, realizações, controvérsias, verificação dos fatos e opinião final.</p>
+        <span class="jp-cta">Abrir julgamento →</span>
+      </div>
+      <div class="jp-retrato" aria-hidden="true"><span>LULA</span></div>
+    </a>
+  </section>
+
+  <section class="jp-section">
+    <div class="jp-metodo">
+      <h2>Método da seção</h2>
+      <p>A proposta não será fazer propaganda, absolvição prévia ou condenação automática. Cada julgamento deve passar por fontes primárias, dados verificáveis, comparação com críticas relevantes e distinção clara entre fato, interpretação e valor.</p>
+      <p>Quando houver controvérsia séria, a página deverá registrar a melhor versão acusatória e a melhor versão defensiva antes da conclusão. A opinião final será reservada para o término da análise.</p>
+      <a class="jp-voltar" href="/filosofia/estado-e-poder.html">Voltar para Estado e Poder</a>
+    </div>
+  </section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
