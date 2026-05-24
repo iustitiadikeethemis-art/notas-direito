@@ -6,92 +6,225 @@
 <title>Direitos Humanos e Aplicações Práticas</title>
 <link rel="stylesheet" href="/style.css">
 <style>
-.catalogo-estado{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:34px;}
-.card-estado{display:flex;flex-direction:column;justify-content:space-between;min-height:285px;padding:26px;border:1px solid #ded8cc;border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,0.045);text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease;}
-.card-estado:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,0.075);}
-.card-estado .tag{display:inline-block;width:max-content;margin-bottom:14px;padding:5px 10px;border-radius:999px;background:#f3efe6;color:#4c463c;font-size:13px;}
-.card-estado .tag.publicado{background:#281716;color:#f6e7d8;}
-.card-estado h3{font-size:23px;line-height:1.2;margin:0 0 12px;}
-.card-estado p{font-size:16px;color:#4d4942;margin:0 0 18px;}
-.card-estado .ler{font-weight:600;color:#2d2a24;}
-.nota-secao{margin-top:22px;font-size:17px;color:#4d4942;}
-.bloco-eixo{margin-top:54px;}
+:root{
+  --dh-bg:#151111;
+  --dh-bg-2:#211817;
+  --dh-panel:#231918;
+  --dh-bordo:#5b1118;
+  --dh-bordo-2:#7b1823;
+  --dh-red-soft:#b94a4d;
+  --dh-gold:#d8b878;
+  --dh-cream:#f6eadf;
+  --dh-text:#fbf2e8;
+  --dh-muted:#e0cfc0;
+  --dh-line:rgba(216,184,120,.32);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(123,24,35,.28),transparent 34%),
+    radial-gradient(circle at 18% 22%,rgba(255,255,255,.08),transparent 25%),
+    linear-gradient(180deg,#241817 0%,#171313 56%,#0c0909 100%);
+  color:var(--dh-text);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.12;
+  background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:7px 7px;
+}
+header{background:rgba(23,19,19,.95);border-bottom:1px solid rgba(216,184,120,.28);backdrop-filter:blur(8px);}
+.brand,.brand a,.menu-links a{color:var(--dh-text)!important;}
+.menu-botao{border-color:rgba(216,184,120,.44);color:#f3d29b;}
+.menu-links{background:#171313;border-right:1px solid rgba(216,184,120,.28);}
+.menu-fechar{color:var(--dh-text);}
+main.wrap{max-width:1180px;}
+.dh-hero-eixo{
+  padding:78px 0 42px;
+  text-align:center;
+  border-bottom:1px solid var(--dh-line);
+}
+.dh-kicker{
+  display:inline-block;
+  margin-bottom:16px;
+  color:var(--dh-muted);
+  text-transform:uppercase;
+  letter-spacing:2.4px;
+  font-size:13px;
+}
+.dh-title{
+  margin:0;
+  color:var(--dh-text);
+  font-size:clamp(42px,6.4vw,78px);
+  line-height:.98;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  text-shadow:0 4px 15px rgba(0,0,0,.52);
+}
+.dh-title span{display:block;color:#ffdfcf;}
+.dh-title strong{display:block;color:#d98887;font-weight:normal;}
+.dh-rule{
+  width:min(760px,82%);
+  height:1px;
+  margin:24px auto 0;
+  background:linear-gradient(90deg,transparent,var(--dh-line),transparent);
+}
+.dh-subtitle{
+  max-width:860px;
+  margin:22px auto 0;
+  color:var(--dh-muted);
+  font-size:20px;
+  line-height:1.7;
+}
+.dh-section{padding:50px 0;}
+.dh-intro{
+  max-width:900px;
+  margin:0 auto 38px;
+  padding:28px 32px;
+  border:1px solid var(--dh-line);
+  background:rgba(255,255,255,.05);
+  color:var(--dh-muted);
+  font-size:18px;
+  line-height:1.76;
+}
+.dh-bloco-eixo{margin-top:54px;}
+.dh-bloco-eixo:first-of-type{margin-top:0;}
+.dh-bloco-topo{
+  max-width:950px;
+  margin:0 0 22px;
+  padding:22px 25px;
+  border-left:4px solid var(--dh-red-soft);
+  background:rgba(255,255,255,.045);
+  border-top:1px solid rgba(216,184,120,.20);
+  border-right:1px solid rgba(216,184,120,.20);
+  border-bottom:1px solid rgba(216,184,120,.20);
+}
+.dh-bloco-topo h2{
+  margin:0 0 8px;
+  color:#ffdfcf;
+  font-size:28px;
+  line-height:1.2;
+}
+.dh-bloco-topo p{
+  margin:0;
+  color:var(--dh-muted);
+  font-size:17px;
+  line-height:1.7;
+}
+.dh-catalogo{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.dh-card{
+  min-height:300px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:27px;
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.058),rgba(255,255,255,.018));
+  box-shadow:0 18px 42px rgba(0,0,0,.28);
+  color:inherit;
+  text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.dh-card:hover{transform:translateY(-4px);box-shadow:0 25px 58px rgba(0,0,0,.36);border-color:rgba(216,184,120,.44);}
+.dh-tag{
+  display:inline-block;
+  width:max-content;
+  margin-bottom:15px;
+  padding:5px 11px;
+  border:1px solid rgba(216,184,120,.32);
+  color:#f3d29b;
+  text-transform:uppercase;
+  letter-spacing:1.45px;
+  font-size:12px;
+}
+.dh-tag.publicado{border-color:rgba(217,136,135,.55);background:rgba(123,24,35,.34);color:#ffe3dc;}
+.dh-card h3{
+  margin:0 0 13px;
+  color:#fff6ee;
+  font-size:24px;
+  line-height:1.18;
+}
+.dh-card p{
+  margin:0 0 20px;
+  color:var(--dh-muted);
+  font-size:16px;
+  line-height:1.66;
+}
+.dh-ler{color:#f3d29b;font-weight:bold;}
+.dh-assinatura{margin:52px auto 0;text-align:center;color:var(--dh-muted);}
+.dh-assinatura p{margin:3px 0;}
+@media(max-width:760px){.dh-card{min-height:auto}.dh-hero-eixo{padding-top:56px}.brand{font-size:22px;}.dh-bloco-topo h2{font-size:24px;}}
 </style>
 </head>
 <body>
 <div id="header-container"></div>
 <main class="wrap">
-<section class="hero">
-<div class="logo-trabalho"><img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor"></div>
-<p class="categoria">Disciplina: Direitos Humanos e Aplicações Práticas</p>
-<h1 class="titulo-principal">Direitos Humanos e Aplicações Práticas</h1>
-<p class="subtitulo">Estudos sobre direitos fundamentais, garantias constitucionais, persecução penal, execução penal e responsabilização internacional do Estado brasileiro.</p>
-</section>
-<section>
-<article class="texto">
-<h2>Textos da série</h2>
-<p class="nota-secao">Esta seção reunirá textos desenvolvidos no eixo Direitos Humanos e Aplicações Práticas. A organização abaixo funciona como roteiro de produção e arquivo temático, permitindo que cada estudo seja desenvolvido em página própria conforme a disciplina avançar.</p>
+  <section class="dh-hero-eixo">
+    <span class="dh-kicker">Disciplina · Direitos Humanos e Aplicações Práticas</span>
+    <h1 class="dh-title"><span>Direitos Humanos</span><strong>e Aplicações Práticas</strong></h1>
+    <div class="dh-rule"></div>
+    <p class="dh-subtitle">Estudos sobre dignidade humana, direitos fundamentais, garantias constitucionais, persecução penal, execução penal e responsabilização internacional do Estado brasileiro.</p>
+  </section>
 
-<div class="bloco-eixo" id="fundamentos">
-<h2>1. Fundamentos e formação histórica</h2>
-<p class="nota-secao">Primeiro núcleo da série, voltado à compreensão da formação histórica dos direitos humanos e de sua relação com a Constituição, a dignidade humana e o Estado Democrático de Direito.</p>
-<div class="catalogo-estado">
-<a class="card-estado" href="/direitos-humanos/historia-conceito-direitos-humanos.html">
-<div><span class="tag publicado">Publicado</span><h3>A história do conceito de direitos humanos</h3><p>Estudo introdutório sobre a formação histórica, filosófica e jurídica da ideia de direitos humanos, das matrizes jusnaturalistas à Declaração Universal de 1948 e à Constituição de 1988.</p></div><span class="ler">Ler texto →</span>
-</a>
-<a class="card-estado" href="#fundamentos">
-<div><span class="tag">Em elaboração</span><h3>O estudo do artigo 5º da Constituição Federal</h3><p>Análise dos direitos e garantias fundamentais previstos no art. 5º da Constituição de 1988, com atenção à sua aplicação prática e ao vocabulário constitucional básico.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-</div>
-</div>
+  <section class="dh-section">
+    <div class="dh-intro">
+      Esta área reúne textos desenvolvidos no eixo Direitos Humanos e Aplicações Práticas. A paleta bordô, vermelho profundo e creme identifica visualmente o núcleo: dignidade humana, violência histórica, limitação do poder e proteção jurídica da pessoa.
+    </div>
 
-<div class="bloco-eixo" id="garantias">
-<h2>2. Garantias constitucionais e proteção judicial</h2>
-<p class="nota-secao">Núcleo destinado ao estudo dos instrumentos constitucionais de proteção dos direitos fundamentais.</p>
-<div class="catalogo-estado">
-<a class="card-estado" href="#garantias">
-<div><span class="tag">Em elaboração</span><h3>Remédios constitucionais</h3><p>Estudo sobre habeas corpus, mandado de segurança, habeas data, mandado de injunção e ação popular como instrumentos de proteção prática dos direitos fundamentais.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-</div>
-</div>
+    <div class="dh-bloco-eixo" id="fundamentos">
+      <div class="dh-bloco-topo"><h2>1. Fundamentos e formação histórica</h2><p>Compreensão da formação histórica dos direitos humanos e de sua relação com a Constituição, a dignidade humana e o Estado Democrático de Direito.</p></div>
+      <div class="dh-catalogo">
+        <a class="dh-card" href="/direitos-humanos/historia-conceito-direitos-humanos.html">
+          <div><span class="dh-tag publicado">Publicado</span><h3>A história do conceito de direitos humanos</h3><p>Estudo introdutório sobre a formação histórica, filosófica e jurídica da ideia de direitos humanos, das matrizes jusnaturalistas à Declaração Universal de 1948 e à Constituição de 1988.</p></div><span class="dh-ler">Ler texto →</span>
+        </a>
+        <a class="dh-card" href="#fundamentos">
+          <div><span class="dh-tag">Em elaboração</span><h3>O estudo do artigo 5º da Constituição Federal</h3><p>Análise dos direitos e garantias fundamentais previstos no art. 5º da Constituição de 1988, com atenção à aplicação prática e ao vocabulário constitucional básico.</p></div><span class="dh-ler">Texto em preparação →</span>
+        </a>
+      </div>
+    </div>
 
-<div class="bloco-eixo" id="persecucao-penal">
-<h2>3. Persecução penal e justiça consensual</h2>
-<p class="nota-secao">Núcleo voltado aos mecanismos penais e processuais que afetam diretamente liberdade, responsabilização e alternativas à punição tradicional.</p>
-<div class="catalogo-estado">
-<a class="card-estado" href="#persecucao-penal">
-<div><span class="tag">Em elaboração</span><h3>ANPP — Acordo de Não Persecução Penal</h3><p>Análise do acordo de não persecução penal como instrumento de justiça negociada, seus requisitos, limites e relação com a ideia de resposta penal proporcional.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-<a class="card-estado" href="#persecucao-penal">
-<div><span class="tag">Em elaboração</span><h3>Lei nº 9.099/1995</h3><p>Estudo dos Juizados Especiais Criminais, infrações de menor potencial ofensivo, termo circunstanciado, composição civil, transação penal e suspensão condicional do processo.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-</div>
-</div>
+    <div class="dh-bloco-eixo" id="garantias">
+      <div class="dh-bloco-topo"><h2>2. Garantias constitucionais e proteção judicial</h2><p>Núcleo destinado ao estudo dos instrumentos constitucionais de proteção dos direitos fundamentais.</p></div>
+      <div class="dh-catalogo">
+        <a class="dh-card" href="#garantias"><div><span class="dh-tag">Em elaboração</span><h3>Remédios constitucionais</h3><p>Estudo sobre habeas corpus, mandado de segurança, habeas data, mandado de injunção e ação popular como instrumentos de proteção prática dos direitos fundamentais.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+      </div>
+    </div>
 
-<div class="bloco-eixo" id="sistema-punitivo">
-<h2>4. Sistema punitivo, penas e execução penal</h2>
-<p class="nota-secao">Núcleo destinado ao estudo da pena, dos limites constitucionais da punição e dos institutos próprios da execução penal.</p>
-<div class="catalogo-estado">
-<a class="card-estado" href="#sistema-punitivo"><div><span class="tag">Em elaboração</span><h3>Penas permitidas e penas proibidas</h3><p>Análise das espécies de pena admitidas e vedadas pela Constituição, com atenção à dignidade humana, proporcionalidade e limites do poder punitivo estatal.</p></div><span class="ler">Texto em preparação →</span></a>
-<a class="card-estado" href="#sistema-punitivo"><div><span class="tag">Em elaboração</span><h3>Lei dos Crimes Hediondos</h3><p>Estudo da Lei nº 8.072/1990, suas consequências penais, regime jurídico mais severo e relação com a política criminal brasileira.</p></div><span class="ler">Texto em preparação →</span></a>
-<a class="card-estado" href="#sistema-punitivo"><div><span class="tag">Em elaboração</span><h3>Progressão de regime</h3><p>Análise dos requisitos objetivos e subjetivos da progressão de regime, com atenção às diferenças entre crimes comuns, hediondos e situações de reincidência.</p></div><span class="ler">Texto em preparação →</span></a>
-<a class="card-estado" href="#sistema-punitivo"><div><span class="tag">Em elaboração</span><h3>Remição e remissão de pena</h3><p>Estudo da diferença entre remição e remissão, com foco na remição por trabalho, estudo e leitura no âmbito da execução penal.</p></div><span class="ler">Texto em preparação →</span></a>
-<a class="card-estado" href="#sistema-punitivo"><div><span class="tag">Em elaboração</span><h3>Maus antecedentes e reincidência</h3><p>Distinção entre maus antecedentes e reincidência, seus efeitos na dosimetria da pena, na execução penal e na avaliação da vida pregressa do condenado.</p></div><span class="ler">Texto em preparação →</span></a>
-</div>
-</div>
+    <div class="dh-bloco-eixo" id="persecucao-penal">
+      <div class="dh-bloco-topo"><h2>3. Persecução penal e justiça consensual</h2><p>Mecanismos penais e processuais que afetam liberdade, responsabilização e alternativas à punição tradicional.</p></div>
+      <div class="dh-catalogo">
+        <a class="dh-card" href="#persecucao-penal"><div><span class="dh-tag">Em elaboração</span><h3>ANPP — Acordo de Não Persecução Penal</h3><p>Análise do acordo de não persecução penal como instrumento de justiça negociada, seus requisitos, limites e relação com a resposta penal proporcional.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+        <a class="dh-card" href="#persecucao-penal"><div><span class="dh-tag">Em elaboração</span><h3>Lei nº 9.099/1995</h3><p>Estudo dos Juizados Especiais Criminais, infrações de menor potencial ofensivo, termo circunstanciado, composição civil, transação penal e suspensão condicional do processo.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+      </div>
+    </div>
 
-<div class="bloco-eixo" id="responsabilizacao">
-<h2>5. Responsabilização internacional do Brasil</h2>
-<p class="nota-secao">Núcleo voltado ao estudo de casos em que o Brasil foi responsabilizado internacionalmente por violação de direitos humanos.</p>
-<div class="catalogo-estado">
-<a class="card-estado" href="#responsabilizacao"><div><span class="tag">Em elaboração</span><h3>Casos de responsabilização do Brasil</h3><p>Estudo de decisões internacionais envolvendo o Estado brasileiro, com atenção às consequências jurídicas, políticas públicas e deveres de reparação.</p></div><span class="ler">Texto em preparação →</span></a>
-<a class="card-estado" href="#responsabilizacao"><div><span class="tag">Em elaboração</span><h3>O caso Pimenta</h3><p>Análise específica do caso Pimenta, com foco na responsabilização estatal, na proteção de direitos humanos e nos deveres internacionais assumidos pelo Brasil.</p></div><span class="ler">Texto em preparação →</span></a>
-</div>
-</div>
+    <div class="dh-bloco-eixo" id="sistema-punitivo">
+      <div class="dh-bloco-topo"><h2>4. Sistema punitivo, penas e execução penal</h2><p>Estudo da pena, dos limites constitucionais da punição e dos institutos próprios da execução penal.</p></div>
+      <div class="dh-catalogo">
+        <a class="dh-card" href="#sistema-punitivo"><div><span class="dh-tag">Em elaboração</span><h3>Penas permitidas e penas proibidas</h3><p>Análise das espécies de pena admitidas e vedadas pela Constituição, com atenção à dignidade humana, proporcionalidade e limites do poder punitivo estatal.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+        <a class="dh-card" href="#sistema-punitivo"><div><span class="dh-tag">Em elaboração</span><h3>Lei dos Crimes Hediondos</h3><p>Estudo da Lei nº 8.072/1990, suas consequências penais, regime jurídico mais severo e relação com a política criminal brasileira.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+        <a class="dh-card" href="#sistema-punitivo"><div><span class="dh-tag">Em elaboração</span><h3>Progressão de regime</h3><p>Análise dos requisitos objetivos e subjetivos da progressão de regime, com atenção às diferenças entre crimes comuns, hediondos e situações de reincidência.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+        <a class="dh-card" href="#sistema-punitivo"><div><span class="dh-tag">Em elaboração</span><h3>Remição e remissão de pena</h3><p>Estudo da diferença entre remição e remissão, com foco na remição por trabalho, estudo e leitura no âmbito da execução penal.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+        <a class="dh-card" href="#sistema-punitivo"><div><span class="dh-tag">Em elaboração</span><h3>Maus antecedentes e reincidência</h3><p>Distinção entre maus antecedentes e reincidência, seus efeitos na dosimetria da pena, na execução penal e na avaliação da vida pregressa do condenado.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+      </div>
+    </div>
 
-<div class="assinatura-texto"><p>João Victor Brando Novais</p><p class="local-data">São Paulo, 2026</p></div>
-</article>
-</section>
+    <div class="dh-bloco-eixo" id="responsabilizacao">
+      <div class="dh-bloco-topo"><h2>5. Responsabilização internacional do Brasil</h2><p>Estudo de casos em que o Brasil foi responsabilizado internacionalmente por violação de direitos humanos.</p></div>
+      <div class="dh-catalogo">
+        <a class="dh-card" href="#responsabilizacao"><div><span class="dh-tag">Em elaboração</span><h3>Casos de responsabilização do Brasil</h3><p>Estudo de decisões internacionais envolvendo o Estado brasileiro, com atenção às consequências jurídicas, políticas públicas e deveres de reparação.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+        <a class="dh-card" href="#responsabilizacao"><div><span class="dh-tag">Em elaboração</span><h3>O caso Pimenta</h3><p>Análise específica do caso Pimenta, com foco na responsabilização estatal, na proteção de direitos humanos e nos deveres internacionais assumidos pelo Brasil.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+      </div>
+    </div>
+
+    <div class="dh-assinatura"><p>João Victor Brando Novais</p><p>São Paulo, 2026</p></div>
+  </section>
 </main>
 <script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
 <script src="/menu.js"></script>
