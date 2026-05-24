@@ -195,8 +195,200 @@ function aplicarEstiloImagensDireitosHumanos() {
   document.head.appendChild(estilo);
 }
 
+function aplicarIdentidadeLeituraEstadoPoder() {
+  const paginaEstadoPoder = location.pathname.startsWith("/filosofia/estado-e-poder/");
+  const possuiLayoutLeitura = Boolean(document.querySelector(".layout-leitura"));
+
+  if (!paginaEstadoPoder || !possuiLayoutLeitura) return;
+  if (document.getElementById("estilo-leitura-estado-poder")) return;
+
+  document.body.classList.add("ep-leitura-interna");
+
+  const estilo = document.createElement("style");
+  estilo.id = "estilo-leitura-estado-poder";
+  estilo.textContent = `
+    body.ep-leitura-interna{
+      background:
+        radial-gradient(circle at 50% 0%,rgba(214,173,92,.13),transparent 32%),
+        radial-gradient(circle at 18% 18%,rgba(255,255,255,.08),transparent 26%),
+        linear-gradient(180deg,#3a3f46 0%,#2d3238 52%,#23282e 100%) !important;
+      color:#f5f1e8;
+    }
+
+    body.ep-leitura-interna::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.10;
+      background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+      background-size:7px 7px;
+      z-index:-1;
+    }
+
+    body.ep-leitura-interna header{
+      background:rgba(31,35,40,.95) !important;
+      border-bottom:1px solid rgba(214,173,92,.34) !important;
+      backdrop-filter:blur(8px);
+    }
+
+    body.ep-leitura-interna .brand,
+    body.ep-leitura-interna .brand a,
+    body.ep-leitura-interna .menu-links a{
+      color:#f5f1e8 !important;
+    }
+
+    body.ep-leitura-interna .menu-botao{
+      border-color:rgba(214,173,92,.50) !important;
+      color:#f1d28a !important;
+    }
+
+    body.ep-leitura-interna .menu-links{
+      background:#23282e !important;
+      border-right:1px solid rgba(214,173,92,.34) !important;
+    }
+
+    body.ep-leitura-interna .menu-fechar{color:#f5f1e8 !important;}
+
+    body.ep-leitura-interna .hero{
+      margin-top:34px;
+      margin-bottom:34px;
+      padding:44px 42px 40px !important;
+      border:1px solid rgba(214,173,92,.32);
+      border-radius:26px;
+      background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(0,0,0,.12));
+      box-shadow:0 20px 48px rgba(0,0,0,.22);
+      text-align:center;
+    }
+
+    body.ep-leitura-interna .logo-trabalho{margin-bottom:22px !important;}
+    body.ep-leitura-interna .logo-trabalho img{max-width:130px !important;filter:drop-shadow(0 8px 18px rgba(0,0,0,.28));}
+
+    body.ep-leitura-interna .categoria{
+      color:#f1d28a !important;
+      letter-spacing:1.8px;
+    }
+
+    body.ep-leitura-interna .titulo-principal{
+      max-width:900px;
+      margin:0 auto 16px !important;
+      color:#f7f2e8 !important;
+      font-size:clamp(32px,4.6vw,54px) !important;
+      line-height:1.12 !important;
+      text-shadow:0 4px 14px rgba(0,0,0,.38);
+    }
+
+    body.ep-leitura-interna .subtitulo,
+    body.ep-leitura-interna .hero p{
+      color:#d9cfbf !important;
+    }
+
+    body.ep-leitura-interna .botao-imprimir{
+      border:1px solid rgba(214,173,92,.50) !important;
+      background:#23282e !important;
+      color:#f1d28a !important;
+      border-radius:999px;
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+    }
+
+    body.ep-leitura-interna .layout-leitura{
+      gap:32px !important;
+      align-items:start;
+    }
+
+    body.ep-leitura-interna .controle-texto{
+      background:#23282e !important;
+      border:1px solid rgba(214,173,92,.34) !important;
+      border-radius:22px !important;
+      color:#f5f1e8 !important;
+      box-shadow:0 18px 42px rgba(0,0,0,.24) !important;
+      scrollbar-color:#d6ad5c #2d3238 !important;
+    }
+
+    body.ep-leitura-interna .controle-texto h2{color:#f7f2e8 !important;}
+    body.ep-leitura-interna .controle-texto p{color:#d9cfbf !important;}
+
+    body.ep-leitura-interna .controle-texto a{
+      color:#f1d28a !important;
+      background:rgba(255,255,255,.055) !important;
+      border:1px solid rgba(214,173,92,.26) !important;
+      border-radius:13px !important;
+      transition:background .18s ease,border-color .18s ease,transform .18s ease;
+    }
+
+    body.ep-leitura-interna .controle-texto a:hover{
+      background:rgba(214,173,92,.14) !important;
+      border-color:rgba(214,173,92,.55) !important;
+      transform:translateX(2px);
+    }
+
+    body.ep-leitura-interna .controle-texto::-webkit-scrollbar-track{background:#2d3238 !important;}
+    body.ep-leitura-interna .controle-texto::-webkit-scrollbar-thumb{background:#d6ad5c !important;}
+
+    body.ep-leitura-interna .conteudo-leitura .texto{
+      max-width:820px !important;
+      padding:46px 54px;
+      border:1px solid rgba(214,173,92,.42);
+      border-radius:26px;
+      background:#f6f0e5;
+      color:#27231d;
+      box-shadow:0 24px 58px rgba(0,0,0,.28);
+    }
+
+    body.ep-leitura-interna .texto p{
+      color:#2b2721;
+      text-align:justify;
+    }
+
+    body.ep-leitura-interna .texto h2{
+      color:#765420;
+      border-bottom:1px solid rgba(118,84,32,.22);
+      padding-bottom:8px;
+    }
+
+    body.ep-leitura-interna .texto h3{color:#8b672d;}
+    body.ep-leitura-interna .texto a{color:#6d4d1d;}
+
+    body.ep-leitura-interna .assinatura-texto p{color:#4c3f2c !important;}
+    body.ep-leitura-interna .local-data{color:#6c6254 !important;}
+
+    body.ep-leitura-interna .link-retorno a{
+      color:#7b663b !important;
+      border-bottom:1px solid rgba(123,102,59,.36);
+    }
+
+    body.ep-leitura-interna .figura-larga img,
+    body.ep-leitura-interna .texto figure:not(.autor-retrato):not(.deusa-retrato):not(.figura-larga) img{
+      border:1px solid rgba(214,173,92,.38) !important;
+      box-shadow:0 14px 34px rgba(0,0,0,.16) !important;
+    }
+
+    @media(max-width:900px){
+      body.ep-leitura-interna .hero{padding:34px 24px 32px !important;border-radius:20px;}
+      body.ep-leitura-interna .conteudo-leitura .texto{padding:32px 24px;border-radius:20px;}
+    }
+
+    @media print{
+      body.ep-leitura-interna{background:#fff !important;color:#000 !important;}
+      body.ep-leitura-interna::before{display:none !important;}
+      body.ep-leitura-interna .hero,
+      body.ep-leitura-interna .conteudo-leitura .texto{
+        background:#fff !important;
+        border:none !important;
+        border-radius:0 !important;
+        box-shadow:none !important;
+        color:#000 !important;
+      }
+      body.ep-leitura-interna .controle-texto{display:none !important;}
+    }
+  `;
+
+  document.head.appendChild(estilo);
+}
+
 aplicarAjustesDeNavegacaoLateral();
 aplicarEstiloImagensDireitosHumanos();
+aplicarIdentidadeLeituraEstadoPoder();
 inserirImagemCapaDireitosHumanos();
 inserirImagemMagnaCarta();
 inserirImagemSeteBispos();
