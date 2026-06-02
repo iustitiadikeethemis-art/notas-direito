@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casos de responsabilização do Brasil</title>
+<meta name="description" content="Página de organização dos casos de responsabilização internacional do Brasil por violações de direitos humanos.">
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --dh-bg:#1d1514;
+  --dh-bg-2:#2b1d1b;
+  --dh-bordo:#5b1118;
+  --dh-bordo-2:#7b1823;
+  --dh-red-soft:#bd5655;
+  --dh-gold:#d8b878;
+  --dh-text:#fbf2e8;
+  --dh-muted:#e5d3c5;
+  --dh-line:rgba(216,184,120,.34);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(123,24,35,.30),transparent 34%),
+    radial-gradient(circle at 18% 22%,rgba(255,255,255,.085),transparent 25%),
+    radial-gradient(circle at 50% 100%,rgba(185,74,77,.20),transparent 34%),
+    linear-gradient(180deg,#2b1b1a 0%,#241817 48%,#30211f 100%);
+  color:var(--dh-text);
+}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.115;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:7px 7px;}
+header{background:rgba(29,21,20,.95);border-bottom:1px solid rgba(216,184,120,.30);backdrop-filter:blur(8px);}
+.brand,.brand a,.menu-links a{color:var(--dh-text)!important;}
+.menu-botao{border-color:rgba(216,184,120,.46);color:#f3d29b;}
+.menu-links{background:#1d1514;border-right:1px solid rgba(216,184,120,.30);}
+.menu-fechar{color:var(--dh-text);}
+main.wrap{max-width:1180px;}
+.dh-hero-eixo{padding:78px 0 42px;text-align:center;border-bottom:1px solid var(--dh-line);}
+.dh-kicker{display:inline-block;margin-bottom:16px;color:var(--dh-muted);text-transform:uppercase;letter-spacing:2.4px;font-size:13px;}
+.dh-title{margin:0;color:var(--dh-text);font-size:clamp(42px,6.4vw,76px);line-height:.98;letter-spacing:1.8px;text-transform:uppercase;text-shadow:0 4px 15px rgba(0,0,0,.52);}
+.dh-title span{display:block;color:#ffdfcf;}
+.dh-title strong{display:block;color:#dd9290;font-weight:normal;}
+.dh-rule{width:min(760px,82%);height:1px;margin:24px auto 0;background:linear-gradient(90deg,transparent,var(--dh-line),transparent);}
+.dh-subtitle{max-width:860px;margin:22px auto 0;color:var(--dh-muted);font-size:20px;line-height:1.7;}
+.dh-section{padding:50px 0 62px;}
+.dh-intro{max-width:900px;margin:0 auto 38px;padding:28px 32px;border:1px solid var(--dh-line);background:rgba(255,255,255,.065);color:var(--dh-muted);font-size:18px;line-height:1.76;box-shadow:0 18px 42px rgba(0,0,0,.18);}
+.dh-bloco-topo{max-width:950px;margin:0 0 22px;padding:22px 25px;border-left:4px solid var(--dh-red-soft);background:rgba(255,255,255,.055);border-top:1px solid rgba(216,184,120,.22);border-right:1px solid rgba(216,184,120,.22);border-bottom:1px solid rgba(216,184,120,.22);box-shadow:0 12px 30px rgba(0,0,0,.13);}
+.dh-bloco-topo h2{margin:0 0 8px;color:#ffdfcf;font-size:28px;line-height:1.2;}
+.dh-bloco-topo p{margin:0;color:var(--dh-muted);font-size:17px;line-height:1.7;}
+.dh-catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;}
+.dh-card{min-height:310px;display:flex;flex-direction:column;justify-content:space-between;padding:27px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(180deg,rgba(255,255,255,.074),rgba(255,255,255,.030));box-shadow:0 18px 42px rgba(0,0,0,.24);color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
+.dh-card:hover{transform:translateY(-4px);box-shadow:0 25px 58px rgba(0,0,0,.32);border-color:rgba(216,184,120,.48);}
+.dh-tag{display:inline-block;width:max-content;margin-bottom:15px;padding:5px 11px;border:1px solid rgba(216,184,120,.34);color:#f3d29b;text-transform:uppercase;letter-spacing:1.45px;font-size:12px;}
+.dh-card h3{margin:0 0 13px;color:#fff6ee;font-size:24px;line-height:1.18;}
+.dh-card p{margin:0 0 20px;color:var(--dh-muted);font-size:16px;line-height:1.66;}
+.dh-ler{color:#f3d29b;font-weight:bold;}
+.dh-assinatura{margin:56px auto 0;padding:22px 0 0;border-top:1px solid rgba(216,184,120,.22);text-align:center;color:#e8d6c6;}
+.dh-assinatura p{margin:3px 0;}
+.link-retorno{margin-top:34px;text-align:center;}
+.link-retorno a{color:#f3d29b;text-decoration:none;border-bottom:1px solid rgba(243,210,155,.45);}
+@media(max-width:760px){.dh-card{min-height:auto}.dh-hero-eixo{padding-top:56px}.brand{font-size:22px;}.dh-bloco-topo h2{font-size:24px;}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="dh-hero-eixo">
+    <span class="dh-kicker">Direitos Humanos · Sistema Internacional</span>
+    <h1 class="dh-title"><span>Casos de responsabilização</span><strong>do Brasil</strong></h1>
+    <div class="dh-rule"></div>
+    <p class="dh-subtitle">Organização dos estudos sobre decisões e casos internacionais envolvendo o Estado brasileiro por violações de direitos humanos.</p>
+  </section>
+
+  <section class="dh-section">
+    <div class="dh-intro">
+      Esta página funciona como índice interno para os casos de responsabilização internacional do Brasil. Cada card será desenvolvido posteriormente em texto próprio, com contexto histórico, fatos relevantes, fundamentos jurídicos, decisão internacional e efeitos internos.
+    </div>
+
+    <div class="dh-bloco-topo"><h2>Casos para estudo posterior</h2><p>Seleção inicial de casos relevantes para compreender a atuação do sistema interamericano e a responsabilidade internacional do Estado brasileiro.</p></div>
+    <div class="dh-catalogo">
+      <a class="dh-card" href="#maria-da-penha"><div><span class="dh-tag">Em elaboração</span><h3>Caso Maria da Penha</h3><p>Estudo sobre a responsabilização internacional do Brasil por omissão, tolerância e demora estatal diante da violência doméstica contra a mulher, com impactos na criação da Lei Maria da Penha.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+      <a class="dh-card" href="#gabriel-sales-pimenta"><div><span class="dh-tag">Em elaboração</span><h3>Caso Gabriel Sales Pimenta</h3><p>Análise do caso envolvendo a morte do advogado Gabriel Sales Pimenta e a responsabilização internacional do Brasil por falhas na investigação, persecução e proteção de direitos humanos.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+      <a class="dh-card" href="#herzog"><div><span class="dh-tag">Em elaboração</span><h3>Caso Herzog</h3><p>Estudo sobre o caso Vladimir Herzog, a responsabilidade estatal por graves violações de direitos humanos durante a ditadura militar e os deveres de verdade, memória, investigação e reparação.</p></div><span class="dh-ler">Texto em preparação →</span></a>
+    </div>
+
+    <p class="link-retorno"><a href="/direitos-humanos/index.html">Voltar para Direitos Humanos</a></p>
+    <div class="dh-assinatura"><p>João Victor Brando Novais</p><p>São Paulo, 2026</p></div>
+  </section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
