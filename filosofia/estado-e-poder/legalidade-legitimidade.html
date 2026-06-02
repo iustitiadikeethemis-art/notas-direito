@@ -13,8 +13,13 @@
 .controle-texto a{display:block;text-decoration:none;color:#2d2a24;padding:9px 11px;margin:7px 0;border:1px solid #ded8cc;border-radius:12px;background:#faf8f3;font-size:14px;line-height:1.35;}
 .controle-texto a:hover{background:#eee7d9;}
 .conteudo-leitura{min-width:0;}
+.fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:#faf8f3;border:1px solid #ded8cc;box-shadow:0 10px 28px rgba(0,0,0,0.045);}
+.fonte-box h2{font-size:26px;margin:0 0 16px;color:#2d2a24;border:0;padding:0;}
+.fonte-box p{font-size:16px;line-height:1.75;text-align:left;margin:0 0 14px;color:#3f3932;}
+.fonte-box p:last-child{margin-bottom:0;}
+.fonte-box a{color:#3d3021;text-decoration:none;border-bottom:1px solid rgba(61,48,33,.35);}
 @media(max-width:900px){.layout-leitura{grid-template-columns:1fr;}.controle-texto{position:static;}}
-@media print{.controle-texto{display:none!important;}.layout-leitura{display:block;}}
+@media print{.controle-texto{display:none!important;}.layout-leitura{display:block;}.fonte-box{box-shadow:none;border:1px solid #000;}}
 </style>
 </head>
 <body>
@@ -42,6 +47,7 @@
 <a href="#collor">Caso Collor</a>
 <a href="#conclusao">Conclusão</a>
 <a href="#constituicao-1988">Constituição de 1988</a>
+<a href="#fontes">Fontes documentais</a>
 </aside>
 <div class="conteudo-leitura">
 <article class="texto">
@@ -122,7 +128,21 @@
   <img src="/imagens/88.jpg" alt="Promulgação da Constituição Federal de 1988">
   <figcaption>Figura 2 – Promulgação da Constituição Federal de 1988. Fonte: Agência Brasil, via Wikimedia Commons.</figcaption>
 </figure>
-
+<div class="fonte-box" id="fontes">
+  <h2>Fontes documentais consultadas</h2>
+  <p>AGÊNCIA SENADO. <strong>STF decide que Ficha Limpa não vale para eleições de 2010.</strong> Brasília, DF, 23 mar. 2011. Disponível em: <a href="https://www12.senado.leg.br/noticias/materias/2011/03/23/stf-decide-que-ficha-limpa-nao-vale-para-eleicoes-de-2010" target="_blank" rel="noopener">https://www12.senado.leg.br/noticias/materias/2011/03/23/stf-decide-que-ficha-limpa-nao-vale-para-eleicoes-de-2010</a>. Acesso em: 10 maio 2026.</p>
+  <p>BENTHAM, Jeremy. <strong>Uma introdução aos princípios da moral e da legislação.</strong> São Paulo: Abril Cultural, 1979.</p>
+  <p>BOBBIO, Norberto; MATTEUCCI, Nicola; PASQUINO, Gianfranco. <strong>Dicionário de política.</strong> 11. ed. Brasília, DF: Editora Universidade de Brasília, 1998.</p>
+  <p>BONAVIDES, Paulo. <strong>Ciência política.</strong> 10. ed. rev. e atual. São Paulo: Malheiros, 2000.</p>
+  <p>BRASIL. <strong>Constituição da República Federativa do Brasil de 1988.</strong> Brasília, DF: Presidência da República, 1988. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm" target="_blank" rel="noopener">https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm</a>. Acesso em: 10 maio 2026.</p>
+  <p>CÂMARA DOS DEPUTADOS. <strong>20 anos do impeachment do presidente Fernando Collor.</strong> Brasília, DF: Câmara dos Deputados. Disponível em: <a href="https://www2.camara.leg.br/atividade-legislativa/plenario/discursos/escrevendohistoria/20-anos-do-impeachment/20-anos-do-impeachment-do-presidente-fernando-collor" target="_blank" rel="noopener">https://www2.camara.leg.br/atividade-legislativa/plenario/discursos/escrevendohistoria/20-anos-do-impeachment/20-anos-do-impeachment-do-presidente-fernando-collor</a>. Acesso em: 10 maio 2026.</p>
+  <p>DALLARI, Dalmo de Abreu. <strong>Elementos de teoria geral do Estado.</strong> 20. ed. atual. São Paulo: Saraiva, 1998.</p>
+  <p>ESTADOS UNIDOS DA AMÉRICA. <strong>The Constitution: Amendments 11-27.</strong> Washington, DC: National Archives. Disponível em: <a href="https://www.archives.gov/founding-docs/amendments-11-27" target="_blank" rel="noopener">https://www.archives.gov/founding-docs/amendments-11-27</a>. Acesso em: 10 maio 2026.</p>
+  <p>SENADO FEDERAL. <strong>Davi manda arquivar PEC 3/2021.</strong> Brasília, DF: Agência Senado, 24 set. 2025. Disponível em: <a href="https://www12.senado.leg.br/noticias/materias/2025/09/24/davi-manda-arquivar-pec-3-2021" target="_blank" rel="noopener">https://www12.senado.leg.br/noticias/materias/2025/09/24/davi-manda-arquivar-pec-3-2021</a>. Acesso em: 10 maio 2026.</p>
+  <p>WEBER, Max. <strong>Ciência e política: duas vocações.</strong> 18. ed. Tradução de Leonidas Hegenberg e Octany Silveira da Mota. São Paulo: Cultrix, 2011.</p>
+  <p>WEBER, Max. <strong>Economia e sociedade: fundamentos da sociologia compreensiva.</strong> Tradução de Regis Barbosa e Karen Elsabe Barbosa. Revisão técnica de Gabriel Cohn. Brasília, DF: Editora Universidade de Brasília; São Paulo: Imprensa Oficial do Estado de São Paulo, 2004. v. 2.</p>
+  <p>WIKIMEDIA COMMONS. <strong>Promulgação-Constituição-1988.jpg.</strong> Fotografia de Agência Brasil. Disponível em: <a href="https://commons.wikimedia.org/wiki/File:Promulga%C3%A7%C3%A3o-Constitui%C3%A7%C3%A3o-1988.jpg" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:Promulgação-Constituição-1988.jpg</a>. Acesso em: 10 maio 2026.</p>
+</div>
 <div class="assinatura-texto">
   <p>João Victor Brando Novais</p>
   <p class="local-data">São Paulo, 2026</p>
