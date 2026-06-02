@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Internacional | Estado e Poder</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --ep-bg:#0b0d0f;
+  --ep-bg-2:#15181c;
+  --ep-panel:#1b1f24;
+  --ep-gold:#d6ad5c;
+  --ep-gold-soft:#f1d28a;
+  --ep-text:#f5f1e8;
+  --ep-muted:#c9c0ad;
+  --ep-line:rgba(214,173,92,.30);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(214,173,92,.14),transparent 31%),
+    radial-gradient(circle at 20% 24%,rgba(255,255,255,.075),transparent 24%),
+    linear-gradient(180deg,#1a1d22 0%,#101214 56%,#08090a 100%);
+  color:var(--ep-text);
+}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:7px 7px;}
+header{background:rgba(10,12,14,.94);border-bottom:1px solid var(--ep-line);backdrop-filter:blur(8px);}
+.brand,.brand a,.menu-links a{color:var(--ep-text)!important;}
+.menu-botao{border-color:var(--ep-line);color:var(--ep-gold-soft);}
+.menu-links{background:#101214;border-right:1px solid var(--ep-line);}
+.menu-fechar{color:var(--ep-text);}
+main.wrap{max-width:1180px;}
+.ep-hero{padding:80px 0 44px;text-align:center;border-bottom:1px solid var(--ep-line);}
+.ep-kicker{display:inline-block;margin-bottom:16px;color:var(--ep-muted);text-transform:uppercase;letter-spacing:2.6px;font-size:13px;}
+.ep-title{margin:0;color:var(--ep-text);font-size:clamp(44px,6.5vw,82px);line-height:.94;letter-spacing:2px;text-transform:uppercase;text-shadow:0 4px 15px rgba(0,0,0,.52);}
+.ep-title span{display:block;color:var(--ep-gold);}
+.ep-rule{width:min(760px,82%);height:1px;margin:24px auto 0;background:linear-gradient(90deg,transparent,var(--ep-line),transparent);}
+.ep-subtitle{max-width:850px;margin:22px auto 0;color:var(--ep-muted);font-size:20px;line-height:1.7;}
+.ep-section{padding:52px 0;}
+.ep-intro{max-width:900px;margin:0 auto 34px;padding:28px 32px;border:1px solid var(--ep-line);background:rgba(255,255,255,.045);color:var(--ep-muted);font-size:18px;line-height:1.76;}
+.ep-bloco-topo{max-width:950px;margin:0 0 22px;padding:22px 25px;border-left:4px solid var(--ep-gold);background:rgba(255,255,255,.045);border-top:1px solid var(--ep-line);border-right:1px solid var(--ep-line);border-bottom:1px solid var(--ep-line);box-shadow:0 12px 30px rgba(0,0,0,.18);}
+.ep-bloco-topo h2{margin:0 0 8px;color:#f7f2e8;font-size:28px;line-height:1.2;}
+.ep-bloco-topo p{margin:0;color:var(--ep-muted);font-size:17px;line-height:1.7;}
+.ep-catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+.ep-card{min-height:315px;display:flex;flex-direction:column;justify-content:space-between;padding:30px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.058),rgba(255,255,255,.018));box-shadow:0 20px 48px rgba(0,0,0,.30);color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
+.ep-card:hover{transform:translateY(-4px);box-shadow:0 28px 62px rgba(0,0,0,.38);border-color:var(--ep-line);}
+.ep-tag{display:inline-block;width:max-content;margin-bottom:15px;padding:5px 11px;border:1px solid var(--ep-line);color:var(--ep-gold-soft);text-transform:uppercase;letter-spacing:1.45px;font-size:12px;}
+.ep-card h2{margin:0 0 13px;color:#f7f2e8;font-size:30px;line-height:1.12;}
+.ep-card p{margin:0 0 20px;color:var(--ep-muted);font-size:17px;line-height:1.66;}
+.ep-ler{color:var(--ep-gold-soft);font-weight:bold;}
+.ep-assinatura{margin:46px auto 0;text-align:center;color:var(--ep-muted);}
+.ep-assinatura p{margin:3px 0;}
+.link-retorno{margin-top:34px;text-align:center;}
+.link-retorno a{color:var(--ep-gold-soft);text-decoration:none;border-bottom:1px solid rgba(241,210,138,.45);}
+@media(max-width:760px){.ep-card{min-height:auto}.ep-hero{padding-top:56px}.brand{font-size:22px;}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="ep-hero">
+    <span class="ep-kicker">Disciplina · Estado e Poder</span>
+    <h1 class="ep-title"><span>Direito</span> Internacional</h1>
+    <div class="ep-rule"></div>
+    <p class="ep-subtitle">Núcleo reservado ao estudo da formação, adesão, ratificação, incorporação e hierarquia dos tratados internacionais no Estado brasileiro.</p>
+  </section>
+
+  <section class="ep-section">
+    <div class="ep-intro">
+      Esta seção ficará dedicada à dimensão técnico-institucional do direito internacional no eixo Estado e Poder: como tratados são criados, como o Brasil manifesta consentimento internacional, como ocorre a incorporação interna e quais efeitos esses atos produzem no ordenamento jurídico brasileiro.
+    </div>
+
+    <div class="ep-bloco-topo"><h2>Estudos programados</h2><p>Textos futuros sobre a relação entre soberania, Estado, Constituição e compromissos internacionais assumidos pelo Brasil.</p></div>
+    <div class="ep-catalogo">
+      <a class="ep-card" href="#tratados-internacionais">
+        <div><span class="ep-tag">Em elaboração</span><h2>Tratados internacionais: formação, adesão e incorporação</h2><p>Estudo técnico sobre negociação, assinatura, ratificação, adesão, decreto legislativo, promulgação presidencial, vigência interna e hierarquia normativa dos tratados internacionais no Brasil.</p></div><span class="ep-ler">Texto em preparação →</span>
+      </a>
+    </div>
+
+    <p class="link-retorno"><a href="/filosofia/estado-e-poder.html">Voltar para Estado e Poder</a></p>
+    <div class="ep-assinatura"><p>João Victor Brando Novais</p><p>São Paulo, 2026</p></div>
+  </section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
