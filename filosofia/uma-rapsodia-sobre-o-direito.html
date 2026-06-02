@@ -48,11 +48,15 @@
 }
 .controle-texto a:hover{background:#eee7d9;}
 .conteudo-leitura{min-width:0;}
+.fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:#faf8f3;border:1px solid #ded8cc;box-shadow:0 10px 28px rgba(0,0,0,0.045);}
+.fonte-box h2{font-size:26px;margin:0 0 16px;color:#2d2a24;border:0;padding:0;}
+.fonte-box p{font-size:16px;line-height:1.75;text-align:left;margin:0 0 14px;color:#3f3932;}
+.fonte-box p:last-child{margin-bottom:0;}
 @media(max-width:900px){
   .layout-leitura{grid-template-columns:1fr;}
   .controle-texto{position:static;}
 }
-@media print{.controle-texto{display:none!important;}.layout-leitura{display:block;}}
+@media print{.controle-texto{display:none!important;}.layout-leitura{display:block;}.fonte-box{box-shadow:none;border:1px solid #000;}}
 </style>
 </head>
 <body>
@@ -89,6 +93,7 @@
 <a href="#hart">Hart</a>
 <a href="#streck">Streck</a>
 <a href="#sintese">Síntese final</a>
+<a href="#fontes">Fontes documentais</a>
 </aside>
 <div class="conteudo-leitura">
 <article class="texto">
@@ -135,6 +140,23 @@
 <figure>
   <img src="/imagens/Resumodoeixo.png" alt="Resumo final do eixo do direito e da justiça">
 </figure>
+<div class="fonte-box" id="fontes">
+  <h2>Fontes documentais consultadas</h2>
+  <p>PLATÃO. <strong>Apologia de Sócrates.</strong></p>
+  <p>ARISTÓTELES. <strong>Ética a Nicômaco.</strong></p>
+  <p>ARISTÓTELES. <strong>Política.</strong></p>
+  <p>CÍCERO, Marco Túlio. <strong>Das leis.</strong></p>
+  <p>TOMÁS DE AQUINO. <strong>Suma Teológica.</strong> Especialmente I-II, q. 90, q. 91 e q. 96.</p>
+  <p>RAWLS, John. <strong>Uma teoria da justiça.</strong></p>
+  <p>RAWLS, John. <strong>Justiça como equidade: uma reformulação.</strong></p>
+  <p>SANDEL, Michael J. <strong>Justiça: o que é fazer a coisa certa?</strong></p>
+  <p>KELSEN, Hans. <strong>Teoria pura do direito.</strong></p>
+  <p>HART, Herbert L. A. <strong>O conceito de direito.</strong></p>
+  <p>HUME, David. <strong>Tratado da natureza humana.</strong></p>
+  <p>STRECK, Lenio Luiz. <strong>O que é isto — decido conforme minha consciência?</strong></p>
+  <p>STRECK, Lenio Luiz. <strong>Verdade e consenso.</strong></p>
+  <p>FERRAZ JR., Tércio Sampaio. <strong>Introdução ao estudo do direito: técnica, decisão, dominação.</strong></p>
+</div>
 <div class="assinatura-texto">
   <p>João Victor Brando Novais</p>
   <p class="local-data">São Paulo, 2026</p>
