@@ -128,6 +128,58 @@ function aplicarAcabamentoInternoDireitosHumanos() {
   `);
 }
 
+function paginaANPPDireitosHumanos() {
+  return location.pathname === "/direitos-humanos/anpp-acordo-nao-persecucao-penal.html" || location.pathname === "/direitos-humanos/anpp-acordo-nao-persecucao-penal";
+}
+
+function figuraANPP(classe, src, alt, legenda, extraClasse = "") {
+  return `
+    <figure class="dh-imagem-secao anpp-infografico ${classe} ${extraClasse}">
+      <img src="${src}" alt="${alt}">
+      <figcaption>${legenda}</figcaption>
+    </figure>`;
+}
+
+function inserirFiguraAntesDoTituloANPP(idTitulo, classe, src, alt, legenda, extraClasse = "") {
+  if (!paginaANPPDireitosHumanos() || document.querySelector("." + classe)) return;
+  const titulo = document.getElementById(idTitulo);
+  if (!titulo) return;
+  titulo.insertAdjacentHTML("beforebegin", figuraANPP(classe, src, alt, legenda, extraClasse));
+}
+
+function inserirFiguraDepoisDoParagrafoANPP(trechoInicial, classe, src, alt, legenda, extraClasse = "") {
+  if (!paginaANPPDireitosHumanos() || document.querySelector("." + classe)) return;
+  const paragrafos = Array.from(document.querySelectorAll(".dh-artigo p"));
+  const alvo = paragrafos.find(p => p.textContent.trim().startsWith(trechoInicial));
+  if (!alvo) return;
+  alvo.insertAdjacentHTML("afterend", figuraANPP(classe, src, alt, legenda, extraClasse));
+}
+
+function aplicarEstiloInfograficosANPP() {
+  if (!paginaANPPDireitosHumanos()) return;
+  inserirEstiloUnico("estilo-infograficos-anpp", `
+    body.dh-leitura-interna .anpp-infografico{max-width:880px;margin:42px auto 44px;border-radius:22px;border:1px solid rgba(91,17,24,.22);background:#211817;box-shadow:0 18px 42px rgba(0,0,0,.16);}
+    body.dh-leitura-interna .anpp-infografico img{display:block;width:100%;height:auto;filter:none !important;}
+    body.dh-leitura-interna .anpp-infografico figcaption{background:#241817;color:#f3e3d5;font-size:14.5px;line-height:1.62;text-align:left;}
+    body.dh-leitura-interna .anpp-infografico-largo{max-width:1000px;}
+    @media(max-width:900px){body.dh-leitura-interna .anpp-infografico{max-width:100%;margin:30px 0 34px;border-radius:16px;}body.dh-leitura-interna .anpp-infografico figcaption{font-size:13.5px;}}
+  `);
+}
+
+function inserirInfograficosANPP() {
+  if (!paginaANPPDireitosHumanos()) return;
+  inserirFiguraAntesDoTituloANPP("requisitos", "anpp-img-requisitos", "/imagens/anppimagem1.png", "Infográfico sobre requisitos mínimos e vedações principais do ANPP.", "Mapa visual dos requisitos mínimos e das vedações centrais do ANPP, útil para fixar o ponto de partida do art. 28-A do CPP.");
+  inserirFiguraDepoisDoParagrafoANPP("O rito inicial pode ser descrito em etapas.", "anpp-img-rito", "/imagens/anppimagem2.png", "Infográfico sobre o rito inicial da persecução penal e a chegada ao ANPP.", "Fluxo simplificado da notícia do fato até a análise ministerial do acordo, distinguindo investigação, arquivamento, transação penal, ANPP e denúncia.");
+  inserirFiguraDepoisDoParagrafoANPP("Na ação penal pública, portanto, os sujeitos centrais do ANPP", "anpp-img-sujeitos", "/imagens/anppimagem3.png", "Infográfico sobre os sujeitos do ANPP e a função de cada participante.", "Distribuição institucional dos papéis no ANPP: Ministério Público, investigado ou acusado, defesa técnica, juiz, vítima e autoridade policial.");
+  inserirFiguraDepoisDoParagrafoANPP("A ação penal privada exige tratamento próprio.", "anpp-img-publica-privada", "/imagens/anppimagem4.png", "Infográfico comparando ação penal pública e ação penal privada no ANPP.", "Comparação entre ação penal pública e ação penal privada no ANPP, com destaque para denúncia, queixa-crime, titularidade, vítima, querelante e controle judicial.", "anpp-infografico-largo");
+  inserirFiguraDepoisDoParagrafoANPP("Essa distinção entre crimes com vítima determinada e crimes sem vítima evidente", "anpp-img-vitima", "/imagens/anppimagem5.png", "Infográfico sobre vítima determinada, vítima difusa e crimes sem vítima evidente no ANPP.", "Síntese das diferenças entre vítima individualizada, vítima difusa ou coletiva e ente público como sujeito passivo, especialmente para fins de reparação do dano.", "anpp-infografico-largo");
+  inserirFiguraDepoisDoParagrafoANPP("A recusa fundamentada do Ministério Público constitui outro ponto central.", "anpp-img-recusas", "/imagens/anppimagem6.png", "Infográfico sobre recusas no ANPP.", "Quadro de controle das recusas no ANPP: recusa fundamentada do Ministério Público, recusa do investigado ou acusado e recusa judicial de homologação.");
+  inserirFiguraDepoisDoParagrafoANPP("As condições previstas no art. 28-A do Código de Processo Penal", "anpp-img-condicoes", "/imagens/anppimagem7.png", "Infográfico sobre as condições possíveis do ANPP.", "Resumo das condições possíveis do ANPP: reparação do dano, renúncia a bens, prestação de serviços, prestação pecuniária e outra condição proporcional e compatível.");
+  inserirFiguraDepoisDoParagrafoANPP("A escolha das condições deve obedecer ao juízo de necessidade e suficiência.", "anpp-img-aplicacao-condicoes", "/imagens/anppimagem8.png", "Infográfico sobre quando aplicar cada condição do ANPP.", "Matriz prática para escolha das condições conforme o caso concreto, observando proporcionalidade, suficiência, capacidade de cumprimento e natureza do bem jurídico lesado.", "anpp-infografico-largo");
+  inserirFiguraDepoisDoParagrafoANPP("Uma vez homologado judicialmente o acordo", "anpp-img-cumprimento", "/imagens/anppimagem9.png", "Infográfico sobre cumprimento, descumprimento e rescisão do ANPP.", "Fluxo prático do acordo após a homologação: execução, comprovação, cumprimento integral, extinção da punibilidade, descumprimento injustificado e rescisão.", "anpp-infografico-largo");
+  inserirFiguraDepoisDoParagrafoANPP("O cumprimento do ANPP não gera condenação criminal.", "anpp-img-efeitos", "/imagens/anppimagem10.png", "Infográfico sobre os efeitos jurídicos do ANPP.", "Síntese dos efeitos finais do ANPP: ausência de condenação, ausência de antecedentes penais ordinários, extinção da punibilidade e restrição a novos benefícios consensuais por cinco anos.", "anpp-infografico-largo");
+}
+
 function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
   const botao = document.querySelector(".menu-botao");
@@ -147,5 +199,7 @@ aplicarEstiloImagensDireitosHumanos();
 aplicarIdentidadeLeituraEstadoPoder();
 ajustarRetornoTextosEstadoPoder();
 aplicarAcabamentoInternoDireitosHumanos();
+aplicarEstiloInfograficosANPP();
 inserirImagemCapaDireitosHumanos();
 inserirImagensHistoriaDireitosHumanos();
+inserirInfograficosANPP();
