@@ -180,6 +180,54 @@ function inserirInfograficosANPP() {
   inserirFiguraDepoisDoParagrafoANPP("O cumprimento do ANPP não gera condenação criminal.", "anpp-img-efeitos", "/imagens/anppimagem10.png", "Infográfico sobre os efeitos jurídicos do ANPP.", "Síntese dos efeitos finais do ANPP: ausência de condenação, ausência de antecedentes penais ordinários, extinção da punibilidade e restrição a novos benefícios consensuais por cinco anos.", "anpp-infografico-largo");
 }
 
+function destaqueANPP(classe, titulo, citacao, texto) {
+  return `
+    <section class="anpp-destaque-conceito ${classe}">
+      <div class="anpp-destaque-cabecalho">${titulo}</div>
+      <div class="anpp-destaque-corpo">
+        <p class="anpp-destaque-citacao">“${citacao}”</p>
+        <p class="anpp-destaque-texto">${texto}</p>
+      </div>
+    </section>`;
+}
+
+function inserirDestaqueDepoisDoParagrafoANPP(trechoInicial, classe, titulo, citacao, texto) {
+  if (!paginaANPPDireitosHumanos() || document.querySelector("." + classe)) return;
+  const paragrafos = Array.from(document.querySelectorAll(".dh-artigo p"));
+  const alvo = paragrafos.find(p => p.textContent.trim().startsWith(trechoInicial));
+  if (!alvo) return;
+  alvo.insertAdjacentHTML("afterend", destaqueANPP(classe, titulo, citacao, texto));
+}
+
+function aplicarEstiloDestaquesANPP() {
+  if (!paginaANPPDireitosHumanos()) return;
+  inserirEstiloUnico("estilo-destaques-anpp", `
+    body.dh-leitura-interna .anpp-destaque-conceito{margin:32px 0 38px;border-radius:18px;overflow:hidden;background:#fff7ef;border-left:6px solid #7b1823;box-shadow:0 14px 34px rgba(0,0,0,.08);border-top:1px solid rgba(91,17,24,.16);border-right:1px solid rgba(91,17,24,.16);border-bottom:1px solid rgba(91,17,24,.16);}
+    body.dh-leitura-interna .anpp-destaque-cabecalho{background:#241b1a;color:#fff3e6;font-weight:700;font-size:18px;line-height:1.35;padding:16px 22px;letter-spacing:.01em;}
+    body.dh-leitura-interna .anpp-destaque-corpo{padding:22px 26px 24px;background:#fff7ef;}
+    body.dh-leitura-interna .anpp-destaque-conceito p{margin:0;text-align:left !important;color:#2b2925 !important;}
+    body.dh-leitura-interna .anpp-destaque-citacao{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:23px !important;line-height:1.55 !important;color:#3a2421 !important;margin-bottom:12px !important;}
+    body.dh-leitura-interna .anpp-destaque-texto{font-size:16.5px !important;line-height:1.68 !important;color:#2e2925 !important;}
+    @media(max-width:900px){body.dh-leitura-interna .anpp-destaque-conceito{margin:26px 0 32px;border-radius:14px;}body.dh-leitura-interna .anpp-destaque-cabecalho{font-size:16px;padding:14px 16px;}body.dh-leitura-interna .anpp-destaque-corpo{padding:18px 18px 20px;}body.dh-leitura-interna .anpp-destaque-citacao{font-size:20px !important;}}
+  `);
+}
+
+function inserirDestaquesANPP() {
+  if (!paginaANPPDireitosHumanos()) return;
+  inserirDestaqueDepoisDoParagrafoANPP("Essa constatação inicial é fundamental.", "anpp-destaque-justa-causa", "Conceito-chave — Justa causa e maturidade do caso", "o acordo pressupõe um caso apto à denúncia", "O ANPP não serve para suprir investigação frágil. Antes da proposta, devem existir elementos suficientes de autoria e materialidade; se não houver justa causa, o caminho adequado é o arquivamento ou o aprofundamento investigativo.");
+  inserirDestaqueDepoisDoParagrafoANPP("Essa lógica revela o caráter híbrido do ANPP.", "anpp-destaque-natureza", "Natureza jurídica destacada — Negócio jurídico processual penal", "negócio jurídico processual penal com conteúdo penal relevante", "O acordo é consensual, mas não é contrato privado. Ele nasce no processo penal, depende de defesa técnica, passa por homologação judicial e pode produzir a extinção da punibilidade.");
+  inserirDestaqueDepoisDoParagrafoANPP("Essa racionalização não significa renúncia descontrolada", "anpp-destaque-limites", "Limites fundamentais — Cabimento restrito", "pena mínima inferior a quatro anos, sem violência ou grave ameaça", "A racionalização da persecução penal não elimina a legalidade. O ANPP só pode ser proposto dentro da moldura do art. 28-A do CPP e das vedações legais e jurisprudenciais aplicáveis.");
+  inserirDestaqueDepoisDoParagrafoANPP("A posição do juiz é uma das características", "anpp-destaque-homologacao", "Ponto institucional — Homologação judicial", "o juiz controla legalidade, regularidade e voluntariedade", "O juiz não negocia o acordo nem substitui o Ministério Público. Sua função é garantir que o pacto respeite a lei, a defesa técnica e a vontade livre do investigado.");
+  inserirDestaqueDepoisDoParagrafoANPP("O primeiro pressuposto é negativo:", "anpp-destaque-arquivamento", "Pressuposto negativo — Não pode ser caso de arquivamento", "não pode ser caso de arquivamento", "Se o fato não tem base probatória mínima, não há espaço legítimo para acordo. O ANPP pressupõe persecução penal possível; onde falta justa causa, não se negocia responsabilização.");
+  inserirDestaqueDepoisDoParagrafoANPP("O quarto requisito é a confissão formal", "anpp-destaque-confissao", "Requisito estrutural — Confissão formal e circunstanciada", "confissão formal e circunstanciada", "A confissão deve ser documentada, voluntária e acompanhada de defesa técnica. Não basta aceitar condições; o investigado deve confessar os fatos essenciais de modo minimamente individualizado.");
+  inserirDestaqueDepoisDoParagrafoANPP("O quinto requisito é que o acordo", "anpp-destaque-suficiencia", "Juízo de suficiência — Reprovação e prevenção", "necessário e suficiente para reprovação e prevenção", "Mesmo presentes os requisitos objetivos, o Ministério Público deve avaliar se a solução consensual é proporcional ao caso concreto e adequada à finalidade preventiva do sistema penal.");
+  inserirDestaqueDepoisDoParagrafoANPP("A recusa fundamentada do Ministério Público constitui", "anpp-destaque-recusa", "Controle da negativa — Recusa fundamentada", "a negativa ministerial não pode ser arbitrária", "O ANPP não é direito automático do investigado, mas a recusa do Ministério Público deve ser motivada. A fundamentação permite controle interno e evita seletividade sem justificativa.");
+  inserirDestaqueDepoisDoParagrafoANPP("A natureza jurídica do ANPP também exige distinção", "anpp-destaque-nao-pena", "Distinção essencial — Condição não é pena", "as condições assumidas pelo investigado não são penas em sentido técnico", "As obrigações do ANPP funcionam como equivalentes sancionatórios, mas não decorrem de condenação. Por isso, cumprimento do acordo não equivale a cumprimento de pena criminal.");
+  inserirDestaqueDepoisDoParagrafoANPP("O cumprimento integral das condições conduz", "anpp-destaque-extincao", "Efeito final — Extinção da punibilidade", "cumprimento integral das condições conduz à extinção da punibilidade", "A extinção da punibilidade encerra a pretensão penal nos limites do acordo. Não é absolvição, nem condenação: é consequência legal do adimplemento das condições pactuadas.");
+  inserirDestaqueDepoisDoParagrafoANPP("O descumprimento do acordo deve ser analisado", "anpp-destaque-descumprimento", "Descumprimento — Rescisão e retomada da persecução", "rescisão judicial do ANPP e posterior oferecimento da denúncia", "O descumprimento injustificado não gera condenação automática. Ele desfaz a via consensual e permite a retomada do processo penal, preservando contraditório e ampla defesa.");
+  inserirDestaqueDepoisDoParagrafoANPP("O cumprimento do ANPP não gera condenação criminal.", "anpp-destaque-antecedentes", "Efeito registral — Sem condenação e sem antecedentes ordinários", "não gera condenação criminal", "O acordo cumprido não produz sentença condenatória nem antecedentes penais comuns. Ainda assim, pode impedir novo benefício consensual no período legal de cinco anos.");
+}
+
 function iniciarMenu() {
   const menu = document.querySelector(".menu-links");
   const botao = document.querySelector(".menu-botao");
@@ -200,6 +248,8 @@ aplicarIdentidadeLeituraEstadoPoder();
 ajustarRetornoTextosEstadoPoder();
 aplicarAcabamentoInternoDireitosHumanos();
 aplicarEstiloInfograficosANPP();
+aplicarEstiloDestaquesANPP();
 inserirImagemCapaDireitosHumanos();
 inserirImagensHistoriaDireitosHumanos();
 inserirInfograficosANPP();
+inserirDestaquesANPP();
