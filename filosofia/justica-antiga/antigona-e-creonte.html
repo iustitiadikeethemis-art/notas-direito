@@ -6,20 +6,57 @@
 <title>Antígona e Creonte | Justiça Antiga</title>
 <link rel="stylesheet" href="/style.css">
 <style>
-:root{--ja-paper:#fbf7ee;--ja-ink:#241f18;--ja-muted:#655b4d;--ja-line:#d7c7aa;--ja-gold:#b58b47;--ja-brown:#5a3d24;}
-body{background:radial-gradient(circle at 50% 0%,rgba(181,139,71,.16),transparent 30%),linear-gradient(180deg,#fbf7ee 0%,#f3ead9 48%,#e9dcc6 100%);color:var(--ja-ink);}
-main.wrap{max-width:980px;}
+:root{
+  --ja-paper:#fbf7ee;
+  --ja-ink:#241f18;
+  --ja-muted:#655b4d;
+  --ja-line:#d7c7aa;
+  --ja-gold:#b58b47;
+  --ja-brown:#5a3d24;
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(181,139,71,.16),transparent 30%),
+    radial-gradient(circle at 16% 24%,rgba(255,255,255,.54),transparent 24%),
+    linear-gradient(180deg,#fbf7ee 0%,#f3ead9 48%,#e9dcc6 100%);
+  color:var(--ja-ink);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.10;
+  background-image:
+    linear-gradient(rgba(90,61,36,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(90,61,36,.06) 1px,transparent 1px);
+  background-size:9px 9px;
+}
+main.wrap{position:relative;z-index:1;}
 .hero-antigona{padding:70px 0 36px;text-align:center;border-bottom:1px solid var(--ja-line);margin-bottom:42px;}
 .hero-antigona .categoria{letter-spacing:2px;text-transform:uppercase;color:var(--ja-muted);font-size:13px;}
 .hero-antigona h1{font-size:clamp(40px,6vw,70px);line-height:1.05;margin:10px 0 16px;color:var(--ja-ink);}
 .hero-antigona .subtitulo{max-width:760px;margin:0 auto;color:var(--ja-muted);font-size:19px;line-height:1.65;}
-.antigona-box{max-width:760px;margin:0 auto 42px;padding:30px 34px;background:rgba(255,255,255,.64);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
-.antigona-box h2{font-size:30px;margin:0 0 12px;color:var(--ja-ink);}
-.antigona-box p{font-size:18px;line-height:1.8;color:var(--ja-muted);margin:0 0 16px;text-align:justify;}
-.antigona-box p:last-child{margin-bottom:0;}
+.layout-leitura{display:grid;grid-template-columns:250px 1fr;gap:28px;align-items:start;}
+.controle-texto{position:sticky;top:92px;align-self:start;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-radius:18px;padding:18px;box-shadow:0 16px 34px rgba(90,61,36,.08);backdrop-filter:blur(6px);}
+.controle-texto h2{font-size:18px;line-height:1.2;margin:0 0 12px;color:var(--ja-ink);}
+.controle-texto p{font-size:14px;line-height:1.55;color:var(--ja-muted);margin:0 0 14px;text-align:left;}
+.controle-texto a{display:block;text-decoration:none;color:var(--ja-brown);padding:10px 12px;margin:8px 0;border:1px solid var(--ja-line);border-radius:12px;background:#fffaf0;font-size:15px;line-height:1.35;}
+.controle-texto a:hover{background:#f4ecd9;}
+.controle-voltar{margin-top:16px;padding-top:12px;border-top:1px solid var(--ja-line);}
+.controle-voltar a{background:rgba(255,255,255,.72);font-weight:bold;}
+.conteudo-leitura{min-width:0;}
+.texto-antigona{max-width:760px;margin:0 auto 52px;padding:0 0 28px;}
+.texto-antigona h2{margin-top:48px;font-size:30px;color:var(--ja-ink);}
+.texto-antigona p{font-size:18px;line-height:1.85;color:#342c22;text-align:justify;margin:20px 0;}
+.fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
+.fonte-box h2{font-size:26px;margin:0 0 16px;color:var(--ja-ink);border:0;padding:0;}
+.fonte-box p{font-size:16px;line-height:1.75;text-align:left;margin:0;color:#3f3932;}
 .navegacao-texto{display:flex;justify-content:space-between;gap:16px;margin:46px auto 0;max-width:760px;border-top:1px solid var(--ja-line);padding-top:22px;}
 .navegacao-texto a{color:var(--ja-brown);text-decoration:none;font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
-@media(max-width:760px){.antigona-box{padding:24px 22px}.antigona-box p{text-align:left}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+@media(max-width:900px){.layout-leitura{grid-template-columns:1fr}.controle-texto{position:static}}
+@media(max-width:760px){.texto-antigona p{text-align:left}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+@media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.fonte-box{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
 </style>
 </head>
 <body>
@@ -28,16 +65,55 @@ main.wrap{max-width:980px;}
 <section class="hero-antigona">
 <p class="categoria">Justiça Antiga · Tragédia grega</p>
 <h1>Antígona e Creonte</h1>
-<p class="subtitulo">Estrutura reservada ao estudo da tragédia grega como conflito entre lei da cidade, autoridade política e leis não escritas.</p>
+<p class="subtitulo">Recontagem da tragédia grega pertencente ao ciclo tebano, com foco narrativo na história de Antígona, Polinice, Creonte e Tebas.</p>
 </section>
 
-<section class="antigona-box">
-<h2>Texto em preparação</h2>
-<p>Este espaço será dedicado à tragédia de Antígona e Creonte como uma das imagens mais fortes da Filosofia do Direito antiga: a tensão entre o decreto do governante e uma justiça superior, não escrita, invocada pela consciência moral.</p>
-<p>O texto poderá funcionar como ponte entre a biblioteca de Justiça Antiga e o ramo do Jusnaturalismo, pois antecipa o problema central do direito natural: a lei positiva é sempre justa ou pode ser julgada por um critério superior?</p>
-</section>
+<section class="layout-leitura">
+<aside class="controle-texto">
+<h2>Navegação</h2>
+<p>Use o controle para acompanhar a narrativa e a fonte base.</p>
+<a href="#historia">História</a>
+<a href="#fonte">Fonte base</a>
+<div class="controle-voltar">
+<a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a>
+<a href="/filosofia/">Voltar à árvore geral →</a>
+</div>
+</aside>
 
-<div class="navegacao-texto"><a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a><a href="/filosofia/jusnaturalismo/o-que-e-jusnaturalismo.html">Ir ao texto-eixo do Jusnaturalismo →</a></div>
+<div class="conteudo-leitura">
+<article class="texto-antigona">
+<p id="historia">A história de Antígona pertence ao ciclo trágico de Tebas, marcado pela queda da casa de Édipo e pela sucessão de desgraças que atinge sua família. Depois da morte de Édipo, seus filhos, Etéocles e Polinice, entram em conflito pelo poder. A disputa termina em guerra, e os dois irmãos morrem no campo de batalha, um pela mão do outro.</p>
+
+<p>Com a cidade abalada, Creonte assume o governo de Tebas. Para restaurar a ordem, ele determina que Etéocles, morto defendendo a cidade, seja sepultado com honras. Polinice, por ter retornado contra Tebas à frente de forças inimigas, é declarado traidor. Creonte então proíbe que seu corpo seja enterrado ou lamentado. O cadáver deveria permanecer exposto, sem ritos fúnebres, entregue aos animais e ao esquecimento.</p>
+
+<p>Essa ordem atinge diretamente Antígona, irmã dos dois mortos. Para ela, Polinice continua sendo seu irmão, independentemente do juízo político lançado sobre ele. O decreto de Creonte pode separá-lo da cidade, mas não pode apagar o vínculo de sangue, a memória familiar e os deveres devidos aos mortos. Antígona entende que abandonar o corpo do irmão sem sepultura seria uma ofensa maior do que desafiar o rei.</p>
+
+<p>Ismênia, sua irmã, teme as consequências. Ela lembra que são mulheres em uma cidade governada por homens, que já perderam quase toda a família e que enfrentar Creonte significaria caminhar para a morte. Antígona, porém, permanece firme. Não tenta convencer a cidade inteira, nem organizar uma revolta. Sua decisão é íntima, solitária e absoluta: ela irá sepultar Polinice.</p>
+
+<p>Durante a noite ou às escondidas, Antígona cobre o corpo do irmão com terra e realiza o gesto mínimo dos ritos funerários. O ato é descoberto. Creonte se enfurece. Para ele, a desobediência ameaça sua autoridade recém-estabelecida. Se sua primeira ordem como governante puder ser quebrada sem punição, a cidade voltará ao descontrole. O rei vê no gesto de Antígona não apenas uma homenagem familiar, mas um desafio público à lei que ele impôs.</p>
+
+<p>Antígona é levada à presença de Creonte. Ela não nega o que fez. Ao contrário, assume o ato com serenidade. Não pede perdão, não se desculpa, não tenta diminuir sua responsabilidade. Diz que conhecia a ordem do rei, mas que não poderia deixar o irmão insepulto. Para ela, certos deveres são mais antigos do que qualquer decreto humano.</p>
+
+<p>Creonte insiste que Polinice era inimigo da cidade. Antígona responde a partir de outro lugar: o morto não é apenas inimigo político, é também irmão. O que para Creonte é traição, para Antígona ainda é sangue, luto e sepultura. A tragédia nasce justamente desse choque: ambos falam de dever, mas não falam do mesmo dever.</p>
+
+<p>Hêmon, filho de Creonte e noivo de Antígona, tenta interceder. Ele pede ao pai que escute a cidade, que não transforme firmeza em obstinação, que reconheça a possibilidade de erro. Creonte, porém, entende qualquer recuo como fraqueza. A autoridade do rei, em sua visão, precisa permanecer intacta. Quem governa deve ser obedecido.</p>
+
+<p>Tirésias, o adivinho, também adverte Creonte. Os sinais divinos são desfavoráveis. A cidade está contaminada pela presença de um corpo sem sepultura, e os deuses rejeitam os sacrifícios. A recusa em enterrar Polinice deixa de ser apenas um problema da família de Édipo e passa a tocar toda Tebas.</p>
+
+<p>Creonte demora a ceder. Quando finalmente aceita voltar atrás, já é tarde. Antígona, condenada a ser enterrada viva em uma gruta, tira a própria vida. Hêmon, ao encontrá-la morta, também se mata. Eurídice, esposa de Creonte e mãe de Hêmon, ao saber da morte do filho, igualmente se mata. O rei, que pretendia salvar a cidade pela firmeza, termina cercado por cadáveres dentro de sua própria casa.</p>
+
+<div class="fonte-box" id="fonte">
+<h2>Fonte base</h2>
+<p>SÓFOCLES. <em>Antígona</em>. Tragédia grega do século V a.C., pertencente ao ciclo tebano. O texto acima é uma recontagem autoral da narrativa clássica, sem reprodução literal de tradução moderna específica.</p>
+</div>
+
+<div class="navegacao-texto">
+<a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a>
+<a href="/filosofia/">Voltar à árvore geral →</a>
+</div>
+</article>
+</div>
+</section>
 </main>
 <script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
 <script src="/menu.js"></script>
