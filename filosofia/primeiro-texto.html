@@ -6,6 +6,38 @@
 <title>A Ordem do Céu, a Justiça dos Homens e o Silêncio dos Deuses</title>
 <link rel="stylesheet" href="/style.css">
 <style>
+:root{
+  --ja-paper:#fbf7ee;
+  --ja-ink:#241f18;
+  --ja-muted:#655b4d;
+  --ja-line:#d7c7aa;
+  --ja-gold:#b58b47;
+  --ja-brown:#5a3d24;
+  --ja-marble:#f7f3ea;
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(181,139,71,.16),transparent 30%),
+    radial-gradient(circle at 16% 24%,rgba(255,255,255,.54),transparent 24%),
+    linear-gradient(180deg,#fbf7ee 0%,#f3ead9 48%,#e9dcc6 100%);
+  color:var(--ja-ink);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.10;
+  background-image:
+    linear-gradient(rgba(90,61,36,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(90,61,36,.06) 1px,transparent 1px);
+  background-size:9px 9px;
+}
+main.wrap{position:relative;z-index:1;}
+.hero{border-bottom:1px solid var(--ja-line);}
+.categoria{color:var(--ja-muted);}
+.titulo-principal{color:var(--ja-ink);}
+.subtitulo{color:var(--ja-muted);}
 .layout-leitura{
   display:grid;
   grid-template-columns:250px 1fr;
@@ -16,43 +48,85 @@
   position:sticky;
   top:92px;
   align-self:start;
-  background:#fff;
-  border:1px solid #ded8cc;
+  background:rgba(255,255,255,.62);
+  border:1px solid var(--ja-line);
   border-radius:18px;
   padding:18px;
-  box-shadow:0 12px 32px rgba(0,0,0,0.045);
+  box-shadow:0 16px 34px rgba(90,61,36,.08);
+  backdrop-filter:blur(6px);
 }
 .controle-texto h2{
   font-size:18px;
   line-height:1.2;
   margin:0 0 12px;
+  color:var(--ja-ink);
 }
 .controle-texto p{
   font-size:14px;
   line-height:1.55;
-  color:#5a544b;
+  color:var(--ja-muted);
   margin:0 0 14px;
   text-align:left;
 }
 .controle-texto a{
   display:block;
   text-decoration:none;
-  color:#2d2a24;
+  color:var(--ja-brown);
   padding:10px 12px;
   margin:8px 0;
-  border:1px solid #ded8cc;
+  border:1px solid var(--ja-line);
   border-radius:12px;
-  background:#faf8f3;
+  background:#fffaf0;
   font-size:15px;
   line-height:1.35;
 }
-.controle-texto a:hover{background:#eee7d9;}
+.controle-texto a:hover{background:#f4ecd9;}
+.controle-voltar{
+  margin-top:16px;
+  padding-top:12px;
+  border-top:1px solid var(--ja-line);
+}
+.controle-voltar a{
+  background:rgba(255,255,255,.72);
+  font-weight:bold;
+}
 .conteudo-leitura{min-width:0;}
+.imagem-capa-filosofica img,
+.deusa-retrato img{
+  box-shadow:0 18px 44px rgba(90,61,36,.12);
+}
+.bloco-conceitual{
+  background:rgba(255,255,255,.66);
+  border-color:var(--ja-line);
+  border-left-color:var(--ja-gold);
+  box-shadow:0 14px 32px rgba(90,61,36,.08);
+}
+.texto h2{color:var(--ja-ink);}
+.texto p{color:#342c22;}
+.navegacao-texto{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  margin:46px auto 0;
+  max-width:760px;
+  border-top:1px solid var(--ja-line);
+  padding-top:22px;
+}
+.navegacao-texto a{
+  color:var(--ja-brown);
+  text-decoration:none;
+  font-weight:bold;
+  border-bottom:1px solid rgba(90,61,36,.35);
+}
 @media(max-width:900px){
   .layout-leitura{grid-template-columns:1fr;}
   .controle-texto{position:static;}
 }
-@media print{.controle-texto{display:none!important;}.layout-leitura{display:block;}}
+@media(max-width:760px){
+  .navegacao-texto{flex-direction:column;}
+  .brand{font-size:22px;}
+}
+@media print{.controle-texto,.navegacao-texto{display:none!important;}.layout-leitura{display:block;}body{background:#fff;}body::before{display:none;}}
 </style>
 </head>
 
@@ -65,7 +139,7 @@
       <img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor">
     </div>
 
-    <p class="categoria">Texto filosófico</p>
+    <p class="categoria">Justiça Antiga · Mitologia jurídica</p>
 
     <h1 class="titulo-principal">
       A Ordem do Céu, a Justiça dos Homens e o Silêncio dos Deuses
@@ -88,6 +162,10 @@
       <a href="#dike">Dike</a>
       <a href="#iustitia">Iustitia</a>
       <a href="#epilogo">Epílogo</a>
+      <div class="controle-voltar">
+        <a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a>
+        <a href="/filosofia/">Voltar à árvore geral →</a>
+      </div>
     </aside>
 
     <div class="conteudo-leitura texto-ilustrado">
@@ -269,6 +347,11 @@
             A justiça nunca desaparece.
             Ela apenas se afasta quando deixa de ser honrada.
           </em></p>
+        </div>
+
+        <div class="navegacao-texto">
+          <a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a>
+          <a href="/filosofia/">Voltar à árvore geral →</a>
         </div>
 
         <div class="assinatura-texto">
