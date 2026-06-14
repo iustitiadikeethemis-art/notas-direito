@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Constitucional | Estado e Poder</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --dc-green:#005c34;
+  --dc-green-dark:#06291d;
+  --dc-green-soft:#0b7a43;
+  --dc-yellow:#ffda44;
+  --dc-yellow-soft:#ffe88a;
+  --dc-blue:#173c7c;
+  --dc-paper:#fffdf1;
+  --dc-text:#f7f4df;
+  --dc-muted:#e7dfb4;
+  --dc-line:rgba(255,218,68,.36);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(255,218,68,.24),transparent 30%),
+    radial-gradient(circle at 16% 22%,rgba(255,255,255,.10),transparent 24%),
+    radial-gradient(circle at 82% 36%,rgba(23,60,124,.28),transparent 22%),
+    linear-gradient(180deg,#08713f 0%,#034f2d 42%,#06291d 100%);
+  color:var(--dc-text);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.14;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:8px 8px;
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(135deg,transparent 0 43%,rgba(255,218,68,.13) 43% 57%,transparent 57% 100%);
+}
+header{background:rgba(4,54,31,.94);border-bottom:1px solid var(--dc-line);backdrop-filter:blur(8px);}
+.brand,.brand a,.menu-links a{color:var(--dc-text)!important;}
+.menu-botao{border-color:var(--dc-line);color:var(--dc-yellow-soft);}
+.menu-links{background:#06321f;border-right:1px solid var(--dc-line);}
+.menu-fechar{color:var(--dc-text);}
+main.wrap{max-width:1180px;position:relative;z-index:1;}
+.dc-hero{padding:82px 0 46px;text-align:center;border-bottom:1px solid var(--dc-line);}
+.dc-kicker{display:inline-block;margin-bottom:16px;color:var(--dc-muted);text-transform:uppercase;letter-spacing:2.7px;font-size:13px;}
+.dc-title{margin:0;color:var(--dc-text);font-size:clamp(44px,6.8vw,84px);line-height:.95;letter-spacing:2px;text-transform:uppercase;text-shadow:0 5px 18px rgba(0,0,0,.44);}
+.dc-title span{display:block;color:var(--dc-yellow);}
+.dc-rule{width:min(780px,82%);height:2px;margin:24px auto 0;background:linear-gradient(90deg,transparent,var(--dc-yellow),transparent);}
+.dc-subtitle{max-width:880px;margin:22px auto 0;color:var(--dc-muted);font-size:20px;line-height:1.72;}
+.dc-section{padding:52px 0;}
+.dc-intro{max-width:920px;margin:0 auto 34px;padding:30px 34px;border:1px solid var(--dc-line);background:rgba(4,54,31,.42);color:var(--dc-muted);font-size:18px;line-height:1.78;box-shadow:0 20px 48px rgba(0,0,0,.22);}
+.dc-intro strong{color:var(--dc-yellow-soft);}
+.dc-bloco-topo{max-width:950px;margin:0 0 22px;padding:23px 26px;border-left:5px solid var(--dc-yellow);background:rgba(255,255,255,.06);border-top:1px solid var(--dc-line);border-right:1px solid var(--dc-line);border-bottom:1px solid var(--dc-line);box-shadow:0 14px 34px rgba(0,0,0,.18);}
+.dc-bloco-topo h2{margin:0 0 8px;color:#fff8c9;font-size:28px;line-height:1.2;}
+.dc-bloco-topo p{margin:0;color:var(--dc-muted);font-size:17px;line-height:1.7;}
+.dc-catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+.dc-card{min-height:310px;display:flex;flex-direction:column;justify-content:space-between;padding:30px;border:1px solid rgba(255,218,68,.30);background:linear-gradient(180deg,rgba(255,218,68,.12),rgba(0,76,43,.20));box-shadow:0 22px 52px rgba(0,0,0,.26);color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;}
+.dc-card:hover{transform:translateY(-4px);box-shadow:0 30px 70px rgba(0,0,0,.34);border-color:rgba(255,218,68,.72);background:linear-gradient(180deg,rgba(255,218,68,.17),rgba(0,76,43,.24));}
+.dc-tag{display:inline-block;width:max-content;margin-bottom:15px;padding:5px 11px;border:1px solid rgba(255,218,68,.50);color:var(--dc-yellow-soft);background:rgba(6,41,29,.35);text-transform:uppercase;letter-spacing:1.45px;font-size:12px;}
+.dc-card h2{margin:0 0 13px;color:#fff8c9;font-size:30px;line-height:1.12;}
+.dc-card p{margin:0 0 20px;color:var(--dc-muted);font-size:17px;line-height:1.66;}
+.dc-ler{color:var(--dc-yellow);font-weight:bold;}
+.dc-fita{margin:30px auto 0;width:min(500px,78%);height:10px;background:linear-gradient(90deg,var(--dc-green),var(--dc-yellow) 50%,var(--dc-blue));border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.24);}
+.dc-assinatura{margin:46px auto 0;text-align:center;color:var(--dc-muted);}
+.dc-assinatura p{margin:3px 0;}
+.link-retorno{margin-top:34px;text-align:center;}
+.link-retorno a{color:var(--dc-yellow-soft);text-decoration:none;border-bottom:1px solid rgba(255,232,138,.55);}
+@media(max-width:760px){.dc-card{min-height:auto}.dc-hero{padding-top:58px}.brand{font-size:22px;}.dc-intro{padding:24px 22px;}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="dc-hero">
+    <span class="dc-kicker">Estado e Poder · Núcleo Constitucional</span>
+    <h1 class="dc-title"><span>Direito</span> Constitucional</h1>
+    <div class="dc-rule"></div>
+    <p class="dc-subtitle">A Constituição como forma jurídica do poder político: limitação do Estado, organização institucional, supremacia normativa e proteção dos direitos fundamentais.</p>
+    <div class="dc-fita" aria-hidden="true"></div>
+  </section>
+
+  <section class="dc-section">
+    <div class="dc-intro">
+      <strong>Direito Constitucional</strong> ficará dentro do eixo Estado e Poder porque a Constituição é o ponto de encontro entre teoria política e dogmática jurídica: ela funda, limita, organiza e legitima o exercício do poder estatal.
+    </div>
+
+    <div class="dc-bloco-topo"><h2>Conteúdos de Direito Constitucional</h2><p>Esta seção reunirá os estudos de Teoria da Constituição e, posteriormente, os módulos de poder constituinte, direitos fundamentais, controle de constitucionalidade, organização dos poderes e Constituição de 1988.</p></div>
+
+    <div class="dc-catalogo">
+      <a class="dc-card" href="#teoria-da-constituicao" id="teoria-da-constituicao">
+        <div><span class="dc-tag">Primeiro módulo</span><h2>Teoria da Constituição</h2><p>Base inicial para estudar conceito de Constituição, classificações, constitucionalismo, poder constituinte, supremacia constitucional, eficácia das normas constitucionais e direitos fundamentais.</p></div><span class="dc-ler">Conteúdo em preparação →</span>
+      </a>
+      <a class="dc-card" href="#poder-constituinte">
+        <div><span class="dc-tag">Em elaboração</span><h2>Poder Constituinte</h2><p>Estudo sobre poder constituinte originário, derivado reformador, decorrente, limites materiais, formais e circunstanciais, além das cláusulas pétreas.</p></div><span class="dc-ler">Módulo futuro →</span>
+      </a>
+      <a class="dc-card" href="#direitos-fundamentais">
+        <div><span class="dc-tag">Em elaboração</span><h2>Direitos Fundamentais</h2><p>Relação entre dignidade da pessoa humana, direitos fundamentais, garantias constitucionais, aplicabilidade imediata e proteção contra abusos do poder.</p></div><span class="dc-ler">Módulo futuro →</span>
+      </a>
+    </div>
+
+    <p class="link-retorno"><a href="/filosofia/estado-e-poder.html">Voltar para Estado e Poder</a></p>
+    <div class="dc-assinatura"><p>João Victor Brando Novais</p><p>São Paulo, 2026</p></div>
+  </section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
