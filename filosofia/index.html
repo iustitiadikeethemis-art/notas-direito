@@ -6,62 +6,178 @@
 <title>Filosofia do Direito</title>
 <link rel="stylesheet" href="/style.css">
 <style>
-.catalogo-estado{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:34px;}
-.card-estado{display:flex;flex-direction:column;justify-content:space-between;min-height:285px;padding:26px;border:1px solid #ded8cc;border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,0.045);text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease;}
-.card-estado:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,0.075);}
-.card-estado .tag{display:inline-block;width:max-content;margin-bottom:14px;padding:5px 10px;border-radius:999px;background:#f3efe6;color:#4c463c;font-size:13px;}
-.card-estado .tag.preparacao{background:#efe7d7;color:#5b4a2f;}
-.card-estado h3{font-size:23px;line-height:1.2;margin:0 0 12px;}
-.card-estado p{font-size:16px;color:#4d4942;margin:0 0 18px;}
-.card-estado .ler{font-weight:600;color:#2d2a24;}
-.nota-secao{margin-top:22px;font-size:17px;color:#4d4942;}
+:root{
+  --filo-paper:#fbf7ee;
+  --filo-paper-2:#f1e7d4;
+  --filo-ink:#241f18;
+  --filo-muted:#655b4d;
+  --filo-line:#d7c7aa;
+  --filo-gold:#b58b47;
+  --filo-brown:#5a3d24;
+  --filo-olive:#6d6a3f;
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(181,139,71,.18),transparent 30%),
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.60),transparent 24%),
+    linear-gradient(180deg,#fbf7ee 0%,#f4ebdc 48%,#eadcc5 100%);
+  color:var(--filo-ink);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.11;
+  background-image:
+    linear-gradient(rgba(90,61,36,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(90,61,36,.06) 1px,transparent 1px);
+  background-size:9px 9px;
+}
+main.wrap{max-width:1180px;position:relative;z-index:1;}
+.hero-filosofia{padding:72px 0 34px;text-align:center;border-bottom:1px solid var(--filo-line);}
+.hero-filosofia .logo-trabalho{margin-bottom:22px;}
+.hero-filosofia .logo-trabalho img{max-width:132px;opacity:.86;}
+.hero-filosofia .categoria{color:var(--filo-muted);letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:10px;}
+.hero-filosofia .titulo-principal{font-size:clamp(42px,6.5vw,76px);line-height:1;margin:0 0 16px;color:var(--filo-ink);}
+.hero-filosofia .subtitulo{max-width:780px;margin:0 auto;color:var(--filo-muted);font-size:20px;line-height:1.65;}
+.filo-section{padding:46px 0;}
+.filo-intro{max-width:900px;margin:0 auto 34px;padding:28px 32px;background:rgba(255,255,255,.58);border:1px solid var(--filo-line);border-left:5px solid var(--filo-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);font-size:18px;line-height:1.78;color:var(--filo-muted);}
+.filo-intro strong{color:var(--filo-brown);}
+.matriz-card{max-width:920px;margin:0 auto 42px;padding:34px;background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(241,231,212,.72));border:1px solid var(--filo-line);box-shadow:0 22px 52px rgba(90,61,36,.11);text-decoration:none;color:inherit;display:block;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
+.matriz-card:hover{transform:translateY(-4px);box-shadow:0 30px 70px rgba(90,61,36,.15);border-color:rgba(181,139,71,.60);}
+.matriz-tag{display:inline-block;margin-bottom:14px;padding:6px 12px;border:1px solid rgba(181,139,71,.45);background:#fffaf0;color:var(--filo-brown);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;}
+.matriz-card h2{font-size:36px;line-height:1.12;margin:0 0 14px;color:var(--filo-ink);}
+.matriz-card p{font-size:18px;line-height:1.7;color:var(--filo-muted);margin:0 0 18px;}
+.matriz-ler{font-weight:bold;color:var(--filo-brown);}
+.arvore-titulo{max-width:900px;margin:0 auto 28px;text-align:center;}
+.arvore-titulo h2{margin:0 0 10px;font-size:34px;color:var(--filo-ink);}
+.arvore-titulo p{margin:0;color:var(--filo-muted);font-size:17px;line-height:1.7;}
+.arvore{position:relative;max-width:1060px;margin:0 auto;padding:12px 0 4px;}
+.arvore::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:2px;background:linear-gradient(180deg,transparent,var(--filo-gold),var(--filo-brown),transparent);transform:translateX(-50%);opacity:.72;}
+.ramo{position:relative;width:calc(50% - 34px);margin:0 0 24px;padding:24px 26px;background:rgba(255,255,255,.64);border:1px solid var(--filo-line);box-shadow:0 14px 32px rgba(90,61,36,.08);text-decoration:none;color:inherit;display:block;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
+.ramo:hover{transform:translateY(-3px);box-shadow:0 20px 46px rgba(90,61,36,.13);border-color:rgba(181,139,71,.58);}
+.ramo.esquerda{margin-right:auto;text-align:right;}
+.ramo.direita{margin-left:auto;text-align:left;}
+.ramo::before{content:"";position:absolute;top:34px;width:34px;height:2px;background:rgba(181,139,71,.74);}
+.ramo.esquerda::before{right:-35px;}
+.ramo.direita::before{left:-35px;}
+.ramo::after{content:"";position:absolute;top:28px;width:12px;height:12px;border-radius:50%;background:var(--filo-gold);border:3px solid var(--filo-paper);box-shadow:0 0 0 1px rgba(181,139,71,.55);}
+.ramo.esquerda::after{right:-43px;}
+.ramo.direita::after{left:-43px;}
+.ramo-tag{display:inline-block;margin-bottom:11px;padding:5px 10px;border:1px solid rgba(181,139,71,.42);background:#fffaf0;color:var(--filo-brown);font-size:12px;letter-spacing:1.15px;text-transform:uppercase;}
+.ramo-tag.preparacao{background:#f4ecd9;color:#6c4b25;}
+.ramo h3{font-size:24px;line-height:1.18;margin:0 0 10px;color:var(--filo-ink);}
+.ramo p{font-size:16px;line-height:1.62;color:var(--filo-muted);margin:0 0 15px;}
+.ramo .ler{font-weight:bold;color:var(--filo-brown);}
+.transversal{max-width:920px;margin:34px auto 0;padding:28px 32px;background:rgba(255,255,255,.68);border:1px solid var(--filo-line);border-left:5px solid var(--filo-olive);box-shadow:0 16px 36px rgba(90,61,36,.08);}
+.transversal h2{font-size:28px;margin:0 0 10px;color:var(--filo-ink);}
+.transversal p{margin:0 0 18px;color:var(--filo-muted);font-size:17px;line-height:1.7;}
+.transversal a{display:inline-block;text-decoration:none;color:var(--filo-brown);font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
+.assinatura-texto{text-align:center;margin:46px auto 0;color:var(--filo-muted);}
+.assinatura-texto p{margin:3px 0;}
+@media(max-width:850px){
+  .arvore::before{left:18px;}
+  .ramo,.ramo.esquerda,.ramo.direita{width:auto;margin-left:48px;margin-right:0;text-align:left;}
+  .ramo.esquerda::before,.ramo.direita::before{left:-31px;right:auto;width:31px;}
+  .ramo.esquerda::after,.ramo.direita::after{left:-40px;right:auto;}
+  .matriz-card,.filo-intro,.transversal{padding:24px 22px;}
+}
 </style>
 </head>
 <body>
 <div id="header-container"></div>
 <main class="wrap">
-<section class="hero">
-<div class="logo-trabalho"><img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor"></div>
-<p class="categoria">Eixo temático</p>
-<h1 class="titulo-principal">Filosofia do Direito</h1>
-<p class="subtitulo">Textos sobre justiça, direito, razão, moralidade, tradição filosófica e formação do pensamento jurídico.</p>
-</section>
-<section>
-<article class="texto">
-<h2>Textos da série</h2>
-<p class="nota-secao">Esta seção reúne textos pertencentes ao eixo Filosofia do Direito. O objetivo é organizar, em um mesmo espaço, reflexões sobre a origem da justiça, a formação do pensamento jurídico e os fundamentos filosóficos do direito.</p>
-<div class="catalogo-estado">
-<a class="card-estado" href="/filosofia/primeiro-texto.html">
-<div><span class="tag">Justiça antiga</span><h3>A Ordem do Céu, a Justiça dos Homens e o Silêncio dos Deuses</h3><p>Reflexão mitológica sobre Themis, Dike e Iustitia como figuras simbólicas da ordem, da justiça moral e da institucionalização jurídica.</p></div><span class="ler">Ler texto →</span>
-</a>
-<a class="card-estado" href="/filosofia/uma-rapsodia-sobre-o-direito.html">
-<div><span class="tag">Eixo do direito</span><h3>Uma rapsódia sobre o direito</h3><p>Percurso histórico, filosófico e estrutural sobre direito e justiça, da regulação primária da convivência à crise contemporânea da decisão jurídica.</p></div><span class="ler">Ler texto →</span>
-</a>
-<a class="card-estado" href="#pensamento-sofista">
-<div><span class="tag preparacao">Em elaboração</span><h3>Os sofistas: linguagem, lei e poder</h3><p>Introdução ao pensamento sofista na Grécia clássica, com foco na retórica, na oposição entre nomos e physis, no relativismo e na tensão entre verdade, persuasão e justiça.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-<a class="card-estado" href="#zetetica-dogmatica">
-<div><span class="tag preparacao">Em elaboração</span><h3>Zetética e dogmática jurídica</h3><p>Estudo da distinção entre investigação crítica e orientação decisória no direito, com atenção ao modo como a ciência jurídica problematiza, interpreta e estabiliza respostas normativas.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-<a class="card-estado" href="#jusnaturalismo">
-<div><span class="tag preparacao">Em elaboração</span><h3>Jusnaturalismo</h3><p>Estudo sobre a tradição do direito natural, suas matrizes clássicas, medievais e modernas, e sua relação com justiça, razão, moralidade e limites ao direito positivo.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-<a class="card-estado" href="#positivismo-juridico">
-<div><span class="tag preparacao">Em elaboração</span><h3>Positivismo jurídico</h3><p>Análise da autonomia do direito positivo, da separação entre validade jurídica e avaliação moral, e das contribuições de autores como Kelsen, Hart e seus críticos.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-<a class="card-estado" href="#contratualismo-moderno">
-<div><span class="tag preparacao">Em elaboração</span><h3>Contratualismo moderno</h3><p>Estudo das teorias do contrato social, com atenção à formação do Estado, legitimidade do poder, soberania, liberdade e obrigação política em Hobbes, Locke e Rousseau.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-<a class="card-estado" href="#utilitarismo">
-<div><span class="tag preparacao">Em elaboração</span><h3>Utilitarismo</h3><p>Exame da teoria utilitarista, especialmente em Bentham e Mill, seus critérios de prazer, dor, felicidade geral e seus limites diante dos direitos individuais.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-<a class="card-estado" href="#liberalismo-economico">
-<div><span class="tag preparacao">Em elaboração</span><h3>Liberalismo econômico</h3><p>Introdução às bases filosóficas, políticas e econômicas do liberalismo, com atenção à propriedade, liberdade contratual, mercado, Estado e crítica social.</p></div><span class="ler">Texto em preparação →</span>
-</a>
-</div>
-<div class="assinatura-texto"><p>João Victor Brando Novais</p><p class="local-data">São Paulo, 2026</p></div>
-</article>
-</section>
+  <section class="hero-filosofia">
+    <div class="logo-trabalho"><img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor"></div>
+    <p class="categoria">Eixo temático</p>
+    <h1 class="titulo-principal">Filosofia do Direito</h1>
+    <p class="subtitulo">Uma árvore conceitual do pensamento jurídico: raízes, tronco, galhos e ramificações da ideia de direito, justiça e validade.</p>
+  </section>
+
+  <section class="filo-section">
+    <div class="filo-intro">
+      <strong>Filosofia do Direito</strong> passa a funcionar como uma árvore de estudo. A página não será apenas uma lista de textos: a rapsódia ocupa o lugar de texto-matriz, enquanto os demais temas aparecem como galhos de aprofundamento histórico, conceitual e metodológico.
+    </div>
+
+    <a class="matriz-card" href="/filosofia/uma-rapsodia-sobre-o-direito.html">
+      <span class="matriz-tag">Texto-matriz · Tronco da árvore</span>
+      <h2>Uma rapsódia sobre o direito</h2>
+      <p>Percurso geral para compreender o nascimento, desenvolvimento e crise contemporânea da ideia de direito: da regulação primária da convivência às grandes disputas sobre justiça, validade, interpretação e decisão jurídica.</p>
+      <span class="matriz-ler">Abrir texto-matriz →</span>
+    </a>
+
+    <div class="arvore-titulo">
+      <h2>Árvore do Pensamento Jurídico</h2>
+      <p>Cada galho indica uma etapa ou problema central. Por enquanto, a organização funciona como mapa de navegação; depois, cada ramo poderá receber sua página própria, resumo, quadro de distinções e sabatina.</p>
+    </div>
+
+    <div class="arvore">
+      <a class="ramo esquerda" href="/filosofia/primeiro-texto.html">
+        <span class="ramo-tag">Raízes simbólicas</span>
+        <h3>Justiça antiga</h3>
+        <p>Themis, Dike e Iustitia como imagens da ordem, da justiça moral e da passagem da justiça simbólica à institucionalização jurídica.</p>
+        <span class="ler">Ler texto →</span>
+      </a>
+
+      <a class="ramo direita" href="#pensamento-sofista" id="pensamento-sofista">
+        <span class="ramo-tag preparacao">Galho clássico · Em elaboração</span>
+        <h3>Sofistas: linguagem, lei e poder</h3>
+        <p>Retórica, persuasão, nomos e physis, relativismo, poder e a pergunta sobre se a justiça é natureza, convenção ou vantagem do mais forte.</p>
+        <span class="ler">Texto em preparação →</span>
+      </a>
+
+      <a class="ramo esquerda" href="#jusnaturalismo" id="jusnaturalismo">
+        <span class="ramo-tag preparacao">Galho clássico-medieval · Em elaboração</span>
+        <h3>Jusnaturalismo</h3>
+        <p>Tradição do direito natural, suas matrizes clássicas, romanas, medievais e modernas, e sua relação com justiça, razão, moralidade e limite ao direito positivo.</p>
+        <span class="ler">Texto em preparação →</span>
+      </a>
+
+      <a class="ramo direita" href="#contratualismo-moderno" id="contratualismo-moderno">
+        <span class="ramo-tag preparacao">Galho moderno · Em elaboração</span>
+        <h3>Contratualismo moderno</h3>
+        <p>Hobbes, Locke e Rousseau como teorias de fundação do Estado, legitimidade do poder, soberania, liberdade e obrigação política.</p>
+        <span class="ler">Texto em preparação →</span>
+      </a>
+
+      <a class="ramo esquerda" href="#utilitarismo" id="utilitarismo">
+        <span class="ramo-tag preparacao">Galho moderno · Em elaboração</span>
+        <h3>Utilitarismo</h3>
+        <p>Bentham e Mill, cálculo de prazer e dor, felicidade geral, maximização da utilidade e limites diante de direitos individuais e garantias fundamentais.</p>
+        <span class="ler">Texto em preparação →</span>
+      </a>
+
+      <a class="ramo direita" href="#liberalismo-economico" id="liberalismo-economico">
+        <span class="ramo-tag preparacao">Galho político-econômico · Em elaboração</span>
+        <h3>Liberalismo econômico</h3>
+        <p>Propriedade, liberdade contratual, mercado, Estado, Adam Smith e a necessidade de compreender o liberalismo sem caricaturas simplificadoras.</p>
+        <span class="ler">Texto em preparação →</span>
+      </a>
+
+      <a class="ramo esquerda" href="#positivismo-juridico" id="positivismo-juridico">
+        <span class="ramo-tag preparacao">Galho dogmático · Em elaboração</span>
+        <h3>Positivismo jurídico</h3>
+        <p>Autonomia do direito positivo, validade jurídica, sistema normativo, separação entre direito e moral, Kelsen, Hart e críticas contemporâneas.</p>
+        <span class="ler">Texto em preparação →</span>
+      </a>
+
+      <a class="ramo direita" href="#teoria-contemporanea" id="teoria-contemporanea">
+        <span class="ramo-tag preparacao">Galho contemporâneo · Em elaboração</span>
+        <h3>Decisão, interpretação e justiça</h3>
+        <p>Rawls, Sandel, Dworkin, Streck e o problema contemporâneo da decisão jurídica, da linguagem e dos limites da discricionariedade judicial.</p>
+        <span class="ler">Texto em preparação →</span>
+      </a>
+    </div>
+
+    <div class="transversal" id="zetetica-dogmatica">
+      <h2>Ferramenta transversal: zetética e dogmática jurídica</h2>
+      <p>Este tema não é apenas mais um galho histórico. Ele funcionará como instrumento de leitura de toda a árvore: a zetética interroga, problematiza e abre questões; a dogmática estabiliza respostas, organiza conceitos e orienta decisões dentro do sistema jurídico.</p>
+      <a href="#zetetica-dogmatica">Texto em preparação →</a>
+    </div>
+
+    <div class="assinatura-texto"><p>João Victor Brando Novais</p><p class="local-data">São Paulo, 2026</p></div>
+  </section>
 </main>
 <script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
 <script src="/menu.js"></script>
