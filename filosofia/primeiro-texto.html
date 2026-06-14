@@ -92,17 +92,16 @@ main.wrap{position:relative;z-index:1;}
 }
 .conteudo-leitura{min-width:0;}
 .imagem-capa-filosofica{
-  max-width:560px;
+  max-width:540px;
   margin-left:auto;
   margin-right:auto;
 }
 .imagem-capa-filosofica img{
   display:block;
   width:100%;
-  height:640px;
-  max-height:68vh;
-  object-fit:cover;
-  object-position:center;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
 }
 .imagem-capa-filosofica img,
 .deusa-retrato img{
@@ -147,7 +146,6 @@ main.wrap{position:relative;z-index:1;}
 }
 @media(max-width:760px){
   .imagem-capa-filosofica{max-width:100%;}
-  .imagem-capa-filosofica img{height:auto;max-height:none;object-fit:contain;}
   .navegacao-texto{flex-direction:column;}
   .brand{font-size:22px;}
 }
