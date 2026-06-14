@@ -89,10 +89,14 @@ main.wrap{max-width:1180px;}
   transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
 }
 .ep-card:hover{transform:translateY(-4px);box-shadow:0 28px 62px rgba(0,0,0,.38);border-color:var(--ep-line);}
+.ep-card.br-card{border-color:rgba(246,210,92,.34);background:linear-gradient(135deg,rgba(0,92,52,.24),rgba(255,218,68,.08) 56%,rgba(255,255,255,.018));}
+.ep-card.br-card:hover{border-color:rgba(255,218,68,.72);box-shadow:0 30px 70px rgba(0,72,42,.28);}
 .ep-tag{display:inline-block;width:max-content;margin-bottom:15px;padding:5px 11px;border:1px solid var(--ep-line);color:var(--ep-gold-soft);text-transform:uppercase;letter-spacing:1.45px;font-size:12px;}
+.br-card .ep-tag{border-color:rgba(255,218,68,.55);color:#ffdf6a;background:rgba(0,92,52,.20);}
 .ep-card h2{margin:0 0 13px;color:#f7f2e8;font-size:30px;line-height:1.12;}
 .ep-card p{margin:0 0 20px;color:var(--ep-muted);font-size:17px;line-height:1.66;}
 .ep-ler{color:var(--ep-gold-soft);font-weight:bold;}
+.br-card .ep-ler{color:#ffdf6a;}
 .ep-assinatura{margin:46px auto 0;text-align:center;color:var(--ep-muted);}
 .ep-assinatura p{margin:3px 0;}
 @media(max-width:760px){.ep-card{min-height:auto}.ep-hero{padding-top:56px}.brand{font-size:22px;}}
@@ -115,6 +119,9 @@ main.wrap{max-width:1180px;}
     <div class="ep-catalogo">
       <a class="ep-card" href="/filosofia/estado-e-poder/textos-e-analises/">
         <div><span class="ep-tag">Biblioteca acadêmica</span><h2>Textos e Análises</h2><p>Ensaios sobre contratualismo, Bentham, separação dos poderes, legalidade, legitimidade e funcionamento das instituições políticas.</p></div><span class="ep-ler">Abrir biblioteca →</span>
+      </a>
+      <a class="ep-card br-card" href="/filosofia/estado-e-poder/direito-constitucional/">
+        <div><span class="ep-tag">Núcleo constitucional</span><h2>Direito Constitucional</h2><p>Estudos sobre Constituição, poder constituinte, supremacia constitucional, direitos fundamentais e organização jurídica do poder político brasileiro.</p></div><span class="ep-ler">Abrir seção →</span>
       </a>
       <a class="ep-card" href="/filosofia/estado-e-poder/direito-internacional/">
         <div><span class="ep-tag">Núcleo técnico</span><h2>Direito Internacional</h2><p>Estudos sobre formação, adesão, ratificação, incorporação e hierarquia dos tratados internacionais no Estado brasileiro.</p></div><span class="ep-ler">Abrir seção →</span>
