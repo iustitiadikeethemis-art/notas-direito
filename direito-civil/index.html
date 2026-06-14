@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Civil</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --civil-blue:#173b68;
+  --civil-blue-dark:#071b33;
+  --civil-blue-soft:#2d6fa3;
+  --civil-rose:#d88aa8;
+  --civil-rose-soft:#f5c7d6;
+  --civil-paper:#fff8fb;
+  --civil-text:#f9f3f7;
+  --civil-muted:#e9d8e1;
+  --civil-line:rgba(245,199,214,.38);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(245,199,214,.22),transparent 30%),
+    radial-gradient(circle at 16% 24%,rgba(255,255,255,.10),transparent 24%),
+    radial-gradient(circle at 82% 32%,rgba(45,111,163,.28),transparent 24%),
+    linear-gradient(180deg,#173b68 0%,#102d50 43%,#071b33 100%);
+  color:var(--civil-text);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.13;
+  background-image:
+    linear-gradient(rgba(255,255,255,.065) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:8px 8px;
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(135deg,transparent 0 44%,rgba(216,138,168,.12) 44% 56%,transparent 56% 100%);
+}
+header{background:rgba(7,27,51,.94);border-bottom:1px solid var(--civil-line);backdrop-filter:blur(8px);}
+.brand,.brand a,.menu-links a{color:var(--civil-text)!important;}
+.menu-botao{border-color:var(--civil-line);color:var(--civil-rose-soft);}
+.menu-links{background:#071b33;border-right:1px solid var(--civil-line);}
+.menu-fechar{color:var(--civil-text);}
+main.wrap{max-width:1180px;position:relative;z-index:1;}
+.civil-hero{padding:82px 0 46px;text-align:center;border-bottom:1px solid var(--civil-line);}
+.civil-kicker{display:inline-block;margin-bottom:16px;color:var(--civil-muted);text-transform:uppercase;letter-spacing:2.7px;font-size:13px;}
+.civil-title{margin:0;color:var(--civil-text);font-size:clamp(46px,7vw,86px);line-height:.95;letter-spacing:2px;text-transform:uppercase;text-shadow:0 5px 18px rgba(0,0,0,.44);}
+.civil-title span{display:block;color:var(--civil-rose-soft);}
+.civil-rule{width:min(780px,82%);height:2px;margin:24px auto 0;background:linear-gradient(90deg,transparent,var(--civil-rose),transparent);}
+.civil-subtitle{max-width:880px;margin:22px auto 0;color:var(--civil-muted);font-size:20px;line-height:1.72;}
+.civil-section{padding:52px 0;}
+.civil-intro{max-width:920px;margin:0 auto 34px;padding:30px 34px;border:1px solid var(--civil-line);background:rgba(7,27,51,.48);color:var(--civil-muted);font-size:18px;line-height:1.78;box-shadow:0 20px 48px rgba(0,0,0,.22);}
+.civil-intro strong{color:var(--civil-rose-soft);}
+.civil-bloco-topo{max-width:950px;margin:0 0 22px;padding:23px 26px;border-left:5px solid var(--civil-rose);background:rgba(255,255,255,.06);border-top:1px solid var(--civil-line);border-right:1px solid var(--civil-line);border-bottom:1px solid var(--civil-line);box-shadow:0 14px 34px rgba(0,0,0,.18);}
+.civil-bloco-topo h2{margin:0 0 8px;color:#ffe6ef;font-size:28px;line-height:1.2;}
+.civil-bloco-topo p{margin:0;color:var(--civil-muted);font-size:17px;line-height:1.7;}
+.civil-catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+.civil-card{min-height:310px;display:flex;flex-direction:column;justify-content:space-between;padding:30px;border:1px solid rgba(245,199,214,.30);background:linear-gradient(180deg,rgba(245,199,214,.12),rgba(16,45,80,.22));box-shadow:0 22px 52px rgba(0,0,0,.26);color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;}
+.civil-card:hover{transform:translateY(-4px);box-shadow:0 30px 70px rgba(0,0,0,.34);border-color:rgba(245,199,214,.72);background:linear-gradient(180deg,rgba(245,199,214,.17),rgba(16,45,80,.26));}
+.civil-tag{display:inline-block;width:max-content;margin-bottom:15px;padding:5px 11px;border:1px solid rgba(245,199,214,.52);color:var(--civil-rose-soft);background:rgba(7,27,51,.35);text-transform:uppercase;letter-spacing:1.45px;font-size:12px;}
+.civil-card h2{margin:0 0 13px;color:#ffe6ef;font-size:30px;line-height:1.12;}
+.civil-card p{margin:0 0 20px;color:var(--civil-muted);font-size:17px;line-height:1.66;}
+.civil-ler{color:var(--civil-rose-soft);font-weight:bold;}
+.civil-fita{margin:30px auto 0;width:min(500px,78%);height:10px;background:linear-gradient(90deg,var(--civil-blue),var(--civil-rose) 52%,var(--civil-blue-soft));border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.24);}
+.civil-assinatura{margin:46px auto 0;text-align:center;color:var(--civil-muted);}
+.civil-assinatura p{margin:3px 0;}
+@media(max-width:760px){.civil-card{min-height:auto}.civil-hero{padding-top:58px}.brand{font-size:22px;}.civil-intro{padding:24px 22px;}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="civil-hero">
+    <span class="civil-kicker">Eixo de estudo · Direito Civil</span>
+    <h1 class="civil-title"><span>Direito</span> Civil</h1>
+    <div class="civil-rule"></div>
+    <p class="civil-subtitle">Estudos sobre pessoa, personalidade, capacidade, bens, obrigações, contratos, responsabilidade civil, propriedade, família e sucessões.</p>
+    <div class="civil-fita" aria-hidden="true"></div>
+  </section>
+
+  <section class="civil-section">
+    <div class="civil-intro">
+      <strong>Direito Civil</strong> será o eixo dedicado à organização dogmática das relações privadas: a pessoa, os bens, os vínculos obrigacionais, a circulação patrimonial, a propriedade, a família e a sucessão.
+    </div>
+
+    <div class="civil-bloco-topo"><h2>Conteúdos de Direito Civil</h2><p>Esta seção reunirá os estudos de Parte Geral e, posteriormente, os módulos de Obrigações, Contratos, Responsabilidade Civil, Direitos Reais, Família e Sucessões.</p></div>
+
+    <div class="civil-catalogo">
+      <a class="civil-card" href="#pessoas-e-bens" id="pessoas-e-bens">
+        <div><span class="civil-tag">Primeiro módulo</span><h2>Parte Geral: Pessoas e Bens</h2><p>Base inicial para estudar pessoa natural, pessoa jurídica, personalidade, capacidade, direitos da personalidade, domicílio, ausência e classificação jurídica dos bens.</p></div><span class="civil-ler">Conteúdo em preparação →</span>
+      </a>
+      <a class="civil-card" href="#obrigacoes">
+        <div><span class="civil-tag">Módulo futuro</span><h2>Obrigações</h2><p>Estudo da relação obrigacional, modalidades de obrigações, pagamento, inadimplemento, mora, perdas e danos e transmissão das obrigações.</p></div><span class="civil-ler">Módulo futuro →</span>
+      </a>
+      <a class="civil-card" href="#contratos">
+        <div><span class="civil-tag">Módulo futuro</span><h2>Contratos</h2><p>Estudo da formação, interpretação, função social, boa-fé objetiva, efeitos, extinção e revisão dos contratos no direito privado.</p></div><span class="civil-ler">Módulo futuro →</span>
+      </a>
+    </div>
+
+    <div class="civil-assinatura"><p>João Victor Brando Novais</p><p>São Paulo, 2026</p></div>
+  </section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
