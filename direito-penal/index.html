@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Penal</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --penal-bg:#e8e8e5;
+  --penal-bg-2:#d2d2cf;
+  --penal-panel:#f7f7f4;
+  --penal-ink:#1d1f22;
+  --penal-muted:#5d6268;
+  --penal-line:#b7b8b5;
+  --penal-steel:#70757d;
+  --penal-dark:#272a2f;
+  --penal-red:#7b1f2a;
+}
+body{
+  background:
+    repeating-linear-gradient(90deg,rgba(39,42,47,.075) 0 2px,transparent 2px 72px),
+    radial-gradient(circle at 50% 0%,rgba(255,255,255,.76),transparent 32%),
+    linear-gradient(180deg,#f1f1ee 0%,#dfdfdc 46%,#c9cac7 100%);
+  color:var(--penal-ink);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.12;
+  background-image:
+    linear-gradient(rgba(0,0,0,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,0,0,.045) 1px,transparent 1px);
+  background-size:8px 8px;
+}
+body::after{
+  content:"";
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:9%;
+  width:1px;
+  pointer-events:none;
+  background:rgba(39,42,47,.18);
+  box-shadow:72px 0 0 rgba(39,42,47,.13),144px 0 0 rgba(39,42,47,.10),216px 0 0 rgba(39,42,47,.08);
+}
+header{background:rgba(247,247,244,.94);border-bottom:1px solid var(--penal-line);backdrop-filter:blur(8px);}
+.brand,.brand a,.menu-links a{color:var(--penal-ink)!important;}
+.menu-botao{border-color:var(--penal-line);color:var(--penal-dark);}
+.menu-links{background:#f2f2ef;border-right:1px solid var(--penal-line);}
+.menu-fechar{color:var(--penal-ink);}
+main.wrap{max-width:1180px;position:relative;z-index:1;}
+.penal-hero{padding:82px 0 46px;text-align:center;border-bottom:1px solid var(--penal-line);}
+.penal-kicker{display:inline-block;margin-bottom:16px;color:var(--penal-muted);text-transform:uppercase;letter-spacing:2.7px;font-size:13px;}
+.penal-title{margin:0;color:var(--penal-dark);font-size:clamp(46px,7vw,86px);line-height:.95;letter-spacing:2px;text-transform:uppercase;text-shadow:0 4px 12px rgba(255,255,255,.62);}
+.penal-title span{display:block;color:#555b63;}
+.penal-rule{width:min(780px,82%);height:2px;margin:24px auto 0;background:linear-gradient(90deg,transparent,var(--penal-steel),transparent);}
+.penal-subtitle{max-width:880px;margin:22px auto 0;color:var(--penal-muted);font-size:20px;line-height:1.72;}
+.penal-section{padding:52px 0;}
+.penal-intro{max-width:920px;margin:0 auto 34px;padding:30px 34px;border:1px solid var(--penal-line);background:rgba(247,247,244,.82);color:var(--penal-muted);font-size:18px;line-height:1.78;box-shadow:0 18px 46px rgba(0,0,0,.10);}
+.penal-intro strong{color:var(--penal-dark);}
+.penal-bloco-topo{max-width:950px;margin:0 0 22px;padding:23px 26px;border-left:5px solid var(--penal-steel);background:rgba(247,247,244,.82);border-top:1px solid var(--penal-line);border-right:1px solid var(--penal-line);border-bottom:1px solid var(--penal-line);box-shadow:0 12px 30px rgba(0,0,0,.10);}
+.penal-bloco-topo h2{margin:0 0 8px;color:var(--penal-dark);font-size:28px;line-height:1.2;}
+.penal-bloco-topo p{margin:0;color:var(--penal-muted);font-size:17px;line-height:1.7;}
+.penal-catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+.penal-card{min-height:310px;display:flex;flex-direction:column;justify-content:space-between;padding:30px;border:1px solid rgba(112,117,125,.35);background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(224,224,221,.72));box-shadow:0 20px 48px rgba(0,0,0,.13);color:inherit;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;}
+.penal-card:hover{transform:translateY(-4px);box-shadow:0 28px 62px rgba(0,0,0,.18);border-color:rgba(39,42,47,.46);background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(214,214,211,.80));}
+.penal-tag{display:inline-block;width:max-content;margin-bottom:15px;padding:5px 11px;border:1px solid rgba(112,117,125,.48);color:var(--penal-dark);background:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:1.45px;font-size:12px;}
+.penal-card h2{margin:0 0 13px;color:var(--penal-dark);font-size:30px;line-height:1.12;}
+.penal-card p{margin:0 0 20px;color:var(--penal-muted);font-size:17px;line-height:1.66;}
+.penal-ler{color:var(--penal-red);font-weight:bold;}
+.penal-fita{margin:30px auto 0;width:min(500px,78%);height:10px;background:linear-gradient(90deg,#d9d9d6,#777d86 52%,#282c31);border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.16);}
+.penal-nota{max-width:920px;margin:28px auto 0;color:var(--penal-muted);font-size:15px;line-height:1.65;text-align:center;}
+.penal-assinatura{margin:46px auto 0;text-align:center;color:var(--penal-muted);}
+.penal-assinatura p{margin:3px 0;}
+@media(max-width:760px){.penal-card{min-height:auto}.penal-hero{padding-top:58px}.brand{font-size:22px;}.penal-intro{padding:24px 22px;}body::after{display:none;}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="penal-hero">
+    <span class="penal-kicker">Eixo de estudo · Direito Penal</span>
+    <h1 class="penal-title"><span>Direito</span> Penal</h1>
+    <div class="penal-rule"></div>
+    <p class="penal-subtitle">Estudos sobre crime, pena, garantias penais, estrutura analítica do delito, legislação penal e processo penal.</p>
+    <div class="penal-fita" aria-hidden="true"></div>
+  </section>
+
+  <section class="penal-section">
+    <div class="penal-intro">
+      <strong>Direito Penal</strong> será o eixo dedicado ao estudo do poder punitivo do Estado, seus limites constitucionais, a teoria do crime, a teoria da pena e os instrumentos processuais pelos quais a persecução penal se desenvolve.
+    </div>
+
+    <div class="penal-bloco-topo"><h2>Conteúdos de Direito Penal</h2><p>Esta seção reunirá os estudos de Teoria Geral do Crime e, posteriormente, os módulos de sanções penais, crimes em espécie, legislação penal especial e Código de Processo Penal.</p></div>
+
+    <div class="penal-catalogo">
+      <a class="penal-card" href="#teoria-geral-do-crime" id="teoria-geral-do-crime">
+        <div><span class="penal-tag">Primeiro módulo</span><h2>Teoria Geral do Crime</h2><p>Base inicial para estudar fato típico, ilicitude, culpabilidade, conduta, resultado, nexo causal, tipicidade, dolo, culpa, tentativa, erro e concurso de pessoas.</p></div><span class="penal-ler">Conteúdo em preparação →</span>
+      </a>
+      <a class="penal-card" href="#codigo-penal">
+        <div><span class="penal-tag">Módulo material</span><h2>Código Penal</h2><p>Organização dos estudos sobre parte geral, aplicação da lei penal, teoria da pena, extinção da punibilidade e crimes em espécie.</p></div><span class="penal-ler">Módulo futuro →</span>
+      </a>
+      <a class="penal-card" href="#codigo-de-processo-penal">
+        <div><span class="penal-tag">Módulo processual</span><h2>Código de Processo Penal</h2><p>Área reservada ao estudo da persecução penal, investigação, ação penal, competência, provas, prisões, medidas cautelares, procedimentos, recursos e nulidades.</p></div><span class="penal-ler">Módulo futuro →</span>
+      </a>
+    </div>
+
+    <p class="penal-nota">Observação técnica: o Código de Processo Penal pertence ao campo do Direito Processual Penal, mas ficará aqui por afinidade temática, dentro do grande eixo criminal do site.</p>
+    <div class="penal-assinatura"><p>João Victor Brando Novais</p><p>São Paulo, 2026</p></div>
+  </section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
