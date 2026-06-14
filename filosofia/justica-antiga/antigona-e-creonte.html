@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antígona e Creonte | Justiça Antiga</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{--ja-paper:#fbf7ee;--ja-ink:#241f18;--ja-muted:#655b4d;--ja-line:#d7c7aa;--ja-gold:#b58b47;--ja-brown:#5a3d24;}
+body{background:radial-gradient(circle at 50% 0%,rgba(181,139,71,.16),transparent 30%),linear-gradient(180deg,#fbf7ee 0%,#f3ead9 48%,#e9dcc6 100%);color:var(--ja-ink);}
+main.wrap{max-width:980px;}
+.hero-antigona{padding:70px 0 36px;text-align:center;border-bottom:1px solid var(--ja-line);margin-bottom:42px;}
+.hero-antigona .categoria{letter-spacing:2px;text-transform:uppercase;color:var(--ja-muted);font-size:13px;}
+.hero-antigona h1{font-size:clamp(40px,6vw,70px);line-height:1.05;margin:10px 0 16px;color:var(--ja-ink);}
+.hero-antigona .subtitulo{max-width:760px;margin:0 auto;color:var(--ja-muted);font-size:19px;line-height:1.65;}
+.antigona-box{max-width:760px;margin:0 auto 42px;padding:30px 34px;background:rgba(255,255,255,.64);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
+.antigona-box h2{font-size:30px;margin:0 0 12px;color:var(--ja-ink);}
+.antigona-box p{font-size:18px;line-height:1.8;color:var(--ja-muted);margin:0 0 16px;text-align:justify;}
+.antigona-box p:last-child{margin-bottom:0;}
+.navegacao-texto{display:flex;justify-content:space-between;gap:16px;margin:46px auto 0;max-width:760px;border-top:1px solid var(--ja-line);padding-top:22px;}
+.navegacao-texto a{color:var(--ja-brown);text-decoration:none;font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
+@media(max-width:760px){.antigona-box{padding:24px 22px}.antigona-box p{text-align:left}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+<section class="hero-antigona">
+<p class="categoria">Justiça Antiga · Tragédia grega</p>
+<h1>Antígona e Creonte</h1>
+<p class="subtitulo">Estrutura reservada ao estudo da tragédia grega como conflito entre lei da cidade, autoridade política e leis não escritas.</p>
+</section>
+
+<section class="antigona-box">
+<h2>Texto em preparação</h2>
+<p>Este espaço será dedicado à tragédia de Antígona e Creonte como uma das imagens mais fortes da Filosofia do Direito antiga: a tensão entre o decreto do governante e uma justiça superior, não escrita, invocada pela consciência moral.</p>
+<p>O texto poderá funcionar como ponte entre a biblioteca de Justiça Antiga e o ramo do Jusnaturalismo, pois antecipa o problema central do direito natural: a lei positiva é sempre justa ou pode ser julgada por um critério superior?</p>
+</section>
+
+<div class="navegacao-texto"><a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a><a href="/filosofia/jusnaturalismo/o-que-e-jusnaturalismo.html">Ir ao texto-eixo do Jusnaturalismo →</a></div>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
