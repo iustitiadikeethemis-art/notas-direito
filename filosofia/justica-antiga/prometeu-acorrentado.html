@@ -51,8 +51,8 @@ main.wrap{position:relative;z-index:1;}
 .texto-prometeu p{font-size:18px;line-height:1.85;color:#342c22;text-align:justify;margin:20px 0;}
 .figura-prometeu{margin:34px auto;}
 .figura-prometeu img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid rgba(122,94,53,.32);box-shadow:0 22px 46px rgba(90,61,36,.16);background:#fffaf0;}
-.figura-prometeu.destaque{margin:0 auto 36px;}
-.figura-prometeu.retrato{max-width:560px;}
+.figura-prometeu.destaque{margin:0 auto 36px;max-width:640px;}
+.figura-prometeu.retrato{max-width:460px;}
 .figura-prometeu figcaption{font-size:14px;line-height:1.55;color:var(--ja-muted);text-align:center;margin-top:10px;font-style:italic;}
 .fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
 .fonte-box h2{font-size:26px;margin:0 0 16px;color:var(--ja-ink);border:0;padding:0;}
@@ -60,7 +60,7 @@ main.wrap{position:relative;z-index:1;}
 .navegacao-texto{display:flex;justify-content:space-between;gap:16px;margin:46px auto 0;max-width:760px;border-top:1px solid var(--ja-line);padding-top:22px;}
 .navegacao-texto a{color:var(--ja-brown);text-decoration:none;font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
 @media(max-width:900px){.layout-leitura{grid-template-columns:1fr}.controle-texto{position:static}}
-@media(max-width:760px){.texto-prometeu p{text-align:left}.figura-prometeu.retrato{max-width:100%}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+@media(max-width:760px){.texto-prometeu p{text-align:left}.figura-prometeu.destaque,.figura-prometeu.retrato{max-width:100%}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
 @media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.figura-prometeu img{box-shadow:none}.fonte-box{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
 </style>
 </head>
