@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prometeu Acorrentado | Justiça Antiga</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --ja-paper:#fbf7ee;
+  --ja-ink:#241f18;
+  --ja-muted:#655b4d;
+  --ja-line:#d7c7aa;
+  --ja-gold:#b58b47;
+  --ja-brown:#5a3d24;
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(181,139,71,.16),transparent 30%),
+    radial-gradient(circle at 16% 24%,rgba(255,255,255,.54),transparent 24%),
+    linear-gradient(180deg,#fbf7ee 0%,#f3ead9 48%,#e9dcc6 100%);
+  color:var(--ja-ink);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.10;
+  background-image:
+    linear-gradient(rgba(90,61,36,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(90,61,36,.06) 1px,transparent 1px);
+  background-size:9px 9px;
+}
+main.wrap{position:relative;z-index:1;}
+.hero-prometeu{padding:70px 0 36px;text-align:center;border-bottom:1px solid var(--ja-line);margin-bottom:42px;}
+.hero-prometeu .categoria{letter-spacing:2px;text-transform:uppercase;color:var(--ja-muted);font-size:13px;}
+.hero-prometeu h1{font-size:clamp(40px,6vw,70px);line-height:1.05;margin:10px 0 16px;color:var(--ja-ink);}
+.hero-prometeu .subtitulo{max-width:760px;margin:0 auto;color:var(--ja-muted);font-size:19px;line-height:1.65;}
+.layout-leitura{display:grid;grid-template-columns:250px 1fr;gap:28px;align-items:start;}
+.controle-texto{position:sticky;top:92px;align-self:start;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-radius:18px;padding:18px;box-shadow:0 16px 34px rgba(90,61,36,.08);backdrop-filter:blur(6px);}
+.controle-texto h2{font-size:18px;line-height:1.2;margin:0 0 12px;color:var(--ja-ink);}
+.controle-texto p{font-size:14px;line-height:1.55;color:var(--ja-muted);margin:0 0 14px;text-align:left;}
+.controle-texto a{display:block;text-decoration:none;color:var(--ja-brown);padding:10px 12px;margin:8px 0;border:1px solid var(--ja-line);border-radius:12px;background:#fffaf0;font-size:15px;line-height:1.35;}
+.controle-texto a:hover{background:#f4ecd9;}
+.controle-voltar{margin-top:16px;padding-top:12px;border-top:1px solid var(--ja-line);}
+.controle-voltar a{background:rgba(255,255,255,.72);font-weight:bold;}
+.conteudo-leitura{min-width:0;}
+.texto-prometeu{max-width:760px;margin:0 auto 52px;padding:0 0 28px;}
+.texto-prometeu h2{margin-top:48px;font-size:30px;color:var(--ja-ink);}
+.texto-prometeu p{font-size:18px;line-height:1.85;color:#342c22;text-align:justify;margin:20px 0;}
+.fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
+.fonte-box h2{font-size:26px;margin:0 0 16px;color:var(--ja-ink);border:0;padding:0;}
+.fonte-box p{font-size:16px;line-height:1.75;text-align:left;margin:10px 0;color:#3f3932;}
+.navegacao-texto{display:flex;justify-content:space-between;gap:16px;margin:46px auto 0;max-width:760px;border-top:1px solid var(--ja-line);padding-top:22px;}
+.navegacao-texto a{color:var(--ja-brown);text-decoration:none;font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
+@media(max-width:900px){.layout-leitura{grid-template-columns:1fr}.controle-texto{position:static}}
+@media(max-width:760px){.texto-prometeu p{text-align:left}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+@media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.fonte-box{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+<section class="hero-prometeu">
+<p class="categoria">Justiça Antiga · Mito grego</p>
+<h1>Prometeu acorrentado</h1>
+<p class="subtitulo">Narrativa do roubo do fogo, de Epimeteu, de Pandora e do castigo imposto a Prometeu.</p>
+</section>
+
+<section class="layout-leitura">
+<aside class="controle-texto">
+<h2>Navegação</h2>
+<p>Use o controle para acompanhar a narrativa e as fontes base.</p>
+<a href="#historia">História</a>
+<a href="#fontes">Fontes base</a>
+<div class="controle-voltar">
+<a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a>
+<a href="/filosofia/">Voltar à árvore geral →</a>
+</div>
+</aside>
+
+<div class="conteudo-leitura">
+<article class="texto-prometeu">
+<p id="historia">Prometeu era filho do titã Jápeto e irmão de Epimeteu. Seu nome costuma ser associado àquele que pensa antes; Epimeteu, ao contrário, àquele que pensa depois. Os dois aparecem ligados à condição dos mortais e ao destino dos homens diante dos deuses.</p>
+
+<p>Em uma antiga tradição, quando os seres vivos receberam suas qualidades, Epimeteu ficou encarregado de distribuí-las. Deu força a uns, velocidade a outros, asas às aves, garras aos predadores, carapaças aos animais frágeis, pelos contra o frio e meios de defesa contra os perigos. Mas, ao terminar a distribuição, percebeu que havia deixado os homens sem proteção suficiente. Os homens estavam nus, frágeis, sem armas naturais, sem velocidade e sem abrigo próprio.</p>
+
+<p>Prometeu, vendo essa condição, decidiu ajudar os mortais. Para que os homens não permanecessem indefesos, roubou o fogo e o entregou à humanidade. Em algumas versões, o fogo foi escondido dentro de uma haste de funcho. A chama passou então dos deuses aos homens.</p>
+
+<p>Com o fogo, os mortais puderam aquecer-se, cozinhar, iluminar a noite, trabalhar os metais, fabricar instrumentos e transformar a matéria. Aquilo que antes pertencia aos deuses passou a fazer parte da vida humana.</p>
+
+<p>Mas a tensão entre Prometeu e Zeus não termina aí. Em outra tradição, Prometeu também engana Zeus no momento da divisão dos sacrifícios. Ele separa duas porções: em uma, coloca ossos cobertos por gordura brilhante; em outra, a carne boa escondida sob aparência menos atraente. Zeus escolhe a parte enganosa. A partir daí, os homens ficam com a carne, e os deuses recebem a fumaça e os ossos dos sacrifícios.</p>
+
+<p>Zeus se enfurece com a astúcia de Prometeu e retira o fogo dos mortais. Prometeu, porém, rouba novamente a chama divina e a devolve aos homens. O gesto provoca a ira definitiva de Zeus.</p>
+
+<p>Como punição aos homens, Zeus ordena a criação de Pandora. Hefesto molda a primeira mulher com terra e água; Atena a adorna; outros deuses lhe concedem dons, beleza, voz e sedução. Pandora é então enviada a Epimeteu.</p>
+
+<p>Prometeu havia advertido Epimeteu para que não aceitasse presente algum vindo de Zeus. Mas Epimeteu aceita Pandora. Com ela chega também o vaso, ou jarro, que não deveria ser aberto. Quando Pandora o abre, espalham-se entre os homens os males, as dores, as doenças e os sofrimentos. Apenas a esperança permanece retida.</p>
+
+<p>Prometeu também é punido. Por ordem de Zeus, é levado a uma região distante e acorrentado a uma rocha. Na tragédia atribuída a Ésquilo, Hefesto é obrigado a prendê-lo, acompanhado por Poder e Violência, que executam a vontade de Zeus.</p>
+
+<p>Prometeu permanece preso, exposto ao sofrimento. Em versões posteriores, uma ave devora diariamente seu fígado, que volta a crescer para ser devorado outra vez. O castigo se repete sem cessar.</p>
+
+<p>Mesmo acorrentado, Prometeu não nega o que fez. Na tragédia, ele recorda os benefícios dados aos mortais: o fogo, as técnicas, os números, as letras, o conhecimento dos astros, a navegação, a medicina e outras artes que tornaram a vida humana possível.</p>
+
+<p>A história de Prometeu reúne, assim, vários episódios: a fragilidade inicial dos homens, o erro de Epimeteu, o roubo do fogo, o engano no sacrifício, a criação de Pandora, a chegada dos males ao mundo e o castigo do titã acorrentado.</p>
+
+<div class="fonte-box" id="fontes">
+<h2>Fontes base</h2>
+<p>HESÍODO. <em>Teogonia</em>. Fonte antiga para a genealogia de Prometeu, sua relação com Zeus e o episódio da divisão sacrificial.</p>
+<p>HESÍODO. <em>Trabalhos e Dias</em>. Fonte importante para o roubo do fogo, Epimeteu, Pandora e a chegada dos males aos homens.</p>
+<p>PLATÃO. <em>Protágoras</em>. Fonte para a narrativa em que Epimeteu distribui as qualidades aos animais, esquece os homens e Prometeu rouba o fogo e a técnica.</p>
+<p>ÉSQUILO. <em>Prometeu Acorrentado</em>. Tragédia tradicionalmente atribuída a Ésquilo, centrada no castigo de Prometeu e na imagem do titã acorrentado por ter beneficiado os mortais.</p>
+</div>
+
+<div class="navegacao-texto">
+<a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a>
+<a href="/filosofia/">Voltar à árvore geral →</a>
+</div>
+</article>
+</div>
+</section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
