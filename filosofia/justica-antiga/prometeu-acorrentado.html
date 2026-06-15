@@ -49,14 +49,19 @@ main.wrap{position:relative;z-index:1;}
 .texto-prometeu{max-width:760px;margin:0 auto 52px;padding:0 0 28px;}
 .texto-prometeu h2{margin-top:48px;font-size:30px;color:var(--ja-ink);}
 .texto-prometeu p{font-size:18px;line-height:1.85;color:#342c22;text-align:justify;margin:20px 0;}
+.figura-prometeu{margin:34px auto;}
+.figura-prometeu img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid rgba(122,94,53,.32);box-shadow:0 22px 46px rgba(90,61,36,.16);background:#fffaf0;}
+.figura-prometeu.destaque{margin:0 auto 36px;}
+.figura-prometeu.retrato{max-width:560px;}
+.figura-prometeu figcaption{font-size:14px;line-height:1.55;color:var(--ja-muted);text-align:center;margin-top:10px;font-style:italic;}
 .fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
 .fonte-box h2{font-size:26px;margin:0 0 16px;color:var(--ja-ink);border:0;padding:0;}
 .fonte-box p{font-size:16px;line-height:1.75;text-align:left;margin:10px 0;color:#3f3932;}
 .navegacao-texto{display:flex;justify-content:space-between;gap:16px;margin:46px auto 0;max-width:760px;border-top:1px solid var(--ja-line);padding-top:22px;}
 .navegacao-texto a{color:var(--ja-brown);text-decoration:none;font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
 @media(max-width:900px){.layout-leitura{grid-template-columns:1fr}.controle-texto{position:static}}
-@media(max-width:760px){.texto-prometeu p{text-align:left}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
-@media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.fonte-box{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
+@media(max-width:760px){.texto-prometeu p{text-align:left}.figura-prometeu.retrato{max-width:100%}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+@media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.figura-prometeu img{box-shadow:none}.fonte-box{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
 </style>
 </head>
 <body>
@@ -82,11 +87,21 @@ main.wrap{position:relative;z-index:1;}
 
 <div class="conteudo-leitura">
 <article class="texto-prometeu">
+<figure class="figura-prometeu destaque">
+<img src="/imagens/rubensprometheusbound.jpg" alt="Prometeu acorrentado à rocha enquanto uma ave se aproxima de seu corpo">
+<figcaption>Peter Paul Rubens e Frans Snyders, <em>Prometheus Bound</em>, c. 1611-1618. Óleo sobre tela. Philadelphia Museum of Art.</figcaption>
+</figure>
+
 <p id="historia">Prometeu era filho do titã Jápeto e irmão de Epimeteu. Seu nome costuma ser associado àquele que pensa antes; Epimeteu, ao contrário, àquele que pensa depois. Os dois aparecem ligados à condição dos mortais e ao destino dos homens diante dos deuses.</p>
 
 <p>Em uma antiga tradição, quando os seres vivos receberam suas qualidades, Epimeteu ficou encarregado de distribuí-las. Deu força a uns, velocidade a outros, asas às aves, garras aos predadores, carapaças aos animais frágeis, pelos contra o frio e meios de defesa contra os perigos. Mas, ao terminar a distribuição, percebeu que havia deixado os homens sem proteção suficiente. Os homens estavam nus, frágeis, sem armas naturais, sem velocidade e sem abrigo próprio.</p>
 
 <p>Prometeu, vendo essa condição, decidiu ajudar os mortais. Para que os homens não permanecessem indefesos, roubou o fogo e o entregou à humanidade. Em algumas versões, o fogo foi escondido dentro de uma haste de funcho. A chama passou então dos deuses aos homens.</p>
+
+<figure class="figura-prometeu retrato">
+<img src="/imagens/jancossiersprometheuscarrying.jpg" alt="Prometeu carregando a chama roubada dos deuses">
+<figcaption>Jan Cossiers, <em>Prometheus Carrying Fire</em>, 1637. Óleo sobre tela. Museo Nacional del Prado.</figcaption>
+</figure>
 
 <p>Com o fogo, os mortais puderam aquecer-se, cozinhar, iluminar a noite, trabalhar os metais, fabricar instrumentos e transformar a matéria. Aquilo que antes pertencia aos deuses passou a fazer parte da vida humana.</p>
 
@@ -95,6 +110,11 @@ main.wrap{position:relative;z-index:1;}
 <p>Zeus se enfurece com a astúcia de Prometeu e retira o fogo dos mortais. Prometeu, porém, rouba novamente a chama divina e a devolve aos homens. O gesto provoca a ira definitiva de Zeus.</p>
 
 <p>Como punição aos homens, Zeus ordena a criação de Pandora. Hefesto molda a primeira mulher com terra e água; Atena a adorna; outros deuses lhe concedem dons, beleza, voz e sedução. Pandora é então enviada a Epimeteu.</p>
+
+<figure class="figura-prometeu">
+<img src="/imagens/prometheusandppimetheusbeforepandorabyhermannjuliusschlosser.jpg" alt="Prometeu e Epimeteu diante de Pandora">
+<figcaption>Hermann Julius Schlösser, <em>Prometheus and Epimetheus before Pandora</em>, 1878. Nationalgalerie, Staatliche Museen zu Berlin.</figcaption>
+</figure>
 
 <p>Prometeu havia advertido Epimeteu para que não aceitasse presente algum vindo de Zeus. Mas Epimeteu aceita Pandora. Com ela chega também o vaso, ou jarro, que não deveria ser aberto. Quando Pandora o abre, espalham-se entre os homens os males, as dores, as doenças e os sofrimentos. Apenas a esperança permanece retida.</p>
 
