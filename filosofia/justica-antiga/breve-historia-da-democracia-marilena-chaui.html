@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breve História da Democracia | Justiça Antiga</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --ja-paper:#fbf7ee;
+  --ja-ink:#241f18;
+  --ja-muted:#655b4d;
+  --ja-line:#d7c7aa;
+  --ja-gold:#b58b47;
+  --ja-brown:#5a3d24;
+}
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(181,139,71,.16),transparent 30%),
+    radial-gradient(circle at 16% 24%,rgba(255,255,255,.54),transparent 24%),
+    linear-gradient(180deg,#fbf7ee 0%,#f3ead9 48%,#e9dcc6 100%);
+  color:var(--ja-ink);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.10;
+  background-image:
+    linear-gradient(rgba(90,61,36,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(90,61,36,.06) 1px,transparent 1px);
+  background-size:9px 9px;
+}
+main.wrap{position:relative;z-index:1;}
+.hero-democracia{padding:70px 0 36px;text-align:center;border-bottom:1px solid var(--ja-line);margin-bottom:42px;}
+.hero-democracia .categoria{letter-spacing:2px;text-transform:uppercase;color:var(--ja-muted);font-size:13px;}
+.hero-democracia h1{font-size:clamp(38px,5.8vw,68px);line-height:1.06;margin:10px 0 16px;color:var(--ja-ink);}
+.hero-democracia .subtitulo{max-width:820px;margin:0 auto;color:var(--ja-muted);font-size:19px;line-height:1.65;}
+.layout-leitura{display:grid;grid-template-columns:250px 1fr;gap:28px;align-items:start;}
+.controle-texto{position:sticky;top:92px;align-self:start;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-radius:18px;padding:18px;box-shadow:0 16px 34px rgba(90,61,36,.08);backdrop-filter:blur(6px);}
+.controle-texto h2{font-size:18px;line-height:1.2;margin:0 0 12px;color:var(--ja-ink);}
+.controle-texto p{font-size:14px;line-height:1.55;color:var(--ja-muted);margin:0 0 14px;text-align:left;}
+.controle-texto a{display:block;text-decoration:none;color:var(--ja-brown);padding:10px 12px;margin:8px 0;border:1px solid var(--ja-line);border-radius:12px;background:#fffaf0;font-size:15px;line-height:1.35;}
+.controle-texto a:hover{background:#f4ecd9;}
+.controle-voltar{margin-top:16px;padding-top:12px;border-top:1px solid var(--ja-line);}
+.controle-voltar a{background:rgba(255,255,255,.72);font-weight:bold;}
+.conteudo-leitura{min-width:0;}
+.texto-democracia{max-width:780px;margin:0 auto 52px;padding:0 0 28px;}
+.texto-democracia h2{margin-top:46px;font-size:30px;color:var(--ja-ink);}
+.texto-democracia p{font-size:18px;line-height:1.85;color:#342c22;text-align:justify;margin:20px 0;}
+.nota-referencia{margin:0 0 34px;padding:22px 24px;border-radius:18px;background:rgba(255,255,255,.66);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
+.nota-referencia p{font-size:16px;line-height:1.75;text-align:left;margin:0;color:#3f3932;}
+.fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
+.fonte-box h2{font-size:26px;margin:0 0 16px;color:var(--ja-ink);border:0;padding:0;}
+.fonte-box p{font-size:16px;line-height:1.75;text-align:left;margin:10px 0;color:#3f3932;}
+.navegacao-texto{display:flex;justify-content:space-between;gap:16px;margin:46px auto 0;max-width:780px;border-top:1px solid var(--ja-line);padding-top:22px;}
+.navegacao-texto a{color:var(--ja-brown);text-decoration:none;font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
+@media(max-width:900px){.layout-leitura{grid-template-columns:1fr}.controle-texto{position:static}}
+@media(max-width:760px){.texto-democracia p{text-align:left}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+@media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.fonte-box,.nota-referencia{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+<section class="hero-democracia">
+<p class="categoria">Justiça Antiga · Democracia e cidade</p>
+<h1>Breve história da democracia</h1>
+<p class="subtitulo">Notas de estudo a partir da aula de Marilena Chauí sobre a invenção da política, a cidade antiga, a criação de direitos e as ameaças contemporâneas à democracia.</p>
+</section>
+
+<section class="layout-leitura">
+<aside class="controle-texto">
+<h2>Navegação</h2>
+<p>Use o controle para acompanhar os momentos centrais do texto.</p>
+<a href="#tragédia">Tragédia e cidade</a>
+<a href="#politica">Invenção da política</a>
+<a href="#aristoteles">Justiça e participação</a>
+<a href="#direitos">Direitos e democracia</a>
+<a href="#brasil">Brasil e autoritarismo</a>
+<a href="#neoliberalismo">Neoliberalismo</a>
+<a href="#fontes">Referências</a>
+<div class="controle-voltar">
+<a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a>
+<a href="/filosofia/">Voltar à árvore geral →</a>
+</div>
+</aside>
+
+<div class="conteudo-leitura">
+<article class="texto-democracia">
+<div class="nota-referencia">
+<p>Este texto é uma elaboração autoral de estudo, escrita a partir da aula <em>Breve história da democracia</em>, de Marilena Chauí, publicada pela TV Boitempo no YouTube. Não se trata de transcrição literal da palestra, mas de uma reorganização ensaística de seus temas centrais para a biblioteca de Justiça Antiga.</p>
+</div>
+
+<p id="tragédia">Entre os séculos V e IV a.C., a tragédia grega ocupou um lugar singular na vida da cidade. Ela não era apenas espetáculo, nem mero entretenimento religioso. Era uma forma pública de pensamento. Diante dos cidadãos, a cidade assistia às ruínas das antigas casas aristocráticas, aos crimes de sangue, às vinganças familiares, aos juramentos quebrados, aos mortos sem sepultura e aos deuses ainda presentes no destino humano.</p>
+
+<p>A tragédia dividia a palavra. De um lado, os personagens do palco: reis, rainhas, heróis, príncipes, sacerdotes, guerreiros, figuras ainda presas ao mundo da honra, da linhagem e da vingança. De outro, o coro: uma presença coletiva, cidadã, que observa, comenta, teme, interroga e julga. Essa divisão não é apenas teatral. Ela dá forma sensível a uma transformação histórica: o passado aristocrático aparece no palco, enquanto o presente da cidade democrática começa a falar pelo coro.</p>
+
+<p>Por isso, a tragédia importa tanto para uma história da democracia. Nela se vê uma passagem lenta e dolorosa: a justiça deixa de pertencer exclusivamente ao sangue, à casa, à vingança e ao comando religioso dos deuses, e começa a deslocar-se para a cidade, para a palavra pública, para o tribunal e para a decisão humana. A família, que antes era o lugar soberano do poder, da honra e da punição, começa a ser atravessada por uma outra medida: a medida comum da pólis.</p>
+
+<p>Nas grandes narrativas trágicas, o crime raramente termina em si mesmo. Um assassinato exige outro assassinato; uma ofensa de sangue convoca uma reparação igualmente sangrenta; a vingança se prolonga como uma cadeia que não sabe cessar. A tragédia mostra esse mecanismo com uma severidade extraordinária: quando a justiça permanece fechada no interior da família, ela tende a converter-se em repetição interminável da violência.</p>
+
+<p>É por isso que a <em>Oresteia</em>, de Ésquilo, ocupa um lugar decisivo. O drama de Orestes não termina apenas com a perseguição das Erínias. Ele se encaminha para a fundação de um tribunal. A vingança privada, que parecia exigida pelo mundo antigo, encontra um limite quando Atena institui uma forma pública de julgamento. A cidade assume a tarefa de julgar os crimes, e os mortais passam a responder diante de outros mortais.</p>
+
+<h2 id="politica">A invenção da política</h2>
+
+<p>A expressão “invenção da política”, associada a Moses Finley, indica uma ruptura fundamental. Gregos e romanos não herdaram um modelo pronto de vida pública; tiveram de inventar formas próprias de lidar com a divisão social, com o conflito, com a guerra, com a lei e com a decisão coletiva. A política nasce, então, como uma criação histórica: não como harmonia natural, mas como resposta institucional à impossibilidade de eliminar os conflitos humanos.</p>
+
+<p>Essa invenção exigiu uma separação. O poder político precisou distinguir-se do poder privado do chefe de família, do comando militar e da autoridade religiosa. Nos grandes impérios antigos, essas figuras costumavam reunir-se numa mesma autoridade: o governante era pai, guerreiro, sacerdote e senhor. A cidade antiga rompe esse bloco quando começa a afirmar instituições próprias: assembleias, tribunais, magistraturas, leis e espaços de deliberação.</p>
+
+<p>A política nasce quando a decisão deixa de ser apenas vontade pessoal e passa a exigir forma pública. A lei deixa de ser o capricho do poderoso, ou o segredo de uma autoridade sagrada, e torna-se algo discutível, instituído e reconhecido pela cidade. Nessa passagem, surge uma das intuições mais fortes da democracia: o poder não pertence naturalmente a quem manda; ele deve responder a uma ordem comum.</p>
+
+<p>A Grécia criou a democracia direta de cidadãos. Roma criou a república como coisa pública, embora oligárquica em sua origem. Em Atenas, os cidadãos homens adultos da pólis participavam da assembleia, dos tribunais e da defesa militar. Em Roma, a cidadania plena pertenceu inicialmente aos patrícios, enquanto a plebe precisou lutar por representação e reconhecimento. Em ambos os casos, porém, uma mudança decisiva havia ocorrido: a vida comum já não podia ser pensada apenas como prolongamento da casa, da guerra ou do templo.</p>
+
+<p>Dois termos gregos ajudam a compreender a novidade democrática: <em>isonomia</em> e <em>isegoria</em>. A isonomia indica igualdade perante a lei. A isegoria indica igualdade no direito à palavra pública. A democracia antiga não se reduz à votação; ela depende da possibilidade de aparecer diante dos outros como cidadão, falar, persuadir, discordar e participar do julgamento das coisas comuns.</p>
+
+<h2 id="aristoteles">Justiça, desigualdade e participação</h2>
+
+<p>Aristóteles percebeu que a política não nasce de uma sociedade sem divisões. Ela nasce justamente porque a cidade é atravessada por diferenças de riqueza, posição, poder e interesse. A distinção entre ricos e pobres não é um detalhe exterior à política; ela pertence ao próprio problema que a política precisa enfrentar. Por isso, uma política justa não é aquela que simplesmente trata todos da mesma maneira, mas aquela que sabe distinguir quando a igualdade formal produz injustiça concreta.</p>
+
+<p>A justiça distributiva diz respeito ao que pode ser partilhado: bens, recursos, encargos, honras, benefícios, condições materiais de existência. Ela se torna injusta quando ignora desigualdades reais e oferece a mesma medida a situações profundamente distintas. A justiça participativa, por sua vez, diz respeito ao que não pode ser simplesmente dividido como coisa: o exercício do poder, a participação na decisão pública, a palavra comum. Nela, a injustiça aparece quando alguns cidadãos são excluídos do poder que deveria pertencer a todos.</p>
+
+<p>Essa distinção é preciosa. Ela impede que a justiça seja reduzida a uma fórmula abstrata. Em certos casos, tratar igualmente os desiguais é injusto, porque conserva ou agrava a desigualdade. Em outros, tratar desigualmente os iguais é injusto, porque exclui cidadãos da participação pública. A democracia, nesse sentido, exige duas tarefas simultâneas: reduzir desigualdades materiais e ampliar a participação política.</p>
+
+<p>Daí a diferença entre uma ética na política e uma ética da política. A primeira procura virtudes privadas nos governantes: bondade, honestidade pessoal, temperança, piedade. A segunda pergunta pela qualidade das instituições: se elas distribuem bens com justiça, se permitem participação, se limitam o arbítrio, se reconhecem direitos, se impedem que a força privada capture o espaço público. Para a democracia, essa segunda pergunta é decisiva.</p>
+
+<h2>Da teologia política a Maquiavel</h2>
+
+<p>Com a expansão dos impérios e, depois, com a ordem medieval cristã, a experiência democrática e republicana foi em grande parte soterrada. A política voltou a ser pensada sob a imagem da autoridade que vem do alto. O governante aparece como figura consagrada; sua vontade se aproxima da lei; a justiça se confunde com o favor concedido por aquele que governa.</p>
+
+<p>Nesse modelo, a pergunta pela justiça das instituições cede lugar à pergunta pela virtude moral do governante. Um rei justo seria aquele que possui qualidades privadas capazes de espelhar uma ordem superior. Mas esse retorno à moralidade pessoal enfraquece a autonomia da política. A cidade deixa de aparecer como espaço de deliberação dos cidadãos e volta a depender da imagem de um governante virtuoso.</p>
+
+<p>Maquiavel rompe esse quadro ao devolver à política sua dureza própria. Ele não parte da ideia de uma comunidade unificada pelo bem comum, mas da divisão social. Em toda sociedade, afirma-se uma tensão fundamental: os grandes desejam comandar e oprimir; o povo deseja não ser comandado nem oprimido. A política existe porque essa divisão não desaparece. Ela precisa ser contida, regulada, trabalhada.</p>
+
+<p>Com isso, a virtude política também muda de sentido. O governante não é virtuoso por ser moralmente exemplar no plano privado. Ele é virtuoso quando sabe escutar os acontecimentos, compreender a realidade efetiva, mudar de conduta diante das circunstâncias e proteger a liberdade e a segurança do povo contra a ambição dos grandes. A política deixa de ser espelho de moral privada e torna-se arte pública de enfrentar conflitos reais.</p>
+
+<h2 id="direitos">Democracia e criação de direitos</h2>
+
+<p>A democracia moderna nasce em outro horizonte. Ela é representativa, não direta como a ateniense. Mas sua profundidade não está apenas nas eleições, nos partidos ou na alternância de governantes. Sua grande originalidade está na prática histórica de declarar direitos. Direitos não aparecem porque todos espontaneamente reconhecem a dignidade de todos. Eles precisam ser declarados justamente porque a sociedade está dividida e porque há grupos aos quais a condição de sujeitos de direito foi recusada.</p>
+
+<p>As grandes declarações de direitos surgem em momentos de ruptura: revoluções, independências, crises de ordem, destruições históricas, lutas contra regimes de extermínio e dominação. Isso revela que o direito não é apenas um enunciado jurídico. Ele é uma criação social e política. Declarar um direito é inscrevê-lo no campo comum, exigir reconhecimento e abrir uma luta para que aquilo que foi declarado se torne efetivo.</p>
+
+<p>Um direito não se confunde com uma necessidade particular, uma carência imediata ou um interesse de grupo. Necessidades e carências variam: água, comida, moradia, transporte, escola, saúde. Interesses também variam conforme grupos, classes e posições sociais. Mas, por trás de muitas carências, há direitos universais: direito à vida, à dignidade, à educação, à saúde, à moradia, à informação, à participação. A democracia transforma carências dispersas em linguagem pública de direitos.</p>
+
+<p>O direito também se distingue do privilégio. A necessidade pode indicar um direito ainda não conquistado; o privilégio se opõe ao direito, porque é particular, exclusivo, reservado a poucos. Uma sociedade democrática não se limita a administrar privilégios. Ela deve converter demandas legítimas em direitos universais e, ao mesmo tempo, desmontar privilégios que se apresentam como se fossem direitos naturais de alguns.</p>
+
+<p>É nesse ponto que Marx recoloca a questão da divisão social com força radical. A sociedade capitalista se apresenta juridicamente como sociedade de indivíduos livres e iguais, capazes de contratar. Mas essa aparência oculta relações materiais de exploração e dominação. O contrato de trabalho exige que o trabalhador apareça como livre; entretanto, a necessidade material o obriga a vender sua força de trabalho. O Estado de Direito proclama igualdade, mas convive com desigualdades estruturais que muitas vezes ajuda a reproduzir.</p>
+
+<p>Daí nasce uma tensão decisiva: as declarações de direitos afirmam mais do que a ordem existente permite realizar, e menos do que a dignidade humana exigiria. Justamente por isso, elas abrem brechas históricas. A democracia não é a paz definitiva dos direitos já prontos; é o campo em que novos sujeitos entram em cena para exigir que aquilo que foi declarado se torne real, e que novos direitos sejam reconhecidos.</p>
+
+<p>Igualdade, liberdade e participação formam o núcleo dessa história. A igualdade declarada não criou imediatamente os iguais. No início das democracias liberais, mulheres, trabalhadores, negros, indígenas, analfabetos e muitos outros grupos foram excluídos da cidadania plena. A liberdade declarada também precisou ser ampliada: liberdade de pensamento, crença, profissão, moradia, associação, resistência à tirania, luta contra a censura, a tortura, a exploração e a discriminação. A participação, por sua vez, só se aprofunda quando os cidadãos deixam de ser tratados como espectadores e passam a ser reconhecidos como sujeitos competentes para deliberar sobre a vida comum.</p>
+
+<p>A democracia é, portanto, mais do que regime de governo. Ela é forma social. Ela existe quando a sociedade reconhece o conflito como legítimo, permite a organização de movimentos, sindicatos, associações, partidos e contrapoderes, e aceita que novos direitos possam nascer de lutas sociais. Uma sociedade democrática não é imóvel. Ela está aberta ao tempo, ao novo, às contradições e à ampliação da cidadania.</p>
+
+<p>Por isso, o voto não deve ser entendido apenas como escolha de governantes. Ele revela que o lugar do poder está vazio: ninguém o possui por natureza. Quem governa ocupa temporariamente uma função porque recebeu mandato da sociedade. O eleitor não é apenas alguém que deposita uma preferência; é o sujeito que manifesta a origem popular da soberania.</p>
+
+<h2 id="brasil">Brasil: autoritarismo social e bloqueio dos direitos</h2>
+
+<p>No Brasil, a democracia encontra um obstáculo antigo e persistente: o predomínio do espaço privado sobre o espaço público. A sociedade brasileira foi formada por relações hierárquicas profundas, nas quais a casa, a família, o favor, a tutela, a clientela e a obediência organizaram grande parte da vida social. A linguagem cotidiana ainda denuncia isso: títulos de deferência, tratamento servil, naturalização da desigualdade, expectativa de mando e submissão.</p>
+
+<p>Onde a democracia exige reconhecimento do outro como sujeito de direitos, a sociedade autoritária tende a ver o outro como inferior, dependente, perigoso ou descartável. Entre os que se reconhecem como iguais, prevalecem cumplicidades privadas; diante dos considerados inferiores, aparecem favor, tutela, repressão ou abandono. A cidadania, nesse ambiente, não se universaliza com facilidade, porque direitos são frequentemente tratados como concessões, e privilégios são defendidos como se fossem direitos.</p>
+
+<p>Essa estrutura ajuda a explicar por que a democracia brasileira parece viver em estado permanente de fragilidade. As camadas populares aparecem como portadoras de carências; as classes dominantes conservam privilégios; e o campo dos direitos encontra bloqueios constantes. A democracia não desaparece apenas quando há golpe ou fechamento institucional. Ela também se enfraquece quando a sociedade naturaliza desigualdades e impede que os sujeitos sociais transformem carências em direitos.</p>
+
+<h2 id="neoliberalismo">Neoliberalismo e esvaziamento da democracia</h2>
+
+<p>A ameaça contemporânea à democracia não se limita ao autoritarismo tradicional. Ela também aparece sob a forma neoliberal, quando direitos sociais são convertidos em serviços privados, e a política é substituída pela gestão. Educação, saúde, moradia, cultura, previdência e transporte deixam de aparecer como direitos e passam a ser tratados como mercadorias. O espaço público encolhe; o mercado se expande; o cidadão é empurrado para a posição de consumidor.</p>
+
+<p>O neoliberalismo não significa simplesmente menos Estado. Ele reorganiza o Estado para servir prioritariamente à valorização privada do capital, especialmente financeiro. Reduz gastos sociais, enfraquece sindicatos, privatiza bens públicos, transforma desemprego em instrumento de disciplina social e apresenta tudo isso como se fosse exigência técnica inevitável. Aquilo que é decisão política aparece como necessidade econômica.</p>
+
+<p>Há ainda uma transformação mais profunda: instituições sociais passam a ser tratadas como organizações empresariais. Escola, universidade, hospital, museu, centro cultural, serviço público e até o próprio Estado são reimaginados segundo critérios de gestão, eficiência, desempenho, competição e resultado. A linguagem muda: governantes tornam-se gestores; cidadãos tornam-se clientes; direitos tornam-se serviços; educação torna-se investimento individual; trabalho torna-se empreendedorismo de si mesmo.</p>
+
+<p>Essa transformação atinge o núcleo da democracia porque substitui deliberação pública por administração. Se tudo é empresa, o conflito social deixa de ser tratado politicamente e passa a ser administrado, judicializado ou reprimido. A política, que deveria ser disputa pública sobre direitos e bens comuns, é reduzida a técnica de gerenciamento. A participação torna-se incômoda; o pensamento crítico passa a ser tratado como ameaça.</p>
+
+<p>O discurso neoliberal também produz uma linguagem empobrecida. Palavras como gestão, flexibilização, eficiência, mérito, capital humano e modernização parecem neutras, mas frequentemente servem para ocultar perdas de direitos, precarização do trabalho e ampliação da desigualdade. A linguagem deixa de abrir sentido e passa a encerrar o debate. Quando as palavras são esvaziadas, a resistência se torna mais difícil, porque o próprio nome da injustiça é retirado de circulação.</p>
+
+<p>É nesse sentido que a democracia deve ser defendida como memória e como criação. Memória, porque ela nasce de lutas antigas: da cidade grega, da tragédia, dos tribunais, das declarações de direitos, das revoluções, dos movimentos populares. Criação, porque ela jamais está pronta. Cada direito conquistado pode ser perdido; cada perda, se reconhecida como perda, recorda que houve uma conquista anterior e que a reconquista é uma tarefa possível.</p>
+
+<p>A beleza da democracia está nessa tensão. Ela não promete uma sociedade sem conflito. Ao contrário: afirma que o conflito pode deixar de ser guerra privada, vingança, favor, clientela ou extermínio, e tornar-se palavra pública, direito, participação e instituição. Desde a tragédia antiga até as lutas contemporâneas, a democracia permanece como a difícil arte de transformar a dor social em linguagem comum e a desigualdade em luta por justiça.</p>
+
+<div class="fonte-box" id="fontes">
+<h2>Referências</h2>
+<p>CHAUÍ, Marilena. <em>Breve história da democracia</em>. Aula publicada pela TV Boitempo no YouTube, integrante do curso <em>Democracia: história, formas e possibilidades</em>. Referência principal para a organização temática deste texto.</p>
+<p>ÉSQUILO. <em>Oresteia</em>. Fonte antiga para a passagem da vingança familiar ao tribunal público na tradição trágica grega.</p>
+<p>ARISTÓTELES. <em>Política</em>; <em>Ética a Nicômaco</em>. Fontes clássicas para a relação entre justiça, desigualdade, distribuição e participação na cidade.</p>
+<p>MAQUIAVEL, Nicolau. <em>O Príncipe</em>; <em>Discursos sobre a primeira década de Tito Lívio</em>. Referências para a política como enfrentamento da divisão social e do conflito entre grandes e povo.</p>
+<p>MARX, Karl. <em>A questão judaica</em>; <em>O capital</em>. Referências para a crítica da igualdade jurídica abstrata e da sociedade capitalista como sociedade dividida em classes.</p>
+<p>BENJAMIN, Walter. <em>Teses sobre o conceito de história</em>. Referência para a relação entre memória, perigo histórico e esperança.</p>
+</div>
+
+<div class="navegacao-texto">
+<a href="/filosofia/justica-antiga/">← Voltar à Justiça Antiga</a>
+<a href="/filosofia/">Voltar à árvore geral →</a>
+</div>
+</article>
+</div>
+</section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
