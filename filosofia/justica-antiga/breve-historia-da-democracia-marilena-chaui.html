@@ -51,14 +51,21 @@ main.wrap{position:relative;z-index:1;}
 .texto-democracia p{font-size:18px;line-height:1.85;color:#342c22;text-align:justify;margin:20px 0;}
 .nota-referencia{margin:0 0 34px;padding:22px 24px;border-radius:18px;background:rgba(255,255,255,.66);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
 .nota-referencia p{font-size:16px;line-height:1.75;text-align:left;margin:0;color:#3f3932;}
+.figura-democracia{margin:34px auto;}
+.figura-democracia img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid rgba(122,94,53,.32);box-shadow:0 22px 46px rgba(90,61,36,.16);background:#fffaf0;}
+.figura-democracia.retrato{max-width:360px;margin-top:0;}
+.figura-democracia.panorama{max-width:720px;}
+.figura-democracia.poster{max-width:520px;}
+.figura-democracia.objeto{max-width:620px;}
+.figura-democracia figcaption{font-size:14px;line-height:1.55;color:var(--ja-muted);text-align:center;margin-top:10px;font-style:italic;}
 .fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
 .fonte-box h2{font-size:26px;margin:0 0 16px;color:var(--ja-ink);border:0;padding:0;}
 .fonte-box p{font-size:16px;line-height:1.75;text-align:left;margin:10px 0;color:#3f3932;}
 .navegacao-texto{display:flex;justify-content:space-between;gap:16px;margin:46px auto 0;max-width:780px;border-top:1px solid var(--ja-line);padding-top:22px;}
 .navegacao-texto a{color:var(--ja-brown);text-decoration:none;font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
 @media(max-width:900px){.layout-leitura{grid-template-columns:1fr}.controle-texto{position:static}}
-@media(max-width:760px){.texto-democracia p{text-align:left}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
-@media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.fonte-box,.nota-referencia{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
+@media(max-width:760px){.texto-democracia p{text-align:left}.figura-democracia.retrato,.figura-democracia.panorama,.figura-democracia.poster,.figura-democracia.objeto{max-width:100%}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+@media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.figura-democracia img{box-shadow:none}.fonte-box,.nota-referencia{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
 </style>
 </head>
 <body>
@@ -93,9 +100,19 @@ main.wrap{position:relative;z-index:1;}
 <p>Este texto é uma elaboração autoral de estudo, escrita a partir da aula <em>Breve história da democracia</em>, de Marilena Chauí, publicada pela TV Boitempo no YouTube. Não se trata de transcrição literal da palestra, mas de uma reorganização ensaística de seus temas centrais para a biblioteca de Justiça Antiga.</p>
 </div>
 
+<figure class="figura-democracia retrato">
+<img src="/imagens/marilena.jpg" alt="Retrato em preto e branco de Marilena Chauí">
+<figcaption>Marilena Chauí, filósofa brasileira e referência central para a elaboração deste estudo.</figcaption>
+</figure>
+
 <p id="tragédia">Entre os séculos V e IV a.C., a tragédia grega ocupou um lugar singular na vida da cidade. Ela não era apenas espetáculo, nem mero entretenimento religioso. Era uma forma pública de pensamento. Diante dos cidadãos, a cidade assistia às ruínas das antigas casas aristocráticas, aos crimes de sangue, às vinganças familiares, aos juramentos quebrados, aos mortos sem sepultura e aos deuses ainda presentes no destino humano.</p>
 
 <p>A tragédia dividia a palavra. De um lado, os personagens do palco: reis, rainhas, heróis, príncipes, sacerdotes, guerreiros, figuras ainda presas ao mundo da honra, da linhagem e da vingança. De outro, o coro: uma presença coletiva, cidadã, que observa, comenta, teme, interroga e julga. Essa divisão não é apenas teatral. Ela dá forma sensível a uma transformação histórica: o passado aristocrático aparece no palco, enquanto o presente da cidade democrática começa a falar pelo coro.</p>
+
+<figure class="figura-democracia panorama">
+<img src="/imagens/teatrodionisio.jpg" alt="Representação do Teatro de Dionísio em Atenas">
+<figcaption>Representação do Teatro de Dionísio, em Atenas. A tragédia grega foi também uma experiência pública da cidade diante de si mesma.</figcaption>
+</figure>
 
 <p>Por isso, a tragédia importa tanto para uma história da democracia. Nela se vê uma passagem lenta e dolorosa: a justiça deixa de pertencer exclusivamente ao sangue, à casa, à vingança e ao comando religioso dos deuses, e começa a deslocar-se para a cidade, para a palavra pública, para o tribunal e para a decisão humana. A família, que antes era o lugar soberano do poder, da honra e da punição, começa a ser atravessada por uma outra medida: a medida comum da pólis.</p>
 
@@ -110,6 +127,11 @@ main.wrap{position:relative;z-index:1;}
 <p>Essa invenção exigiu uma separação. O poder político precisou distinguir-se do poder privado do chefe de família, do comando militar e da autoridade religiosa. Nos grandes impérios antigos, essas figuras costumavam reunir-se numa mesma autoridade: o governante era pai, guerreiro, sacerdote e senhor. A cidade antiga rompe esse bloco quando começa a afirmar instituições próprias: assembleias, tribunais, magistraturas, leis e espaços de deliberação.</p>
 
 <p>A política nasce quando a decisão deixa de ser apenas vontade pessoal e passa a exigir forma pública. A lei deixa de ser o capricho do poderoso, ou o segredo de uma autoridade sagrada, e torna-se algo discutível, instituído e reconhecido pela cidade. Nessa passagem, surge uma das intuições mais fortes da democracia: o poder não pertence naturalmente a quem manda; ele deve responder a uma ordem comum.</p>
+
+<figure class="figura-democracia panorama">
+<img src="/imagens/pnyx.png" alt="Vista da Acrópole a partir da Pnyx em Atenas">
+<figcaption>A Pnyx, em Atenas, lugar associado às assembleias populares e ao exercício da palavra pública na democracia antiga.</figcaption>
+</figure>
 
 <p>A Grécia criou a democracia direta de cidadãos. Roma criou a república como coisa pública, embora oligárquica em sua origem. Em Atenas, os cidadãos homens adultos da pólis participavam da assembleia, dos tribunais e da defesa militar. Em Roma, a cidadania plena pertenceu inicialmente aos patrícios, enquanto a plebe precisou lutar por representação e reconhecimento. Em ambos os casos, porém, uma mudança decisiva havia ocorrido: a vida comum já não podia ser pensada apenas como prolongamento da casa, da guerra ou do templo.</p>
 
@@ -135,6 +157,11 @@ main.wrap{position:relative;z-index:1;}
 
 <p>Maquiavel rompe esse quadro ao devolver à política sua dureza própria. Ele não parte da ideia de uma comunidade unificada pelo bem comum, mas da divisão social. Em toda sociedade, afirma-se uma tensão fundamental: os grandes desejam comandar e oprimir; o povo deseja não ser comandado nem oprimido. A política existe porque essa divisão não desaparece. Ela precisa ser contida, regulada, trabalhada.</p>
 
+<figure class="figura-democracia poster">
+<img src="/imagens/Povoeliberdade.png" alt="Arte autoral inspirada em Maquiavel sobre os grandes e o povo">
+<figcaption>Arte autoral inspirada na leitura maquiaveliana do conflito entre os grandes e o povo.</figcaption>
+</figure>
+
 <p>Com isso, a virtude política também muda de sentido. O governante não é virtuoso por ser moralmente exemplar no plano privado. Ele é virtuoso quando sabe escutar os acontecimentos, compreender a realidade efetiva, mudar de conduta diante das circunstâncias e proteger a liberdade e a segurança do povo contra a ambição dos grandes. A política deixa de ser espelho de moral privada e torna-se arte pública de enfrentar conflitos reais.</p>
 
 <h2 id="direitos">Democracia e criação de direitos</h2>
@@ -152,6 +179,11 @@ main.wrap{position:relative;z-index:1;}
 <p>Daí nasce uma tensão decisiva: as declarações de direitos afirmam mais do que a ordem existente permite realizar, e menos do que a dignidade humana exigiria. Justamente por isso, elas abrem brechas históricas. A democracia não é a paz definitiva dos direitos já prontos; é o campo em que novos sujeitos entram em cena para exigir que aquilo que foi declarado se torne real, e que novos direitos sejam reconhecidos.</p>
 
 <p>Igualdade, liberdade e participação formam o núcleo dessa história. A igualdade declarada não criou imediatamente os iguais. No início das democracias liberais, mulheres, trabalhadores, negros, indígenas, analfabetos e muitos outros grupos foram excluídos da cidadania plena. A liberdade declarada também precisou ser ampliada: liberdade de pensamento, crença, profissão, moradia, associação, resistência à tirania, luta contra a censura, a tortura, a exploração e a discriminação. A participação, por sua vez, só se aprofunda quando os cidadãos deixam de ser tratados como espectadores e passam a ser reconhecidos como sujeitos competentes para deliberar sobre a vida comum.</p>
+
+<figure class="figura-democracia objeto">
+<img src="/imagens/ostrakon.jpg" alt="Ostrakon com inscrição em grego usado em procedimento de ostracismo ateniense">
+<figcaption>Ostrakon associado ao procedimento ateniense do ostracismo. A participação política antiga também se materializava em práticas concretas de votação e decisão.</figcaption>
+</figure>
 
 <p>Nas democracias constitucionais modernas, essa participação não se esgota na eleição de representantes. Ela também pode aparecer em mecanismos de consulta direta à soberania popular, como o plebiscito e o referendo. Em linhas gerais, o plebiscito consulta o povo antes de um ato político, legislativo ou administrativo; o referendo submete ao povo, depois de praticado o ato, a decisão de confirmá-lo ou rejeitá-lo. A diferença temporal é importante, mas a raiz democrática é comum: em ambos, a sociedade é chamada a pronunciar-se diretamente sobre uma decisão pública relevante.</p>
 
