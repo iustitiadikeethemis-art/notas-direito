@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sofistas: linguagem, lei e poder | Filosofia do Direito</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{--ja-paper:#fbf7ee;--ja-ink:#241f18;--ja-muted:#655b4d;--ja-line:#d7c7aa;--ja-gold:#b58b47;--ja-brown:#5a3d24;--ja-olive:#6d6a3f;}
+body{background:radial-gradient(circle at 50% 0%,rgba(181,139,71,.16),transparent 30%),radial-gradient(circle at 16% 24%,rgba(255,255,255,.54),transparent 24%),linear-gradient(180deg,#fbf7ee 0%,#f3ead9 48%,#e9dcc6 100%);color:var(--ja-ink);}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.10;background-image:linear-gradient(rgba(90,61,36,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(90,61,36,.06) 1px,transparent 1px);background-size:9px 9px;}
+main.wrap{position:relative;z-index:1;}
+.hero-sofistas{padding:70px 0 36px;text-align:center;border-bottom:1px solid var(--ja-line);margin-bottom:42px;}
+.hero-sofistas .categoria{letter-spacing:2px;text-transform:uppercase;color:var(--ja-muted);font-size:13px;}
+.hero-sofistas h1{font-size:clamp(40px,6vw,70px);line-height:1.05;margin:10px 0 16px;color:var(--ja-ink);}
+.hero-sofistas .subtitulo{max-width:790px;margin:0 auto;color:var(--ja-muted);font-size:19px;line-height:1.65;}
+.layout-leitura{display:grid;grid-template-columns:250px 1fr;gap:28px;align-items:start;}
+.controle-texto{position:sticky;top:92px;align-self:start;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-radius:18px;padding:18px;box-shadow:0 16px 34px rgba(90,61,36,.08);backdrop-filter:blur(6px);}
+.controle-texto h2{font-size:18px;line-height:1.2;margin:0 0 12px;color:var(--ja-ink);}
+.controle-texto p{font-size:14px;line-height:1.55;color:var(--ja-muted);margin:0 0 14px;text-align:left;}
+.controle-texto a{display:block;text-decoration:none;color:var(--ja-brown);padding:10px 12px;margin:8px 0;border:1px solid var(--ja-line);border-radius:12px;background:#fffaf0;font-size:15px;line-height:1.35;}
+.controle-texto a:hover{background:#f4ecd9;}
+.controle-voltar{margin-top:16px;padding-top:12px;border-top:1px solid var(--ja-line);}
+.controle-voltar a{background:rgba(255,255,255,.72);font-weight:bold;}
+.conteudo-leitura{min-width:0;}
+.texto-sofistas{max-width:780px;margin:0 auto 52px;padding:0 0 28px;}
+.texto-sofistas h2{margin-top:48px;font-size:30px;color:var(--ja-ink);}
+.texto-sofistas p{font-size:18px;line-height:1.85;color:#342c22;text-align:justify;margin:20px 0;}
+.texto-sofistas em{color:#3a2a1f;}
+.nota-referencia{margin:0 0 28px;padding:22px 24px;border-radius:18px;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
+.nota-referencia p{font-size:16px;line-height:1.75;text-align:left;margin:0;color:#3f3932;}
+.subtemas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:28px 0 16px;}
+.subtema-card{display:block;text-decoration:none;color:inherit;padding:20px;border:1px solid var(--ja-line);border-radius:16px;background:rgba(255,255,255,.66);box-shadow:0 12px 28px rgba(90,61,36,.08);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
+.subtema-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(90,61,36,.13);border-color:rgba(181,139,71,.58);}
+.subtema-card span{display:inline-block;margin-bottom:10px;padding:5px 9px;border:1px solid rgba(181,139,71,.42);background:#fffaf0;color:var(--ja-brown);font-size:11px;letter-spacing:1.1px;text-transform:uppercase;}
+.subtema-card h3{font-size:21px;line-height:1.2;margin:0 0 10px;color:var(--ja-ink);}
+.subtema-card p{font-size:15px;line-height:1.6;text-align:left;color:var(--ja-muted);margin:0 0 10px;}
+.subtema-card strong{color:var(--ja-brown);font-size:14px;}
+.fonte-box{margin:42px 0 28px;padding:24px 26px;border-radius:18px;background:rgba(255,255,255,.62);border:1px solid var(--ja-line);border-left:5px solid var(--ja-gold);box-shadow:0 16px 34px rgba(90,61,36,.08);}
+.fonte-box h2{font-size:26px;margin:0 0 16px;color:var(--ja-ink);border:0;padding:0;}
+.fonte-box p{font-size:16px;line-height:1.75;text-align:left;margin:10px 0;color:#3f3932;}
+.navegacao-texto{display:flex;justify-content:space-between;gap:16px;margin:46px auto 0;max-width:780px;border-top:1px solid var(--ja-line);padding-top:22px;}
+.navegacao-texto a{color:var(--ja-brown);text-decoration:none;font-weight:bold;border-bottom:1px solid rgba(90,61,36,.35);}
+@media(max-width:900px){.layout-leitura{grid-template-columns:1fr}.controle-texto{position:static}.texto-sofistas{max-width:100%;}}
+@media(max-width:760px){.texto-sofistas p{text-align:left}.navegacao-texto{flex-direction:column}.brand{font-size:22px;}}
+@media print{.controle-texto,.navegacao-texto{display:none!important}.layout-leitura{display:block}.fonte-box,.nota-referencia,.subtema-card{box-shadow:none;border:1px solid #000}body{background:#fff}body::before{display:none}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+<section class="hero-sofistas">
+<p class="categoria">Filosofia do Direito · Galho clássico</p>
+<h1>Sofistas: linguagem, lei e poder</h1>
+<p class="subtitulo">Retórica, persuasão, educação política, <em>nómos</em> e <em>phýsis</em>: a palavra como instrumento de formação, disputa e poder na cidade grega.</p>
+</section>
+
+<section class="layout-leitura">
+<aside class="controle-texto">
+<h2>Navegação</h2>
+<p>Use o controle para acompanhar o texto eixo e acessar os aprofundamentos do ramo.</p>
+<a href="#quem-foram">Quem foram</a>
+<a href="#deslocamento">O deslocamento sofístico</a>
+<a href="#tecnicas">Técnicas do discurso</a>
+<a href="#nomos-physis">Lei e natureza</a>
+<a href="#pensadores">Pensadores e problemas</a>
+<a href="#fontes">Fontes base</a>
+<div class="controle-voltar">
+<a href="/filosofia/">← Voltar à árvore geral</a>
+<a href="/filosofia/justica-antiga/">Justiça Antiga →</a>
+</div>
+</aside>
+
+<div class="conteudo-leitura">
+<article class="texto-sofistas">
+<div class="nota-referencia">
+<p>Este texto funciona como eixo introdutório do ramo dos sofistas. A proposta é evitar duas simplificações: tratá-los como uma escola doutrinária única ou reduzi-los a uma caricatura negativa. O tema será aprofundado por pensadores, técnicas e problemas jurídicos.</p>
+</div>
+
+<p id="quem-foram">Os sofistas aparecem na Grécia do século V a.C., sobretudo no ambiente político e cultural de Atenas, como mestres da palavra, da argumentação e da formação pública. A palavra grega <em>sophistḗs</em>, ligada a <em>sophía</em>, podia designar originalmente alguém dotado de saber, perícia ou sabedoria; mas, ao longo do século V a.C., passou a indicar um novo tipo de intelectual: professores itinerantes que ofereciam instrução em diversas áreas, com especial atenção à fala pública, à persuasão e à condução bem-sucedida da vida na cidade.</p>
+
+<p>Eles não formavam uma escola única, nem possuíam uma doutrina comum como se fossem discípulos de um mesmo mestre. O que os aproximava era uma prática: ensinar técnicas de linguagem, interpretação, argumentação, memória, composição de discursos e atuação política. Em uma cidade democrática como Atenas, onde assembleias, tribunais e debates públicos dependiam da palavra falada, saber argumentar não era ornamento cultural; era instrumento de participação, defesa, acusação, prestígio e poder.</p>
+
+<h2 id="deslocamento">O deslocamento sofístico</h2>
+
+<p>A novidade dos sofistas está no deslocamento do olhar. Enquanto muitos pensadores anteriores perguntavam pela origem do cosmos, pela natureza das coisas ou pelos princípios físicos do mundo, os sofistas trouxeram para o centro da reflexão o universo humano: a cidade, a linguagem, a educação, a lei, os costumes, a justiça, a religião, a convenção e a disputa entre opiniões.</p>
+
+<p>Com eles, a filosofia se aproxima da praça pública, do tribunal, da assembleia e da formação dos cidadãos. A pergunta deixa de ser apenas “de que é feito o mundo?” e passa a ser também “como os homens convencem uns aos outros?”, “quem define o justo?”, “a lei é natural ou convencional?”, “a virtude pode ser ensinada?” e “o discurso revela a verdade ou apenas produz adesão?”.</p>
+
+<p>O primeiro grande nome desse movimento é Protágoras de Abdera. Em Platão, ele aparece como alguém que promete tornar melhor aquele que o acompanha e que ensina uma espécie de prudência prática para a vida privada e para os assuntos da cidade. A partir dele se abre um dos grandes problemas da tradição sofística: se a virtude política pode ser ensinada, então a vida pública não depende apenas de nascimento nobre, inspiração divina ou autoridade tradicional, mas de educação, técnica e exercício.</p>
+
+<p>Também se associa a Protágoras a famosa tese segundo a qual “o homem é a medida de todas as coisas”. A frase, transmitida por Platão e discutida desde a Antiguidade, tornou-se símbolo do relativismo sofístico, embora sua interpretação seja difícil e não deva ser simplificada. Ela pode indicar que aquilo que aparece a cada indivíduo, ou a cada comunidade, funciona como medida de verdade, justiça ou conveniência; mas também pode abrir uma discussão mais fina sobre percepção, linguagem, educação e vida política.</p>
+
+<h2 id="tecnicas">Técnicas do discurso</h2>
+
+<p>Entre as técnicas associadas aos sofistas, algumas merecem atenção especial. A primeira é a retórica, a arte de construir discursos capazes de persuadir. A segunda é a antilogia, isto é, o exercício de sustentar argumentos opostos sobre uma mesma questão. A terceira é a atenção à correção da linguagem, ao uso preciso das palavras, à distinção entre sentidos próximos e à interpretação de textos poéticos, legais e políticos.</p>
+
+<p>Com Górgias de Leontinos, o problema se desloca ainda mais para o poder do discurso. No diálogo platônico <em>Górgias</em>, a retórica é discutida como produtora de persuasão, especialmente nos tribunais e assembleias, tratando do justo e do injusto. O ponto decisivo é que essa persuasão pode produzir crença sem necessariamente produzir conhecimento.</p>
+
+<p>Esse ponto é fundamental para a filosofia do direito. O tribunal, a assembleia e a cidade não funcionam apenas por fatos brutos; funcionam por narrativas, provas, argumentos, interpretações e disputas sobre o sentido das normas. O sofista é perigoso quando a palavra se afasta da verdade; mas é indispensável quando mostra que a justiça pública depende de linguagem organizada, contraditório, técnica argumentativa e capacidade de sustentar uma posição diante dos outros.</p>
+
+<h2 id="nomos-physis">Lei, natureza e convenção</h2>
+
+<p>A oposição entre <em>nómos</em> e <em>phýsis</em> é talvez o ponto mais importante para a filosofia do direito. <em>Nómos</em> pode significar lei, costume, norma ou convenção; <em>phýsis</em> indica natureza, aquilo que existe por constituição própria. Quando os sofistas colocam esses termos em tensão, abrem uma pergunta que atravessa toda a teoria jurídica: a justiça vale porque está inscrita na natureza das coisas ou porque a cidade a institui?</p>
+
+<p>Essa discussão aparece com força em figuras como Trasímaco, personagem da <em>República</em> de Platão, para quem a justiça seria a vantagem do mais forte; e em Cálicles, personagem do <em>Górgias</em>, que opõe a moral convencional dos muitos a uma pretensão de medida natural. O problema jurídico-político é direto: a lei pode ser expressão de uma ordem comum, mas também pode servir a interesses situados. O discurso jurídico pode esclarecer os fatos, mas também pode produzir aparências convincentes.</p>
+
+<p>Por isso, os sofistas interessam tanto ao direito. Eles obrigam a olhar para a lei não apenas como texto normativo, mas como produção humana situada em uma cidade concreta. A justiça deixa de ser apenas mito, tradição ou autoridade sagrada e se torna objeto de disputa pública, interpretação racional e conflito político.</p>
+
+<h2 id="pensadores">Pensadores e problemas</h2>
+
+<p>Os sofistas não devem ser estudados como uma escola fechada, mas como um campo de problemas. Cada nome abre uma questão própria: Protágoras conduz ao relativismo e à educação política; Górgias, ao poder da persuasão; Pródico, à precisão dos nomes; Hípias, ao saber enciclopédico; Antifonte, à tensão entre lei e natureza; Trasímaco, à denúncia da justiça como vantagem do poder. Em conjunto, eles formam uma espécie de laboratório antigo da argumentação pública.</p>
+
+<div class="subtemas-grid">
+<a class="subtema-card" href="/filosofia/sofistas/protagoras/"><span>Pensador</span><h3>Protágoras</h3><p>A medida humana, a virtude ensinável e a formação política do cidadão.</p><strong>Abrir aprofundamento →</strong></a>
+<a class="subtema-card" href="/filosofia/sofistas/gorgias/"><span>Pensador</span><h3>Górgias</h3><p>O poder do <em>lógos</em>, a persuasão e a diferença entre crença e conhecimento.</p><strong>Abrir aprofundamento →</strong></a>
+<a class="subtema-card" href="/filosofia/sofistas/prodico/"><span>Pensador</span><h3>Pródico</h3><p>Nomes, sentidos, distinções semânticas e precisão da linguagem.</p><strong>Abrir aprofundamento →</strong></a>
+<a class="subtema-card" href="/filosofia/sofistas/hipias/"><span>Pensador</span><h3>Hípias</h3><p>O sofista enciclopédico: memória, técnica, poesia, matemática e saber público.</p><strong>Abrir aprofundamento →</strong></a>
+<a class="subtema-card" href="/filosofia/sofistas/antifonte/"><span>Pensador</span><h3>Antifonte</h3><p>Natureza, convenção, igualdade humana e crítica às imposições da lei.</p><strong>Abrir aprofundamento →</strong></a>
+<a class="subtema-card" href="/filosofia/sofistas/trasimaco/"><span>Problema</span><h3>Trasímaco</h3><p>Justiça, força e a tese da vantagem do mais forte.</p><strong>Abrir aprofundamento →</strong></a>
+<a class="subtema-card" href="/filosofia/sofistas/nomos-physis/"><span>Conceito</span><h3><em>Nómos</em> e <em>phýsis</em></h3><p>Lei, natureza, costume, convenção e validade da justiça.</p><strong>Abrir aprofundamento →</strong></a>
+<a class="subtema-card" href="/filosofia/sofistas/critica-platao-aristoteles/"><span>Crítica clássica</span><h3>Platão e Aristóteles</h3><p>A crítica filosófica à aparência de saber, à retórica e às falsas refutações.</p><strong>Abrir aprofundamento →</strong></a>
+</div>
+
+<p>O estudo dos sofistas, portanto, deve começar sem caricatura. Eles são, ao mesmo tempo, educadores da cidade e alvos da crítica filosófica; mestres da linguagem e exemplos do risco de separar técnica e verdade. Sua presença marca uma passagem decisiva: a justiça se torna um problema discutível, público e racionalmente disputado.</p>
+
+<div class="fonte-box" id="fontes">
+<h2>Fontes base</h2>
+<p>PLATÃO. <em>Protágoras</em>. Fonte antiga para a apresentação de Protágoras como mestre da formação política e da virtude ensinável.</p>
+<p>PLATÃO. <em>Teeteto</em>. Fonte antiga para a discussão da tese protagórica do homem como medida.</p>
+<p>PLATÃO. <em>Górgias</em>. Fonte antiga central para a discussão sobre retórica, persuasão, crença, justiça e poder da palavra.</p>
+<p>PLATÃO. <em>República</em>, Livro I. Fonte antiga para a tese de Trasímaco sobre a justiça como vantagem do mais forte.</p>
+<p>ARISTÓTELES. <em>Refutações Sofísticas</em>. Fonte antiga para a crítica aos raciocínios aparentes, às ambiguidades e às falsas refutações.</p>
+<p>ARISTÓTELES. <em>Retórica</em>. Fonte clássica para o tratamento filosófico da persuasão, dos argumentos e dos meios retóricos.</p>
+<p>KERFERD, G. B. <em>The Sophistic Movement</em>. Referência moderna para a reconstrução histórica e filosófica do movimento sofístico.</p>
+<p>GUTHRIE, W. K. C. <em>The Sophists</em>. Referência moderna para o estudo dos principais sofistas e dos problemas de linguagem, lei, natureza e convenção.</p>
+<p>STANFORD ENCYCLOPEDIA OF PHILOSOPHY. “The Sophists” e “Callicles and Thrasymachus”. Referências acadêmicas modernas para a diversidade sofística e para o problema da justiça como força, convenção e poder.</p>
+</div>
+
+<div class="navegacao-texto"><a href="/filosofia/">← Voltar à árvore de Filosofia do Direito</a><a href="/filosofia/justica-antiga/">Justiça Antiga →</a></div>
+</article>
+</div>
+</section>
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
