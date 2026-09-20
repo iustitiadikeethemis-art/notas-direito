@@ -215,7 +215,15 @@
 
   function questionMeta(q) {
     const n = node(q.primaryNode);
-    const typeLabel = q.type === "short_answer" ? "resposta curta" : (q.type === "true_false" ? "verdadeiro ou falso" : "múltipla escolha");
+    const labels = {
+      short_answer:"resposta curta",
+      true_false:"verdadeiro ou falso",
+      fill_blank:"complete a lacuna",
+      case_multiple_choice:"caso concreto",
+      error_spotting:"identifique o erro",
+      multiple_choice:"múltipla escolha"
+    };
+    const typeLabel = labels[q.type] || "questão objetiva";
     return `<div class="pa-meta"><span class="pa-chip">${n?.disciplina || ""}</span><span class="pa-chip">${n?.tema || ""}</span><span class="pa-chip">${typeLabel}</span><span class="pa-chip">${q.origin}</span><span class="pa-chip">dificuldade ${q.difficulty}</span></div>`;
   }
 
@@ -230,6 +238,14 @@
     currentAnswered = false;
     const pct = Math.round(index / current.length * 100);
     const base = `<div class="pa-question"><div class="pa-progress"><div style="width:${pct}%"></div></div><div class="pa-question-count">Questão ${index + 1} de ${current.length}</div>${questionMeta(q)}<h2>${q.prompt}</h2>`;
+
+    if (q.type === "fill_blank") {
+      $("#sessao").innerHTML = base +
+        `<div class="pa-short"><input id="resposta-lacuna" class="pa-text-input" type="text" autocomplete="off" placeholder="Digite a resposta que completa corretamente a afirmação."></div><div class="pa-actions"><button id="verificar-lacuna" class="pa-primary">Verificar resposta</button><button id="pular" class="pa-secondary">Pular</button></div><div id="feedback" class="pa-feedback"></div></div>`;
+      $("#verificar-lacuna").onclick = answerFillBlank;
+      $("#pular").onclick = skipQuestion;
+      return;
+    }
 
     if (q.type === "short_answer") {
       $("#sessao").innerHTML = base +
@@ -297,7 +313,7 @@
 
     currentAnswered = true;
     const correct = selected === q.answer;
-    const attempt = await recordAttempt(q, correct, selected);
+    await recordAttempt(q, correct, selected);
     $$(".pa-option").forEach((b,i) => {
       b.disabled = true;
       if (i === q.answer) b.classList.add("correta");
@@ -305,7 +321,43 @@
     });
     $("#responder").disabled = true;
     $("#pular").disabled = true;
-    showFeedback(q, correct, attempt);
+    showFeedback(q, correct);
+    await stats();
+  }
+
+  function normalizeAnswer(text) {
+    return String(text || "")
+      .trim()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[.,;:!?'"()]/g, "")
+      .replace(/\s+/g, " ");
+  }
+
+  async function answerFillBlank() {
+    const q = current[index];
+    if (currentAnswered) return;
+    const input = $("#resposta-lacuna");
+    const value = input.value.trim();
+    if (!value) {
+      alert("Digite uma resposta.");
+      return;
+    }
+
+    currentAnswered = true;
+    input.disabled = true;
+    $("#verificar-lacuna").disabled = true;
+    $("#pular").disabled = true;
+
+    const accepted = (q.acceptedAnswers || []).map(normalizeAnswer);
+    const correct = accepted.includes(normalizeAnswer(value));
+    await recordAttempt(q, correct, value);
+
+    const f = $("#feedback");
+    f.className = "pa-feedback show " + (correct ? "ok" : "erro");
+    f.innerHTML = `<strong>${correct ? "Correto." : "Resposta incorreta."}</strong><p>${q.explanation}</p><p><strong>Resposta esperada:</strong> ${q.displayAnswer || q.acceptedAnswers?.[0] || ""}</p><p><a href="${content(q.contentId)?.url || "#"}">Rever conteúdo relacionado →</a></p><div class="pa-actions"><button id="continuar" class="pa-primary">Próxima questão</button></div>`;
+    $("#continuar").onclick = () => { index++; renderQuestion(); };
     await stats();
   }
 
@@ -333,39 +385,19 @@
     if ($("#auto-acerto").disabled) return;
     $("#auto-acerto").disabled = true;
     $("#auto-erro").disabled = true;
-    const attempt = await recordAttempt(q, correct, text);
+    await recordAttempt(q, correct, text);
     const f = $("#feedback");
     f.classList.add(correct ? "ok" : "erro");
-    f.insertAdjacentHTML("beforeend", feedbackActions(attempt.id));
-    wireFeedbackActions(attempt.id);
+    f.insertAdjacentHTML("beforeend", '<div class="pa-actions"><button id="continuar" class="pa-primary">Próxima questão</button></div>');
+    $("#continuar").onclick = () => { index++; renderQuestion(); };
     await stats();
   }
 
-  function feedbackActions(attemptId) {
-    return `<div class="pa-confidence"><span>Como você respondeu?</span><button class="pa-secondary confidence" data-value="certeza" data-attempt="${attemptId}">Tive certeza</button><button class="pa-secondary confidence" data-value="duvida" data-attempt="${attemptId}">Estava em dúvida</button><button class="pa-secondary confidence" data-value="chute" data-attempt="${attemptId}">Chutei / arrisquei</button></div><div class="pa-actions"><button id="continuar" class="pa-primary">Próxima questão</button></div>`;
-  }
-
-  function showFeedback(q, correct, attempt) {
+  function showFeedback(q, correct) {
     const f = $("#feedback");
     f.className = "pa-feedback show " + (correct ? "ok" : "erro");
-    f.innerHTML = `<strong>${correct ? "Correto." : "Resposta incorreta."}</strong><p>${q.explanation}</p><p><a href="${content(q.contentId)?.url || "#"}">Rever conteúdo relacionado →</a></p>${feedbackActions(attempt.id)}`;
-    wireFeedbackActions(attempt.id);
-  }
-
-  function wireFeedbackActions(attemptId) {
-    $$(".confidence").forEach(b => b.onclick = () => setConfidence(attemptId, b.dataset.value));
+    f.innerHTML = `<strong>${correct ? "Correto." : "Resposta incorreta."}</strong><p>${q.explanation}</p><p><a href="${content(q.contentId)?.url || "#"}">Rever conteúdo relacionado →</a></p><div class="pa-actions"><button id="continuar" class="pa-primary">Próxima questão</button></div>`;
     $("#continuar").onclick = () => { index++; renderQuestion(); };
-  }
-
-  async function setConfidence(attemptId, value) {
-    const attempts = await all("attempts");
-    const a = attempts.find(x => x.id === attemptId);
-    if (!a) return;
-    a.confidence = value;
-    await put("attempts", a);
-    $$(".confidence").forEach(b => {
-      b.classList.toggle("selecionada-conf", b.dataset.value === value);
-    });
   }
 
   async function finish() {
