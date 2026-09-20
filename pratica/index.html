@@ -35,16 +35,16 @@
 <p>Revisão inteligente vinculada aos conteúdos estudados e publicados no site. O histórico fica salvo localmente no seu navegador.</p>
 </section>
 
-<nav class="pa-tabs" aria-label="Áreas da prática ativa">
-<button class="pa-tab ativo" data-tab="hoje">Hoje</button>
-<button class="pa-tab" data-tab="treinar">Treinar</button>
-<button class="pa-tab" data-tab="conteudos">Conteúdos</button>
-<button class="pa-tab" data-tab="erros">Caderno de Erros</button>
-<button class="pa-tab" data-tab="provas">Provas & Concursos</button>
-<button class="pa-tab" data-tab="desempenho">Desempenho</button>
+<nav class="pa-tabs" role="tablist" aria-label="Áreas da prática ativa">
+<button type="button" class="pa-tab ativo" data-tab="hoje">Hoje</button>
+<button type="button" class="pa-tab" data-tab="treinar">Treinar</button>
+<button type="button" class="pa-tab" data-tab="conteudos">Conteúdos</button>
+<button type="button" class="pa-tab" data-tab="erros">Caderno de Erros</button>
+<button type="button" class="pa-tab" data-tab="provas">Provas & Concursos</button>
+<button type="button" class="pa-tab" data-tab="desempenho">Desempenho</button>
 </nav>
 
-<section id="painel-hoje" class="pa-painel ativo">
+<section id="painel-hoje" class="pa-painel ativo" role="tabpanel">
 <div class="pa-grid">
 <div class="pa-card"><strong id="kpi-hoje">0</strong><span>questões disponíveis hoje</span></div>
 <div class="pa-card"><strong id="kpi-nos">0</strong><span>assuntos ativos</span></div>
@@ -55,7 +55,7 @@
 <div id="sessao" hidden></div>
 </section>
 
-<section id="painel-treinar" class="pa-painel">
+<section id="painel-treinar" class="pa-painel" role="tabpanel">
 <div class="pa-box"><h2>Treino direcionado</h2>
 <div class="pa-filtros">
 <label>Disciplina<select id="f-disciplina"><option value="">Todas</option></select></label>
@@ -67,15 +67,15 @@
 </div>
 </section>
 
-<section id="painel-conteudos" class="pa-painel">
+<section id="painel-conteudos" class="pa-painel" role="tabpanel">
 <div class="pa-box"><h2>Conteúdos vinculados</h2><p class="pa-note">Somente conteúdos marcados como estudados ou publicados alimentam a revisão pessoal.</p><div id="lista-conteudos" class="pa-lista"></div></div>
 </section>
 
-<section id="painel-erros" class="pa-painel">
+<section id="painel-erros" class="pa-painel" role="tabpanel">
 <div class="pa-box"><h2>Caderno de Erros</h2><div id="lista-erros"></div></div>
 </section>
 
-<section id="painel-provas" class="pa-painel">
+<section id="painel-provas" class="pa-painel" role="tabpanel">
 <div class="pa-box"><h2>Provas & Concursos</h2><p>Área preparada para provas reais da OAB, Magistratura, Ministério Público, Defensoria e demais carreiras jurídicas.</p>
 <div class="pa-empty"><strong>Banco oficial em preparação.</strong><br>Questões reais só serão incluídas com procedência identificada — órgão, banca, ano, número, gabarito oficial, situação e fonte. A estrutura já está pronta para recebê-las sem misturar questões autorais com questões de prova.</div>
 <h3 style="margin-top:22px">Modos previstos</h3><div class="pa-lista">
@@ -85,7 +85,7 @@
 </div></div>
 </section>
 
-<section id="painel-desempenho" class="pa-painel">
+<section id="painel-desempenho" class="pa-painel" role="tabpanel">
 <div class="pa-grid">
 <div class="pa-card"><strong id="d-tentativas">0</strong><span>tentativas</span></div>
 <div class="pa-card"><strong id="d-acertos">0</strong><span>acertos</span></div>
