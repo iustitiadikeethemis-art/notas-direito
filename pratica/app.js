@@ -98,7 +98,12 @@
     const daily = await buildDailyQueue();
     const errors = attempts.filter(a => !a.correct);
     const correctCount = attempts.filter(a => a.correct).length;
-    const errorQuestions = new Set(errors.map(a => a.questionId)).size;
+    const latestByQuestion = new Map();
+    attempts.forEach(a => {
+      const prev = latestByQuestion.get(a.questionId);
+      if (!prev || new Date(a.date) > new Date(prev.date)) latestByQuestion.set(a.questionId, a);
+    });
+    const errorQuestions = [...latestByQuestion.values()].filter(a => !a.correct).length;
 
     $("#kpi-hoje").textContent = daily.length;
     $("#kpi-nos").textContent = D.nodes.length;
