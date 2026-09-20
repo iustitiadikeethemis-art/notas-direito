@@ -428,16 +428,62 @@
     await stats();
   }
 
-  function activateTab(name) {
-    $$(".pa-tab").forEach(x => x.classList.toggle("ativo", x.dataset.tab === name));
-    $$(".pa-painel").forEach(x => x.classList.remove("ativo"));
-    $("#painel-" + name).classList.add("ativo");
-    $("#sessao").hidden = true;
-    window.scrollTo({top:0, behavior:"smooth"});
+  const validTabs = new Set(["hoje","treinar","conteudos","erros","provas","desempenho"]);
+
+  function activateTab(name, options = {}) {
+    const safeName = validTabs.has(name) ? name : "hoje";
+    const target = $("#painel-" + safeName);
+    if (!target) return;
+
+    $(".pa-tab").forEach(x => {
+      const active = x.dataset.tab === safeName;
+      x.classList.toggle("ativo", active);
+      x.setAttribute("aria-selected", active ? "true" : "false");
+      x.tabIndex = active ? 0 : -1;
+    });
+
+    $(".pa-painel").forEach(x => x.classList.remove("ativo"));
+    target.classList.add("ativo");
+
+    const session = $("#sessao");
+    if (session) session.hidden = safeName !== "hoje";
+
+    if (options.updateHash !== false) {
+      const hash = safeName === "hoje" ? "" : "#" + safeName;
+      history.replaceState(null, "", location.pathname + location.search + hash);
+    }
+
+    if (options.scroll !== false) window.scrollTo({top:0, behavior:"smooth"});
   }
 
   function setupTabs() {
-    $$(".pa-tab").forEach(b => b.onclick = () => activateTab(b.dataset.tab));
+    $(".pa-tab").forEach((b, i) => {
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-controls", "painel-" + b.dataset.tab);
+      b.setAttribute("aria-selected", b.classList.contains("ativo") ? "true" : "false");
+      b.tabIndex = b.classList.contains("ativo") ? 0 : -1;
+      b.addEventListener("click", () => activateTab(b.dataset.tab));
+      b.addEventListener("keydown", e => {
+        if (!["ArrowRight","ArrowLeft","Home","End"].includes(e.key)) return;
+        e.preventDefault();
+        const tabs = $(".pa-tab");
+        let next = tabs.indexOf(b);
+        if (e.key === "ArrowRight") next = (next + 1) % tabs.length;
+        if (e.key === "ArrowLeft") next = (next - 1 + tabs.length) % tabs.length;
+        if (e.key === "Home") next = 0;
+        if (e.key === "End") next = tabs.length - 1;
+        tabs[next].focus();
+        activateTab(tabs[next].dataset.tab);
+      });
+    });
+
+    window.addEventListener("hashchange", () => {
+      const name = location.hash.replace("#", "");
+      activateTab(validTabs.has(name) ? name : "hoje", {updateHash:false, scroll:false});
+    });
+
+    const initial = location.hash.replace("#", "");
+    activateTab(validTabs.has(initial) ? initial : "hoje", {updateHash:false, scroll:false});
   }
 
   async function exportBackup() {
@@ -478,8 +524,8 @@
   }
 
   async function init() {
-    await openDB();
     setupTabs();
+    await openDB();
     renderContents();
     populateFilters();
 
