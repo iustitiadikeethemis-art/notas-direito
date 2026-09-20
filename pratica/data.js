@@ -1,0 +1,27 @@
+window.PA_DATA = {
+nodes:[
+{id:"PEN-LEG-LEGALIDADE",disciplina:"Direito Penal",tema:"Princípio da legalidade",titulo:"Legalidade penal"},
+{id:"PEN-LEI-TEMPO",disciplina:"Direito Penal",tema:"Lei penal no tempo",titulo:"Retroatividade e lei penal mais benéfica"},
+{id:"DH-ANPP",disciplina:"Direitos Humanos e Aplicações Práticas",tema:"ANPP",titulo:"Acordo de Não Persecução Penal"},
+{id:"CONST-ART5",disciplina:"Direito Constitucional",tema:"Direitos fundamentais",titulo:"Art. 5º e garantias fundamentais"},
+{id:"PROC-CONTRADITORIO",disciplina:"Teoria do Processo",tema:"Garantias processuais",titulo:"Contraditório"},
+{id:"PEN-EXEC-REMICAO",disciplina:"Direito Penal",tema:"Execução penal",titulo:"Remição e remissão"}
+],
+contents:[
+{id:"TXT-PEN-INDEX",titulo:"Direito Penal",url:"/direito-penal/",status:"published",nodes:["PEN-LEG-LEGALIDADE","PEN-LEI-TEMPO"]},
+{id:"TXT-DH-ANPP",titulo:"ANPP — Acordo de Não Persecução Penal",url:"/direitos-humanos/anpp-acordo-nao-persecucao-penal.html",status:"published",nodes:["DH-ANPP"]},
+{id:"TXT-DH-ART5",titulo:"Artigo 5º da Constituição Federal",url:"/direitos-humanos/artigo-5-constituicao-federal.html",status:"published",nodes:["CONST-ART5","PROC-CONTRADITORIO"]},
+{id:"TXT-DH-REMICAO",titulo:"Remição e remissão de pena",url:"/direitos-humanos/remicao-e-remissao-de-pena.html",status:"published",nodes:["PEN-EXEC-REMICAO"]},
+{id:"TXT-VOCAB",titulo:"Vocabulário Jurídico e Latim",url:"/vocabulario/",status:"published",nodes:["PEN-LEG-LEGALIDADE","PEN-LEI-TEMPO","PROC-CONTRADITORIO","PEN-EXEC-REMICAO"]}
+],
+questions:[
+{id:"Q-PEN-001",type:"multiple_choice",origin:"autoral",primaryNode:"PEN-LEG-LEGALIDADE",difficulty:1,prompt:"Qual fórmula sintetiza classicamente o princípio da legalidade penal?",options:["In dubio pro reo","Nullum crimen, nulla poena sine lege","Iura novit curia","Pacta sunt servanda"],answer:1,explanation:"A fórmula nullum crimen, nulla poena sine lege exprime a exigência de lei anterior para definir crimes e cominar penas.",contentId:"TXT-PEN-INDEX"},
+{id:"Q-PEN-002",type:"multiple_choice",origin:"autoral",primaryNode:"PEN-LEI-TEMPO",difficulty:1,prompt:"Uma lei penal posterior que beneficia o agente pode alcançar fato praticado antes de sua vigência?",options:["Nunca","Sim, inclusive em hipóteses já decididas, nos limites jurídicos aplicáveis","Somente antes da denúncia","Somente se o Ministério Público concordar"],answer:1,explanation:"A retroatividade da lei penal mais benéfica constitui garantia constitucional e também é disciplinada pelo Código Penal.",contentId:"TXT-PEN-INDEX"},
+{id:"Q-PEN-003",type:"multiple_choice",origin:"autoral",primaryNode:"PEN-LEI-TEMPO",difficulty:2,prompt:"A expressão lex gravior designa, no estudo da lei penal no tempo:",options:["Lei posterior mais favorável","Lei posterior mais gravosa","Lei temporária","Lei excepcional favorável"],answer:1,explanation:"Lex gravior é a lei mais severa ou gravosa e não retroage para prejudicar fatos anteriores.",contentId:"TXT-VOCAB"},
+{id:"Q-DH-001",type:"multiple_choice",origin:"autoral",primaryNode:"DH-ANPP",difficulty:2,prompt:"No ANPP, a homologação judicial significa que o juiz passa a negociar diretamente as condições com o investigado?",options:["Sim, sempre","Não; o controle judicial se volta à legalidade, regularidade e voluntariedade","Sim, mas apenas quando a pena mínima for inferior a dois anos","Não existe homologação judicial no ANPP"],answer:1,explanation:"A negociação não é substituída pelo juiz; a homologação exerce controle jurídico sobre o acordo.",contentId:"TXT-DH-ANPP"},
+{id:"Q-DH-002",type:"multiple_choice",origin:"autoral",primaryNode:"DH-ANPP",difficulty:2,prompt:"O cumprimento integral do ANPP equivale a uma sentença penal condenatória?",options:["Sim","Não","Somente para reincidência","Somente para antecedentes"],answer:1,explanation:"O acordo cumprido não se confunde com condenação criminal; seus efeitos jurídicos são próprios.",contentId:"TXT-DH-ANPP"},
+{id:"Q-CONST-001",type:"multiple_choice",origin:"autoral",primaryNode:"PROC-CONTRADITORIO",difficulty:1,prompt:"O contraditório se resume à mera ciência dos atos processuais?",options:["Sim","Não; inclui possibilidade real de manifestação e influência legítima na decisão","Sim, salvo no processo penal","Somente em processos administrativos"],answer:1,explanation:"O contraditório envolve ciência e possibilidade efetiva de participação e influência.",contentId:"TXT-DH-ART5"},
+{id:"Q-PEN-004",type:"multiple_choice",origin:"autoral",primaryNode:"PEN-EXEC-REMICAO",difficulty:1,prompt:"No vocabulário penal, remição de pena e remissão são expressões equivalentes?",options:["Sim","Não; remição refere-se ao abatimento do tempo de pena, enquanto remissão possui outros sentidos jurídicos","Sim, mas apenas na execução penal","Somente quando há perdão judicial"],answer:1,explanation:"Remição, com ç, é instituto de abatimento da pena; remissão, com ss, não é sinônimo técnico.",contentId:"TXT-DH-REMICAO"},
+{id:"Q-CONST-002",type:"multiple_choice",origin:"autoral",primaryNode:"CONST-ART5",difficulty:1,prompt:"Habeas corpus protege primordialmente qual esfera jurídica?",options:["Acesso a dados pessoais","Liberdade de locomoção","Direito líquido e certo tributário","Patrimônio público"],answer:1,explanation:"O habeas corpus protege a liberdade de locomoção contra ilegalidade ou abuso de poder.",contentId:"TXT-DH-ART5"}
+]
+};

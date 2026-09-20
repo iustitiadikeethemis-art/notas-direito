@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prática Ativa — Notas de um Estudante de Direito</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{--pa-accent:#6f4e37;--pa-soft:#f3ede5;--pa-good:#315c43;--pa-bad:#7b2d2d;}
+.pa-wrap{max-width:1120px;margin:0 auto;padding:38px 24px 80px}
+.pa-hero{padding:34px 36px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#fff,#f4efe7);box-shadow:0 18px 48px rgba(0,0,0,.05)}
+.pa-hero h1{margin:4px 0 10px;font-size:42px;line-height:1.1}.pa-hero p{margin:0;max-width:780px;color:#565049;font-size:17px}
+.pa-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}.pa-tab{border:1px solid #d8d1c7;background:#fff;border-radius:999px;padding:10px 14px;font-family:inherit;cursor:pointer}.pa-tab.ativo{background:#1f1f1f;color:#fff;border-color:#1f1f1f}
+.pa-painel{display:none}.pa-painel.ativo{display:block}.pa-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
+.pa-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.03)}.pa-card strong{display:block;font-size:25px}.pa-card span{font-size:13px;color:#666}
+.pa-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0}.pa-box h2,.pa-box h3{margin-top:0}.pa-lista{display:grid;gap:10px}.pa-item{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #eee9e1}.pa-item:last-child{border-bottom:0}.pa-item small{color:#6b655e}
+.pa-primary,.pa-secondary{border:0;border-radius:12px;padding:12px 16px;font:inherit;cursor:pointer}.pa-primary{background:#1f1f1f;color:#fff}.pa-secondary{background:#eee8df;color:#2c2925}.pa-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.pa-question{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 12px 32px rgba(0,0,0,.04)}.pa-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}.pa-chip{font-size:12px;border:1px solid #ded5c8;border-radius:999px;padding:4px 9px;background:#faf7f2}
+.pa-question h2{font-size:24px;line-height:1.45}.pa-options{display:grid;gap:10px;margin:18px 0}.pa-option{width:100%;text-align:left;border:1px solid #d9d3cb;background:#fff;border-radius:13px;padding:13px 15px;font:inherit;cursor:pointer}.pa-option:hover{background:#f8f4ee}.pa-option.selecionada{border-color:#1f1f1f;background:#f1ece4}
+.pa-feedback{display:none;margin-top:18px;padding:16px;border-radius:14px}.pa-feedback.show{display:block}.pa-feedback.ok{background:#edf5ef;border:1px solid #b9d3bf}.pa-feedback.erro{background:#f8eded;border:1px solid #dabcbc}.pa-feedback a{color:inherit}
+.pa-progress{height:7px;border-radius:999px;background:#e8e3dc;overflow:hidden;margin:12px 0 18px}.pa-progress>div{height:100%;background:#1f1f1f;width:0}
+.pa-filtros{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.pa-filtros label{font-size:13px;color:#5e5851}.pa-filtros select,.pa-filtros input{width:100%;box-sizing:border-box;margin-top:5px;padding:10px 11px;border:1px solid #d8d1c7;border-radius:10px;background:#fff;font:inherit}
+.pa-empty{padding:22px;border:1px dashed #cfc6ba;border-radius:14px;color:#655f58;background:#faf8f4}.pa-table{width:100%;border-collapse:collapse}.pa-table th,.pa-table td{padding:11px;border-bottom:1px solid #eee8df;text-align:left;font-size:14px}
+.pa-note{font-size:14px;color:#625c55;line-height:1.6}.pa-badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#eee8df;font-size:12px}
+@media(max-width:850px){.pa-grid{grid-template-columns:repeat(2,1fr)}.pa-filtros{grid-template-columns:1fr 1fr}.pa-hero h1{font-size:34px}}
+@media(max-width:560px){.pa-wrap{padding:24px 16px 60px}.pa-hero{padding:26px 20px}.pa-grid,.pa-filtros{grid-template-columns:1fr}.pa-tabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.pa-tab{white-space:nowrap}.pa-item{flex-direction:column}.pa-question{padding:20px 16px}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="pa-wrap">
+<section class="pa-hero">
+<p class="categoria">Sistema pessoal de aprendizagem</p>
+<h1>Prática Ativa</h1>
+<p>Revisão inteligente vinculada aos conteúdos estudados e publicados no site. O histórico fica salvo localmente no seu navegador.</p>
+</section>
+
+<nav class="pa-tabs" aria-label="Áreas da prática ativa">
+<button class="pa-tab ativo" data-tab="hoje">Hoje</button>
+<button class="pa-tab" data-tab="treinar">Treinar</button>
+<button class="pa-tab" data-tab="conteudos">Conteúdos</button>
+<button class="pa-tab" data-tab="erros">Caderno de Erros</button>
+<button class="pa-tab" data-tab="provas">Provas & Concursos</button>
+<button class="pa-tab" data-tab="desempenho">Desempenho</button>
+</nav>
+
+<section id="painel-hoje" class="pa-painel ativo">
+<div class="pa-grid">
+<div class="pa-card"><strong id="kpi-hoje">0</strong><span>questões disponíveis hoje</span></div>
+<div class="pa-card"><strong id="kpi-nos">0</strong><span>assuntos ativos</span></div>
+<div class="pa-card"><strong id="kpi-erros">0</strong><span>erros para revisar</span></div>
+<div class="pa-card"><strong id="kpi-acerto">—</strong><span>acerto acumulado</span></div>
+</div>
+<div class="pa-box"><h2>Revisão de hoje</h2><p class="pa-note">A sessão prioriza erros anteriores e alterna questões do mesmo assunto para evitar simples memorização do enunciado.</p><div id="lista-hoje" class="pa-lista"></div><div class="pa-actions"><button id="btn-revisao" class="pa-primary">Começar revisão</button></div></div>
+<div id="sessao" hidden></div>
+</section>
+
+<section id="painel-treinar" class="pa-painel">
+<div class="pa-box"><h2>Treino direcionado</h2>
+<div class="pa-filtros">
+<label>Disciplina<select id="f-disciplina"><option value="">Todas</option></select></label>
+<label>Tema<select id="f-tema"><option value="">Todos</option></select></label>
+<label>Origem<select id="f-origem"><option value="">Todas</option><option value="autoral">Autoral</option><option value="oab">OAB</option><option value="concurso">Concurso</option></select></label>
+<label>Quantidade<input id="f-qtd" type="number" min="1" max="30" value="10"></label>
+</div>
+<div class="pa-actions"><button id="btn-treino" class="pa-primary">Iniciar treino</button></div>
+</div>
+</section>
+
+<section id="painel-conteudos" class="pa-painel">
+<div class="pa-box"><h2>Conteúdos vinculados</h2><p class="pa-note">Somente conteúdos marcados como estudados ou publicados alimentam a revisão pessoal.</p><div id="lista-conteudos" class="pa-lista"></div></div>
+</section>
+
+<section id="painel-erros" class="pa-painel">
+<div class="pa-box"><h2>Caderno de Erros</h2><div id="lista-erros"></div></div>
+</section>
+
+<section id="painel-provas" class="pa-painel">
+<div class="pa-box"><h2>Provas & Concursos</h2><p>Área preparada para provas reais da OAB, Magistratura, Ministério Público, Defensoria e demais carreiras jurídicas.</p>
+<div class="pa-empty"><strong>Banco oficial em preparação.</strong><br>Questões reais só serão incluídas com procedência identificada — órgão, banca, ano, número, gabarito oficial, situação e fonte. A estrutura já está pronta para recebê-las sem misturar questões autorais com questões de prova.</div>
+<h3 style="margin-top:22px">Modos previstos</h3><div class="pa-lista">
+<div class="pa-item"><div><strong>Prova real</strong><br><small>Reprodução estruturada de uma prova histórica.</small></div><span class="pa-badge">estrutura pronta</span></div>
+<div class="pa-item"><div><strong>Simulado personalizado</strong><br><small>Filtros por carreira, banca, matérias e quantidade.</small></div><span class="pa-badge">estrutura pronta</span></div>
+<div class="pa-item"><div><strong>Diagnóstico</strong><br><small>Distingue desempenho em conteúdo já estudado e ainda não estudado.</small></div><span class="pa-badge">estrutura pronta</span></div>
+</div></div>
+</section>
+
+<section id="painel-desempenho" class="pa-painel">
+<div class="pa-grid">
+<div class="pa-card"><strong id="d-tentativas">0</strong><span>tentativas</span></div>
+<div class="pa-card"><strong id="d-acertos">0</strong><span>acertos</span></div>
+<div class="pa-card"><strong id="d-percentual">—</strong><span>aproveitamento</span></div>
+<div class="pa-card"><strong id="d-dominados">0</strong><span>assuntos em consolidação</span></div>
+</div>
+<div class="pa-box"><h2>Domínio por assunto</h2><div id="tabela-dominio"></div></div>
+</section>
+</main>
+<script src="/pratica/data.js"></script>
+<script src="/pratica/app.js"></script>
+<script>
+fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});
+</script>
+<script src="/menu.js"></script>
+</body>
+</html>
