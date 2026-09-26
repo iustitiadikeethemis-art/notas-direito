@@ -6,6 +6,28 @@
   const $$ = s => Array.from(document.querySelectorAll(s));
 
   let db;
+  let storageMode = "indexeddb";
+  const FALLBACK_KEY = "notas-direito-pratica-fallback-v1";
+
+  function readFallback() {
+    try {
+      const raw = localStorage.getItem(FALLBACK_KEY);
+      const parsed = raw ? JSON.parse(raw) : {};
+      return {
+        attempts: Array.isArray(parsed.attempts) ? parsed.attempts : [],
+        mastery: Array.isArray(parsed.mastery) ? parsed.mastery : [],
+        sessions: Array.isArray(parsed.sessions) ? parsed.sessions : []
+      };
+    } catch {
+      return {attempts:[], mastery:[], sessions:[]};
+    }
+  }
+
+  function writeFallback(state) {
+    try { localStorage.setItem(FALLBACK_KEY, JSON.stringify(state)); }
+    catch {}
+  }
+
   let current = [];
   let index = 0;
   let selected = null;
@@ -24,11 +46,15 @@
         if (!d.objectStoreNames.contains("sessions")) d.createObjectStore("sessions", {keyPath:"id"});
       };
       r.onsuccess = () => { db = r.result; resolve(db); };
-      r.onerror = () => reject(r.error);
+      r.onerror = () => reject(r.error || new Error("IndexedDB indisponível"));
+      r.onblocked = () => reject(new Error("IndexedDB bloqueado por outra aba"));
     });
   }
 
   function all(store) {
+    if (storageMode === "fallback" || !db) {
+      return Promise.resolve(readFallback()[store] || []);
+    }
     return new Promise((resolve, reject) => {
       const r = db.transaction(store).objectStore(store).getAll();
       r.onsuccess = () => resolve(r.result);
@@ -37,6 +63,17 @@
   }
 
   function put(store, value) {
+    if (storageMode === "fallback" || !db) {
+      const state = readFallback();
+      const list = state[store] || [];
+      const key = store === "mastery" ? "node" : "id";
+      const idx = list.findIndex(item => item[key] === value[key]);
+      if (idx >= 0) list[idx] = value;
+      else list.push(value);
+      state[store] = list;
+      writeFallback(state);
+      return Promise.resolve();
+    }
     return new Promise((resolve, reject) => {
       const r = db.transaction(store, "readwrite").objectStore(store).put(value);
       r.onsuccess = () => resolve();
@@ -45,6 +82,12 @@
   }
 
   function clear(store) {
+    if (storageMode === "fallback" || !db) {
+      const state = readFallback();
+      state[store] = [];
+      writeFallback(state);
+      return Promise.resolve();
+    }
     return new Promise((resolve, reject) => {
       const r = db.transaction(store, "readwrite").objectStore(store).clear();
       r.onsuccess = () => resolve();
@@ -523,13 +566,10 @@
     alert("Backup restaurado com sucesso.");
   }
 
-  async function init() {
+  function bindUi() {
     setupTabs();
-    await openDB();
     renderContents();
     populateFilters();
-
-    $("#btn-revisao").onclick = async () => start(await buildDailyQueue(), "daily");
 
     $("#btn-treino").onclick = () => {
       const disc = $("#f-disciplina").value;
@@ -545,6 +585,7 @@
       start(list, "free");
     };
 
+    $("#btn-revisao").onclick = async () => start(await buildDailyQueue(), "daily");
     $("#exportar-progresso").onclick = exportBackup;
     $("#importar-progresso").onclick = () => $("#arquivo-backup").click();
     $("#arquivo-backup").onchange = async e => {
@@ -554,6 +595,18 @@
       catch (err) { alert(err.message || "Não foi possível restaurar o backup."); }
       e.target.value = "";
     };
+  }
+
+  async function init() {
+    bindUi();
+
+    try {
+      await openDB();
+      storageMode = "indexeddb";
+    } catch (err) {
+      console.warn("IndexedDB indisponível; usando armazenamento local de contingência.", err);
+      storageMode = "fallback";
+    }
 
     await stats();
   }
