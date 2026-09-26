@@ -230,13 +230,68 @@
       ).join("") + '</tbody></table>';
   }
 
+  function availableQuestionsForFilters() {
+    const disc = $("#f-disciplina").value;
+    const tema = $("#f-tema").value;
+    const orig = $("#f-origem").value;
+    return D.questions.filter(q => {
+      const n = node(q.primaryNode);
+      return (!disc || n?.disciplina === disc) &&
+             (!tema || n?.tema === tema) &&
+             (!orig || q.origin === orig);
+    });
+  }
+
+  function refreshThemeOptions() {
+    const select = $("#f-tema");
+    const current = select.value;
+    const disc = $("#f-disciplina").value;
+    const themes = [...new Set(
+      D.nodes
+        .filter(n => !disc || n.disciplina === disc)
+        .map(n => n.tema)
+    )].sort();
+
+    select.innerHTML = '<option value="">Todos</option>' +
+      themes.map(v => `<option value="${v}">${v}</option>`).join("");
+
+    if (themes.includes(current)) select.value = current;
+    else select.value = "";
+
+    updateTrainingAvailability();
+  }
+
+  function updateTrainingAvailability() {
+    const count = availableQuestionsForFilters().length;
+    const info = $("#treino-disponibilidade");
+    const btn = $("#btn-treino");
+    if (info) {
+      info.textContent = count === 0
+        ? "Nenhuma questão corresponde aos filtros atuais."
+        : `${count} ${count === 1 ? "questão disponível" : "questões disponíveis"} para este recorte.`;
+      info.classList.toggle("sem-questoes", count === 0);
+    }
+    if (btn) {
+      btn.disabled = count === 0;
+      btn.setAttribute("aria-disabled", count === 0 ? "true" : "false");
+    }
+  }
+
   function populateFilters() {
-    [...new Set(D.nodes.map(n => n.disciplina))].sort().forEach(v =>
-      $("#f-disciplina").insertAdjacentHTML("beforeend", `<option>${v}</option>`)
-    );
-    [...new Set(D.nodes.map(n => n.tema))].sort().forEach(v =>
-      $("#f-tema").insertAdjacentHTML("beforeend", `<option>${v}</option>`)
-    );
+    const discSelect = $("#f-disciplina");
+    const temaSelect = $("#f-tema");
+    const origemSelect = $("#f-origem");
+
+    discSelect.innerHTML = '<option value="">Todas</option>' +
+      [...new Set(D.nodes.map(n => n.disciplina))].sort()
+        .map(v => `<option value="${v}">${v}</option>`).join("");
+
+    refreshThemeOptions();
+
+    discSelect.addEventListener("change", refreshThemeOptions);
+    temaSelect.addEventListener("change", updateTrainingAvailability);
+    origemSelect.addEventListener("change", updateTrainingAvailability);
+    $("#f-qtd").addEventListener("input", updateTrainingAvailability);
   }
 
   function start(list, mode) {
@@ -572,16 +627,12 @@
     populateFilters();
 
     $("#btn-treino").onclick = () => {
-      const disc = $("#f-disciplina").value;
-      const tema = $("#f-tema").value;
-      const orig = $("#f-origem").value;
       const qtd = Math.max(1, Math.min(30, Number($("#f-qtd").value) || 10));
-      const list = D.questions.filter(q => {
-        const n = node(q.primaryNode);
-        return (!disc || n?.disciplina === disc) &&
-               (!tema || n?.tema === tema) &&
-               (!orig || q.origin === orig);
-      }).slice(0, qtd);
+      const list = availableQuestionsForFilters().slice(0, qtd);
+      if (!list.length) {
+        updateTrainingAvailability();
+        return;
+      }
       start(list, "free");
     };
 
