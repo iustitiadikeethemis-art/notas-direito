@@ -435,14 +435,14 @@
     const target = $("#painel-" + safeName);
     if (!target) return;
 
-    $(".pa-tab").forEach(x => {
+    $$(".pa-tab").forEach(x => {
       const active = x.dataset.tab === safeName;
       x.classList.toggle("ativo", active);
       x.setAttribute("aria-selected", active ? "true" : "false");
       x.tabIndex = active ? 0 : -1;
     });
 
-    $(".pa-painel").forEach(x => x.classList.remove("ativo"));
+    $$(".pa-painel").forEach(x => x.classList.remove("ativo"));
     target.classList.add("ativo");
 
     const session = $("#sessao");
@@ -457,7 +457,7 @@
   }
 
   function setupTabs() {
-    $(".pa-tab").forEach((b, i) => {
+    $$(".pa-tab").forEach((b, i) => {
       b.setAttribute("role", "tab");
       b.setAttribute("aria-controls", "painel-" + b.dataset.tab);
       b.setAttribute("aria-selected", b.classList.contains("ativo") ? "true" : "false");
@@ -466,7 +466,7 @@
       b.addEventListener("keydown", e => {
         if (!["ArrowRight","ArrowLeft","Home","End"].includes(e.key)) return;
         e.preventDefault();
-        const tabs = $(".pa-tab");
+        const tabs = $$(".pa-tab");
         let next = tabs.indexOf(b);
         if (e.key === "ArrowRight") next = (next + 1) % tabs.length;
         if (e.key === "ArrowLeft") next = (next - 1 + tabs.length) % tabs.length;
