@@ -14,7 +14,7 @@
 .pa-painel{display:none}.pa-painel.ativo{display:block}.pa-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
 .pa-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.03)}.pa-card strong{display:block;font-size:25px}.pa-card span{font-size:13px;color:#666}
 .pa-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0}.pa-box h2,.pa-box h3{margin-top:0}.pa-lista{display:grid;gap:10px}.pa-item{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #eee9e1}.pa-item:last-child{border-bottom:0}.pa-item small{color:#6b655e}
-.pa-primary,.pa-secondary{border:0;border-radius:12px;padding:12px 16px;font:inherit;cursor:pointer}.pa-primary{background:#1f1f1f;color:#fff}.pa-secondary{background:#eee8df;color:#2c2925}.pa-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.pa-primary,.pa-secondary{border:0;border-radius:12px;padding:12px 16px;font:inherit;cursor:pointer}.pa-primary{background:#1f1f1f;color:#fff}.pa-secondary{background:#eee8df;color:#2c2925}.pa-primary:disabled{opacity:.45;cursor:not-allowed}.pa-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .pa-question{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 12px 32px rgba(0,0,0,.04)}.pa-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}.pa-chip{font-size:12px;border:1px solid #ded5c8;border-radius:999px;padding:4px 9px;background:#faf7f2}
 .pa-question h2{font-size:24px;line-height:1.45}.pa-question-count{font-size:13px;color:#6d665f;margin-bottom:10px}.pa-options{display:grid;gap:10px;margin:18px 0}.pa-option{width:100%;text-align:left;border:1px solid #d9d3cb;background:#fff;border-radius:13px;padding:13px 15px;font:inherit;cursor:pointer}.pa-option:hover{background:#f8f4ee}.pa-option.selecionada{border-color:#1f1f1f;background:#f1ece4}.pa-option.correta{border-color:#7ea388;background:#eef6f0}.pa-option.incorreta{border-color:#b98383;background:#f8eded}.pa-option:disabled{cursor:default;color:inherit}
 .pa-feedback{display:none;margin-top:18px;padding:16px;border-radius:14px}.pa-feedback.show{display:block}.pa-feedback.ok{background:#edf5ef;border:1px solid #b9d3bf}.pa-feedback.erro{background:#f8eded;border:1px solid #dabcbc}.pa-feedback a{color:inherit}
@@ -63,7 +63,7 @@
 <label>Origem<select id="f-origem"><option value="">Todas</option><option value="autoral">Autoral</option><option value="oab">OAB</option><option value="concurso">Concurso</option></select></label>
 <label>Quantidade<input id="f-qtd" type="number" min="1" max="30" value="10"></label>
 </div>
-<div class="pa-actions"><button id="btn-treino" class="pa-primary">Iniciar treino</button></div>
+<p id="treino-disponibilidade" class="pa-note" style="margin:14px 0 0"></p><div class="pa-actions"><button id="btn-treino" class="pa-primary">Iniciar treino</button></div>
 </div>
 </section>
 
