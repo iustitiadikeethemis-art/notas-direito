@@ -1,5 +1,5 @@
 window.PA_DATA = {
-  "version": "1.2",
+  "version": "1.3",
   "nodes": [
     {
       "id": "PEN-LEG-LEGALIDADE",
@@ -1409,6 +1409,300 @@ window.PA_DATA = {
       "modelAnswer": "Maus antecedentes são circunstância judicial do art. 59, considerada na primeira fase da dosimetria para fixação da pena-base. Reincidência é agravante da segunda fase e exige novo crime após condenação anterior transitada em julgado, observados os requisitos legais.",
       "explanation": "A distinção envolve conceito, requisitos e momento de incidência na dosimetria.",
       "contentId": "TXT-DH-ANTECEDENTES"
+    },
+    {
+      "id": "Q-ADV-001",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "PEN-LEI-TEMPO",
+      "difficulty": 4,
+      "prompt": "Um fato foi praticado sob a Lei A. Antes do julgamento entrou em vigor a Lei B, mais favorável; depois, a Lei C restaurou disciplina mais severa. Qual solução melhor corresponde ao estudo da lei penal no tempo?",
+      "options": [
+        "Aplica-se a Lei C por ser a vigente no julgamento",
+        "A Lei B pode produzir efeitos benéficos sobre o fato anterior, mesmo tendo sido posteriormente revogada",
+        "Aplica-se sempre a Lei A por ser a lei do tempo do fato",
+        "O juiz deve combinar livremente trechos favoráveis das Leis B e C"
+      ],
+      "answer": 1,
+      "explanation": "A lei penal intermediária mais benéfica pode incidir sobre o fato anterior. A solução decorre da retroatividade e ultratividade benéficas, sem autorização para criação judicial de um regime híbrido.",
+      "contentId": "TXT-VOCAB"
+    },
+    {
+      "id": "Q-ADV-002",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "DH-ANPP",
+      "difficulty": 4,
+      "prompt": "O investigado confessa formalmente infração sem violência, cuja pena mínima é inferior a quatro anos, mas o caso seria de arquivamento por ausência de justa causa. Qual é a solução coerente com o conteúdo estudado?",
+      "options": [
+        "Propor ANPP para suprir a fragilidade probatória",
+        "Prosseguir com o arquivamento ou aprofundar a investigação; o ANPP pressupõe caso apto à persecução",
+        "Oferecer denúncia apenas para permitir o ANPP depois",
+        "Homologar judicialmente o acordo mesmo sem proposta ministerial"
+      ],
+      "answer": 1,
+      "explanation": "O ANPP não serve para corrigir investigação insuficiente. Ele pressupõe justa causa e um caso juridicamente apto à persecução.",
+      "contentId": "TXT-DH-ANPP"
+    },
+    {
+      "id": "Q-ADV-003",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "DH-ANPP",
+      "difficulty": 4,
+      "prompt": "Em determinado delito, a pena mínima em abstrato é de quatro anos, mas há causa de diminuição claramente aplicável ao caso concreto. Qual dado precisa ser examinado antes de afastar o ANPP apenas pelo requisito quantitativo?",
+      "options": [
+        "Somente a pena máxima",
+        "A incidência das causas de aumento e diminuição aplicáveis ao caso concreto",
+        "A existência de ação civil indenizatória",
+        "A opinião da vítima sobre a pena"
+      ],
+      "answer": 1,
+      "explanation": "O art. 28-A, § 1º, manda considerar as causas de aumento e diminuição aplicáveis ao caso concreto na aferição da pena mínima.",
+      "contentId": "TXT-DH-ANPP"
+    },
+    {
+      "id": "Q-ADV-004",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "CONST-REM-HD",
+      "difficulty": 4,
+      "prompt": "Maria quer obter informação genérica sobre gastos de um órgão público. João quer conhecer e corrigir dado pessoal seu em banco público. Qual comparação é mais adequada?",
+      "options": [
+        "Ambos devem usar habeas data",
+        "O habeas data é especialmente adequado à pretensão pessoal de João, não a qualquer pedido genérico de informação pública",
+        "Maria deve usar habeas corpus e João ação popular",
+        "João só pode usar mandado de injunção"
+      ],
+      "answer": 1,
+      "explanation": "O habeas data possui natureza pessoal: protege acesso e retificação de informações relativas ao próprio impetrante.",
+      "contentId": "TXT-DH-REMEDIOS"
+    },
+    {
+      "id": "Q-ADV-005",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "CONST-REM-MI",
+      "difficulty": 4,
+      "prompt": "Uma omissão normativa inviabiliza concretamente o exercício de prerrogativa constitucional de determinado titular. Em outro caso, pretende-se impugnar objetivamente a omissão inconstitucional em controle concentrado. Qual distinção melhor corresponde ao material estudado?",
+      "options": [
+        "O primeiro caso se aproxima do mandado de injunção; o segundo, da ADO",
+        "Ambos são necessariamente habeas data",
+        "O primeiro é ADI e o segundo ação popular",
+        "Não há distinção jurídica relevante"
+      ],
+      "answer": 0,
+      "explanation": "O mandado de injunção parte da inviabilização concreta de direito ou prerrogativa; a ADO integra o controle concentrado e objetivo de omissão.",
+      "contentId": "TXT-DH-REMEDIOS"
+    },
+    {
+      "id": "Q-ADV-006",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "CONST-LAR",
+      "difficulty": 4,
+      "prompt": "Às 23h, policiais possuem apenas mandado judicial de busca e não há consentimento, flagrante, desastre ou necessidade de socorro. Qual ponto constitucional é decisivo?",
+      "options": [
+        "A ordem judicial autoriza ingresso a qualquer hora",
+        "A Constituição condiciona o ingresso por determinação judicial, nessa hipótese isolada, ao período diurno",
+        "A inviolabilidade do lar não se aplica à investigação criminal",
+        "O mandado é inválido por ter sido expedido por juiz"
+      ],
+      "answer": 1,
+      "explanation": "Sem outra exceção constitucional, a determinação judicial autoriza o ingresso domiciliar sem consentimento durante o dia.",
+      "contentId": "TXT-DH-LAR"
+    },
+    {
+      "id": "Q-ADV-007",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "PEN-PENAS-CONST",
+      "difficulty": 4,
+      "prompt": "Uma lei penal prevê sanção que expulsa definitivamente o condenado brasileiro do território nacional e outra que impõe trabalho compulsório como castigo. Quais limites constitucionais são diretamente atingidos?",
+      "options": [
+        "Proibições de banimento e de trabalhos forçados",
+        "Somente a legalidade penal",
+        "Apenas a individualização da pena",
+        "Proibições de multa e perda de bens"
+      ],
+      "answer": 0,
+      "explanation": "Banimento e trabalhos forçados aparecem entre as penas expressamente proibidas pela Constituição.",
+      "contentId": "TXT-DH-PENAS"
+    },
+    {
+      "id": "Q-ADV-008",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "PEN-REINCIDENCIA",
+      "difficulty": 4,
+      "prompt": "A condenação anterior foi extinta há mais de cinco anos nas condições do art. 64, I, e o agente pratica novo crime. Qual efeito deve ser analisado especificamente quanto à reincidência?",
+      "options": [
+        "A condenação anterior deixa de prevalecer para efeito de reincidência",
+        "A condenação gera reincidência perpétua",
+        "A condenação é automaticamente apagada de todo registro",
+        "O novo crime se torna atípico"
+      ],
+      "answer": 0,
+      "explanation": "O art. 64, I, estabelece período depurador para efeito de reincidência, sem transformar isso em apagamento integral da condenação para todos os fins.",
+      "contentId": "TXT-DH-ANTECEDENTES"
+    },
+    {
+      "id": "Q-ADV-009",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "PEN-MAUS-ANT",
+      "difficulty": 4,
+      "prompt": "Há duas condenações anteriores distintas, ambas definitivas. Na dosimetria do novo crime, uma é utilizada como mau antecedente e outra como reincidência. Qual é o ponto técnico central?",
+      "options": [
+        "É necessariamente bis in idem porque qualquer condenação anterior só pode ser considerada uma vez na vida",
+        "O problema de dupla valoração surge quando a mesma condenação é utilizada simultaneamente nos dois vetores; condenações distintas exigem análise própria",
+        "Maus antecedentes nunca podem coexistir com reincidência",
+        "Reincidência só pode ser considerada na primeira fase"
+      ],
+      "answer": 1,
+      "explanation": "A vedação ao bis in idem impede dupla valoração da mesma condenação. Condenações distintas podem assumir funções diferentes, conforme os requisitos jurídicos aplicáveis.",
+      "contentId": "TXT-DH-ANTECEDENTES"
+    },
+    {
+      "id": "Q-ADV-010",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "PEN-EXEC-REMICAO",
+      "difficulty": 4,
+      "prompt": "Um condenado realiza estudo e trabalho no mesmo período. Qual premissa é mais adequada à disciplina da remição trabalhada no site?",
+      "options": [
+        "Estudo e trabalho jamais podem ser cumulados",
+        "A cumulação é juridicamente possível quando as jornadas forem compatibilizadas",
+        "O trabalho elimina automaticamente a remição por estudo",
+        "Só existe remição por trabalho"
+      ],
+      "answer": 1,
+      "explanation": "A LEP admite cumulação, desde que as horas diárias de trabalho e estudo sejam definidas de modo compatível.",
+      "contentId": "TXT-DH-REMICAO"
+    },
+    {
+      "id": "Q-ADV-011",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "PEN-EXEC-REMICAO",
+      "difficulty": 4,
+      "prompt": "Durante o cumprimento da pena, o condenado conclui curso superior devidamente certificado. Além das horas já computadas para remição, qual consequência específica pode incidir?",
+      "options": [
+        "Acréscimo de um terço ao tempo a remir em função das horas de estudo",
+        "Perda integral da remição por estudo",
+        "Conversão automática para regime aberto",
+        "Duplicação obrigatória de toda a pena remida"
+      ],
+      "answer": 0,
+      "explanation": "A LEP prevê acréscimo de um terço no tempo a remir por estudo quando houver conclusão de ensino fundamental, médio ou superior nas condições legais.",
+      "contentId": "TXT-DH-REMICAO"
+    },
+    {
+      "id": "Q-ADV-012",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "PROC-CONTRADITORIO",
+      "difficulty": 4,
+      "prompt": "Uma parte é formalmente comunicada de todos os atos, mas não recebe oportunidade efetiva de se manifestar sobre fundamento decisivo introduzido no processo. À luz do conceito estudado, qual problema existe?",
+      "options": [
+        "Nenhum, porque informação formal esgota o contraditório",
+        "O contraditório envolve ciência e possibilidade real de participação e influência",
+        "Somente a ampla defesa penal pode ser invocada",
+        "A questão é exclusivamente de publicidade"
+      ],
+      "answer": 1,
+      "explanation": "O contraditório não se reduz à notícia dos atos: pressupõe possibilidade efetiva de manifestação e influência legítima na decisão.",
+      "contentId": "TXT-VOCAB"
+    },
+    {
+      "id": "Q-ADV-013",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "DH-HIST-METODO",
+      "difficulty": 4,
+      "prompt": "Um pesquisador afirma que a Magna Carta de 1215 já consagrava direitos humanos universais exatamente no sentido contemporâneo. Qual crítica metodológica corresponde ao texto publicado?",
+      "options": [
+        "A afirmação é adequada porque todo documento limitador do poder já é uma declaração universal moderna",
+        "Há risco de anacronismo: antecedentes históricos devem ser reconhecidos sem projetar neles integralmente o conceito contemporâneo",
+        "A Magna Carta não possui qualquer relevância histórica",
+        "Direitos humanos só podem ser estudados a partir do século XXI"
+      ],
+      "answer": 1,
+      "explanation": "O texto insiste em distinguir antecedentes, matrizes e etapas de formação do sistema contemporâneo de direitos humanos.",
+      "contentId": "TXT-DH-HIST"
+    },
+    {
+      "id": "Q-ADV-014",
+      "type": "short_answer",
+      "origin": "autoral",
+      "primaryNode": "DH-JUSNATURALISMO",
+      "difficulty": 4,
+      "prompt": "Explique por que a ideia jusnaturalista de uma ordem de justiça superior ao direito positivo pode funcionar como matriz remota da limitação jurídica do poder.",
+      "modelAnswer": "Porque, ao admitir critérios de justiça anteriores ou superiores à simples vontade do legislador, o jusnaturalismo permite sustentar que o poder estatal não é absoluto e pode ser juridicamente avaliado por parâmetros que não se reduzem ao comando positivo vigente.",
+      "explanation": "O ponto central é a possibilidade de julgar e limitar o poder por critérios normativos que não se confundem com a mera vontade estatal.",
+      "contentId": "TXT-DH-HIST"
+    },
+    {
+      "id": "Q-ADV-015",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "CONST-REM-AP",
+      "difficulty": 4,
+      "prompt": "Uma pessoa sem direitos políticos em exercício pretende ajuizar ação popular contra ato que considera lesivo à moralidade administrativa. Qual questão preliminar deve ser enfrentada?",
+      "options": [
+        "A legitimidade ativa, pois a Constituição atribui a ação popular ao cidadão",
+        "A existência de ameaça à liberdade de locomoção",
+        "A necessidade de omissão normativa",
+        "A competência exclusiva do Ministério Público"
+      ],
+      "answer": 0,
+      "explanation": "A ação popular possui legitimidade ativa constitucionalmente atribuída ao cidadão.",
+      "contentId": "TXT-DH-REMEDIOS"
+    },
+    {
+      "id": "Q-ADV-016",
+      "type": "case_multiple_choice",
+      "origin": "autoral",
+      "primaryNode": "CONST-REM-MS",
+      "difficulty": 4,
+      "prompt": "O direito alegado depende de perícia extensa e de produção testemunhal complexa para comprovar os fatos. Qual dificuldade surge para o uso do mandado de segurança?",
+      "options": [
+        "Nenhuma, pois o mandado de segurança sempre admite ampla dilação probatória",
+        "A exigência de direito líquido e certo e prova pré-constituída torna inadequado o uso quando a demonstração depende de extensa instrução",
+        "O mandado de segurança só pode ser usado por pessoa jurídica",
+        "O caso deve ser necessariamente convertido em habeas corpus"
+      ],
+      "answer": 1,
+      "explanation": "A via do mandado de segurança pressupõe demonstração documental imediata do direito alegado, sem ampla dilação probatória.",
+      "contentId": "TXT-DH-REMEDIOS"
+    },
+    {
+      "id": "Q-ADV-017",
+      "type": "error_spotting",
+      "origin": "autoral",
+      "primaryNode": "PEN-LEG-LEGALIDADE",
+      "difficulty": 4,
+      "prompt": "Identifique o problema: “Diante de lacuna incriminadora, o juiz pode ampliar por analogia uma figura penal existente para alcançar conduta semelhante, desde que considere a solução socialmente justa.”",
+      "options": [
+        "Não há problema",
+        "A analogia in malam partem para criar ou ampliar incriminação viola a legalidade penal estrita",
+        "O único problema é a ausência de recurso",
+        "A analogia penal é sempre obrigatória"
+      ],
+      "answer": 1,
+      "explanation": "A legalidade penal estrita impede a utilização de analogia para criar crimes ou agravar a situação do acusado.",
+      "contentId": "TXT-VOCAB"
+    },
+    {
+      "id": "Q-ADV-018",
+      "type": "short_answer",
+      "origin": "autoral",
+      "primaryNode": "CONST-ART5",
+      "difficulty": 4,
+      "prompt": "Explique por que o art. 5º pode ser lido simultaneamente como memória do autoritarismo e como projeto jurídico de contenção futura do poder.",
+      "modelAnswer": "Porque suas garantias refletem experiências históricas de abuso estatal, mas não se limitam a registrar o passado: estruturam limites jurídicos permanentes ao exercício do poder e instrumentos destinados a impedir novas violações.",
+      "explanation": "O conteúdo publicado apresenta o art. 5º como trincheira normativa de proteção da dignidade e limitação do poder, com dimensão histórica e prospectiva.",
+      "contentId": "TXT-DH-ART5"
     }
   ]
 };
