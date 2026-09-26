@@ -308,7 +308,7 @@
     currentAnswered = false;
     $("#sessao").hidden = false;
     renderQuestion();
-    $("#sessao").scrollIntoView({behavior:"smooth", block:"start"});
+    requestAnimationFrame(() => $("#sessao").scrollIntoView({behavior:"smooth", block:"start"}));
   }
 
   function questionMeta(q) {
@@ -520,7 +520,7 @@
 
     $("#nova").onclick = () => {
       $("#sessao").hidden = true;
-      window.scrollTo({top:0,behavior:"smooth"});
+      document.querySelector(".pa-tabs")?.scrollIntoView({behavior:"smooth", block:"start"});
     };
     $("#ver-erros").onclick = () => activateTab("erros");
     await stats();
@@ -544,7 +544,7 @@
     target.classList.add("ativo");
 
     const session = $("#sessao");
-    if (session) session.hidden = safeName !== "hoje";
+    if (session && options.preserveSession !== true) session.hidden = true;
 
     if (options.updateHash !== false) {
       const hash = safeName === "hoje" ? "" : "#" + safeName;
