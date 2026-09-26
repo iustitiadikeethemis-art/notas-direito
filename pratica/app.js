@@ -1,5 +1,6 @@
 (() => {
   const D = window.PA_DATA;
+  const LAW = window.PA_LEI_SECA || {sources:[], questions:[]};
   const DB_NAME = "notas-direito-pratica";
   const DB_VERSION = 1;
   const $ = s => document.querySelector(s);
@@ -97,7 +98,9 @@
 
   function node(id) { return D.nodes.find(n => n.id === id); }
   function content(id) { return D.contents.find(c => c.id === id); }
-  function question(id) { return D.questions.find(q => q.id === id); }
+  function allQuestions() { return [...D.questions, ...(LAW.questions || [])]; }
+  function question(id) { return allQuestions().find(q => q.id === id); }
+  function lawSource(id) { return (LAW.sources || []).find(s => s.id === id); }
   function fmtDate(d) { return d ? new Intl.DateTimeFormat("pt-BR").format(new Date(d)) : "—"; }
   function uid(prefix) { return prefix + "-" + Date.now() + "-" + Math.random().toString(36).slice(2); }
 
@@ -110,7 +113,7 @@
   }
 
   async function validAttempts() {
-    const ids = new Set(D.questions.map(q => q.id));
+    const ids = new Set(allQuestions().map(q => q.id));
     return (await all("attempts")).filter(a => ids.has(a.questionId));
   }
 
@@ -133,6 +136,105 @@
 
     const merged = [...wrong, ...due, ...unseen, ...D.questions];
     return [...new Map(merged.map(q => [q.id, q])).values()].slice(0, limit);
+  }
+
+  function shuffle(list) {
+    const copy = [...list];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+
+  function publishedQuestionPool() {
+    const published = new Set(D.contents.filter(c => c.status === "published" || c.status === "studying").map(c => c.id));
+    return D.questions.filter(q => published.has(q.contentId));
+  }
+
+  function buildMixedQueue(count) {
+    const pool = publishedQuestionPool();
+    const groups = new Map();
+    shuffle(pool).forEach(q => {
+      const key = q.primaryNode || "geral";
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(q);
+    });
+
+    const keys = shuffle([...groups.keys()]);
+    const result = [];
+    let cursor = 0;
+    while (result.length < count && keys.length) {
+      const key = keys[cursor % keys.length];
+      const group = groups.get(key);
+      if (group?.length) result.push(group.shift());
+      if (!group?.length) {
+        const idx = keys.indexOf(key);
+        keys.splice(idx, 1);
+        if (!keys.length) break;
+        cursor = cursor % keys.length;
+      } else {
+        cursor++;
+      }
+    }
+
+    const difficultyOrder = [1,2,3,4];
+    return result.sort((a,b) => {
+      const ai = difficultyOrder.indexOf(a.difficulty);
+      const bi = difficultyOrder.indexOf(b.difficulty);
+      return ai === bi ? Math.random() - .5 : ai - bi;
+    });
+  }
+
+  function lawQuestionsForMode(mode) {
+    const qs = LAW.questions || [];
+    if (mode === "memorization") return qs.filter(q => q.pedagogy === "memorization");
+    if (mode === "understanding") return qs.filter(q => q.pedagogy === "understanding");
+    return qs;
+  }
+
+  function buildLawQueue(count, mode) {
+    const source = shuffle(lawQuestionsForMode(mode));
+    const byNode = new Map();
+    source.forEach(q => {
+      if (!byNode.has(q.primaryNode)) byNode.set(q.primaryNode, []);
+      byNode.get(q.primaryNode).push(q);
+    });
+    const keys = shuffle([...byNode.keys()]);
+    const result = [];
+    let cursor = 0;
+    while (result.length < count && keys.length) {
+      const key = keys[cursor % keys.length];
+      const group = byNode.get(key);
+      if (group?.length) result.push(group.shift());
+      if (!group?.length) {
+        const idx = keys.indexOf(key);
+        keys.splice(idx, 1);
+        if (!keys.length) break;
+        cursor = cursor % keys.length;
+      } else cursor++;
+    }
+    return result;
+  }
+
+  function updateMixedAvailability() {
+    const info = $("#misto-disponibilidade");
+    if (!info) return;
+    const pool = publishedQuestionPool();
+    const topics = new Set(pool.map(q => q.primaryNode)).size;
+    const levels = new Set(pool.map(q => q.difficulty)).size;
+    info.textContent = `${pool.length} questões no banco · ${topics} temas · ${levels} níveis de dificuldade. O assunto não pode ser escolhido neste modo.`;
+  }
+
+  function updateLawAvailability() {
+    const info = $("#lei-disponibilidade");
+    if (!info) return;
+    const mode = $("#lei-metodo")?.value || "mixed";
+    const count = lawQuestionsForMode(mode).length;
+    const refs = new Set(lawQuestionsForMode(mode).map(q => q.lawRef)).size;
+    info.textContent = `${count} questões disponíveis · ${refs} referências normativas trabalhadas neste método.`;
+    const btn = $("#btn-lei");
+    if (btn) btn.disabled = count === 0;
   }
 
   async function stats() {
@@ -322,7 +424,10 @@
       multiple_choice:"múltipla escolha"
     };
     const typeLabel = labels[q.type] || "questão objetiva";
-    return `<div class="pa-meta"><span class="pa-chip">${n?.disciplina || ""}</span><span class="pa-chip">${n?.tema || ""}</span><span class="pa-chip">${typeLabel}</span><span class="pa-chip">${q.origin}</span><span class="pa-chip">dificuldade ${q.difficulty}</span></div>`;
+    const difficultyLabels = {1:"básica",2:"intermediária",3:"difícil",4:"avançada"};
+    const lawChip = q.lawRef ? `<span class="pa-chip">${q.lawRef}</span>` : "";
+    const originLabel = q.origin === "lei_seca" ? "lei seca" : q.origin;
+    return `<div class="pa-meta"><span class="pa-chip">${n?.disciplina || ""}</span><span class="pa-chip">${n?.tema || ""}</span><span class="pa-chip">${typeLabel}</span><span class="pa-chip">${originLabel}</span><span class="pa-chip">${difficultyLabels[q.difficulty] || q.difficulty}</span>${lawChip}</div>`;
   }
 
   function renderQuestion() {
@@ -433,6 +538,18 @@
       .replace(/\s+/g, " ");
   }
 
+  function feedbackLinks(q) {
+    const study = content(q.contentId)?.url
+      ? `<a href="${content(q.contentId).url}">Rever conteúdo relacionado →</a>`
+      : "";
+    const source = q.sourceId ? lawSource(q.sourceId) : null;
+    const official = source?.url
+      ? `<a href="${source.url}" target="_blank" rel="noopener noreferrer">Consultar texto oficial →</a>`
+      : "";
+    if (!study && !official) return "";
+    return `<p class="pa-feedback-links">${[study, official].filter(Boolean).join(" &nbsp; · &nbsp; ")}</p>`;
+  }
+
   async function answerFillBlank() {
     const q = current[index];
     if (currentAnswered) return;
@@ -454,7 +571,7 @@
 
     const f = $("#feedback");
     f.className = "pa-feedback show " + (correct ? "ok" : "erro");
-    f.innerHTML = `<strong>${correct ? "Correto." : "Resposta incorreta."}</strong><p>${q.explanation}</p><p><strong>Resposta esperada:</strong> ${q.displayAnswer || q.acceptedAnswers?.[0] || ""}</p><p><a href="${content(q.contentId)?.url || "#"}">Rever conteúdo relacionado →</a></p><div class="pa-actions"><button id="continuar" class="pa-primary">Próxima questão</button></div>`;
+    f.innerHTML = `<strong>${correct ? "Correto." : "Resposta incorreta."}</strong><p>${q.explanation}</p><p><strong>Resposta esperada:</strong> ${q.displayAnswer || q.acceptedAnswers?.[0] || ""}</p>${feedbackLinks(q)}<div class="pa-actions"><button id="continuar" class="pa-primary">Próxima questão</button></div>`;
     $("#continuar").onclick = () => { index++; renderQuestion(); };
     await stats();
   }
@@ -474,7 +591,7 @@
     $("#pular").disabled = true;
     const f = $("#feedback");
     f.className = "pa-feedback show";
-    f.innerHTML = `<strong>Compare sua resposta com o modelo.</strong><div class="pa-model-answer">${q.modelAnswer}</div><p>${q.explanation}</p><p><a href="${content(q.contentId)?.url || "#"}">Rever conteúdo relacionado →</a></p><p><strong>Autoavaliação:</strong> considere se sua resposta recuperou o núcleo jurídico sem consultar o material.</p><div class="pa-actions"><button id="auto-acerto" class="pa-primary">Acertei o núcleo</button><button id="auto-erro" class="pa-secondary">Errei ou ficou incompleto</button></div>`;
+    f.innerHTML = `<strong>Compare sua resposta com o modelo.</strong><div class="pa-model-answer">${q.modelAnswer}</div><p>${q.explanation}</p>${feedbackLinks(q)}<p><strong>Autoavaliação:</strong> considere se sua resposta recuperou o núcleo jurídico sem consultar o material.</p><div class="pa-actions"><button id="auto-acerto" class="pa-primary">Acertei o núcleo</button><button id="auto-erro" class="pa-secondary">Errei ou ficou incompleto</button></div>`;
     $("#auto-acerto").onclick = () => assessShort(q, true, text);
     $("#auto-erro").onclick = () => assessShort(q, false, text);
   }
@@ -494,7 +611,7 @@
   function showFeedback(q, correct) {
     const f = $("#feedback");
     f.className = "pa-feedback show " + (correct ? "ok" : "erro");
-    f.innerHTML = `<strong>${correct ? "Correto." : "Resposta incorreta."}</strong><p>${q.explanation}</p><p><a href="${content(q.contentId)?.url || "#"}">Rever conteúdo relacionado →</a></p><div class="pa-actions"><button id="continuar" class="pa-primary">Próxima questão</button></div>`;
+    f.innerHTML = `<strong>${correct ? "Correto." : "Resposta incorreta."}</strong><p>${q.explanation}</p>${feedbackLinks(q)}<div class="pa-actions"><button id="continuar" class="pa-primary">Próxima questão</button></div>`;
     $("#continuar").onclick = () => { index++; renderQuestion(); };
   }
 
@@ -526,7 +643,7 @@
     await stats();
   }
 
-  const validTabs = new Set(["hoje","treinar","conteudos","erros","provas","desempenho"]);
+  const validTabs = new Set(["hoje","treinar","misto","lei","conteudos","erros","provas","desempenho"]);
 
   function activateTab(name, options = {}) {
     const safeName = validTabs.has(name) ? name : "hoje";
@@ -625,6 +742,22 @@
     setupTabs();
     renderContents();
     populateFilters();
+    updateMixedAvailability();
+    updateLawAvailability();
+
+    $("#btn-misto").onclick = () => {
+      const qtd = Math.max(5, Math.min(50, Number($("#misto-qtd").value) || 15));
+      const list = buildMixedQueue(qtd);
+      start(list, "mixed");
+    };
+
+    $("#lei-metodo").addEventListener("change", updateLawAvailability);
+    $("#btn-lei").onclick = () => {
+      const mode = $("#lei-metodo").value;
+      const qtd = Math.max(5, Math.min(40, Number($("#lei-qtd").value) || 12));
+      const list = buildLawQueue(qtd, mode);
+      start(list, "law_" + mode);
+    };
 
     $("#btn-treino").onclick = () => {
       const qtd = Math.max(1, Math.min(30, Number($("#f-qtd").value) || 10));
