@@ -190,6 +190,9 @@ body.parecer-page{
 }
 
 .parecer-cabecalho{
+  position:static;
+  top:auto;
+  background:var(--pj-paper);
   text-align:center;
   padding-bottom:20px;
   margin-bottom:34px;
