@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pareceres jurídico-acadêmicos e exercícios de prática jurídica do projeto Notas de um Estudante de Direito.">
+  <title>Pareceres Jurídicos | Notas de um Estudante de Direito</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/pareceres/pareceres.css">
+</head>
+<body class="parecer-page">
+<div id="header-container"></div>
+
+<main class="pareceres-shell">
+  <section class="pareceres-hero">
+    <img src="/imagens/seu-simbolo-transparente.png" class="pareceres-simbolo" alt="Símbolo de Notas de um Estudante de Direito">
+    <span class="pareceres-kicker">Produção formativa</span>
+    <h1>Pareceres Jurídicos</h1>
+    <p>Pareceres técnico-jurídicos e exercícios de prática jurídica voltados ao desenvolvimento de análise, fundamentação, subsunção e conclusão.</p>
+  </section>
+
+  <section class="pareceres-intro">
+    <p>Esta seção reúne peças elaboradas durante a formação acadêmica a partir de casos hipotéticos. O objetivo é registrar o desenvolvimento progressivo da técnica consultiva: delimitar a questão jurídica, selecionar as normas aplicáveis, confrontá-las com os fatos e apresentar uma conclusão fundamentada.</p>
+  </section>
+
+  <section class="pareceres-arquivo">
+    <h2>Arquivo de pareceres</h2>
+
+    <article class="parecer-card">
+      <div class="parecer-numero">Parecer Jurídico nº 01</div>
+      <h3>Incapacidade absoluta e representação do menor de 16 anos</h3>
+      <p>Análise da possibilidade de um adolescente de 14 anos celebrar pessoalmente contrato de compra e venda de bem móvel, com exame da capacidade de exercício, representação e invalidade do negócio jurídico.</p>
+
+      <div class="parecer-meta">
+        <span>Direito Civil</span>
+        <span>Parte Geral</span>
+        <span>Capacidade civil</span>
+        <span>Negócio jurídico</span>
+      </div>
+
+      <div class="parecer-acoes">
+        <a class="parecer-botao" href="/pareceres/parecer-01.html">Ler parecer</a>
+      </div>
+    </article>
+  </section>
+
+  <p class="parecer-nota">Material de estudo. Os casos publicados nesta seção são hipotéticos e não constituem consultoria jurídica ou manifestação profissional destinada a caso concreto real.</p>
+</main>
+
+<script>
+fetch("/header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-container").innerHTML = data;
+    iniciarMenu();
+  });
+</script>
+<script src="/menu.js"></script>
+</body>
+</html>
