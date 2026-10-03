@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magna Carta de 1215 | Direito Constitucional</title>
+<meta name="description" content="Estudo histórico da Magna Carta de 1215: João Sem Terra, crise do reino inglês, revolta dos barões e formação histórica da limitação jurídica do poder.">
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --mc-green:#0d4c32;
+  --mc-green-dark:#082c20;
+  --mc-gold:#caa24f;
+  --mc-gold-soft:#e7cf91;
+  --mc-paper:#f6f0e3;
+  --mc-ink:#2b2924;
+  --mc-muted:#6c665d;
+  --mc-line:#d5c7aa;
+}
+body{background:#ece5d8;color:var(--mc-ink);}
+.mc-hero{
+  margin:56px auto 34px;
+  max-width:1040px;
+  border-radius:26px;
+  overflow:hidden;
+  border:1px solid #173d2e;
+  background:
+    radial-gradient(circle at 14% 18%,rgba(255,255,255,.10),transparent 27%),
+    linear-gradient(135deg,#082c20 0%,#0d4c32 58%,#80652d 145%);
+  box-shadow:0 22px 60px rgba(0,0,0,.16);
+  color:#fff;
+}
+.mc-hero-inner{padding:58px 50px;position:relative;}
+.mc-kicker{color:#ead7a5;letter-spacing:.09em;text-transform:uppercase;font-size:13px;margin:0 0 12px;}
+.mc-hero h1{font-size:48px;line-height:1.06;margin:0 0 18px;max-width:850px;color:#fff8de;}
+.mc-hero p{font-size:19px;line-height:1.7;color:#f1ead8;max-width:820px;margin:0;}
+.mc-alerta{
+  max-width:980px;
+  margin:0 auto 30px;
+  padding:22px 26px;
+  border-left:5px solid var(--mc-gold);
+  border-radius:14px;
+  background:#fffaf0;
+  box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+.mc-alerta p{margin:0;color:#4b4438;font-size:17px;line-height:1.7;}
+.mc-layout{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:28px;
+  max-width:1120px;
+  margin:0 auto 80px;
+}
+.mc-nav{
+  position:sticky;
+  top:92px;
+  align-self:start;
+  background:#0a3325;
+  color:#fff;
+  border-radius:18px;
+  padding:18px;
+  border:1px solid #315b4c;
+  box-shadow:0 16px 36px rgba(0,0,0,.12);
+}
+.mc-nav h2{font-size:17px;margin:0 0 12px;color:#f1dfb0;}
+.mc-nav a{
+  display:block;
+  text-decoration:none;
+  color:#eee4cf;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  padding:9px 10px;
+  margin:8px 0;
+  font-size:14px;
+  line-height:1.35;
+  background:rgba(255,255,255,.04);
+}
+.mc-nav a:hover{background:rgba(255,255,255,.11);}
+.mc-artigo{
+  background:var(--mc-paper);
+  border:1px solid var(--mc-line);
+  border-radius:24px;
+  padding:42px 48px;
+  box-shadow:0 14px 40px rgba(0,0,0,.055);
+}
+.mc-artigo h2{
+  font-size:30px;
+  line-height:1.2;
+  margin:50px 0 18px;
+  padding-top:24px;
+  border-top:1px solid #ded2bc;
+  color:#14392c;
+}
+.mc-artigo h2:first-child{margin-top:0;padding-top:0;border-top:0;}
+.mc-artigo p{
+  font-size:18px;
+  line-height:1.86;
+  color:var(--mc-ink);
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+  margin:0 0 18px;
+}
+.mc-artigo strong{color:#173f30;}
+.mc-mito{
+  margin:28px 0;
+  padding:22px 24px;
+  border-left:5px solid var(--mc-gold);
+  background:#fffaf0;
+  border-radius:0 14px 14px 0;
+}
+.mc-mito p{margin:0 0 12px;text-align:left;font-size:17px;line-height:1.7;}
+.mc-mito p:last-child{margin-bottom:0;}
+.mc-proxima{
+  margin:40px 0 0;
+  padding:24px 26px;
+  border:1px dashed #9b8451;
+  border-radius:16px;
+  background:#eee4cf;
+}
+.mc-proxima h2{border:0;padding:0;margin:0 0 12px;font-size:25px;color:#234c3b;}
+.mc-proxima p{margin:0;text-align:left;font-size:17px;line-height:1.75;color:#514a40;}
+.mc-fontes{
+  margin:44px 0 0;
+  padding:24px 26px;
+  border-radius:18px;
+  background:#fffaf0;
+  border:1px solid #dfcfad;
+}
+.mc-fontes h2{border:0;padding:0;margin:0 0 15px;font-size:25px;color:#234c3b;}
+.mc-fontes p{font-size:16px;line-height:1.72;text-align:left;margin:0 0 10px;color:#4b4438;}
+.mc-fontes a{color:#174d37;text-decoration:none;border-bottom:1px solid rgba(23,77,55,.35);}
+.mc-relacionado{
+  margin:30px 0 0;
+  padding-top:22px;
+  border-top:1px solid #ded2bc;
+  font-size:16px;
+  color:var(--mc-muted);
+}
+.mc-relacionado a{color:#174d37;text-decoration:none;border-bottom:1px solid rgba(23,77,55,.35);}
+.assinatura-texto{margin-top:46px;padding-top:22px;border-top:1px solid #ded2bc;}
+.assinatura-texto p{text-align:left;font-size:16px;color:#625c52;margin:4px 0;}
+@media(max-width:900px){
+  .mc-layout{grid-template-columns:1fr;}
+  .mc-nav{position:static;}
+  .mc-hero-inner{padding:38px 28px;}
+  .mc-hero h1{font-size:37px;}
+  .mc-artigo{padding:30px 24px;}
+}
+@media print{
+  #header-container,.mc-nav{display:none!important;}
+  .mc-layout{display:block;}
+  .mc-artigo,.mc-hero{box-shadow:none;border:1px solid #000;}
+}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+
+<section class="mc-hero">
+  <div class="mc-hero-inner">
+    <p class="mc-kicker">Direito Constitucional · Formação histórica do constitucionalismo</p>
+    <h1>Magna Carta de 1215</h1>
+    <p>João Sem Terra, a crise da monarquia inglesa e o caminho histórico para a ideia de que o poder também se submete ao Direito.</p>
+  </div>
+</section>
+
+<div class="mc-alerta">
+  <p><strong>Parte I — Contexto histórico.</strong> Antes de estudar as cláusulas da Magna Carta, é preciso compreender o mundo político que a produziu: a dinastia Plantageneta, a relação entre João e Ricardo Coração de Leão, as perdas territoriais na França, o conflito com o papado, a derrota de Bouvines e a revolta dos barões.</p>
+</div>
+
+<section class="mc-layout">
+<aside class="mc-nav">
+  <h2>Navegação</h2>
+  <a href="#origens">João Sem Terra e sua família</a>
+  <a href="#ricardo">João e Ricardo Coração de Leão</a>
+  <a href="#arthur">A sucessão e Arthur da Bretanha</a>
+  <a href="#franca">A perda dos territórios franceses</a>
+  <a href="#papa">O conflito com o papa</a>
+  <a href="#bouvines">Bouvines e a crise final</a>
+  <a href="#1215">1215 e a revolta dos barões</a>
+  <a href="#mitos">Mitos e verdades</a>
+  <a href="#proxima">Próxima etapa</a>
+  <a href="#fontes">Fontes e leituras</a>
+</aside>
+
+<article class="mc-artigo">
+
+<h2 id="origens">1. João Sem Terra e o mundo que antecede a Magna Carta</h2>
+<p>João Sem Terra nasceu em 1167 e era o filho mais novo de Henrique II da Inglaterra e Leonor da Aquitânia. O apelido inglês <em>Lackland</em> — “sem terra” — relaciona-se ao fato de que, como filho mais novo, inicialmente não recebeu um grande conjunto de territórios comparável ao dos irmãos. Mais tarde, contudo, Henrique II providenciou terras, rendas, alianças matrimoniais e o senhorio da Irlanda para ele; portanto, o apelido não significa que João tenha permanecido literalmente sem propriedades.</p>
+
+<p>Para entender a família, é preciso abandonar por um momento a ideia moderna de “rei da Inglaterra”. Henrique II comandava o chamado domínio angevino: Inglaterra e extensos territórios no que hoje é a França, incluindo Normandia, Anjou e Aquitânia. Era uma construção política enorme e difícil de administrar, e grande parte da vida política da família acontecia dos dois lados do Canal da Mancha.</p>
+
+<p>Henrique II e Leonor tiveram vários filhos homens, entre eles Henrique, o Jovem Rei; Ricardo, futuro Ricardo Coração de Leão; Geoffrey; e João. A família era extremamente conflituosa. Os filhos mais velhos rebelaram-se contra o próprio pai, disputando territórios e autoridade. No final da vida de Henrique II, Ricardo aliou-se ao rei francês Filipe II contra ele. Portanto, as disputas familiares que posteriormente envolveriam João não eram uma anomalia: faziam parte de uma dinastia na qual território, sucessão e alianças políticas frequentemente colocavam pai contra filho e irmão contra irmão.</p>
+
+<h2 id="ricardo">2. João e Ricardo Coração de Leão</h2>
+<p>É aqui que a história real começa a se misturar fortemente com a lenda.</p>
+
+<p>Ricardo tornou-se rei em 1189. Pouco depois partiu para a Terceira Cruzada, deixando o governo inglês essencialmente nas mãos de outros. No retorno, foi capturado e mantido prisioneiro no continente. Durante a ausência e o cativeiro de Ricardo, João efetivamente conspirou contra o governo do irmão: ocupou Windsor, participou de revoltas e aproximou-se de Filipe II da França, grande adversário de Ricardo. Leonor da Aquitânia atuou para preservar a autoridade de Ricardo na Inglaterra.</p>
+
+<p>Portanto, a imagem popular do príncipe João tentando aproveitar a ausência de Ricardo para ampliar seu próprio poder tem um <strong>núcleo histórico verdadeiro</strong>.</p>
+
+<p>Mas há uma diferença importante em relação à versão de <em>Robin Hood</em>: Ricardo e João não permaneceram simplesmente como inimigos irreconciliáveis. Depois que Ricardo foi libertado em 1194, João foi derrotado politicamente e acabou reconciliado com o irmão. Quando Ricardo morreu, sem filhos legítimos, em 1199, João acabou sucedendo-o.</p>
+
+<p>A caricatura cinematográfica — Ricardo como rei perfeito e João como puro usurpador covarde — simplifica demais os dois. Ricardo era extraordinário comandante militar, mas passou grande parte de seu reinado fora da Inglaterra e exigiu enormes recursos financeiros para guerra, cruzada e resgate. João herdou, portanto, não apenas uma coroa, mas um sistema político submetido a intensas pressões financeiras e militares.</p>
+
+<h2 id="arthur">3. O problema da sucessão: João ou Arthur?</h2>
+<p>A morte de Ricardo criou uma dificuldade séria.</p>
+
+<p>João era irmão sobrevivente de Ricardo. Entretanto, Geoffrey, irmão mais velho de João, já havia morrido e deixara um filho: <strong>Arthur da Bretanha</strong>.</p>
+
+<p>A questão era, aproximadamente: deveria a sucessão passar ao irmão sobrevivente do rei ou ao filho de um irmão mais velho falecido?</p>
+
+<p>Não havia ainda um sistema sucessório inglês tão rigidamente definido quanto o que hoje imaginamos. Diferentes territórios apoiaram candidatos diferentes. João conseguiu a coroa inglesa, mas Arthur encontrou importante apoio em áreas continentais, particularmente na Bretanha e em partes do domínio angevino.</p>
+
+<p>Em 1202 ocorreu um episódio decisivo. Arthur tentou capturar sua própria avó, Leonor da Aquitânia, no castelo de Mirebeau. João reagiu rapidamente, derrotou os rebeldes e capturou Arthur.</p>
+
+<p>Depois disso veio um dos grandes mistérios do reinado.</p>
+
+<p>Arthur desapareceu em 1203.</p>
+
+<p>Há relatos medievais de que João teria assassinado pessoalmente o sobrinho, talvez lançando o corpo no Sena; outros afirmam que teria ordenado sua morte. Mas <strong>não sabemos com segurança como Arthur morreu</strong>. As circunstâncias exatas permanecem obscuras. O que pode ser dito com razoável segurança é que Arthur estava sob custódia de João e desapareceu; contemporâneos e gerações posteriores atribuíram amplamente a responsabilidade ao rei.</p>
+
+<div class="mc-mito">
+  <p><strong>Afirmação não comprovada:</strong> “João assassinou pessoalmente Arthur e jogou o corpo no Sena.”</p>
+  <p><strong>O que as fontes permitem afirmar:</strong> Arthur desapareceu enquanto estava sob custódia de João, e a suspeita de responsabilidade do rei prejudicou profundamente sua reputação.</p>
+</div>
+
+<p>Esse episódio também ajudou Filipe II da França a explorar politicamente a fragilidade de João.</p>
+
+<h2 id="franca">4. A grande catástrofe: a perda da França</h2>
+<p>O domínio angevino dependia de uma situação juridicamente curiosa: o rei da Inglaterra era soberano na Inglaterra, mas possuía muitos territórios franceses como vassalo do rei da França.</p>
+
+<p>Filipe II soube explorar essa relação.</p>
+
+<p>Entre 1203 e 1204, João perdeu grande parte dos territórios continentais herdados, especialmente <strong>Normandia e Anjou</strong>. O gigantesco domínio construído por Henrique II começou a desmoronar.</p>
+
+<p>Isso é crucial para compreender a Magna Carta.</p>
+
+<p>João queria recuperar as terras.</p>
+<p>Para recuperar as terras, precisava de exércitos.</p>
+<p>Para manter exércitos, precisava de dinheiro.</p>
+<p>Para obter dinheiro, pressionou o sistema feudal e aumentou extraordinariamente as exigências financeiras sobre seus barões.</p>
+
+<p>A crise constitucional inglesa começa, portanto, também como uma <strong>crise fiscal</strong>.</p>
+
+<p>Os barões não estavam filosoficamente reunidos discutindo democracia universal. Eles tinham queixas muito concretas contra multas, tributos, obrigações feudais, administração da justiça e exercício arbitrário do poder real.</p>
+
+<h2 id="papa">5. João contra o papa</h2>
+<p>Como se não bastasse, João abriu outra frente.</p>
+
+<p>Após a morte do arcebispo de Canterbury, surgiu uma disputa sobre seu sucessor. O papa Inocêncio III apoiou <strong>Stephen Langton</strong>; João recusou-se a aceitá-lo.</p>
+
+<p>O conflito escalou.</p>
+
+<p>Em 1208, a Inglaterra foi colocada sob interdito papal. Em 1209, João foi excomungado. Posteriormente, a pressão papal tornou-se ainda mais severa.</p>
+
+<p>Finalmente, João cedeu em 1213 e reconciliou-se com o papa.</p>
+
+<p>Há aqui uma ironia constitucional extraordinária: poucos anos depois, Inocêncio III tornar-se-ia importante aliado de João e <strong>anularia a Magna Carta</strong>, considerando-a ofensiva aos direitos do rei. A história medieval não cabe muito bem na fórmula simplista “Igreja contra rei” ou “barões contra tirania”; as alianças mudavam rapidamente conforme os interesses.</p>
+
+<h2 id="bouvines">6. 1214: o desastre de Bouvines</h2>
+<p>João ainda não desistira de recuperar os territórios franceses.</p>
+
+<p>Em 1214 organizou uma grande estratégia contra Filipe II, envolvendo aliados continentais. O plano terminou desastrosamente quando seus aliados foram derrotados na <strong>Batalha de Bouvines</strong>, em julho de 1214.</p>
+
+<p>Esse evento é fundamental.</p>
+
+<p>João havia extraído enormes recursos de seus súditos para tentar recuperar o império continental e, no final, fracassara.</p>
+
+<p>Imagine a posição política:</p>
+
+<p>João havia perdido territórios. Cobrara pesadamente dos barões para recuperá-los. Conflitara com a Igreja. Criara inimigos pessoais. E, depois de todo esse custo, perdera novamente.</p>
+
+<p>Sua autoridade política despencou.</p>
+
+<h2 id="1215">7. 1215: os barões se revoltam</h2>
+<p>No começo de 1215, os barões começaram a organizar suas reivindicações. Em maio entraram abertamente em rebelião. Em 17 de maio tomaram Londres. João ficou sem condições de simplesmente ignorá-los.</p>
+
+<p>As partes encontraram-se em <strong>Runnymede</strong>.</p>
+
+<p>Em 15 de junho de 1215, João autorizou que seu selo fosse colocado naquilo que posteriormente chamaríamos de <strong>Magna Carta</strong>. Tecnicamente, portanto, é melhor dizer que João <strong>selou</strong> ou autorizou a selagem da Carta, e não simplesmente que a “assinou”.</p>
+
+<p>A Magna Carta era inicialmente um acordo de paz entre um rei e barões rebeldes.</p>
+
+<p>Não funcionou.</p>
+
+<p>Pouco tempo depois, João procurou o papa, que anulou o documento. Rei e barões voltaram à guerra. Os rebeldes chegaram ao ponto extraordinário de oferecer a coroa inglesa ao príncipe Luís da França.</p>
+
+<p>João morreu em outubro de 1216, durante essa guerra civil.</p>
+
+<p>Seu filho Henrique III tinha apenas nove anos.</p>
+
+<p>E foi justamente a fragilidade do novo governo que salvou a Magna Carta: os regentes de Henrique reeditaram uma versão da Carta para atrair os barões de volta à fidelidade do jovem rei. Ela seria reeditada novamente e, aos poucos, deixaria de ser somente o fracassado tratado de paz de 1215 para adquirir uma trajetória constitucional completamente nova.</p>
+
+<h2 id="mitos">8. João Sem Terra: monstro ou rei incompreendido?</h2>
+<p>Aqui vale fugir de dois extremos.</p>
+
+<p>A velha imagem de João como simplesmente “o pior rei da Inglaterra” deve muito aos cronistas hostis, à tradição posterior, a Shakespeare e, finalmente, às adaptações de <em>Robin Hood</em>.</p>
+
+<p>Mas também seria revisionismo excessivo transformá-lo em pobre vítima da propaganda.</p>
+
+<p>João era uma figura contraditória: podia ser um administrador capaz, interessado em direito e governo, mas era profundamente desconfiado, inspirava pouca confiança, pressionou financeiramente seus súditos, foi politicamente implacável e acumulou inimigos.</p>
+
+<p>É justamente essa combinação que o torna historicamente fascinante.</p>
+
+<p>Ele não era um tolo incapaz.</p>
+
+<p>Ao contrário: tinha capacidades administrativas consideráveis.</p>
+
+<p>Seu fracasso foi em larga medida <strong>político</strong>. Um monarca medieval dependia não apenas de instrumentos coercitivos, mas de redes pessoais de fidelidade e confiança. João conseguiu transformar muitos daqueles de quem dependia em adversários.</p>
+
+<div class="mc-mito">
+  <p><strong>“João recebeu o apelido Sem Terra porque era pobre.”</strong><br>Não. A origem relaciona-se sobretudo à sua posição de filho mais novo e à falta inicial de grandes territórios próprios. Depois recebeu terras e senhorios.</p>
+  <p><strong>“João tentou tomar o trono enquanto Ricardo estava nas Cruzadas.”</strong><br>Em essência, sim: conspirou e rebelou-se contra a administração de Ricardo durante sua ausência e cativeiro. Mas depois houve reconciliação.</p>
+  <p><strong>“Ricardo era o rei perfeito e João era apenas o vilão.”</strong><br>Não. É uma construção posterior muito simplificada.</p>
+  <p><strong>“João matou Arthur da Bretanha.”</strong><br>É possível que João tenha sido responsável, mas as circunstâncias precisas da morte são desconhecidas. Não devemos afirmar como fato que ele pessoalmente o matou.</p>
+  <p><strong>“Robin Hood lutou contra o príncipe João enquanto Ricardo estava na Cruzada.”</strong><br>Isso pertence fundamentalmente à tradição literária posterior. Há elementos históricos reais — ausência de Ricardo, ambição de João e conflitos internos — que foram incorporados pela lenda, mas não há evidência histórica da narrativa clássica de Robin Hood.</p>
+  <p><strong>“João criou a Magna Carta porque acreditava em liberdade.”</strong><br>Não. Ele a aceitou sob enorme pressão política e militar e procurou anulá-la pouco depois.</p>
+  <p><strong>“A Magna Carta instaurou uma democracia.”</strong><br>Não. Era majoritariamente um documento pertencente ao mundo feudal e voltado às queixas de elites e instituições específicas. Seu significado constitucional universal foi sendo construído posteriormente.</p>
+</div>
+
+<p>E talvez essa seja a parte mais interessante de toda a história: <strong>a importância histórica da Magna Carta tornou-se muito maior do que a intenção política imediata daqueles que a produziram.</strong></p>
+
+<div class="mc-proxima" id="proxima">
+  <h2>Próxima etapa — a Carta propriamente dita</h2>
+  <p>O próximo bloco deste estudo será dedicado à leitura da Magna Carta de 1215. O objetivo será examinar o que efetivamente está escrito no documento, distinguir cláusulas circunstanciais do mundo feudal das disposições que adquiriram relevância constitucional posterior e, ao final, formular uma conclusão enxuta sobre sua relação com o constitucionalismo.</p>
+</div>
+
+<div class="mc-fontes" id="fontes">
+  <h2>Fontes e leituras recomendadas</h2>
+  <p><a href="https://www.royal.uk/richard-i" target="_blank" rel="noopener">The Royal Family — Richard I</a></p>
+  <p><a href="https://www.royal.uk/john-lackland" target="_blank" rel="noopener">The Royal Family — John Lackland</a></p>
+  <p><a href="https://www.english-heritage.org.uk/visit/places/dover-castle/history-and-stories/angevin-empire/" target="_blank" rel="noopener">English Heritage — The Angevin Empire</a></p>
+  <p><a href="https://www.parliament.uk/about/living-heritage/evolutionofparliament/originsofparliament/birthofparliament/overview/magnacarta/magnacartahow/" target="_blank" rel="noopener">UK Parliament — Magna Carta: how did it come about?</a></p>
+  <p><a href="https://www.parliament.uk/about/living-heritage/evolutionofparliament/originsofparliament/birthofparliament/overview/magnacarta/magnacartalegacy/" target="_blank" rel="noopener">UK Parliament — Magna Carta: legacy</a></p>
+  <p><a href="https://www.parliament.uk/globalassets/documents/Magna-Carta-and-Parliament-Booklet.pdf" target="_blank" rel="noopener">David Carpenter — Magna Carta and the Development of Parliament</a></p>
+</div>
+
+<div class="mc-relacionado">
+  <strong>Leitura relacionada:</strong> <a href="/direitos-humanos/historia-conceito-direitos-humanos.html">A história do conceito de direitos humanos</a>.
+</div>
+
+<div class="assinatura-texto">
+  <p>João Victor Brando Novais</p>
+  <p>Notas de um Estudante de Direito · São Paulo, 2026</p>
+</div>
+
+</article>
+</section>
+
+<p style="text-align:center;margin:-45px 0 70px;"><a href="/filosofia/estado-e-poder/direito-constitucional/" style="color:#174d37;text-decoration:none;border-bottom:1px solid rgba(23,77,55,.35);">Voltar para Direito Constitucional</a></p>
+
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
