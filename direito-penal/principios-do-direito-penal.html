@@ -4,188 +4,354 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Princípios do Direito Penal | Notas de um Estudante de Direito</title>
-<meta name="description" content="Carta de princípios fundamentais do Direito Penal brasileiro: legalidade, anterioridade, culpabilidade, humanidade, proporcionalidade, intervenção mínima, ofensividade e outras garantias.">
+<meta name="description" content="Carta solene dos princípios fundamentais do Direito Penal brasileiro: garantias, limites constitucionais e cânones de contenção do poder punitivo.">
 <link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --carta-bg:#171614;
-  --carta-bg-2:#26211b;
-  --papel:#f4ead3;
-  --papel-claro:#fff9e9;
-  --papel-sombra:#dfcda8;
-  --tinta:#241b13;
-  --tinta-suave:#625342;
-  --ouro:#a97827;
-  --ouro-claro:#d9b86f;
-  --vinho:#6f1f28;
-  --linha:#b89250;
+  --noite:#100a16;
+  --purpura:#281633;
+  --purpura-profundo:#1d1027;
+  --purpura-claro:#3a2149;
+  --marfim:#f2eadf;
+  --marfim-suave:#d8cbbd;
+  --ouro:#c6a15b;
+  --ouro-suave:#8f7242;
+  --ameixa:#b184a6;
+  --linha:rgba(198,161,91,.48);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  color:var(--tinta);
-  background:
-    radial-gradient(circle at 50% 0%,rgba(217,184,111,.16),transparent 28%),
-    radial-gradient(circle at 10% 40%,rgba(111,31,40,.13),transparent 24%),
-    radial-gradient(circle at 90% 70%,rgba(169,120,39,.10),transparent 25%),
-    linear-gradient(180deg,#161513 0%,#24201b 48%,#12110f 100%);
-}
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.18;
-  background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
-  background-size:8px 8px;
+  color:var(--marfim);
+  background:var(--noite);
+  font-family:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  font-size:18px;
+  line-height:1.72;
 }
 header{
-  background:rgba(20,18,15,.96)!important;
-  border-bottom:1px solid rgba(217,184,111,.34)!important;
+  background:rgba(16,10,22,.97)!important;
+  border-bottom:1px solid rgba(198,161,91,.28)!important;
   backdrop-filter:blur(8px);
 }
-.brand,.brand a,.menu-links a{color:#f5ead4!important}
-.menu-botao{border-color:rgba(217,184,111,.55)!important;color:#e5c786!important}
-.menu-links{background:#171614!important;border-right:1px solid rgba(217,184,111,.34)!important}
-.menu-fechar{color:#f5ead4!important}
-main.wrap{max-width:1220px;position:relative;z-index:1;padding-top:44px;padding-bottom:72px}
+.brand,.brand a,.menu-links a{color:#f3ecdf!important}
+.menu-botao{border-color:rgba(198,161,91,.58)!important;color:#d6b56f!important}
+.menu-links{background:#140c1c!important;border-right:1px solid rgba(198,161,91,.28)!important}
+.menu-fechar{color:#f3ecdf!important}
+main.wrap{
+  max-width:1240px;
+  position:relative;
+  z-index:1;
+  padding-top:58px;
+  padding-bottom:78px;
+}
 .carta{
   position:relative;
-  max-width:1050px;
+  max-width:1080px;
   margin:0 auto;
-  padding:clamp(34px,6vw,78px);
-  background:
-    radial-gradient(circle at 20% 10%,rgba(255,255,255,.76),transparent 26%),
-    linear-gradient(135deg,rgba(255,255,255,.42),transparent 38%),
-    var(--papel);
-  border:1px solid #6f5529;
+  padding:clamp(46px,7vw,88px);
+  background:var(--purpura);
+  border:1px solid var(--ouro);
   box-shadow:
-    0 0 0 7px #2b2115,
-    0 0 0 9px var(--ouro),
-    0 0 0 14px #17120c,
-    0 28px 80px rgba(0,0,0,.55);
+    0 0 0 7px var(--purpura-profundo),
+    0 0 0 8px rgba(198,161,91,.56),
+    0 0 0 15px #120b19,
+    0 30px 80px rgba(0,0,0,.56);
+  overflow:hidden;
 }
-.carta::before,.carta::after{
+.carta::before{
+  content:"";
+  position:absolute;
+  inset:20px;
+  border:1px solid rgba(198,161,91,.55);
+  pointer-events:none;
+}
+.carta::after{
+  content:"";
+  position:absolute;
+  inset:28px;
+  border:1px solid rgba(198,161,91,.18);
+  pointer-events:none;
+}
+.filete-superior,
+.filete-inferior{
+  position:relative;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  color:var(--ouro);
+  margin:0 auto;
+  max-width:760px;
+}
+.filete-superior::before,.filete-superior::after,
+.filete-inferior::before,.filete-inferior::after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:var(--linha);
+}
+.filete-superior span,.filete-inferior span{
+  font-family:Georgia,serif;
+  font-size:22px;
+  line-height:1;
+  color:var(--ouro);
+}
+.filete-inferior{margin-top:42px}
+.cabecalho-carta{
+  position:relative;
+  z-index:3;
+  text-align:center;
+  padding:26px 0 44px;
+}
+.emblema{
+  position:relative;
+  width:132px;
+  height:132px;
+  margin:0 auto 26px;
+  display:grid;
+  place-items:center;
+}
+.emblema::before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border:1px solid rgba(198,161,91,.62);
+  border-radius:50%;
+}
+.emblema::after{
   content:"";
   position:absolute;
   inset:18px;
-  pointer-events:none;
-  border:1px solid rgba(111,31,40,.42);
+  border:1px solid rgba(198,161,91,.22);
+  border-radius:50%;
 }
-.carta::after{
-  inset:25px;
-  border-color:rgba(169,120,39,.42);
+.emblema img{
+  position:relative;
+  z-index:2;
+  width:82px;
+  max-height:82px;
+  object-fit:contain;
+  filter:sepia(.15) saturate(.72) brightness(1.32);
 }
-.canto{position:absolute;width:74px;height:74px;z-index:2;pointer-events:none}
-.canto::before,.canto::after{content:"";position:absolute;background:var(--ouro)}
-.canto::before{width:58px;height:2px;top:0;left:0}
-.canto::after{width:2px;height:58px;top:0;left:0}
-.canto span{position:absolute;left:10px;top:10px;width:26px;height:26px;border:1px solid var(--vinho);transform:rotate(45deg)}
-.canto.tl{top:35px;left:35px}
-.canto.tr{top:35px;right:35px;transform:rotate(90deg)}
-.canto.br{bottom:35px;right:35px;transform:rotate(180deg)}
-.canto.bl{bottom:35px;left:35px;transform:rotate(270deg)}
-.cabecalho-carta{text-align:center;position:relative;z-index:3;padding:10px 0 34px}
-.selo{
-  width:82px;height:82px;margin:0 auto 22px;border:1px solid var(--ouro);
-  border-radius:50%;display:grid;place-items:center;position:relative;
-  box-shadow:0 0 0 5px rgba(169,120,39,.10);
+.legenda-emblema{
+  margin:0 0 24px;
+  font-family:"Cinzel",Georgia,serif;
+  color:var(--ouro);
+  font-size:10px;
+  letter-spacing:3.4px;
+  text-transform:uppercase;
 }
-.selo::before{content:"§";font-size:45px;line-height:1;color:var(--vinho);font-weight:bold}
-.selo::after{content:"LEX · LIBERTAS · DIGNITAS";position:absolute;width:150px;bottom:-27px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:1.5px;color:var(--ouro);white-space:nowrap}
-.supra{margin:34px 0 10px;text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--vinho);font-weight:bold}
+.supra{
+  margin:0 0 14px;
+  font-family:"Cinzel",Georgia,serif;
+  color:var(--ameixa);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:3.6px;
+  text-transform:uppercase;
+}
 h1{
   margin:0 auto;
-  max-width:850px;
-  font-size:clamp(38px,6vw,68px);
-  line-height:1.02;
-  font-weight:normal;
-  letter-spacing:.4px;
-  color:#21170f;
+  max-width:870px;
+  color:var(--marfim);
+  font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  font-size:clamp(46px,7vw,78px);
+  font-weight:500;
+  line-height:.98;
+  letter-spacing:.2px;
 }
-.subtitulo{max-width:780px;margin:20px auto 0;font-size:18px;line-height:1.72;color:var(--tinta-suave)}
-.divisor{display:flex;align-items:center;gap:14px;justify-content:center;margin:30px auto 0;color:var(--ouro)}
-.divisor::before,.divisor::after{content:"";height:1px;width:150px;background:linear-gradient(90deg,transparent,var(--ouro))}
-.divisor::after{transform:scaleX(-1)}
-.divisor span{font-size:22px;color:var(--vinho)}
+.subtitulo{
+  max-width:760px;
+  margin:24px auto 0;
+  color:var(--marfim-suave);
+  font-size:20px;
+  line-height:1.55;
+  font-style:italic;
+}
+.ornamento-central{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  margin:30px auto 0;
+  color:var(--ouro);
+}
+.ornamento-central::before,.ornamento-central::after{
+  content:"";
+  width:112px;
+  height:1px;
+  background:rgba(198,161,91,.42);
+}
+.ornamento-central span{font-size:27px;line-height:1}
 .preambulo{
-  position:relative;z-index:3;
-  max-width:850px;margin:4px auto 46px;padding:30px 34px;
-  border-top:1px solid rgba(169,120,39,.48);
-  border-bottom:1px solid rgba(169,120,39,.48);
+  position:relative;
+  z-index:3;
+  max-width:850px;
+  margin:0 auto 48px;
+  padding:32px 40px;
+  border-top:1px solid rgba(198,161,91,.38);
+  border-bottom:1px solid rgba(198,161,91,.38);
+  color:#e8ded2;
+  font-size:19px;
+  line-height:1.86;
   text-align:justify;
-  font-size:17.5px;line-height:1.9;color:#3a2c20;
 }
-.preambulo::first-letter{float:left;font-size:62px;line-height:.8;padding:10px 9px 0 0;color:var(--vinho);font-weight:bold}
-.nota-rigor{
-  position:relative;z-index:3;max-width:850px;margin:0 auto 46px;padding:18px 22px;
-  background:rgba(255,249,233,.56);border:1px solid rgba(169,120,39,.42);
-  color:#554637;font-size:14.5px;line-height:1.65;
+.preambulo::first-letter{
+  float:left;
+  padding:8px 10px 0 0;
+  color:var(--ouro);
+  font-family:"Cinzel",Georgia,serif;
+  font-size:58px;
+  font-weight:500;
+  line-height:.78;
 }
-.nota-rigor strong{color:var(--vinho)}
-.mandamentos{position:relative;z-index:3;max-width:880px;margin:0 auto}
+.mandamentos{
+  position:relative;
+  z-index:3;
+  max-width:900px;
+  margin:0 auto;
+}
 .principio{
-  display:grid;grid-template-columns:82px 1fr;gap:26px;
-  padding:32px 0;border-top:1px solid rgba(104,79,42,.24);
+  display:grid;
+  grid-template-columns:92px 1fr;
+  gap:30px;
+  padding:34px 0 38px;
+  border-top:1px solid rgba(198,161,91,.24);
 }
 .principio:first-child{border-top:0}
 .romano{
-  width:68px;height:68px;border:1px solid rgba(169,120,39,.68);
-  display:grid;place-items:center;
-  color:var(--vinho);font-size:20px;font-weight:bold;letter-spacing:1px;
-  background:rgba(255,249,233,.38);
-  box-shadow:inset 0 0 0 4px rgba(169,120,39,.08);
-  transform:rotate(45deg);
-  margin-top:6px;
+  position:relative;
+  width:76px;
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--ouro);
+  font-family:"Cinzel",Georgia,serif;
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:1px;
+  border-top:1px solid rgba(198,161,91,.68);
+  border-bottom:1px solid rgba(198,161,91,.68);
+  margin-top:4px;
 }
-.romano span{transform:rotate(-45deg)}
-.principio h2{margin:0 0 8px;font-size:27px;line-height:1.18;color:#2b1e14;font-weight:normal}
-.maxima{margin:0 0 12px;color:var(--vinho);font-size:14px;letter-spacing:.5px;font-style:italic}
-.principio p{margin:0;color:#4b3d30;font-size:16.5px;line-height:1.78;text-align:justify}
-.base{display:block;margin-top:10px;color:#75614b;font-size:13.5px;line-height:1.55}
-.base strong{color:#5e4421}
+.romano::before,.romano::after{
+  content:"";
+  position:absolute;
+  width:22px;
+  height:1px;
+  background:rgba(198,161,91,.44);
+}
+.romano::before{left:-9px;top:18px;transform:rotate(-48deg)}
+.romano::after{right:-9px;bottom:18px;transform:rotate(-48deg)}
+.romano span{display:block}
+.principio h2{
+  margin:0 0 8px;
+  color:var(--marfim);
+  font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  font-size:31px;
+  font-weight:500;
+  line-height:1.12;
+}
+.maxima{
+  margin:0 0 13px;
+  color:var(--ameixa);
+  font-size:16px;
+  letter-spacing:.25px;
+  font-style:italic;
+}
+.principio p{
+  margin:0;
+  color:#ded2c7;
+  font-size:18px;
+  line-height:1.72;
+  text-align:justify;
+}
+.base{
+  display:block;
+  margin-top:11px;
+  color:#bdaea1;
+  font-size:14.5px;
+  line-height:1.55;
+}
+.base strong{color:#d2b476;font-weight:500}
 .fecho{
-  position:relative;z-index:3;max-width:850px;margin:46px auto 0;padding:34px 0 6px;
-  border-top:2px double rgba(169,120,39,.56);text-align:center;
+  position:relative;
+  z-index:3;
+  max-width:850px;
+  margin:52px auto 0;
+  padding:38px 22px 10px;
+  border-top:1px solid rgba(198,161,91,.46);
+  text-align:center;
 }
-.fecho h2{margin:0 0 14px;font-size:30px;font-weight:normal;color:#2b1e14}
-.fecho p{max-width:760px;margin:0 auto;color:#514334;font-size:17px;line-height:1.8}
-.fontes{
-  position:relative;z-index:3;max-width:850px;margin:42px auto 0;padding:25px 28px;
-  border:1px solid rgba(169,120,39,.38);background:rgba(255,249,233,.48);
+.fecho::before{
+  content:"❦";
+  position:absolute;
+  top:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:0 16px;
+  background:var(--purpura);
+  color:var(--ouro);
+  font-size:27px;
 }
-.fontes h2{margin:0 0 14px;font-size:20px;color:var(--vinho);text-transform:uppercase;letter-spacing:1.3px}
-.fontes p{margin:8px 0;font-size:14px;line-height:1.65;color:#5b4a39;text-align:left}
-.fontes a{color:#5b351e;text-decoration:none;border-bottom:1px solid rgba(91,53,30,.35)}
-.assinatura-carta{position:relative;z-index:3;margin:38px auto 0;text-align:center;color:#705d48}
-.assinatura-carta p{margin:3px 0;font-size:14px}
-.retorno{margin:34px auto 0;text-align:center}
-.retorno a{color:#e6cf9c;text-decoration:none;border-bottom:1px solid rgba(230,207,156,.46);font-size:15px}
+.fecho h2{
+  margin:0 0 14px;
+  color:var(--marfim);
+  font-family:"Cinzel",Georgia,serif;
+  font-size:20px;
+  font-weight:500;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+.fecho p{
+  max-width:760px;
+  margin:0 auto;
+  color:#d9cec3;
+  font-size:18px;
+  line-height:1.78;
+}
+.retorno{margin:38px auto 0;text-align:center}
+.retorno a{
+  color:#d8c08b;
+  text-decoration:none;
+  border-bottom:1px solid rgba(216,192,139,.42);
+  font-size:16px;
+}
 @media(max-width:760px){
-  main.wrap{padding:24px 16px 52px}
-  .carta{padding:54px 28px;box-shadow:0 0 0 4px #2b2115,0 0 0 6px var(--ouro),0 18px 50px rgba(0,0,0,.5)}
-  .carta::before{inset:12px}.carta::after{inset:17px}
-  .canto{display:none}
-  .principio{grid-template-columns:1fr;gap:14px;padding:28px 0}
-  .romano{width:56px;height:56px;font-size:17px;margin-left:8px}
-  .principio h2{font-size:24px}
-  .principio p{font-size:16px;text-align:left}
-  .preambulo{padding:24px 4px;text-align:left}
-  .nota-rigor{padding:16px}
-  .fontes{padding:20px 18px}
+  main.wrap{padding:32px 18px 58px}
+  .carta{
+    padding:56px 30px;
+    box-shadow:0 0 0 4px var(--purpura-profundo),0 0 0 5px rgba(198,161,91,.55),0 16px 46px rgba(0,0,0,.5);
+  }
+  .carta::before{inset:12px}
+  .carta::after{inset:18px}
+  .emblema{width:108px;height:108px}
+  .emblema img{width:66px;max-height:66px}
+  .legenda-emblema{letter-spacing:2.2px}
+  .principio{grid-template-columns:1fr;gap:12px;padding:29px 0 32px}
+  .romano{width:64px;min-height:56px;font-size:16px}
+  .principio h2{font-size:28px}
+  .principio p{font-size:17px;text-align:left}
+  .preambulo{padding:28px 4px;font-size:18px;text-align:left}
+  .subtitulo{font-size:18px}
+  .ornamento-central::before,.ornamento-central::after{width:70px}
 }
 @media print{
-  body{background:#fff!important}
-  body::before,#header-container,.retorno{display:none!important}
+  body{background:#fff!important;color:#111!important}
+  #header-container,.retorno{display:none!important}
   main.wrap{padding:0!important;max-width:none!important}
-  .carta{box-shadow:none!important;border:2px solid #000!important;padding:1.6cm!important;background:#fff!important}
+  .carta{box-shadow:none!important;border:2px solid #333!important;background:#fff!important;color:#111!important;padding:1.6cm!important}
   .carta::before,.carta::after{border-color:#777!important}
+  h1,.principio h2,.fecho h2,.principio p,.preambulo,.fecho p{color:#111!important}
+  .maxima,.base,.supra,.legenda-emblema,.romano{color:#444!important}
   .principio{break-inside:avoid}
-  .romano{color:#000!important;border-color:#555!important}
-  .principio h2,.maxima,.fontes h2{color:#000!important}
+  .fecho::before{background:#fff!important;color:#333!important}
 }
 </style>
 </head>
@@ -193,22 +359,22 @@ h1{
 <div id="header-container"></div>
 <main class="wrap">
   <article class="carta">
-    <div class="canto tl"><span></span></div><div class="canto tr"><span></span></div>
-    <div class="canto br"><span></span></div><div class="canto bl"><span></span></div>
+    <div class="filete-superior" aria-hidden="true"><span>❦</span></div>
 
     <header class="cabecalho-carta">
-      <div class="selo" aria-hidden="true"></div>
+      <div class="emblema">
+        <img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor">
+      </div>
+      <p class="legenda-emblema">Lex · Libertas · Dignitas</p>
       <p class="supra">Carta de garantias · Direito Penal</p>
       <h1>Princípios Fundamentais do Direito Penal</h1>
       <p class="subtitulo">Cânones de contenção do poder punitivo, proteção da liberdade e legitimação constitucional da intervenção penal.</p>
-      <div class="divisor" aria-hidden="true"><span>◆</span></div>
+      <div class="ornamento-central" aria-hidden="true"><span>❧</span></div>
     </header>
 
     <section class="preambulo">
       O Direito Penal não se legitima pela mera capacidade do Estado de punir. Legitima-se, antes, pelos limites que o próprio Direito impõe ao poder de punir. Em um Estado Democrático de Direito, a pena somente pode nascer de lei anterior, incidir sobre fato pessoalmente imputável, proteger bens juridicamente relevantes, respeitar a dignidade humana e conservar proporção com a gravidade do injusto e a culpabilidade do agente. Os princípios a seguir não constituem ornamento retórico: formam uma arquitetura de garantias destinada a impedir o arbítrio, racionalizar a criminalização e recordar que a liberdade é a regra, enquanto a coerção penal exige fundamento jurídico estrito.
     </section>
-
-    <aside class="nota-rigor"><strong>Nota de rigor.</strong> Não existe, na doutrina, catálogo único e fechado de “todos” os princípios penais. Alguns estão expressamente positivados na Constituição e no Código Penal; outros são construções dogmáticas ou jurisprudenciais extraídas do Estado de Direito, da dignidade humana e do sistema de direitos fundamentais. Esta carta reúne os princípios centrais do Direito Penal brasileiro e indica, em cada item, sua principal base normativa ou dogmática.</aside>
 
     <section class="mandamentos" aria-label="Princípios fundamentais do Direito Penal">
       <div class="principio">
@@ -317,15 +483,7 @@ h1{
       <p>Estes princípios não enfraquecem o Direito Penal: conferem-lhe legitimidade. A força de um sistema penal democrático não se mede pela facilidade com que pune, mas pela fidelidade com que distingue culpa de suspeita, lesão de irrelevância, necessidade de excesso e justiça de arbítrio.</p>
     </section>
 
-    <section class="fontes">
-      <h2>Fundamentos para consulta</h2>
-      <p><strong>Constituição da República Federativa do Brasil de 1988:</strong> especialmente arts. 1º, III, e 5º, III, XXXVII, XXXIX a XLIX e LIII a LVII. <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Texto oficial — Presidência da República</a>.</p>
-      <p><strong>Código Penal — Decreto-Lei nº 2.848/1940:</strong> especialmente arts. 1º, 2º, 18, 19, 29 e 59. <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm" target="_blank" rel="noopener">Texto compilado oficial — Presidência da República</a>.</p>
-      <p><strong>Doutrina de referência:</strong> Cesare Beccaria; Luigi Ferrajoli; Claus Roxin; Eugenio Raúl Zaffaroni e José Henrique Pierangeli; Cezar Roberto Bitencourt; Luiz Regis Prado; Rogério Greco; Guilherme de Souza Nucci; Juarez Cirino dos Santos. As formulações variam entre autores; por isso, a página distingue princípios expressos de construções dogmáticas.</p>
-      <p><strong>Material de estudo:</strong> a legalidade como <em>nullum crimen sine lege</em> e a função garantidora do tipo penal também aparecem no material de Teoria do Crime utilizado neste eixo de estudo.</p>
-    </section>
-
-    <div class="assinatura-carta"><p>Notas de um Estudante de Direito</p><p>João Victor Brando Novais · São Paulo, 2026</p></div>
+    <div class="filete-inferior" aria-hidden="true"><span>❦</span></div>
   </article>
   <div class="retorno"><a href="/direito-penal/">← Voltar ao eixo de Direito Penal</a></div>
 </main>
