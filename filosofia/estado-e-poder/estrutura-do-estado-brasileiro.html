@@ -57,11 +57,57 @@ main.wrap{max-width:1220px;position:relative;z-index:1}
 .me-subtitle{max-width:900px;margin:22px auto 0;color:var(--me-muted);font-size:20px;line-height:1.72}
 .me-breadcrumb{margin:24px 0 0;color:var(--me-muted);font-size:14px}
 .me-breadcrumb a{color:var(--me-gold-soft);text-decoration:none;border-bottom:1px solid rgba(240,211,139,.55)}
-.me-nav{position:sticky;top:64px;z-index:10;margin:0;padding:13px 0;border-bottom:1px solid var(--me-line);background:rgba(11,13,16,.91);backdrop-filter:blur(10px)}
-.me-nav-inner{display:flex;gap:8px;overflow:auto;padding-bottom:2px;scrollbar-width:thin}
-.me-nav a{flex:0 0 auto;padding:7px 11px;border:1px solid var(--me-softline);color:var(--me-muted);text-decoration:none;font-size:13px;background:rgba(255,255,255,.025)}
-.me-nav a:hover{color:var(--me-gold-soft);border-color:var(--me-line)}
-.me-section{padding:50px 0;border-bottom:1px solid rgba(255,255,255,.055)}
+.me-layout{
+  display:grid;
+  grid-template-columns:255px minmax(0,1fr);
+  gap:28px;
+  align-items:start;
+  padding:48px 0 72px;
+}
+.me-nav{
+  position:sticky;
+  top:92px;
+  align-self:start;
+  max-height:calc(100vh - 120px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  padding:18px;
+  border:1px solid var(--me-line);
+  background:linear-gradient(180deg,rgba(18,23,29,.98),rgba(10,13,16,.98));
+  box-shadow:0 18px 42px rgba(0,0,0,.26);
+  scrollbar-width:thin;
+  scrollbar-color:var(--me-gold) rgba(255,255,255,.05);
+}
+.me-nav::-webkit-scrollbar{width:8px}
+.me-nav::-webkit-scrollbar-track{background:rgba(255,255,255,.04)}
+.me-nav::-webkit-scrollbar-thumb{background:var(--me-gold);border:2px solid #10151a}
+.me-nav h2{
+  margin:0 0 12px;
+  padding-bottom:11px;
+  border-bottom:1px solid var(--me-line);
+  color:var(--me-gold-soft);
+  font-size:17px;
+}
+.me-nav a{
+  display:block;
+  padding:9px 10px;
+  margin:7px 0;
+  border:1px solid var(--me-softline);
+  color:var(--me-muted);
+  text-decoration:none;
+  font-size:13px;
+  line-height:1.35;
+  background:rgba(255,255,255,.025);
+  transition:background .15s ease,border-color .15s ease,color .15s ease,transform .15s ease;
+}
+.me-nav a:hover{
+  color:#fff3cf;
+  border-color:var(--me-line);
+  background:rgba(215,177,95,.08);
+  transform:translateX(2px);
+}
+.me-content{min-width:0}
+.me-section{padding:0 0 50px;margin-bottom:50px;border-bottom:1px solid rgba(255,255,255,.055)}
 .me-section h2{margin:0 0 12px;font-size:32px;color:#fff7df;line-height:1.2}
 .me-section h3{margin:26px 0 10px;font-size:22px;color:var(--me-gold-soft)}
 .me-section p{color:var(--me-muted);font-size:17px;line-height:1.76}
@@ -110,13 +156,24 @@ main.wrap{max-width:1220px;position:relative;z-index:1}
 .me-source a{color:var(--me-gold-soft)}
 .me-back{display:inline-block;margin-top:24px;color:var(--me-gold-soft);text-decoration:none;border-bottom:1px solid rgba(240,211,139,.55)}
 .me-footer-note{margin-top:34px;text-align:center;color:var(--me-muted);font-size:14px}
-@media(max-width:860px){
+@media(max-width:900px){
+  .me-layout{grid-template-columns:1fr;gap:22px;padding-top:30px}
+  .me-nav{
+    position:static;
+    max-height:none;
+    overflow:visible;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+  }
+  .me-nav h2{grid-column:1 / -1;margin-bottom:4px}
+  .me-nav a{margin:0}
   .me-card,.me-card.wide{grid-column:span 12}
   .me-triad{grid-template-columns:1fr}
-  .me-nav{top:56px}
   .me-hero{padding-top:58px}
 }
 @media(max-width:600px){
+  .me-nav{grid-template-columns:1fr}
   .me-lead{padding:22px 20px}
   .me-section h2{font-size:28px}
   .me-flow{font-size:12.5px;padding:18px}
@@ -135,8 +192,9 @@ main.wrap{max-width:1220px;position:relative;z-index:1}
     <p class="me-breadcrumb"><a href="/filosofia/estado-e-poder.html">Estado e Poder</a> &gt; Estrutura do Estado Brasileiro</p>
   </section>
 
-  <nav class="me-nav" aria-label="Navegação interna do mapa institucional">
-    <div class="me-nav-inner">
+  <div class="me-layout">
+    <aside class="me-nav" aria-label="Navegação interna do mapa institucional">
+      <h2>Navegação</h2>
       <a href="#chaves">Chaves de leitura</a>
       <a href="#federacao">Federação</a>
       <a href="#poderes">Poderes</a>
@@ -149,9 +207,10 @@ main.wrap{max-width:1220px;position:relative;z-index:1}
       <a href="#financeiro">Sistema financeiro</a>
       <a href="#privados">Privados e paraestatais</a>
       <a href="#quadro">Quadro geral</a>
-    </div>
-  </nav>
+      <a href="#fontes">Fontes essenciais</a>
+    </aside>
 
+    <div class="me-content">
   <section class="me-section" id="chaves">
     <div class="me-lead">
       <strong>Primeira regra: não tente desenhar o Estado brasileiro como uma única pirâmide.</strong>
@@ -588,6 +647,8 @@ CONTROLE INTERNO DO EXECUTIVO FEDERAL
     <a class="me-back" href="/filosofia/estado-e-poder.html">Voltar para Estado e Poder</a>
     <div class="me-footer-note">João Victor Brando Novais · São Paulo, 2026</div>
   </section>
+    </div>
+  </div>
 </main>
 
 <script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
