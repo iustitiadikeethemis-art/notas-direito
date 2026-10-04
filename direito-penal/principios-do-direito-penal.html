@@ -210,6 +210,75 @@ h1{
   font-weight:500;
   line-height:.78;
 }
+.sumario-carta{
+  position:relative;
+  z-index:3;
+  max-width:900px;
+  margin:0 auto 52px;
+  padding:26px 0 30px;
+  border-bottom:1px solid rgba(198,161,91,.25);
+}
+.sumario-carta header{
+  padding:0 0 18px;
+  background:transparent!important;
+  border:0!important;
+  backdrop-filter:none;
+  text-align:center;
+}
+.sumario-carta .kicker{
+  display:block;
+  margin-bottom:5px;
+  color:var(--ameixa);
+  font-family:"Cinzel",Georgia,serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.sumario-carta h2{
+  margin:0;
+  color:var(--marfim);
+  font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  font-size:27px;
+  font-weight:500;
+}
+.sumario-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid rgba(198,161,91,.34);
+  border-bottom:1px solid rgba(198,161,91,.34);
+}
+.sumario-grid a{
+  min-height:92px;
+  padding:18px 16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  color:#dcd1c6;
+  text-align:center;
+  text-decoration:none;
+  border-right:1px solid rgba(198,161,91,.22);
+  transition:background .18s ease,color .18s ease;
+}
+.sumario-grid a:last-child{border-right:0}
+.sumario-grid a:hover,.sumario-grid a:focus-visible{
+  background:rgba(198,161,91,.07);
+  color:#fff8ed;
+  outline:none;
+}
+.sumario-grid b{
+  color:var(--ouro);
+  font-family:"Cinzel",Georgia,serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.6px;
+}
+.sumario-grid span{
+  font-size:15px;
+  line-height:1.25;
+}
 .mandamentos{
   position:relative;
   z-index:3;
@@ -224,6 +293,50 @@ h1{
   border-top:1px solid rgba(198,161,91,.24);
 }
 .principio:first-child{border-top:0}
+.grupo{
+  scroll-margin-top:92px;
+  position:relative;
+  padding:54px 0 22px;
+  text-align:center;
+}
+.grupo:first-child{padding-top:18px}
+.grupo::before{
+  content:"";
+  position:absolute;
+  top:34px;
+  left:50%;
+  width:74px;
+  height:1px;
+  transform:translateX(-50%);
+  background:rgba(198,161,91,.42);
+}
+.grupo:first-child::before{top:0}
+.grupo .livro{
+  display:block;
+  margin:0 0 7px;
+  color:var(--ouro);
+  font-family:"Cinzel",Georgia,serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.grupo h2{
+  margin:0 0 7px;
+  color:var(--marfim);
+  font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  font-size:34px;
+  font-weight:500;
+  line-height:1.08;
+}
+.grupo p{
+  max-width:660px;
+  margin:0 auto;
+  color:#bcaea2;
+  font-size:16px;
+  line-height:1.5;
+  font-style:italic;
+}
 .romano{
   position:relative;
   width:76px;
@@ -334,6 +447,15 @@ h1{
   .emblema{width:108px;height:108px}
   .emblema img{width:66px;max-height:66px}
   .legenda-emblema{letter-spacing:2.2px}
+  .sumario-grid{grid-template-columns:1fr 1fr}
+  .sumario-grid a{min-height:82px;border-bottom:1px solid rgba(198,161,91,.22)}
+  .sumario-grid a:nth-child(2){border-right:0}
+  .sumario-grid a:nth-last-child(-n+2){border-bottom:0}
+  .grupo{padding:44px 0 16px}
+  .grupo:first-child{padding-top:10px}
+  .grupo::before{top:28px}
+  .grupo:first-child::before{top:0}
+  .grupo h2{font-size:30px}
   .principio{grid-template-columns:1fr;gap:12px;padding:29px 0 32px}
   .romano{width:64px;min-height:56px;font-size:16px}
   .principio h2{font-size:28px}
@@ -363,7 +485,7 @@ h1{
 
     <header class="cabecalho-carta">
       <div class="emblema">
-        <img src="/imagens/seu-simbolo-transparente.png" alt="Símbolo do autor">
+        <img src="/imagens/seu-simbolo-transparente.png" alt="Emblema do site Notas de um Estudante de Direito">
       </div>
       <p class="legenda-emblema">Lex · Libertas · Dignitas</p>
       <p class="supra">Carta de garantias · Direito Penal</p>
@@ -376,7 +498,25 @@ h1{
       O Direito Penal não se legitima pela mera capacidade do Estado de punir. Legitima-se, antes, pelos limites que o próprio Direito impõe ao poder de punir. Em um Estado Democrático de Direito, a pena somente pode nascer de lei anterior, incidir sobre fato pessoalmente imputável, proteger bens juridicamente relevantes, respeitar a dignidade humana e conservar proporção com a gravidade do injusto e a culpabilidade do agente. Os princípios a seguir não constituem ornamento retórico: formam uma arquitetura de garantias destinada a impedir o arbítrio, racionalizar a criminalização e recordar que a liberdade é a regra, enquanto a coerção penal exige fundamento jurídico estrito.
     </section>
 
+    <nav class="sumario-carta" aria-label="Mapa dos princípios">
+      <header>
+        <span class="kicker">Ordo principiorum</span>
+        <h2>Mapa da Carta</h2>
+      </header>
+      <div class="sumario-grid">
+        <a href="#fundamentos"><b>I–VI</b><span>Fundamentos e legalidade</span></a>
+        <a href="#imputacao"><b>VII–XI</b><span>Imputação e pena</span></a>
+        <a href="#limites-materiais"><b>XII–XVII</b><span>Limites materiais</span></a>
+        <a href="#garantias"><b>XVIII–XX</b><span>Garantias contra o arbítrio</span></a>
+      </div>
+    </nav>
+
     <section class="mandamentos" aria-label="Princípios fundamentais do Direito Penal">
+      <div class="grupo" id="fundamentos">
+        <span class="livro">Liber I · Cânones I–VI</span>
+        <h2>Fundamentos e legalidade</h2>
+        <p>O poder punitivo começa por reconhecer aquilo que não lhe é permitido fazer.</p>
+      </div>
       <div class="principio">
         <div class="romano"><span>I</span></div>
         <div><h2>Dignidade da pessoa humana</h2><p class="maxima">A pessoa jamais se reduz a objeto do poder punitivo.</p><p>A dignidade humana funciona como fundamento e limite de toda intervenção penal. O condenado não perde sua condição de sujeito de direitos; por isso, a persecução, a pena e a execução penal devem preservar um núcleo irredutível de integridade física, moral e jurídica.</p><span class="base"><strong>Base:</strong> CF, art. 1º, III; art. 5º, III e XLIX.</span></div>
@@ -407,6 +547,12 @@ h1{
         <div><h2>Proibição da analogia <em>in malam partem</em></h2><p class="maxima"><em>Lex stricta.</em></p><p>A analogia não pode criar crime, ampliar elemento incriminador nem agravar pena contra o acusado. A interpretação penal encontra limite na moldura possível do texto legal. A analogia favorável, quando juridicamente cabível, não sofre a mesma vedação.</p><span class="base"><strong>Base:</strong> garantia decorrente da legalidade e da reserva legal.</span></div>
       </div>
 
+      <div class="grupo" id="imputacao">
+        <span class="livro">Liber II · Cânones VII–XI</span>
+        <h2>Imputação e pena</h2>
+        <p>A pena somente se legitima quando há responsabilidade pessoal e medida jurídica.</p>
+      </div>
+
       <div class="principio">
         <div class="romano"><span>VII</span></div>
         <div><h2>Culpabilidade e responsabilidade subjetiva</h2><p class="maxima">Não há pena legítima sem reprovação pessoal.</p><p>A sanção penal pressupõe imputação pessoal fundada, em regra, em dolo ou culpa e em condições que permitam reprovar juridicamente o agente. O sistema repele responsabilidade penal objetiva: o resultado agravador, por exemplo, somente pode ser imputado quando causado ao menos culposamente.</p><span class="base"><strong>Base:</strong> CP, arts. 18 e 19; princípio constitucional extraído da dignidade, individualização e responsabilidade pessoal.</span></div>
@@ -432,6 +578,12 @@ h1{
         <div><h2>Proporcionalidade</h2><p class="maxima">A intensidade da coerção deve guardar medida com a gravidade do ilícito.</p><p>A criminalização e a pena devem ser adequadas, necessárias e não excessivas diante da proteção pretendida. No campo penal, a proporcionalidade opera simultaneamente como barreira contra o excesso punitivo e como critério de racionalidade na escolha e aplicação das sanções.</p><span class="base"><strong>Base:</strong> princípio constitucional implícito, relacionado ao devido processo, à individualização e ao Estado de Direito.</span></div>
       </div>
 
+      <div class="grupo" id="limites-materiais">
+        <span class="livro">Liber III · Cânones XII–XVII</span>
+        <h2>Limites materiais da intervenção penal</h2>
+        <p>Nem todo ilícito, perigo ou desvalor social autoriza o emprego da pena.</p>
+      </div>
+
       <div class="principio">
         <div class="romano"><span>XII</span></div>
         <div><h2>Intervenção mínima</h2><p class="maxima"><em>Ultima ratio.</em></p><p>O Direito Penal deve ser reservado às agressões mais relevantes quando instrumentos menos gravosos do ordenamento não forem suficientes. A existência de um comportamento socialmente indesejado, imoral ou ilícito em outro ramo não basta, por si só, para legitimar sua criminalização.</p><span class="base"><strong>Base:</strong> construção doutrinária decorrente do Estado de Direito, da liberdade e da proporcionalidade.</span></div>
@@ -454,12 +606,18 @@ h1{
 
       <div class="principio">
         <div class="romano"><span>XVI</span></div>
-        <div><h2>Insignificância</h2><p class="maxima"><em>De minimis non curat praetor.</em></p><p>Em hipóteses reconhecidas pela jurisprudência, a lesão materialmente irrelevante pode afastar a tipicidade material, apesar da adequação formal da conduta ao tipo. Sua aplicação não é automática: depende das circunstâncias do fato, do bem jurídico e dos critérios jurisprudenciais pertinentes.</p><span class="base"><strong>Base:</strong> construção dogmática e jurisprudencial associada à tipicidade material, fragmentariedade e intervenção mínima.</span></div>
+        <div><h2>Insignificância</h2><p class="maxima"><em>De minimis non curat praetor.</em></p><p>Em hipóteses reconhecidas pela jurisprudência, a lesão materialmente irrelevante pode afastar a tipicidade material, apesar da adequação formal da conduta ao tipo. No STF, o exame costuma considerar a mínima ofensividade da conduta, a ausência de periculosidade social da ação, o reduzidíssimo grau de reprovabilidade do comportamento e a inexpressividade da lesão jurídica, sempre à luz do caso concreto.</p><span class="base"><strong>Base:</strong> construção dogmática e jurisprudencial associada à tipicidade material, fragmentariedade e intervenção mínima.</span></div>
       </div>
 
       <div class="principio">
         <div class="romano"><span>XVII</span></div>
         <div><h2>Alteridade e responsabilidade pelo fato</h2><p class="maxima">O Direito Penal julga fatos juridicamente relevantes, não modos de ser.</p><p>A intervenção penal não deve fundar-se na personalidade, identidade, pensamento íntimo ou simples autolesão do indivíduo, mas em conduta exterior dotada de relevância jurídico-penal. A ideia se opõe a modelos de “Direito Penal do autor” e reforça a exigência de um Direito Penal do fato.</p><span class="base"><strong>Base:</strong> construção doutrinária ligada à dignidade, liberdade, ofensividade e culpabilidade pelo fato.</span></div>
+      </div>
+
+      <div class="grupo" id="garantias">
+        <span class="livro">Liber IV · Cânones XVIII–XX</span>
+        <h2>Garantias contra o arbítrio</h2>
+        <p>A legitimidade da punição depende também de como o Estado investiga, acusa e julga.</p>
       </div>
 
       <div class="principio">
