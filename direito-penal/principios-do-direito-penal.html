@@ -230,21 +230,11 @@ h1{
 .grupo{
   scroll-margin-top:92px;
   position:relative;
-  padding:54px 0 22px;
+  padding:30px 0 22px;
   text-align:center;
 }
 .grupo:first-child{padding-top:18px}
-.grupo::before{
-  content:"";
-  position:absolute;
-  top:34px;
-  left:50%;
-  width:74px;
-  height:1px;
-  transform:translateX(-50%);
-  background:rgba(198,161,91,.42);
-}
-.grupo:first-child::before{top:0}
+.grupo::before{content:none}
 .grupo .livro{
   display:block;
   margin:0 0 7px;
@@ -385,10 +375,8 @@ h1{
   .emblema{width:108px;height:108px}
   .emblema img{width:66px;max-height:66px}
   .legenda-emblema{letter-spacing:2.2px}
-  .grupo{padding:44px 0 16px}
+  .grupo{padding:28px 0 16px}
   .grupo:first-child{padding-top:10px}
-  .grupo::before{top:28px}
-  .grupo:first-child::before{top:0}
   .grupo h2{font-size:30px}
   .principio{grid-template-columns:1fr;gap:12px;padding:29px 0 32px}
   .romano{width:52px;min-height:34px;font-size:18px;padding-top:0}
