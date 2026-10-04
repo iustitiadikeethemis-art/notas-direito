@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petition of Right de 1628 | Direito Constitucional</title>
+<meta name="description" content="Estudo histórico-constitucional da Petition of Right de 1628: Carlos I, Parlamento, tributação, prisões arbitrárias, alojamento militar e lei marcial.">
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --pr-navy:#26384d;
+  --pr-navy-dark:#172433;
+  --pr-burgundy:#6e2638;
+  --pr-burgundy-dark:#481925;
+  --pr-gold:#c9a35b;
+  --pr-gold-soft:#ead49b;
+  --pr-paper:#f5efe2;
+  --pr-ink:#292722;
+  --pr-muted:#6b6458;
+  --pr-line:#d5c6a8;
+}
+body{background:#e9e1d3;color:var(--pr-ink);}
+.pr-hero{
+  margin:56px auto 34px;
+  max-width:1040px;
+  border-radius:26px;
+  overflow:hidden;
+  border:1px solid #53303a;
+  background:
+    radial-gradient(circle at 16% 18%,rgba(255,255,255,.10),transparent 27%),
+    linear-gradient(135deg,#172433 0%,#293d54 48%,#6e2638 118%);
+  box-shadow:0 22px 60px rgba(0,0,0,.16);
+  color:#fff;
+}
+.pr-hero-inner{padding:58px 50px;position:relative;}
+.pr-kicker{color:#ead7a7;letter-spacing:.09em;text-transform:uppercase;font-size:13px;margin:0 0 12px;}
+.pr-hero h1{font-size:46px;line-height:1.06;margin:0 0 18px;max-width:870px;color:#fff7dd;}
+.pr-hero p{font-size:19px;line-height:1.7;color:#f0e8d7;max-width:830px;margin:0;}
+.pr-alerta{
+  max-width:980px;
+  margin:0 auto 30px;
+  padding:22px 26px;
+  border-left:5px solid var(--pr-burgundy);
+  border-radius:14px;
+  background:#fffaf0;
+  box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+.pr-alerta p{margin:0;color:#4d463b;font-size:17px;line-height:1.7;}
+.pr-layout{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:28px;
+  max-width:1120px;
+  margin:0 auto 80px;
+}
+.pr-nav{
+  position:sticky;
+  top:92px;
+  align-self:start;
+  max-height:calc(100vh - 120px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:#c9a35b rgba(255,255,255,.08);
+  background:#1d2f42;
+  color:#fff;
+  border-radius:18px;
+  padding:18px;
+  border:1px solid #40556b;
+  box-shadow:0 16px 36px rgba(0,0,0,.12);
+}
+.pr-nav::-webkit-scrollbar{width:8px;}
+.pr-nav::-webkit-scrollbar-track{background:rgba(255,255,255,.06);border-radius:999px;}
+.pr-nav::-webkit-scrollbar-thumb{background:#c9a35b;border-radius:999px;border:2px solid #1d2f42;}
+.pr-nav::-webkit-scrollbar-thumb:hover{background:#ead49b;}
+.pr-nav h2{font-size:17px;margin:0 0 12px;color:#f0dfb4;}
+.pr-nav a{
+  display:block;
+  text-decoration:none;
+  color:#eee6d5;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  padding:9px 10px;
+  margin:8px 0;
+  font-size:14px;
+  line-height:1.35;
+  background:rgba(255,255,255,.04);
+}
+.pr-nav a:hover{background:rgba(255,255,255,.11);}
+.pr-artigo{
+  background:var(--pr-paper);
+  border:1px solid var(--pr-line);
+  border-radius:24px;
+  padding:42px 48px;
+  box-shadow:0 14px 40px rgba(0,0,0,.055);
+}
+.pr-artigo h2{
+  font-size:30px;
+  line-height:1.2;
+  margin:50px 0 18px;
+  padding-top:24px;
+  border-top:1px solid #ded1b9;
+  color:#26384d;
+}
+.pr-artigo h2:first-child{margin-top:0;padding-top:0;border-top:0;}
+.pr-artigo p{
+  font-size:18px;
+  line-height:1.86;
+  color:var(--pr-ink);
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+  margin:0 0 18px;
+}
+.pr-artigo strong{color:#573044;}
+.pr-pergunta{
+  margin:24px 0;
+  padding:20px 22px;
+  border-left:5px solid var(--pr-burgundy);
+  background:#fffaf0;
+  border-radius:0 14px 14px 0;
+}
+.pr-pergunta p{margin:0;text-align:left;font-size:18px;line-height:1.7;}
+.pr-original{
+  margin:20px 0 24px;
+  padding:18px 20px;
+  border-left:4px solid var(--pr-burgundy);
+  border-radius:0 12px 12px 0;
+  background:#eee4d1;
+}
+.pr-original .rotulo{
+  display:block;
+  margin-bottom:7px;
+  color:#72572f;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.pr-original .texto{
+  margin:0 0 8px;
+  color:#30343a;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.65;
+  font-style:italic;
+  text-align:left;
+}
+.pr-original .traducao{margin:0;color:#504a40;font-size:15px;line-height:1.62;text-align:left;}
+.pr-original a{color:#4d2a3a;text-decoration:none;border-bottom:1px solid rgba(77,42,58,.35);}
+.pr-figura{
+  margin:30px auto 34px;
+  padding:14px;
+  border:1px solid #d6c49c;
+  border-radius:18px;
+  background:#fffaf0;
+  box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+.pr-figura.retrato{max-width:560px;}
+.pr-figura img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:590px;
+  object-fit:contain;
+  border-radius:12px;
+  background:#eee5d3;
+}
+.pr-figura figcaption{margin-top:12px;color:#625b4f;font-size:14px;line-height:1.55;text-align:left;}
+.pr-figura figcaption a{color:#4d2a3a;text-decoration:none;border-bottom:1px solid rgba(77,42,58,.35);}
+.pr-proxima{
+  margin:40px 0 0;
+  padding:24px 26px;
+  border:1px solid #bba061;
+  border-radius:16px;
+  background:linear-gradient(135deg,#f4ead8,#e5d5b7);
+}
+.pr-proxima h2{border:0;padding:0;margin:0 0 12px;font-size:25px;color:#26384d;}
+.pr-proxima p{margin:0 0 12px;text-align:left;font-size:17px;line-height:1.75;color:#514a40;}
+.pr-proxima p:last-child{margin-bottom:0;}
+.pr-fontes{
+  margin:44px 0 0;
+  padding:24px 26px;
+  border-radius:18px;
+  background:#fffaf0;
+  border:1px solid #dfcfad;
+}
+.pr-fontes h2{border:0;padding:0;margin:0 0 15px;font-size:25px;color:#26384d;}
+.pr-fontes p{font-size:16px;line-height:1.72;text-align:left;margin:0 0 10px;color:#4b4438;}
+.pr-fontes a{color:#4d2a3a;text-decoration:none;border-bottom:1px solid rgba(77,42,58,.35);}
+.pr-relacionado{margin:30px 0 0;padding-top:22px;border-top:1px solid #ded2bc;font-size:16px;color:var(--pr-muted);}
+.pr-relacionado a{color:#4d2a3a;text-decoration:none;border-bottom:1px solid rgba(77,42,58,.35);}
+.assinatura-texto{margin-top:46px;padding-top:22px;border-top:1px solid #ded2bc;}
+.assinatura-texto p{text-align:left;font-size:16px;color:#625c52;margin:4px 0;}
+@media(max-width:900px){
+  .pr-layout{grid-template-columns:1fr;}
+  .pr-nav{position:static;max-height:none;overflow-y:visible;}
+  .pr-hero-inner{padding:38px 28px;}
+  .pr-hero h1{font-size:36px;}
+  .pr-artigo{padding:30px 24px;}
+}
+@media print{
+  #header-container,.pr-nav{display:none!important;}
+  .pr-layout{display:block;}
+  .pr-artigo,.pr-hero{box-shadow:none;border:1px solid #000;}
+}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+
+<section class="pr-hero">
+  <div class="pr-hero-inner">
+    <p class="pr-kicker">Direito Constitucional · Formação histórica do constitucionalismo</p>
+    <h1>Petition of Right de 1628</h1>
+    <p>Quando a prerrogativa do rei encontrou o Parlamento: tributação, liberdade, força militar e os limites jurídicos da Coroa sob Carlos I.</p>
+  </div>
+</section>
+
+<div class="pr-alerta">
+  <p><strong>Parte I — Contexto histórico e formação do documento.</strong> O estudo parte da crise fiscal e institucional do reinado de Carlos I, passa pelo <em>Forced Loan</em>, pelas prisões sem causa adequadamente declarada, pelo alojamento compulsório de tropas e pela lei marcial, até chegar à elaboração parlamentar da <em>Petition of Right</em>.</p>
+</div>
+
+<section class="pr-layout">
+<aside class="pr-nav">
+  <h2>Navegação</h2>
+  <a href="#ponte">Da Magna Carta aos Stuart</a>
+  <a href="#carlos">Carlos I e a crise fiscal</a>
+  <a href="#forced-loan">O Forced Loan</a>
+  <a href="#cinco-cavaleiros">Prisões e Five Knights’ Case</a>
+  <a href="#billeting">Alojamento compulsório</a>
+  <a href="#lei-marcial">Lei marcial</a>
+  <a href="#coke">Sir Edward Coke</a>
+  <a href="#parlamento">O Parlamento de 1628</a>
+  <a href="#chaves">Chaves de leitura</a>
+  <a href="#proxima">Parte II — documento</a>
+  <a href="#fontes">Fontes</a>
+</aside>
+
+<article class="pr-artigo">
+
+<h2 id="ponte">1. Da Magna Carta aos Stuart: a limitação do poder não estava resolvida</h2>
+
+<p>A Magna Carta de 1215 havia deixado uma ideia que atravessaria a história constitucional inglesa: o rei não exercia um poder absolutamente desvinculado do Direito. Isso, contudo, não significou que a relação entre Coroa, leis e instituições estivesse definitivamente solucionada. Nos séculos seguintes, o conflito assumiria novas formas.</p>
+
+<p>No início do século XVII, o problema já não pertencia ao mesmo mundo feudal de João Sem Terra e dos barões rebeldes. A monarquia inglesa possuía uma administração mais desenvolvida, o Parlamento havia adquirido importância institucional consideravelmente maior e as disputas concentravam-se cada vez mais na extensão da <strong>prerrogativa régia</strong>.</p>
+
+<div class="pr-pergunta"><p><strong>Questão central:</strong> até onde alcançava a prerrogativa do rei quando seu exercício entrava em conflito com direitos reconhecidos aos súditos e com as competências reivindicadas pelo Parlamento?</p></div>
+
+<p>Foi desse conflito que nasceu, em 1628, a <em>Petition of Right</em>.</p>
+
+<h2 id="carlos">2. Carlos I e uma Coroa que precisava de dinheiro</h2>
+
+<p>Carlos I subiu ao trono inglês em março de 1625, sucedendo seu pai, Jaime I. Tinha vinte e quatro anos e assumiu a Coroa em um momento de forte pressão financeira e militar. A Inglaterra estava envolvida em conflitos externos, as campanhas custavam caro e a monarquia necessitava constantemente de recursos.</p>
+
+<figure class="pr-figura retrato">
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Anthony_van_Dyck_-_Charles_I_%281600-49%29_with_M._de_St_Antoine_-_Google_Art_Project.jpg?width=760" alt="Retrato de Carlos I por Anthony van Dyck." loading="lazy">
+  <figcaption><strong>Carlos I.</strong> Retrato equestre de Anthony van Dyck, produzido durante o reinado do monarca. A imagem é contemporânea ao personagem e integra a tradição de representação régia dos Stuart. Domínio público, via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Charles_I_(1600-49)_with_M._de_St_Antoine_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Fonte da imagem</a>.</figcaption>
+</figure>
+
+<p>O problema financeiro tinha dimensão constitucional. O Parlamento reivindicava papel necessário na concessão de receitas extraordinárias à Coroa, ao passo que Carlos sustentava uma compreensão ampla das competências inerentes à prerrogativa real.</p>
+
+<p>A tensão apareceu desde o início do reinado. Antigos direitos alfandegários conhecidos como <em>tonnage and poundage</em> costumavam ser concedidos pelo Parlamento ao novo monarca por toda a duração do reinado. Em 1625, porém, a Câmara dos Comuns aprovou a arrecadação por apenas um ano. Carlos continuou a cobrá-los posteriormente, invocando a prerrogativa régia.</p>
+
+<p>A controvérsia ultrapassava o valor desses tributos. Estava em discussão a própria distribuição da autoridade política: poderia a Coroa obter determinadas receitas independentemente do consentimento parlamentar?</p>
+
+<h2 id="forced-loan">3. O <em>Forced Loan</em>: quando o empréstimo deixa de ser voluntário</h2>
+
+<p>Em 1626, depois de novas dificuldades com o Parlamento, Carlos I lançou mão de um expediente particularmente controverso: o chamado <strong><em>Forced Loan</em></strong>, o empréstimo compulsório.</p>
+
+<p>Formalmente, não se tratava simplesmente de um imposto ordinário. A Coroa exigia dos súditos uma contribuição apresentada como empréstimo ao rei. A natureza coercitiva da cobrança, contudo, colocava em dúvida a distinção: a recusa podia acarretar consequências e prisões.</p>
+
+<p>O problema jurídico era evidente. Se o rei não obtivesse do Parlamento os recursos pretendidos, poderia alcançar resultado equivalente exigindo diretamente dinheiro dos súditos sob outra denominação?</p>
+
+<p>A <em>Petition of Right</em> reconstruiria essa controvérsia a partir de normas e precedentes anteriores, sustentando que os súditos não deveriam ser compelidos a empréstimos, benevolências, impostos ou encargos semelhantes sem fundamento jurídico e consentimento parlamentar.</p>
+
+<p>Esse aspecto revela uma característica central da estratégia parlamentar de 1628: o documento não se apresentava prioritariamente como criação de direitos novos, mas como <strong>reivindicação de direitos e liberdades já pertencentes à ordem jurídica inglesa</strong>.</p>
+
+<h2 id="cinco-cavaleiros">4. Prisão sem causa declarada: o <em>Five Knights’ Case</em></h2>
+
+<p>Alguns daqueles que se recusaram a contribuir para o empréstimo compulsório foram presos por ordem da Coroa. A controvérsia, então, deixou de ser apenas fiscal e passou a atingir diretamente a liberdade individual.</p>
+
+<p>Cinco prisioneiros recorreram ao <em>habeas corpus</em>. O episódio tornou-se conhecido como <strong><em>Five Knights’ Case</em></strong>, também chamado <em>Darnell’s Case</em>.</p>
+
+<p>A questão possuía enorme relevância constitucional: bastaria a ordem especial do rei para manter alguém preso, ou a autoridade responsável deveria apresentar perante os tribunais uma causa juridicamente cognoscível para a detenção?</p>
+
+<p>Os argumentos desenvolvidos em defesa dos prisioneiros recorreram à tradição jurídica anterior, inclusive à Magna Carta e a estatutos promulgados sob Eduardo III. Essa tradição seria novamente mobilizada nos debates parlamentares de 1628.</p>
+
+<div class="pr-original">
+  <span class="rotulo">Trecho do texto de 1628</span>
+  <p class="texto">“no freeman [...] be imprisoned or deteined”</p>
+  <p class="traducao">Tradução de estudo: “nenhum homem livre [...] seja preso ou detido”. O texto da <em>Petition</em> recupera expressamente a tradição de proteção da liberdade pessoal e a relaciona às leis anteriores do reino. <a href="https://www.legislation.gov.uk/aep/Cha1/3/1?view=plain" target="_blank" rel="noopener">Texto oficial</a>.</p>
+</div>
+
+<p>A ligação com a Magna Carta é direta, mas não se deve tratar os documentos como equivalentes. Em 1215, a cláusula 39 havia empregado a fórmula <em>law of the land</em> em contexto medieval. Em 1628, parlamentares e juristas recuperavam e reinterpretavam aquela tradição dentro de um conflito institucional muito mais desenvolvido entre Coroa, Parlamento e tribunais.</p>
+
+<h2 id="billeting">5. Soldados dentro das casas dos súditos</h2>
+
+<p>As campanhas militares de Carlos I criaram outro problema relevante: o alojamento compulsório de soldados e marinheiros nas casas da população, prática conhecida como <strong><em>billeting</em></strong>.</p>
+
+<p>Habitantes podiam ser obrigados a receber e sustentar militares vinculados à Coroa. A questão não era meramente logística. A presença compulsória de tropas dentro de residências privadas significava impor aos súditos uma obrigação material e uma intrusão diretamente vinculadas ao poder militar do rei.</p>
+
+<p>A <em>Petition of Right</em> denunciou a prática, registrando que soldados e marinheiros haviam sido distribuídos por diversos condados e que habitantes haviam sido compelidos a recebê-los.</p>
+
+<p>O problema constitucional reaparecia sob outra forma: a necessidade militar da Coroa seria suficiente, por si só, para criar obrigações aos súditos sem autorização legal?</p>
+
+<h2 id="lei-marcial">6. Lei marcial e jurisdição extraordinária</h2>
+
+<p>Uma quarta controvérsia dizia respeito às comissões que autorizavam procedimentos segundo a <strong>lei marcial</strong>. Esses instrumentos permitiam que determinadas pessoas fossem submetidas a formas extraordinárias de julgamento e punição, afastadas da jurisdição ordinária.</p>
+
+<div class="pr-original">
+  <span class="rotulo">Expressão empregada no documento</span>
+  <p class="texto">“Martiall Lawe”</p>
+  <p class="traducao">A <em>Petition</em> requereu a revogação das comissões de lei marcial denunciadas e a não expedição de outras semelhantes, preservando o julgamento segundo as leis ordinárias do reino. <a href="https://www.legislation.gov.uk/aep/Cha1/3/1?view=plain" target="_blank" rel="noopener">Texto oficial</a>.</p>
+</div>
+
+<p>Ao chegar a 1628, portanto, quatro eixos principais já podiam ser identificados na crise: <strong>tributação sem consentimento parlamentar, prisão arbitrária, alojamento compulsório de tropas e utilização de lei marcial contra os súditos.</strong></p>
+
+<h2 id="coke">7. Sir Edward Coke e a força jurídica do passado</h2>
+
+<p>Entre as figuras centrais desse processo estava <strong>Sir Edward Coke</strong>, um dos mais importantes juristas ingleses de seu tempo. Coke havia ocupado funções de enorme relevância, entre elas as de <em>Attorney General</em>, <em>Chief Justice of the Common Pleas</em> e <em>Chief Justice of the King’s Bench</em>. Depois de conflitos com a Coroa, tornou-se também figura parlamentar destacada.</p>
+
+<figure class="pr-figura retrato">
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sir_Edward_Coke.jpg?width=700" alt="Retrato gravado de Sir Edward Coke, por John Payne." loading="lazy">
+  <figcaption><strong>Sir Edward Coke (1552–1634).</strong> Gravura de John Payne, c. 1628–1629, contemporânea aos acontecimentos da <em>Petition of Right</em>. National Portrait Gallery, via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Sir_Edward_Coke.jpg" target="_blank" rel="noopener">Fonte da imagem</a>.</figcaption>
+</figure>
+
+<p>A estratégia jurídica desenvolvida no Parlamento não consistia apenas em apresentar uma declaração filosófica de direitos naturais. O argumento era mais específico: <strong>Carlos I estava violando o próprio Direito inglês</strong>.</p>
+
+<p>Magna Carta, estatutos posteriores, <em>common law</em>, práticas parlamentares e antigas liberdades foram mobilizados como fundamentos contra determinadas pretensões da Coroa. O passado jurídico passava a funcionar como instrumento de limitação institucional do presente.</p>
+
+<div class="pr-original">
+  <span class="rotulo">Trecho do texto de 1628</span>
+  <p class="texto">“common consent in Parliament”</p>
+  <p class="traducao">“consentimento comum no Parlamento.” A fórmula aparece na reconstrução das limitações anteriormente reconhecidas à imposição de determinadas cargas. <a href="https://www.legislation.gov.uk/aep/Cha1/3/1?view=plain" target="_blank" rel="noopener">Texto oficial</a>.</p>
+</div>
+
+<p>Não se tratava ainda de democracia parlamentar em sentido contemporâneo. O ponto constitucional era outro: determinadas matérias, sobretudo tributárias, eram reivindicadas como esferas que não pertenciam exclusivamente à vontade do monarca.</p>
+
+<h2 id="parlamento">8. O Parlamento de 1628 e a formulação da <em>Petition of Right</em></h2>
+
+<p>Carlos I convocou novo Parlamento em março de 1628 porque continuava necessitando de recursos. A necessidade financeira da Coroa deu aos parlamentares capacidade política para condicionar a concessão de novas receitas à solução das queixas acumuladas.</p>
+
+<p>A relação assumiu a forma de uma negociação constitucional: o rei precisava de financiamento; o Parlamento buscava garantias jurídicas contra práticas que considerava incompatíveis com as leis e liberdades do reino.</p>
+
+<p>Havia, contudo, uma diferença fundamental de perspectiva. Carlos não pretendia admitir que o Parlamento pudesse criar novos limites à prerrogativa régia. Os parlamentares, por sua vez, não se satisfaziam com uma promessa pessoal e politicamente revogável do soberano. Pretendiam obter reconhecimento jurídico.</p>
+
+<p>Foi nesse ambiente que surgiu a <em>Petition of Right</em>, apresentada em nome dos <strong>Lords Spiritual and Temporal e dos Commons reunidos em Parlamento</strong> e dirigida formalmente ao monarca.</p>
+
+<p>A estrutura argumentativa do documento é essencial para compreender sua natureza. O Parlamento não se apresenta simplesmente pedindo ao rei uma concessão graciosa; reconstrói leis e liberdades anteriores e sustenta que determinadas práticas régias eram incompatíveis com elas.</p>
+
+<p>Por isso, o título <em>Petition of Right</em> é particularmente significativo: trata-se de uma petição formulada <strong>em termos de direito</strong>, e não apenas de favor ou clemência régia.</p>
+
+<h2 id="chaves">9. Chaves de leitura da <em>Petition of Right</em></h2>
+
+<p>A interpretação da <em>Petition of Right</em> exige cautela para evitar anacronismos. O documento não deve ser compreendido como uma Constituição em sentido moderno, nem como uma declaração universal de direitos fundamentais. Tampouco instituiu, de forma acabada, a separação de poderes ou um regime democrático parlamentar nos moldes contemporâneos.</p>
+
+<p>Seu significado histórico reside em outro ponto: a <em>Petition of Right</em> representa um estágio mais desenvolvido da limitação jurídica da autoridade régia e da afirmação institucional do Parlamento.</p>
+
+<p>Enquanto a Magna Carta de 1215 surgiu de um conflito entre a Coroa e setores da aristocracia feudal, a crise de 1628 já se desenvolvia em um ambiente político significativamente distinto. O Parlamento encontrava-se consolidado como instituição e recorria a precedentes, estatutos e princípios do <em>common law</em> para contestar determinadas manifestações da prerrogativa real.</p>
+
+<p>A controvérsia, portanto, não se limitava à existência abstrata de limites ao poder do rei. Ela envolvia questões mais precisas sobre a distribuição e o exercício da autoridade política: quem poderia autorizar a tributação, em quais condições alguém poderia ser privado de sua liberdade, quais eram os limites da atuação militar da Coroa e até onde se estendia a prerrogativa régia diante das leis e liberdades tradicionalmente reconhecidas.</p>
+
+<p>Sob esse aspecto, a <em>Petition of Right</em> marca uma etapa relevante na transformação do problema constitucional inglês. A limitação do poder deixa de aparecer apenas como resistência circunstancial ao monarca e passa a assumir contornos cada vez mais <strong>institucionais e jurídicos</strong>, especialmente na relação entre Coroa, Parlamento e tribunais.</p>
+
+<p>Há ainda uma particularidade documental. Embora seja tradicionalmente denominada <strong>Petition of Right de 1628</strong> e tenha recebido assentimento real em 7 de junho daquele ano, a base oficial de legislação britânica a identifica como <strong>“The Petition of Right [1627]”</strong>. A classificação decorre do sistema histórico de datação das sessões parlamentares: a sessão de Carlos I em questão teve início em 17 de março, ainda considerado 1627 pelo calendário então utilizado, no qual o ano civil começava em 25 de março.</p>
+
+<p>A partir desse contexto, torna-se possível examinar diretamente o texto da <em>Petition of Right</em>, sobretudo nos quatro eixos que concentram sua relevância constitucional: <strong>tributação sem consentimento parlamentar, prisão arbitrária, alojamento compulsório de tropas e aplicação da lei marcial.</strong></p>
+
+<div class="pr-proxima" id="proxima">
+  <h2>Parte II — o documento e suas garantias</h2>
+  <p>A etapa seguinte será dedicada à leitura direta da <em>Petition of Right</em>, com trechos do inglês do século XVII, tradução de estudo e comentário histórico-jurídico de suas principais passagens.</p>
+  <p>O percurso culminará no assentimento de Carlos I e na fórmula registrada no documento: <em>“Soit droit fait come est desiré”</em>, antes de examinar a eficácia política da Petition e sua posição na trajetória que conduz às crises constitucionais posteriores do século XVII.</p>
+</div>
+
+<div class="pr-fontes" id="fontes">
+  <h2>Fontes e leituras recomendadas</h2>
+  <p><a href="https://www.legislation.gov.uk/aep/Cha1/3/1?view=plain" target="_blank" rel="noopener">legislation.gov.uk — The Petition of Right [1627], texto oficial</a></p>
+  <p><a href="https://www.legislation.gov.uk/aep/Cha1/3/1/introduction?view=plain" target="_blank" rel="noopener">legislation.gov.uk — nota editorial sobre a datação 1627/1628</a></p>
+  <p><a href="https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/civilwar/overview/petition-of-right/" target="_blank" rel="noopener">UK Parliament — Charles I and the Petition of Right</a></p>
+  <p><a href="https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/civilwar/collections/petition-of-right/" target="_blank" rel="noopener">UK Parliament — The Petition of Right</a></p>
+  <p><a href="https://www.parliament.uk/globalassets/documents/magna-carta-and-parliament-booklet.pdf" target="_blank" rel="noopener">UK Parliament — Magna Carta and Parliament</a></p>
+</div>
+
+<div class="pr-relacionado">
+  <strong>Leitura anterior:</strong> <a href="/filosofia/estado-e-poder/direito-constitucional/magna-carta-1215.html">Magna Carta de 1215</a>.
+</div>
+
+<div class="assinatura-texto">
+  <p>João Victor Brando Novais</p>
+  <p>Notas de um Estudante de Direito · São Paulo, 2026</p>
+</div>
+
+</article>
+</section>
+
+<p style="text-align:center;margin:-45px 0 70px;"><a href="/filosofia/estado-e-poder/direito-constitucional/" style="color:#4d2a3a;text-decoration:none;border-bottom:1px solid rgba(77,42,58,.35);">Voltar para Direito Constitucional</a></p>
+
+</main>
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
