@@ -213,75 +213,6 @@ h1{
   font-weight:500;
   line-height:.78;
 }
-.sumario-carta{
-  position:relative;
-  z-index:3;
-  max-width:900px;
-  margin:0 auto 52px;
-  padding:26px 0 30px;
-  border-bottom:1px solid rgba(198,161,91,.25);
-}
-.sumario-carta header{
-  padding:0 0 18px;
-  background:transparent!important;
-  border:0!important;
-  backdrop-filter:none;
-  text-align:center;
-}
-.sumario-carta .kicker{
-  display:block;
-  margin-bottom:5px;
-  color:var(--ameixa);
-  font-family:"Cinzel",Georgia,serif;
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
-.sumario-carta h2{
-  margin:0;
-  color:var(--marfim);
-  font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
-  font-size:27px;
-  font-weight:500;
-}
-.sumario-grid{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  border-top:1px solid rgba(198,161,91,.34);
-  border-bottom:1px solid rgba(198,161,91,.34);
-}
-.sumario-grid a{
-  min-height:92px;
-  padding:18px 16px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:5px;
-  color:#dcd1c6;
-  text-align:center;
-  text-decoration:none;
-  border-right:1px solid rgba(198,161,91,.22);
-  transition:background .18s ease,color .18s ease;
-}
-.sumario-grid a:last-child{border-right:0}
-.sumario-grid a:hover,.sumario-grid a:focus-visible{
-  background:rgba(198,161,91,.07);
-  color:#fff8ed;
-  outline:none;
-}
-.sumario-grid b{
-  color:var(--ouro);
-  font-family:"Cinzel",Georgia,serif;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.6px;
-}
-.sumario-grid span{
-  font-size:15px;
-  line-height:1.25;
-}
 .mandamentos{
   position:relative;
   z-index:3;
@@ -459,10 +390,6 @@ h1{
   .emblema{width:108px;height:108px}
   .emblema img{width:66px;max-height:66px}
   .legenda-emblema{letter-spacing:2.2px}
-  .sumario-grid{grid-template-columns:1fr 1fr}
-  .sumario-grid a{min-height:82px;border-bottom:1px solid rgba(198,161,91,.22)}
-  .sumario-grid a:nth-child(2){border-right:0}
-  .sumario-grid a:nth-last-child(-n+2){border-bottom:0}
   .grupo{padding:44px 0 16px}
   .grupo:first-child{padding-top:10px}
   .grupo::before{top:28px}
@@ -510,19 +437,6 @@ h1{
     <section class="preambulo">
       O Direito Penal não se legitima pela mera capacidade do Estado de punir. Legitima-se, antes, pelos limites que o próprio Direito impõe ao poder de punir. Em um Estado Democrático de Direito, a pena somente pode nascer de lei anterior, incidir sobre fato pessoalmente imputável, proteger bens juridicamente relevantes, respeitar a dignidade humana e conservar proporção com a gravidade do injusto e a culpabilidade do agente. Os princípios a seguir não constituem ornamento retórico: formam uma arquitetura de garantias destinada a impedir o arbítrio, racionalizar a criminalização e recordar que a liberdade é a regra, enquanto a coerção penal exige fundamento jurídico estrito.
     </section>
-
-    <nav class="sumario-carta" aria-label="Mapa dos princípios">
-      <header>
-        <span class="kicker">Ordo principiorum</span>
-        <h2>Mapa da Carta</h2>
-      </header>
-      <div class="sumario-grid">
-        <a href="#fundamentos"><b>I–VI</b><span>Fundamentos e legalidade</span></a>
-        <a href="#imputacao"><b>VII–XI</b><span>Imputação e pena</span></a>
-        <a href="#limites-materiais"><b>XII–XVII</b><span>Limites materiais</span></a>
-        <a href="#garantias"><b>XVIII–XX</b><span>Garantias contra o arbítrio</span></a>
-      </div>
-    </nav>
 
     <section class="mandamentos" aria-label="Princípios fundamentais do Direito Penal">
       <div class="grupo" id="fundamentos">
