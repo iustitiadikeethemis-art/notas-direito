@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estrutura do Estado Brasileiro | Estado e Poder</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --me-bg:#0b0d10;
+  --me-bg2:#11161c;
+  --me-panel:#171d24;
+  --me-panel2:#1d2530;
+  --me-gold:#d7b15f;
+  --me-gold-soft:#f0d38b;
+  --me-blue:#6f94ba;
+  --me-green:#68a57e;
+  --me-violet:#9d8bb8;
+  --me-rust:#bd8a68;
+  --me-text:#f3efe7;
+  --me-muted:#c8c1b4;
+  --me-line:rgba(215,177,95,.28);
+  --me-softline:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 50% -8%,rgba(215,177,95,.17),transparent 32%),
+    radial-gradient(circle at 9% 28%,rgba(111,148,186,.10),transparent 24%),
+    radial-gradient(circle at 93% 45%,rgba(104,165,126,.07),transparent 22%),
+    linear-gradient(180deg,#171b20 0%,#0f1216 42%,#080a0c 100%);
+  color:var(--me-text);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.11;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:8px 8px;
+}
+header{background:rgba(9,11,14,.95);border-bottom:1px solid var(--me-line);backdrop-filter:blur(8px)}
+.brand,.brand a,.menu-links a{color:var(--me-text)!important}
+.menu-botao{border-color:var(--me-line);color:var(--me-gold-soft)}
+.menu-links{background:#0e1115;border-right:1px solid var(--me-line)}
+.menu-fechar{color:var(--me-text)}
+main.wrap{max-width:1220px;position:relative;z-index:1}
+.me-hero{padding:78px 0 44px;text-align:center;border-bottom:1px solid var(--me-line)}
+.me-kicker{display:inline-block;margin-bottom:16px;color:var(--me-muted);text-transform:uppercase;letter-spacing:2.5px;font-size:13px}
+.me-title{margin:0;color:var(--me-text);font-size:clamp(42px,6.5vw,78px);line-height:.98;letter-spacing:1.6px;text-transform:uppercase;text-shadow:0 5px 18px rgba(0,0,0,.55)}
+.me-title span{display:block;color:var(--me-gold)}
+.me-rule{width:min(820px,84%);height:1px;margin:24px auto 0;background:linear-gradient(90deg,transparent,var(--me-gold),transparent)}
+.me-subtitle{max-width:900px;margin:22px auto 0;color:var(--me-muted);font-size:20px;line-height:1.72}
+.me-breadcrumb{margin:24px 0 0;color:var(--me-muted);font-size:14px}
+.me-breadcrumb a{color:var(--me-gold-soft);text-decoration:none;border-bottom:1px solid rgba(240,211,139,.55)}
+.me-nav{position:sticky;top:64px;z-index:10;margin:0;padding:13px 0;border-bottom:1px solid var(--me-line);background:rgba(11,13,16,.91);backdrop-filter:blur(10px)}
+.me-nav-inner{display:flex;gap:8px;overflow:auto;padding-bottom:2px;scrollbar-width:thin}
+.me-nav a{flex:0 0 auto;padding:7px 11px;border:1px solid var(--me-softline);color:var(--me-muted);text-decoration:none;font-size:13px;background:rgba(255,255,255,.025)}
+.me-nav a:hover{color:var(--me-gold-soft);border-color:var(--me-line)}
+.me-section{padding:50px 0;border-bottom:1px solid rgba(255,255,255,.055)}
+.me-section h2{margin:0 0 12px;font-size:32px;color:#fff7df;line-height:1.2}
+.me-section h3{margin:26px 0 10px;font-size:22px;color:var(--me-gold-soft)}
+.me-section p{color:var(--me-muted);font-size:17px;line-height:1.76}
+.me-lead{max-width:930px;margin:0 auto 32px;padding:28px 30px;border:1px solid var(--me-line);background:rgba(255,255,255,.04);box-shadow:0 20px 44px rgba(0,0,0,.22)}
+.me-lead strong{color:#fff0bd}
+.me-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.me-card{grid-column:span 4;padding:23px;border:1px solid var(--me-softline);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));box-shadow:0 18px 42px rgba(0,0,0,.20)}
+.me-card.wide{grid-column:span 6}
+.me-card.full{grid-column:span 12}
+.me-card h3{margin:5px 0 9px;color:#f9f4e9;font-size:23px}
+.me-card p{font-size:15.5px;margin:0}
+.me-eyebrow{font-family:Arial,sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:1.3px;color:var(--me-gold-soft)}
+.me-badge{display:inline-block;margin:0 5px 6px 0;padding:5px 8px;border:1px solid var(--me-softline);font-family:Arial,sans-serif;font-size:11px;letter-spacing:.35px;color:#eee}
+.me-public{background:rgba(111,148,186,.15);border-color:rgba(111,148,186,.45)}
+.me-private{background:rgba(189,138,104,.14);border-color:rgba(189,138,104,.42)}
+.me-auto{background:rgba(157,139,184,.16);border-color:rgba(157,139,184,.45)}
+.me-mixed{background:rgba(104,165,126,.14);border-color:rgba(104,165,126,.43)}
+.me-warning{margin:22px 0;padding:18px 20px;border-left:4px solid var(--me-gold);border-top:1px solid var(--me-line);border-right:1px solid var(--me-line);border-bottom:1px solid var(--me-line);background:rgba(215,177,95,.07);color:var(--me-muted);font-size:16px;line-height:1.7}
+.me-flow{margin:18px 0 26px;padding:22px 24px;overflow:auto;border:1px solid var(--me-softline);background:#090b0e;color:#e8e3d9;font-family:Consolas,"Courier New",monospace;font-size:14px;line-height:1.62;white-space:pre;box-shadow:inset 0 0 40px rgba(255,255,255,.018)}
+.me-flow strong{color:var(--me-gold-soft)}
+.me-table-wrap{overflow-x:auto;margin:16px 0 28px;border:1px solid var(--me-softline)}
+.me-table{width:100%;border-collapse:collapse;min-width:760px;background:rgba(8,10,12,.45)}
+.me-table th,.me-table td{padding:12px 13px;border-right:1px solid var(--me-softline);border-bottom:1px solid var(--me-softline);vertical-align:top;text-align:left}
+.me-table th{background:rgba(215,177,95,.09);color:#f8e7b6;font-family:Arial,sans-serif;text-transform:uppercase;font-size:11px;letter-spacing:.75px}
+.me-table td{color:var(--me-muted);font-size:14px;line-height:1.55}
+.me-table td strong{color:#f5f1e7}
+.me-table tr:last-child td{border-bottom:none}
+.me-table th:last-child,.me-table td:last-child{border-right:none}
+.me-triad{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0 26px}
+.me-power{padding:28px 22px;text-align:center;border:1px solid var(--me-line);background:linear-gradient(180deg,rgba(215,177,95,.07),rgba(255,255,255,.018))}
+.me-power .roman{font-size:42px;color:var(--me-gold);line-height:1}
+.me-power h3{margin:10px 0 8px;color:#fff5d9}
+.me-power p{margin:0;font-size:14.5px}
+.me-qa{margin:10px 0;border:1px solid var(--me-softline);background:rgba(255,255,255,.025)}
+.me-qa summary{cursor:pointer;padding:15px 17px;color:#f7f2e7;font-weight:bold}
+.me-qa summary::marker{color:var(--me-gold)}
+.me-qa > div{padding:0 17px 17px}
+.me-qa p{font-size:15.5px;margin:5px 0}
+.me-legend{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 5px}
+.me-key{display:flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid var(--me-softline);font-family:Arial,sans-serif;font-size:11px;color:var(--me-muted)}
+.me-linekey{width:28px;height:0;border-top:2px solid var(--me-gold)}
+.me-linekey.dash{border-top-style:dashed;border-color:var(--me-blue)}
+.me-linekey.dot{border-top-style:dotted;border-color:var(--me-green)}
+.me-linekey.double{border-top:3px double var(--me-violet)}
+.me-source{font-size:14px!important}
+.me-source a{color:var(--me-gold-soft)}
+.me-back{display:inline-block;margin-top:24px;color:var(--me-gold-soft);text-decoration:none;border-bottom:1px solid rgba(240,211,139,.55)}
+.me-footer-note{margin-top:34px;text-align:center;color:var(--me-muted);font-size:14px}
+@media(max-width:860px){
+  .me-card,.me-card.wide{grid-column:span 12}
+  .me-triad{grid-template-columns:1fr}
+  .me-nav{top:56px}
+  .me-hero{padding-top:58px}
+}
+@media(max-width:600px){
+  .me-lead{padding:22px 20px}
+  .me-section h2{font-size:28px}
+  .me-flow{font-size:12.5px;padding:18px}
+}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+
+<main class="wrap">
+  <section class="me-hero">
+    <span class="me-kicker">Estado e Poder · mapa institucional</span>
+    <h1 class="me-title"><span>Estrutura</span> do Estado Brasileiro</h1>
+    <div class="me-rule"></div>
+    <p class="me-subtitle">Uma cartografia das instituições brasileiras: quem é ente, quem é órgão, quem integra a Administração, onde existe hierarquia e onde há apenas autonomia, controle, competência, regulação ou cooperação.</p>
+    <p class="me-breadcrumb"><a href="/filosofia/estado-e-poder.html">Estado e Poder</a> &gt; Estrutura do Estado Brasileiro</p>
+  </section>
+
+  <nav class="me-nav" aria-label="Navegação interna do mapa institucional">
+    <div class="me-nav-inner">
+      <a href="#chaves">Chaves de leitura</a>
+      <a href="#federacao">Federação</a>
+      <a href="#poderes">Poderes</a>
+      <a href="#administracao">Administração</a>
+      <a href="#judiciario">Judiciário</a>
+      <a href="#justica">Funções essenciais</a>
+      <a href="#controle">Controle</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#sistemas">Sistemas cooperativos</a>
+      <a href="#financeiro">Sistema financeiro</a>
+      <a href="#privados">Privados e paraestatais</a>
+      <a href="#quadro">Quadro geral</a>
+    </div>
+  </nav>
+
+  <section class="me-section" id="chaves">
+    <div class="me-lead">
+      <strong>Primeira regra: não tente desenhar o Estado brasileiro como uma única pirâmide.</strong>
+      Há hierarquia dentro de determinados órgãos e cadeias administrativas, mas o desenho constitucional combina autonomia federativa, separação dos Poderes, competências jurisdicionais, controle externo, regulação, delegação e cooperação. Dizer simplesmente que uma instituição “responde a” outra pode esconder relações juridicamente muito diferentes.
+    </div>
+
+    <h2>1. Quatro chaves de leitura</h2>
+    <div class="me-grid">
+      <article class="me-card wide">
+        <span class="me-eyebrow">Pessoa política</span>
+        <h3>Ente federativo</h3>
+        <p>União, Estados, Distrito Federal e Municípios. São pessoas jurídicas de direito público interno dotadas de autonomia constitucional. A soberania pertence à República Federativa do Brasil; os entes são autônomos, não soberanos.</p>
+      </article>
+      <article class="me-card wide">
+        <span class="me-eyebrow">Centro de competências</span>
+        <h3>Órgão público</h3>
+        <p>É parte de uma pessoa jurídica. Ministério, secretaria, tribunal, vara, embaixada, consulado e subprefeitura não se tornam pessoas jurídicas independentes apenas por possuírem estrutura e competências próprias.</p>
+      </article>
+      <article class="me-card wide">
+        <span class="me-eyebrow">Pessoa administrativa</span>
+        <h3>Entidade da Administração Indireta</h3>
+        <p>Autarquias, fundações públicas, empresas públicas e sociedades de economia mista possuem personalidade jurídica própria. A vinculação a um ministério, quando existente, não equivale à hierarquia típica entre órgãos da mesma pessoa jurídica.</p>
+      </article>
+      <article class="me-card wide">
+        <span class="me-eyebrow">Fora da máquina estatal</span>
+        <h3>Particular em função de interesse público</h3>
+        <p>Uma entidade privada pode prestar serviço público, receber recursos públicos, exercer atividade delegada, colaborar com políticas públicas ou desempenhar função cultural de interesse coletivo sem integrar a Administração Pública.</p>
+      </article>
+    </div>
+
+    <div class="me-legend">
+      <span class="me-badge me-public">público / estatal</span>
+      <span class="me-badge me-mixed">direito privado dentro da Administração</span>
+      <span class="me-badge me-auto">autonomia ou regime especial</span>
+      <span class="me-badge me-private">privado / não estatal</span>
+    </div>
+
+    <div class="me-flow">REPÚBLICA FEDERATIVA DO BRASIL
+│
+├── ORGANIZAÇÃO POLÍTICO-ADMINISTRATIVA
+│   ├── União
+│   ├── Estados
+│   ├── Distrito Federal
+│   └── Municípios
+│
+├── ORGANIZAÇÃO FUNCIONAL DO PODER
+│   ├── Legislativo
+│   ├── Executivo
+│   └── Judiciário
+│
+├── INSTITUIÇÕES COM AUTONOMIA CONSTITUCIONAL
+│   ├── Ministério Público
+│   └── Defensoria Pública
+│
+├── SISTEMAS DE CONTROLE
+│   ├── Legislativo + Tribunais de Contas
+│   ├── controle interno
+│   ├── CNJ
+│   └── CNMP
+│
+└── PARTICULARES EM RELAÇÃO COM O PODER PÚBLICO
+    ├── delegatários
+    ├── concessionárias e permissionárias
+    ├── serviços sociais autônomos
+    ├── organizações da sociedade civil
+    └── instituições privadas de relevância pública</div>
+  </section>
+
+  <section class="me-section" id="federacao">
+    <h2>2. Federação: quatro espécies de entes autônomos</h2>
+    <p>A organização político-administrativa compreende União, Estados, Distrito Federal e Municípios. Não existe relação geral de superioridade da União sobre os Estados ou dos Estados sobre os Municípios: cada ente recebe competências diretamente da Constituição. O Brasil possui 26 Estados, o Distrito Federal e, atualmente, 5.571 Municípios.</p>
+
+    <div class="me-table-wrap"><table class="me-table">
+      <thead><tr><th>Ente</th><th>Executivo</th><th>Legislativo</th><th>Judiciário próprio?</th><th>Nota institucional</th></tr></thead>
+      <tbody>
+        <tr><td><strong>União</strong></td><td>Presidente da República</td><td>Congresso Nacional</td><td>Sim, estrutura judiciária federal</td><td>É ente federativo interno. A República Federativa do Brasil é quem possui soberania e personalidade internacional; a União atua na representação externa nos termos constitucionais.</td></tr>
+        <tr><td><strong>Estado</strong></td><td>Governador</td><td>Assembleia Legislativa</td><td>Sim</td><td>Possui Constituição estadual, competências legislativas e administrativas próprias.</td></tr>
+        <tr><td><strong>Distrito Federal</strong></td><td>Governador</td><td>Câmara Legislativa</td><td>Sim, mas organizado e mantido pela União</td><td>Acumula competências legislativas reservadas aos Estados e aos Municípios e não pode ser dividido em Municípios.</td></tr>
+        <tr><td><strong>Município</strong></td><td>Prefeito</td><td>Câmara Municipal</td><td>Não</td><td>Possui Lei Orgânica e autonomia constitucional para assuntos locais. Não existe Poder Judiciário municipal.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="me-section" id="poderes">
+    <h2>3. Separação dos Poderes</h2>
+    <p>Na União, Legislativo, Executivo e Judiciário são independentes e harmônicos. A independência não significa isolamento: a própria Constituição distribui mecanismos de participação e controle recíproco, formando o conhecido sistema de freios e contrapesos.</p>
+
+    <div class="me-triad">
+      <article class="me-power"><div class="roman">I</div><h3>Legislativo</h3><p>Produz normas, delibera politicamente e exerce fiscalização e controle externo.</p></article>
+      <article class="me-power"><div class="roman">II</div><h3>Executivo</h3><p>Governa, dirige a Administração e executa políticas públicas.</p></article>
+      <article class="me-power"><div class="roman">III</div><h3>Judiciário</h3><p>Exerce jurisdição, tutela direitos e controla juridicamente atos e normas.</p></article>
+    </div>
+
+    <div class="me-warning"><strong>Exemplo de freio e contrapeso:</strong> o Presidente pode vetar projeto aprovado pelo Congresso; o Congresso pode rejeitar o veto; o Senado participa da aprovação de determinadas autoridades; e o Judiciário pode controlar a constitucionalidade de atos dos demais Poderes. Nenhum desses mecanismos transforma um Poder em superior hierárquico dos outros.</div>
+  </section>
+
+  <section class="me-section" id="administracao">
+    <h2>4. Poder Executivo e Administração Pública</h2>
+    <p>O Executivo não se confunde com toda a Administração Pública, mas nele se concentra a maior parte da atividade administrativa. Para visualizar sua estrutura, a distinção básica é entre Administração Direta e Administração Indireta.</p>
+
+    <div class="me-flow">ADMINISTRAÇÃO PÚBLICA FEDERAL
+│
+├── DIRETA
+│   ├── Presidência da República
+│   ├── Ministérios
+│   ├── Secretarias
+│   └── demais órgãos internos
+│
+└── INDIRETA
+    ├── Autarquias
+    │   ├── INSS
+    │   ├── IBAMA
+    │   ├── ANVISA
+    │   └── Banco Central — autarquia de natureza especial
+    │
+    ├── Fundações públicas
+    │
+    ├── Empresas públicas
+    │   ├── Caixa Econômica Federal
+    │   ├── Correios
+    │   └── BNDES
+    │
+    └── Sociedades de economia mista
+        ├── Banco do Brasil
+        └── Petrobras</div>
+
+    <div class="me-table-wrap"><table class="me-table">
+      <thead><tr><th>Categoria</th><th>Personalidade jurídica</th><th>Capital / patrimônio</th><th>Exemplos</th><th>Relação institucional</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Órgão da Administração Direta</strong></td><td>Não possui personalidade própria</td><td>Integra o orçamento da pessoa política</td><td>Ministérios, secretarias</td><td>Pode haver hierarquia administrativa interna.</td></tr>
+        <tr><td><strong>Autarquia</strong></td><td>Direito público</td><td>Patrimônio próprio</td><td>INSS, IBAMA, ANVISA</td><td>Descentralização administrativa; em regra sujeita a supervisão finalística prevista em lei, não à hierarquia de órgão ministerial.</td></tr>
+        <tr><td><strong>Empresa pública</strong></td><td>Direito privado</td><td>Capital integralmente público nos termos legais</td><td>Caixa, Correios, BNDES</td><td>Integra a Administração Indireta e se submete ao regime jurídico das estatais.</td></tr>
+        <tr><td><strong>Sociedade de economia mista</strong></td><td>Direito privado; sociedade anônima</td><td>Controle estatal, com participação privada possível</td><td>Banco do Brasil, Petrobras</td><td>Integra a Administração Indireta; não é simples repartição do ministério supervisor.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="me-warning"><strong>Banco Central:</strong> a LC 179/2021 o define como autarquia de natureza especial, caracterizada pela ausência de vinculação a Ministério, de tutela ou de subordinação hierárquica, com autonomia técnica, operacional, administrativa e financeira. <strong>Eletrobras:</strong> a União deixou de deter seu controle em 2022; por isso não deve ser apresentada hoje como sociedade de economia mista federal controlada pela União.</div>
+  </section>
+
+  <section class="me-section" id="judiciario">
+    <h2>5. Poder Judiciário: organização sem falsa hierarquia</h2>
+    <p>A estrutura judiciária possui graus de jurisdição e competências recursais, mas isso não autoriza tratar todos os órgãos inferiores como administrativamente subordinados aos tribunais superiores. Um Tribunal de Justiça estadual, por exemplo, possui autonomia administrativa e competências constitucionais próprias, ainda que suas decisões possam chegar ao STJ ou ao STF nas hipóteses previstas.</p>
+
+    <div class="me-flow">PODER JUDICIÁRIO
+│
+├── STF — Supremo Tribunal Federal
+│   └── guarda da Constituição e competências constitucionais próprias
+│
+├── CNJ — Conselho Nacional de Justiça
+│   └── controle administrativo, financeiro e disciplinar
+│       (não é tribunal recursal comum)
+│
+├── JUSTIÇA COMUM
+│   ├── Justiça Federal
+│   │   ├── Juízes Federais
+│   │   ├── 6 Tribunais Regionais Federais
+│   │   └── STJ / STF conforme a matéria
+│   └── Justiça dos Estados e do DF
+│       ├── Juízes de Direito
+│       ├── Tribunais de Justiça
+│       └── STJ / STF conforme a matéria
+│
+└── JUSTIÇAS ESPECIALIZADAS
+    ├── Trabalho: Varas → TRTs → TST
+    ├── Eleitoral: Juízes/Juntas → TREs → TSE
+    └── Militar
+        ├── União → STM
+        └── Estados → TJM onde existente ou TJ estadual</div>
+
+    <div class="me-grid">
+      <article class="me-card"><span class="me-eyebrow">Cúpula constitucional</span><h3>STF</h3><p>Onze Ministros. Exerce, entre outras funções, a guarda da Constituição e o controle concentrado de constitucionalidade.</p></article>
+      <article class="me-card"><span class="me-eyebrow">Lei federal</span><h3>STJ</h3><p>Tribunal superior responsável por uniformizar a interpretação do direito federal infraconstitucional no âmbito de sua competência.</p></article>
+      <article class="me-card"><span class="me-eyebrow">Controle interno do Judiciário</span><h3>CNJ</h3><p>Integra o Poder Judiciário, mas não funciona como instância recursal ordinária. Atua em controle administrativo, financeiro e disciplinar.</p></article>
+    </div>
+
+    <div class="me-warning">A Justiça Federal possui hoje <strong>seis</strong> Tribunais Regionais Federais. Na Justiça Militar estadual, apenas São Paulo, Minas Gerais e Rio Grande do Sul possuem Tribunal de Justiça Militar próprio; nos demais Estados, o segundo grau é exercido pelo Tribunal de Justiça.</div>
+  </section>
+
+  <section class="me-section" id="justica">
+    <h2>6. Funções essenciais à Justiça</h2>
+    <div class="me-table-wrap"><table class="me-table">
+      <thead><tr><th>Instituição</th><th>Posição</th><th>Função básica</th><th>Integra um dos três Poderes?</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ministério Público</strong></td><td>Instituição permanente com autonomia constitucional</td><td>Defesa da ordem jurídica, do regime democrático e de interesses sociais e individuais indisponíveis.</td><td>Não.</td></tr>
+        <tr><td><strong>Advocacia Pública</strong></td><td>Estruturas jurídicas dos entes públicos</td><td>Representação judicial e extrajudicial e consultoria jurídica. Na União, destaca-se a AGU.</td><td>A AGU integra a estrutura do Executivo federal, embora seja função essencial à Justiça.</td></tr>
+        <tr><td><strong>Defensoria Pública</strong></td><td>Instituição permanente com autonomia constitucional</td><td>Orientação jurídica, promoção de direitos humanos e defesa integral e gratuita dos necessitados.</td><td>Não.</td></tr>
+        <tr><td><strong>Advocacia</strong></td><td>Atividade profissional privada indispensável à administração da Justiça</td><td>Defesa técnica e representação de pessoas e organizações.</td><td>Não.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="me-flow">MINISTÉRIO PÚBLICO BRASILEIRO
+├── Ministério Público da União — MPU
+│   ├── MPF
+│   ├── MPT
+│   ├── MPM
+│   └── MPDFT
+│
+└── Ministérios Públicos dos Estados
+
+CONTROLE ADMINISTRATIVO E FINANCEIRO
+└── CNMP — Conselho Nacional do Ministério Público</div>
+
+    <div class="me-warning">O CNMP não é “chefe hierárquico” de todos os membros do Ministério Público. Exerce controle administrativo, financeiro e disciplinar dentro das competências constitucionais.</div>
+  </section>
+
+  <section class="me-section" id="controle">
+    <h2>7. Controle do poder público</h2>
+    <p>O controle estatal é plural. O mesmo ato pode ser submetido a controles internos, externos, judiciais, legislativos e sociais, cada qual com fundamento e finalidade próprios.</p>
+
+    <div class="me-flow">CONTROLE EXTERNO FEDERAL
+Congresso Nacional
+└── exerce o controle externo com auxílio do TCU
+    └── Tribunal de Contas da União
+        ├── aprecia contas
+        ├── realiza auditorias e inspeções
+        ├── julga contas de administradores nos casos constitucionais
+        └── aplica sanções previstas em lei
+
+CONTROLE INTERNO DO EXECUTIVO FEDERAL
+└── Controladoria-Geral da União — CGU
+    ├── auditoria
+    ├── correição
+    ├── integridade
+    ├── transparência
+    └── prevenção e combate à corrupção</div>
+
+    <p>O TCU auxilia o Congresso Nacional, mas possui competências próprias atribuídas diretamente pela Constituição. A expressão “órgão auxiliar” não significa subordinação hierárquica ao Congresso.</p>
+  </section>
+
+  <section class="me-section" id="seguranca">
+    <h2>8. Defesa, segurança pública, inteligência e sistema penal</h2>
+
+    <h3>Forças Armadas</h3>
+    <p>Marinha, Exército e Aeronáutica são instituições nacionais permanentes e regulares, organizadas com base na hierarquia e na disciplina. O Presidente da República exerce a autoridade de Comandante Supremo. O art. 142 da Constituição não confere às Forças Armadas função de poder moderador sobre as instituições constitucionais.</p>
+
+    <div class="me-table-wrap"><table class="me-table">
+      <thead><tr><th>Instituição</th><th>Âmbito</th><th>Função predominante</th><th>Inserção</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Polícia Federal</strong></td><td>Federal</td><td>Polícia judiciária da União e demais atribuições constitucionais.</td><td>Executivo federal.</td></tr>
+        <tr><td><strong>Polícia Rodoviária Federal</strong></td><td>Federal</td><td>Patrulhamento ostensivo das rodovias federais.</td><td>Executivo federal.</td></tr>
+        <tr><td><strong>Polícias Civis</strong></td><td>Estados e DF</td><td>Polícia judiciária e apuração de infrações, ressalvadas competências da União.</td><td>Executivos estaduais e distrital.</td></tr>
+        <tr><td><strong>Polícias Militares</strong></td><td>Estados e DF</td><td>Polícia ostensiva e preservação da ordem pública.</td><td>Executivos estaduais e distrital.</td></tr>
+        <tr><td><strong>Corpos de Bombeiros Militares</strong></td><td>Estados e DF</td><td>Atividades definidas constitucional e legalmente, inclusive defesa civil.</td><td>Executivos estaduais e distrital.</td></tr>
+        <tr><td><strong>Polícias Penais</strong></td><td>Federal, estadual e distrital</td><td>Segurança dos estabelecimentos penais.</td><td>Respectivos Executivos.</td></tr>
+        <tr><td><strong>Guardas Municipais</strong></td><td>Municipal</td><td>Segurança urbana e proteção municipal dentro dos limites constitucionais e legais; não exercem polícia judiciária.</td><td>Executivo municipal.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Inteligência</h3>
+    <p>A Agência Brasileira de Inteligência — ABIN é órgão da Presidência da República vinculado à Casa Civil e órgão central do Sistema Brasileiro de Inteligência — SISBIN. É uma estrutura administrativa de inteligência de Estado; não se confunde com órgão policial ou tribunal.</p>
+
+    <h3>Política penal</h3>
+    <p>O antigo Departamento Penitenciário Nacional — DEPEN foi transformado, em 2023, na <strong>Secretaria Nacional de Políticas Penais — SENAPPEN</strong>, integrante da estrutura do Ministério da Justiça e Segurança Pública. No plano estadual, a administração penitenciária é organizada conforme a estrutura de cada Estado.</p>
+  </section>
+
+  <section class="me-section" id="sistemas">
+    <h2>9. Federalismo cooperativo: SUS, SUAS e educação</h2>
+    <p>Algumas políticas públicas nacionais não podem ser compreendidas por uma linha vertical “União → Estado → Município”. Elas funcionam mediante repartição de competências, financiamento e coordenação entre entes autônomos.</p>
+
+    <div class="me-grid">
+      <article class="me-card"><span class="me-eyebrow">Saúde</span><h3>SUS</h3><p>Sistema descentralizado e cooperativo. União, Estados, Distrito Federal e Municípios exercem competências próprias e articuladas na prestação de ações e serviços de saúde.</p></article>
+      <article class="me-card"><span class="me-eyebrow">Assistência social</span><h3>SUAS</h3><p>Organiza a assistência social em rede federativa. CRAS e CREAS são unidades públicas de referência; não são entes federativos nem pessoas políticas independentes.</p></article>
+      <article class="me-card"><span class="me-eyebrow">Educação</span><h3>Regime de colaboração</h3><p>União, Estados, Distrito Federal e Municípios possuem responsabilidades constitucionais próprias e cooperam na organização dos sistemas de ensino.</p></article>
+    </div>
+  </section>
+
+  <section class="me-section" id="financeiro">
+    <h2>10. Sistema Financeiro Nacional: regulação e operação</h2>
+    <div class="me-flow">SISTEMA FINANCEIRO NACIONAL
+│
+├── ÓRGÃOS NORMATIVOS E SUPERVISORES
+│   ├── Conselho Monetário Nacional — CMN
+│   ├── Banco Central do Brasil — BCB
+│   ├── Comissão de Valores Mobiliários — CVM
+│   ├── SUSEP
+│   └── PREVIC
+│
+└── OPERADORES
+    ├── bancos públicos
+    │   ├── Banco do Brasil — sociedade de economia mista
+    │   ├── Caixa — empresa pública
+    │   └── BNDES — empresa pública
+    ├── bancos privados
+    ├── cooperativas de crédito
+    └── demais instituições autorizadas ou reguladas</div>
+
+    <div class="me-table-wrap"><table class="me-table">
+      <thead><tr><th>Instituição</th><th>Natureza</th><th>Integra a Administração?</th><th>Chave de compreensão</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Banco Central</strong></td><td>Autarquia federal de natureza especial</td><td>Sim</td><td>Autonomia especial e ausência de vinculação a Ministério.</td></tr>
+        <tr><td><strong>Banco do Brasil</strong></td><td>Sociedade de economia mista</td><td>Sim, Administração Indireta</td><td>Pessoa jurídica de direito privado sob controle estatal, com participação de acionistas privados.</td></tr>
+        <tr><td><strong>Caixa Econômica Federal</strong></td><td>Empresa pública</td><td>Sim, Administração Indireta</td><td>Pessoa jurídica de direito privado com capital público.</td></tr>
+        <tr><td><strong>BNDES</strong></td><td>Empresa pública federal</td><td>Sim, Administração Indireta</td><td>Instrumento federal de fomento e financiamento do desenvolvimento.</td></tr>
+        <tr><td><strong>Banco privado</strong></td><td>Sociedade privada</td><td>Não</td><td>É regulado pelo Estado e integra o SFN sem se tornar órgão ou entidade estatal.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="me-section" id="privados">
+    <h2>11. Instituições privadas, delegatárias e paraestatais</h2>
+    <p>A presença de interesse público, fiscalização estatal ou recursos públicos não basta, isoladamente, para transformar uma pessoa privada em órgão estatal. A classificação depende do regime jurídico concreto.</p>
+
+    <details class="me-qa" open>
+      <summary>Academia Brasileira de Letras — ABL: é órgão público?</summary>
+      <div>
+        <span class="me-badge me-private">privada / não estatal</span>
+        <p>Não. A ABL é instituição cultural de natureza privada, organizada segundo estatuto próprio, e não integra a Administração Direta ou Indireta. Sua relevância cultural nacional e a possibilidade de manter relações ou receber auxílios públicos não mudam essa classificação.</p>
+      </div>
+    </details>
+
+    <details class="me-qa" open>
+      <summary>Banco do Brasil: é público ou privado?</summary>
+      <div>
+        <span class="me-badge me-mixed">direito privado dentro da Administração</span>
+        <p>É sociedade de economia mista federal: pessoa jurídica de direito privado integrante da Administração Indireta, sob controle estatal e com participação privada no capital. Portanto, “banco público” é uma descrição útil no uso comum, mas juridicamente sua categoria é sociedade de economia mista.</p>
+      </div>
+    </details>
+
+    <details class="me-qa" open>
+      <summary>OAB: é autarquia?</summary>
+      <div>
+        <span class="me-badge me-auto">regime jurídico singular</span>
+        <p>A OAB não deve ser colocada no mesmo quadro das autarquias comuns. A Lei 8.906/1994 a define como serviço público dotado de personalidade jurídica e forma federativa, e a jurisprudência do STF reconhece posição institucional singular, independente da Administração Pública direta e indireta.</p>
+      </div>
+    </details>
+
+    <details class="me-qa">
+      <summary>Cartórios / serventias extrajudiciais</summary>
+      <div>
+        <span class="me-badge me-private">atividade privada por delegação pública</span>
+        <p>Os serviços notariais e de registro são exercidos em caráter privado por delegação do poder público. A atividade é pública quanto à função delegada, mas seu exercício é privado, sujeito à disciplina legal e à fiscalização do Poder Judiciário.</p>
+      </div>
+    </details>
+
+    <details class="me-qa">
+      <summary>Conselhos profissionais</summary>
+      <div>
+        <span class="me-badge me-public">autarquias corporativas, em regra</span>
+        <p>Conselhos de fiscalização profissional são, em regra, pessoas jurídicas de direito público com natureza autárquica e poder de polícia profissional. A OAB constitui a exceção institucional mais relevante e possui regime próprio.</p>
+      </div>
+    </details>
+
+    <details class="me-qa">
+      <summary>Sistema S</summary>
+      <div>
+        <span class="me-badge me-private">serviços sociais autônomos</span>
+        <p>Entidades como SENAI, SESI, SENAC e SESC são tradicionalmente classificadas como pessoas jurídicas de direito privado, não integrantes da Administração, destinadas a atividades de interesse social e sujeitas a controles próprios sobre recursos e finalidades.</p>
+      </div>
+    </details>
+
+    <details class="me-qa">
+      <summary>Concessionárias e permissionárias</summary>
+      <div>
+        <span class="me-badge me-private">particular prestador de serviço público</span>
+        <p>A concessionária continua sendo pessoa privada. O que ocorre é a delegação da prestação de determinado serviço público, sob regulação, contrato, fiscalização e demais limites jurídicos.</p>
+      </div>
+    </details>
+
+    <details class="me-qa">
+      <summary>Organizações Sociais, OSCIPs e outras OSCs</summary>
+      <div>
+        <span class="me-badge me-private">cooperação com o Estado</span>
+        <p>São pessoas privadas que podem receber qualificações jurídicas específicas e celebrar instrumentos de parceria com o poder público. Cooperação, fomento ou recebimento de recursos não as converte automaticamente em integrantes da Administração Pública.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="me-section" id="quadro">
+    <h2>12. Quadro geral: “o que cada instituição é?”</h2>
+    <div class="me-table-wrap"><table class="me-table">
+      <thead><tr><th>Instituição</th><th>Natureza</th><th>Administração?</th><th>Relação central</th></tr></thead>
+      <tbody>
+        <tr><td><strong>União</strong></td><td>Ente federativo de direito público</td><td>É a própria pessoa política federal</td><td>Autonomia constitucional.</td></tr>
+        <tr><td><strong>Ministério</strong></td><td>Órgão</td><td>Administração Direta</td><td>Hierarquia administrativa interna.</td></tr>
+        <tr><td><strong>STF</strong></td><td>Órgão constitucional do Judiciário</td><td>Poder Judiciário</td><td>Competências constitucionais próprias.</td></tr>
+        <tr><td><strong>TCU</strong></td><td>Órgão constitucional de controle</td><td>Sistema federal de controle externo</td><td>Auxilia o Congresso; sem subordinação hierárquica a ele.</td></tr>
+        <tr><td><strong>MPF</strong></td><td>Ramo do MPU</td><td>Não integra os três Poderes</td><td>Autonomia institucional do Ministério Público.</td></tr>
+        <tr><td><strong>INSS</strong></td><td>Autarquia</td><td>Administração Indireta</td><td>Direito público.</td></tr>
+        <tr><td><strong>Banco Central</strong></td><td>Autarquia de natureza especial</td><td>Administração Indireta</td><td>Autonomia legal especial.</td></tr>
+        <tr><td><strong>Banco do Brasil</strong></td><td>Sociedade de economia mista</td><td>Administração Indireta</td><td>Direito privado + controle estatal.</td></tr>
+        <tr><td><strong>Caixa</strong></td><td>Empresa pública</td><td>Administração Indireta</td><td>Direito privado + capital público.</td></tr>
+        <tr><td><strong>BNDES</strong></td><td>Empresa pública</td><td>Administração Indireta</td><td>Fomento público federal.</td></tr>
+        <tr><td><strong>Petrobras</strong></td><td>Sociedade de economia mista</td><td>Administração Indireta</td><td>Empresa estatal sob forma de S.A.</td></tr>
+        <tr><td><strong>ABL</strong></td><td>Instituição cultural privada</td><td>Não</td><td>Relevância cultural sem integração estatal.</td></tr>
+        <tr><td><strong>OAB</strong></td><td>Regime institucional singular</td><td>Não integra Administração Direta ou Indireta</td><td>Serviço público independente segundo regime próprio.</td></tr>
+        <tr><td><strong>Serventia extrajudicial</strong></td><td>Serviço delegado</td><td>Não</td><td>Exercício privado por delegação + fiscalização judicial.</td></tr>
+        <tr><td><strong>CRAS</strong></td><td>Unidade pública</td><td>Integra a estrutura administrativa local competente</td><td>Unidade de referência do SUAS.</td></tr>
+        <tr><td><strong>Subprefeitura</strong></td><td>Órgão municipal</td><td>Administração municipal</td><td>Desconcentração administrativa.</td></tr>
+        <tr><td><strong>Embaixada</strong></td><td>Órgão/repartição de representação</td><td>Administração federal</td><td>Representação diplomática no exterior.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Tipos de relação institucional</h3>
+    <div class="me-legend">
+      <span class="me-key"><i class="me-linekey"></i> hierarquia</span>
+      <span class="me-key"><i class="me-linekey dash"></i> vinculação / supervisão</span>
+      <span class="me-key"><i class="me-linekey double"></i> controle</span>
+      <span class="me-key"><i class="me-linekey dot"></i> cooperação / regulação</span>
+    </div>
+
+    <div class="me-table-wrap"><table class="me-table">
+      <thead><tr><th>Relação</th><th>Significado</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Hierarquia</strong></td><td>Poder de direção, comando, revisão e disciplina dentro de uma estrutura.</td><td>Ministro e órgãos internos do ministério.</td></tr>
+        <tr><td><strong>Vinculação / supervisão</strong></td><td>Controle finalístico legal sobre entidade descentralizada, sem convertê-la em órgão subordinado.</td><td>Ministério supervisor e determinada autarquia ou estatal.</td></tr>
+        <tr><td><strong>Autonomia</strong></td><td>Competências próprias protegidas constitucional ou legalmente.</td><td>Entes federativos, Ministério Público, Defensoria e regimes especiais.</td></tr>
+        <tr><td><strong>Controle externo</strong></td><td>Fiscalização por estrutura institucional distinta.</td><td>Congresso Nacional com auxílio do TCU.</td></tr>
+        <tr><td><strong>Competência recursal</strong></td><td>Possibilidade de revisão jurisdicional por tribunal competente.</td><td>TJ → STJ ou STF, conforme a matéria.</td></tr>
+        <tr><td><strong>Regulação</strong></td><td>Disciplina estatal de agentes, mercados ou serviços.</td><td>Banco Central e instituições financeiras.</td></tr>
+        <tr><td><strong>Delegação</strong></td><td>Particular exerce atividade pública transferida pelo Estado nos limites legais.</td><td>Cartórios e concessionárias.</td></tr>
+        <tr><td><strong>Cooperação federativa</strong></td><td>Atuação coordenada de entes autônomos.</td><td>SUS, SUAS e educação.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="me-section" id="fontes">
+    <h2>13. Fontes essenciais</h2>
+    <p class="me-source">O mapa foi construído principalmente a partir da Constituição Federal e de normas e páginas institucionais oficiais. Como estruturas administrativas podem mudar, especialmente ministérios e vinculações, esta página deve ser revisitada periodicamente.</p>
+    <p class="me-source">
+      <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Constituição Federal de 1988</a> ·
+      <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm" target="_blank" rel="noopener">Decreto-Lei 200/1967</a> ·
+      <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13303.htm" target="_blank" rel="noopener">Lei 13.303/2016</a> ·
+      <a href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp179.htm" target="_blank" rel="noopener">LC 179/2021</a> ·
+      <a href="https://www.planalto.gov.br/ccivil_03/leis/l8906.htm" target="_blank" rel="noopener">Lei 8.906/1994</a> ·
+      <a href="https://www.planalto.gov.br/ccivil_03/leis/l8935.htm" target="_blank" rel="noopener">Lei 8.935/1994</a> ·
+      <a href="https://www.gov.br/abin/pt-br/institucional/a-abin/" target="_blank" rel="noopener">ABIN</a> ·
+      <a href="https://www.gov.br/senappen/pt-br/acesso-a-informacao/institucional/institucional" target="_blank" rel="noopener">SENAPPEN</a> ·
+      <a href="https://www.bcb.gov.br/" target="_blank" rel="noopener">Banco Central</a> ·
+      <a href="https://www.cnj.jus.br/" target="_blank" rel="noopener">CNJ</a> ·
+      <a href="https://www.cnmp.mp.br/" target="_blank" rel="noopener">CNMP</a> ·
+      <a href="https://www.gov.br/cgu/pt-br" target="_blank" rel="noopener">CGU</a> ·
+      <a href="https://www.academia.org.br/academia/estatuto" target="_blank" rel="noopener">Estatuto da ABL</a>.
+    </p>
+    <a class="me-back" href="/filosofia/estado-e-poder.html">Voltar para Estado e Poder</a>
+    <div class="me-footer-note">João Victor Brando Novais · São Paulo, 2026</div>
+  </section>
+</main>
+
+<script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;iniciarMenu();});</script>
+<script src="/menu.js"></script>
+</body>
+</html>
