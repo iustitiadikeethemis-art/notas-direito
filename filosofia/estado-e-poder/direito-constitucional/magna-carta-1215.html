@@ -55,6 +55,11 @@ body{background:#ece5d8;color:var(--mc-ink);}
   position:sticky;
   top:92px;
   align-self:start;
+  max-height:calc(100vh - 120px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:#caa24f rgba(255,255,255,.08);
   background:#0a3325;
   color:#fff;
   border-radius:18px;
@@ -62,6 +67,17 @@ body{background:#ece5d8;color:var(--mc-ink);}
   border:1px solid #315b4c;
   box-shadow:0 16px 36px rgba(0,0,0,.12);
 }
+.mc-nav::-webkit-scrollbar{width:8px;}
+.mc-nav::-webkit-scrollbar-track{
+  background:rgba(255,255,255,.06);
+  border-radius:999px;
+}
+.mc-nav::-webkit-scrollbar-thumb{
+  background:#caa24f;
+  border-radius:999px;
+  border:2px solid #0a3325;
+}
+.mc-nav::-webkit-scrollbar-thumb:hover{background:#e7cf91;}
 .mc-nav h2{font-size:17px;margin:0 0 12px;color:#f1dfb0;}
 .mc-nav a{
   display:block;
@@ -255,7 +271,7 @@ body{background:#ece5d8;color:var(--mc-ink);}
 .assinatura-texto p{text-align:left;font-size:16px;color:#625c52;margin:4px 0;}
 @media(max-width:900px){
   .mc-layout{grid-template-columns:1fr;}
-  .mc-nav{position:static;}
+  .mc-nav{position:static;max-height:none;overflow-y:visible;}
   .mc-hero-inner{padding:38px 28px;}
   .mc-hero h1{font-size:37px;}
   .mc-artigo{padding:30px 24px;}
