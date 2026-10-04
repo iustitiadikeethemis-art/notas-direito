@@ -273,8 +273,8 @@ h1{
 }
 .romano{
   position:relative;
-  width:82px;
-  height:104px;
+  width:86px;
+  height:86px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -285,64 +285,73 @@ h1{
   font-weight:600;
   letter-spacing:1px;
   background:
-    linear-gradient(180deg,rgba(221,190,126,.96),rgba(143,114,66,.88));
+    linear-gradient(135deg,rgba(198,161,91,.96),rgba(143,114,66,.92));
   clip-path:polygon(
-    50% 0,
-    86% 29%,
-    86% 82%,
-    76% 94%,
-    61% 94%,
+    50% 0%,
+    65% 9%,
+    82% 8%,
+    92% 24%,
+    100% 50%,
+    92% 76%,
+    82% 92%,
+    65% 91%,
     50% 100%,
-    39% 94%,
-    24% 94%,
-    14% 82%,
-    14% 29%
+    35% 91%,
+    18% 92%,
+    8% 76%,
+    0% 50%,
+    8% 24%,
+    18% 8%,
+    35% 9%
   );
-  filter:drop-shadow(0 8px 14px rgba(0,0,0,.20));
+  filter:drop-shadow(0 8px 14px rgba(0,0,0,.18));
 }
 .romano::before{
   content:"";
   position:absolute;
-  inset:2px;
+  inset:3px;
   z-index:0;
   background:
-    radial-gradient(circle at 50% 18%,rgba(198,161,91,.13),transparent 18%),
-    linear-gradient(180deg,rgba(58,33,73,.98),rgba(29,16,39,.98));
+    radial-gradient(circle at 50% 50%,rgba(198,161,91,.09),transparent 56%),
+    linear-gradient(180deg,rgba(52,30,66,.98),rgba(29,16,39,.99));
   clip-path:polygon(
-    50% 0,
-    86% 29%,
-    86% 82%,
-    76% 94%,
-    61% 94%,
+    50% 0%,
+    65% 9%,
+    82% 8%,
+    92% 24%,
+    100% 50%,
+    92% 76%,
+    82% 92%,
+    65% 91%,
     50% 100%,
-    39% 94%,
-    24% 94%,
-    14% 82%,
-    14% 29%
+    35% 91%,
+    18% 92%,
+    8% 76%,
+    0% 50%,
+    8% 24%,
+    18% 8%,
+    35% 9%
   );
   pointer-events:none;
 }
 .romano::after{
   content:"";
   position:absolute;
-  top:18px;
-  left:50%;
+  inset:13px;
   z-index:1;
-  width:8px;
-  height:8px;
-  border:1px solid rgba(198,161,91,.68);
-  transform:translateX(-50%) rotate(45deg);
+  border:1px solid rgba(198,161,91,.34);
+  transform:rotate(45deg);
   box-shadow:
-    0 0 0 3px rgba(198,161,91,.06),
-    0 0 12px rgba(198,161,91,.08);
+    0 0 0 5px rgba(198,161,91,.035),
+    inset 0 0 0 1px rgba(198,161,91,.08);
   pointer-events:none;
 }
 .romano span{
   position:relative;
   z-index:2;
   display:block;
-  transform:translateY(10px);
-  text-shadow:0 1px 8px rgba(198,161,91,.12);
+  transform:none;
+  text-shadow:0 1px 8px rgba(198,161,91,.14);
 }
 .principio h2{
   margin:0 0 8px;
@@ -434,9 +443,8 @@ h1{
   .grupo:first-child::before{top:0}
   .grupo h2{font-size:30px}
   .principio{grid-template-columns:1fr;gap:12px;padding:29px 0 32px}
-  .romano{width:68px;height:88px;font-size:17px}
-  .romano::after{top:15px;width:7px;height:7px}
-  .romano span{transform:translateY(8px)}
+  .romano{width:70px;height:70px;font-size:17px}
+  .romano::after{inset:11px}
   .principio h2{font-size:28px}
   .principio p{font-size:17px;text-align:left}
   .preambulo{padding:28px 4px;font-size:18px;text-align:left}
