@@ -273,8 +273,8 @@ h1{
 }
 .romano{
   position:relative;
-  width:72px;
-  min-height:72px;
+  width:82px;
+  height:104px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -284,27 +284,65 @@ h1{
   font-size:20px;
   font-weight:600;
   letter-spacing:1px;
-  border:1px solid rgba(198,161,91,.58);
-  border-radius:18px;
   background:
-    linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.08)),
-    rgba(255,255,255,.015);
-  box-shadow:
-    inset 0 0 0 1px rgba(198,161,91,.12),
-    0 8px 18px rgba(0,0,0,.18);
+    linear-gradient(180deg,rgba(221,190,126,.96),rgba(143,114,66,.88));
+  clip-path:polygon(
+    50% 0,
+    86% 29%,
+    86% 82%,
+    76% 94%,
+    61% 94%,
+    50% 100%,
+    39% 94%,
+    24% 94%,
+    14% 82%,
+    14% 29%
+  );
+  filter:drop-shadow(0 8px 14px rgba(0,0,0,.20));
 }
 .romano::before{
   content:"";
   position:absolute;
-  inset:7px;
-  border:1px solid rgba(198,161,91,.18);
-  border-radius:12px;
+  inset:2px;
+  z-index:0;
+  background:
+    radial-gradient(circle at 50% 18%,rgba(198,161,91,.13),transparent 18%),
+    linear-gradient(180deg,rgba(58,33,73,.98),rgba(29,16,39,.98));
+  clip-path:polygon(
+    50% 0,
+    86% 29%,
+    86% 82%,
+    76% 94%,
+    61% 94%,
+    50% 100%,
+    39% 94%,
+    24% 94%,
+    14% 82%,
+    14% 29%
+  );
   pointer-events:none;
 }
-.romano::after{content:none}
+.romano::after{
+  content:"";
+  position:absolute;
+  top:18px;
+  left:50%;
+  z-index:1;
+  width:8px;
+  height:8px;
+  border:1px solid rgba(198,161,91,.68);
+  transform:translateX(-50%) rotate(45deg);
+  box-shadow:
+    0 0 0 3px rgba(198,161,91,.06),
+    0 0 12px rgba(198,161,91,.08);
+  pointer-events:none;
+}
 .romano span{
+  position:relative;
+  z-index:2;
   display:block;
-  transform:translateY(-1px);
+  transform:translateY(10px);
+  text-shadow:0 1px 8px rgba(198,161,91,.12);
 }
 .principio h2{
   margin:0 0 8px;
@@ -396,8 +434,9 @@ h1{
   .grupo:first-child::before{top:0}
   .grupo h2{font-size:30px}
   .principio{grid-template-columns:1fr;gap:12px;padding:29px 0 32px}
-  .romano{width:60px;min-height:60px;font-size:17px;border-radius:15px}
-  .romano::before{inset:6px;border-radius:10px}
+  .romano{width:68px;height:88px;font-size:17px}
+  .romano::after{top:15px;width:7px;height:7px}
+  .romano span{transform:translateY(8px)}
   .principio h2{font-size:28px}
   .principio p{font-size:17px;text-align:left}
   .preambulo{padding:28px 4px;font-size:18px;text-align:left}
