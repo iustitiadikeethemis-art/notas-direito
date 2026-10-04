@@ -161,6 +161,43 @@ body{background:#ece5d8;color:var(--mc-ink);}
 .mc-clausula h3{margin:0 0 10px;color:#173f30;font-size:22px;line-height:1.25;}
 .mc-clausula p{margin-bottom:12px;text-align:left;font-size:17px;line-height:1.75;}
 .mc-clausula p:last-child{margin-bottom:0;}
+.mc-original{
+  margin:14px 0 16px;
+  padding:16px 18px;
+  border-left:4px solid var(--mc-green);
+  border-radius:0 12px 12px 0;
+  background:#f0e7d5;
+}
+.mc-original .rotulo{
+  display:block;
+  margin-bottom:6px;
+  color:#6a5c3d;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.mc-original .latim{
+  margin:0 0 8px;
+  color:#2f332d;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.6;
+  font-style:italic;
+  text-align:left;
+}
+.mc-original .traducao{
+  margin:0;
+  color:#4e493f;
+  font-size:15px;
+  line-height:1.6;
+  text-align:left;
+}
+.mc-original a{
+  color:#174d37;
+  text-decoration:none;
+  border-bottom:1px solid rgba(23,77,55,.35);
+}
 .mc-vigencia{
   margin:32px 0;
   padding:24px 26px;
@@ -432,6 +469,7 @@ body{background:#ece5d8;color:var(--mc-ink);}
 </div>
 
 <p>A primeira coisa que o leitor precisa saber é que a Magna Carta de 1215 não nasceu organizada em “artigos” como uma Constituição contemporânea. O texto original corria de forma contínua; a divisão em <strong>63 cláusulas</strong> é editorial e posterior. Por isso, ao estudá-la, o termo historicamente mais adequado é <strong>cláusula</strong>.</p>
+<p>Também é importante esclarecer o que chamaremos aqui de <strong>“original”</strong>: a Magna Carta de 1215 foi redigida em <strong>latim medieval</strong> e expedida em múltiplos exemplares oficiais. Não existe uma única folha-mestra “assinada por João” da qual todo o restante derive. Por isso, os quadros abaixo reproduzem trechos do texto latino de 1215 tal como estabelecido em edições documentais modernas, acompanhados de uma tradução de estudo em português.</p>
 
 <p>E há outra surpresa: lendo a Carta inteira, percebe-se rapidamente que ela não é uma declaração abstrata sobre liberdade. Grande parte do texto trata de heranças, viúvas, guarda de herdeiros menores, dívidas, florestas reais, pontes, mercadores, tributos feudais, propriedades, castelos, funcionários régios e obrigações entre senhores e vassalos.</p>
 
@@ -443,12 +481,24 @@ body{background:#ece5d8;color:var(--mc-ink);}
   <h3>Cláusula 1 — a liberdade da Igreja</h3>
   <p>A Carta começa afirmando a liberdade da Igreja inglesa e a preservação de seus direitos e liberdades. Isso não é casual diante do longo conflito entre João e o papado, especialmente em torno da nomeação do arcebispo de Canterbury.</p>
   <p>O dado importante é que a primeira grande limitação estabelecida não é uma declaração de direitos individuais universais. É a proteção de uma <strong>instituição</strong> contra interferências do poder régio. Isso revela bem o mundo de 1215: liberdade significava frequentemente preservar esferas jurídicas já existentes contra a intervenção do rei.</p>
+  <div class="mc-original">
+    <span class="rotulo">Trecho latino de 1215</span>
+    <p class="latim">“quod Anglicana ecclesia libera sit, et habeat jura sua integra, et libertates suas illaesas”</p>
+    <p class="traducao">Tradução de estudo: “que a Igreja inglesa seja livre, conserve íntegros os seus direitos e ilesas as suas liberdades.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_01" target="_blank" rel="noopener">Texto latino e edição crítica</a></p>
+  </div>
 </div>
 
 <div class="mc-clausula">
   <h3>Cláusulas 12 e 14 — tributação e consentimento</h3>
   <p>A cláusula 12 estabelecia que determinados tributos feudais, especialmente <em>scutage</em> e <em>aid</em>, não deveriam ser cobrados, salvo exceções, sem o <strong>“common counsel of the kingdom”</strong>, o conselho comum do reino.</p>
   <p>A cláusula 14 explicava como esse conselho deveria ser convocado: arcebispos, bispos, abades, condes e grandes barões seriam chamados individualmente; outros vassalos diretos da Coroa seriam convocados de forma geral, com antecedência mínima de quarenta dias, indicação de data, lugar e motivo.</p>
+  <div class="mc-original">
+    <span class="rotulo">Trechos latinos de 1215</span>
+    <p class="latim">Cl. 12: “Nullum scutagium vel auxilium ponatur in regno nostro nisi per commune consilium regni nostri”</p>
+    <p class="traducao">“Nenhum escutágio ou auxílio seja imposto em nosso reino senão pelo conselho comum de nosso reino.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_12" target="_blank" rel="noopener">Cláusula 12</a></p>
+    <p class="latim">Cl. 14: “ad terminum quadraginta dierum ad minus, et ad certum locum”</p>
+    <p class="traducao">“com antecedência de pelo menos quarenta dias e para lugar determinado.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_14" target="_blank" rel="noopener">Cláusula 14</a></p>
+  </div>
   <p>Não se deve traduzir isso apressadamente como “nenhum imposto sem aprovação do Parlamento”, porque o Parlamento moderno ainda não existia. Mas a ideia é historicamente importante: <strong>o poder fiscal do rei começa a encontrar uma exigência de consentimento político.</strong></p>
 </div>
 
@@ -456,18 +506,33 @@ body{background:#ece5d8;color:var(--mc-ink);}
   <h3>Cláusula 20 — a punição não deve ser arbitrariamente excessiva</h3>
   <p>A cláusula 20 tratava das multas e determinava que sua intensidade guardasse relação com a gravidade da infração, procurando preservar os meios de subsistência do punido. Mercadores deveriam conservar seu estoque comercial e trabalhadores rurais, os instrumentos necessários à produção.</p>
   <p>Não se trata ainda do princípio constitucional moderno da proporcionalidade, mas há um antecedente relevante: <strong>a sanção não deve ser imposta de modo destrutivo e sem medida.</strong></p>
+  <div class="mc-original">
+    <span class="rotulo">Trecho latino de 1215</span>
+    <p class="latim">“Liber homo non amercietur pro parvo delicto, nisi secundum modum delicti”</p>
+    <p class="traducao">“O homem livre não será multado por pequena infração senão segundo a medida da infração.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_20" target="_blank" rel="noopener">Cláusula 20</a></p>
+  </div>
 </div>
 
 <div class="mc-clausula">
   <h3>Cláusula 28 — a Coroa não pode simplesmente tomar</h3>
   <p>A cláusula 28 proibia funcionários régios de tomar alimentos ou outros bens sem pagamento imediato, salvo concordância do proprietário em receber posteriormente.</p>
   <p>A norma respondia a uma prática concreta da administração régia, mas o problema jurídico é reconhecível até hoje: <strong>a necessidade do poder público não transforma automaticamente o patrimônio privado em bem disponível ao governante.</strong></p>
+  <div class="mc-original">
+    <span class="rotulo">Trecho latino de 1215</span>
+    <p class="latim">“Nullus constabularius, vel alius ballivus noster, capiat blada vel alia catalla alicujus”</p>
+    <p class="traducao">“Nenhum condestável ou outro oficial nosso tome o cereal ou outros bens de alguém...” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_28" target="_blank" rel="noopener">Cláusula 28</a></p>
+  </div>
 </div>
 
 <div class="mc-clausula">
   <h3>Cláusula 38 — a acusação, sozinha, não basta</h3>
   <p>A cláusula 38 impedia um oficial de submeter alguém a julgamento apoiando-se apenas em sua própria acusação, sem testemunhas confiáveis.</p>
   <p>Ainda não estamos diante do processo penal contemporâneo, mas a limitação é clara: <strong>a afirmação do agente do poder não deve valer automaticamente como prova suficiente contra o acusado.</strong></p>
+  <div class="mc-original">
+    <span class="rotulo">Trecho latino de 1215</span>
+    <p class="latim">“Nullus ballivus ponat de cetero aliquem ad legem simplici loquela sua, sine testibus fidelibus”</p>
+    <p class="traducao">“Nenhum oficial submeterá alguém à lei apenas por sua própria acusação, sem testemunhas dignas de confiança.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_38" target="_blank" rel="noopener">Cláusula 38</a></p>
+  </div>
 </div>
 
 <div class="mc-clausula">
@@ -475,30 +540,57 @@ body{background:#ece5d8;color:var(--mc-ink);}
   <p>Esta é uma das passagens mais célebres da Carta. Ela dispõe que nenhum <em>homem livre</em> poderia ser preso, privado de bens ou direitos, exilado ou atingido de outras formas sem julgamento legítimo de seus pares ou segundo a <strong>“law of the land”</strong>, a lei da terra.</p>
   <p>Três cuidados são necessários. A cláusula fala em “homem livre”, portanto não proclama direitos universais; “julgamento por seus pares” não equivale automaticamente ao júri moderno; e “law of the land” ainda não é o <em>due process of law</em> contemporâneo.</p>
   <p>Mesmo assim, a transformação estrutural é enorme: <strong>a ação do rei contra a liberdade, os direitos e o patrimônio não pode ser puramente voluntarista; precisa encontrar fundamento em uma ordem jurídica.</strong></p>
+  <div class="mc-original">
+    <span class="rotulo">Trecho latino de 1215</span>
+    <p class="latim">“Nullus liber homo capiatur, vel imprisonetur [...] nisi per legale judicium parium suorum vel per legem terrae.”</p>
+    <p class="traducao">“Nenhum homem livre será preso ou encarcerado [...] senão por julgamento legal de seus pares ou pela lei da terra.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_39" target="_blank" rel="noopener">Cláusula 39</a></p>
+  </div>
 </div>
 
 <div class="mc-clausula">
   <h3>Cláusula 40 — a justiça não se vende, não se nega e não se demora</h3>
   <p>A cláusula seguinte promete que o rei não venderá, negará ou retardará direito ou justiça.</p>
   <p>Por trás da fórmula havia um problema concreto: a administração da justiça podia funcionar também como instrumento financeiro e político da Coroa. A importância constitucional posterior está justamente na ideia de que <strong>a justiça não deve ser propriedade pessoal do governante.</strong></p>
+  <div class="mc-original">
+    <span class="rotulo">Texto latino de 1215 — cláusula 40</span>
+    <p class="latim">“Nulli vendemus, nulli negabimus, aut differemus, rectum aut justiciam.”</p>
+    <p class="traducao">“A ninguém venderemos, a ninguém negaremos ou retardaremos o direito ou a justiça.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_40" target="_blank" rel="noopener">Cláusula 40</a></p>
+  </div>
 </div>
 
 <div class="mc-clausula">
   <h3>Cláusula 45 — quem exerce o poder deve conhecer a lei</h3>
   <p>A cláusula 45 previa que juízes, xerifes e outros oficiais fossem escolhidos entre pessoas que conhecessem a lei do reino e estivessem dispostas a observá-la.</p>
   <p>A Carta, portanto, não enfrenta apenas a figura do rei, mas também os agentes que exercem poder em seu nome. Não basta existir uma ordem jurídica: <strong>quem administra e julga deve atuar segundo ela.</strong></p>
+  <div class="mc-original">
+    <span class="rotulo">Trecho latino de 1215</span>
+    <p class="latim">“Nos non faciemus justiciarios [...] nisi de talibus qui sciant legem regni et eam bene velint observare.”</p>
+    <p class="traducao">“Não nomearemos juízes [...] senão dentre aqueles que conheçam a lei do reino e estejam dispostos a observá-la bem.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_45" target="_blank" rel="noopener">Cláusula 45</a></p>
+  </div>
 </div>
 
 <div class="mc-clausula">
   <h3>Cláusula 60 — a limitação alcança a cadeia feudal</h3>
   <p>A cláusula 60 estabelecia, em essência, que as liberdades e costumes que o rei deveria respeitar em relação aos seus homens também deveriam ser observados pelos demais senhores em relação aos seus próprios dependentes.</p>
   <p>Isso não cria igualdade social nem universaliza direitos, mas mostra que determinadas limitações impostas à Coroa deveriam repercutir ao longo da estrutura feudal.</p>
+  <div class="mc-original">
+    <span class="rotulo">Trecho latino de 1215</span>
+    <p class="latim">“omnes de regno nostro, tam clerici quam laici, observent [...] erga suos.”</p>
+    <p class="traducao">“todos de nosso reino, tanto clérigos quanto leigos, observem [essas liberdades] em relação aos seus.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/Clause_60" target="_blank" rel="noopener">Cláusula 60</a></p>
+  </div>
 </div>
 
 <div class="mc-clausula">
   <h3>Cláusula 61 — o mecanismo dos vinte e cinco barões</h3>
   <p>A cláusula 61 era politicamente explosiva. Ela previa que vinte e cinco barões fiscalizassem o cumprimento da Carta. Se o rei ou seus agentes violassem suas disposições, quatro deles poderiam apresentar a reclamação; não havendo correção no prazo de <strong>quarenta dias</strong>, os vinte e cinco, com apoio da comunidade do reino, poderiam constranger o rei tomando castelos, terras e propriedades até que a violação fosse reparada, preservando a pessoa do rei, da rainha e de seus filhos.</p>
   <p>João aceitava, portanto, um mecanismo organizado de resistência contra o próprio poder régio. Não surpreende que essa cláusula tenha sido particularmente incompatível com a ideia de autoridade régia defendida por João e por Inocêncio III.</p>
+  <div class="mc-original">
+    <span class="rotulo">Trechos latinos de 1215</span>
+    <p class="latim">“barones eligant viginti quinque barones de regno quos voluerint”</p>
+    <p class="traducao">“que os barões escolham vinte e cinco barões do reino, aqueles que desejarem.”</p>
+    <p class="latim">“petent ut excessum illum sine dilatione faciamus emendari”</p>
+    <p class="traducao">“pedirão que façamos reparar aquela violação sem demora.” · <a href="https://magnacartaresearch.org/read/magna_carta_1215/%21all" target="_blank" rel="noopener">Cláusula 61 no texto integral</a></p>
+  </div>
   <p>Há ainda uma ironia histórica: a própria cláusula vedava a obtenção de qualquer providência destinada a revogar ou reduzir as concessões da Carta. Pouco depois, João buscou precisamente a intervenção papal que levou Inocêncio III a declará-la nula. A cláusula 61 desapareceu das reedições posteriores.</p>
 </div>
 
