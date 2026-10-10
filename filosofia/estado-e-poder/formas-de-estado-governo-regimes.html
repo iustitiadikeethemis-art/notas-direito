@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Estudo em desenvolvimento sobre formas de Estado e de governo, sistemas de governo e regimes políticos: república, monarquia, parlamentarismo, democracia, teocracia, plutocracia e oclocracia.">
+<title>Formas de Estado, Governo e Regimes Políticos | Estado e Poder</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{--fg-base:#0d1115;--fg-panel:#192127;--fg-line:rgba(212,176,109,.33);--fg-gold:#d8b77c;--fg-ivory:#eee8dd;--fg-muted:#c9c2b7;--fg-blue:#97bbcb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{background:radial-gradient(circle at 50% -5%,rgba(216,183,124,.18),transparent 33%),linear-gradient(180deg,#1c252c 0%,#11161b 45%,#090c10 100%);color:var(--fg-ivory)}
+header{background:rgba(11,16,20,.96);border-bottom:1px solid var(--fg-line)}
+.brand,.brand a,.menu-links a{color:var(--fg-ivory)!important}
+.menu-botao{color:var(--fg-gold);border-color:var(--fg-line)}
+.menu-links{background:#11191c;border-right-color:var(--fg-line)}
+.menu-fechar{color:var(--fg-gold)}
+main.wrap{max-width:1230px}
+.fg-hero{padding:68px 0 39px;text-align:center;border-bottom:1px solid var(--fg-line)}
+.fg-label{display:block;color:var(--fg-gold);font-size:12px;font-weight:bold;letter-spacing:2.7px;text-transform:uppercase}
+.fg-hero h1{font-size:clamp(35px,5.6vw,66px);line-height:1.05;margin:18px auto;max-width:950px;color:#faf3e5}
+.fg-hero h1 span{color:var(--fg-gold)}
+.fg-hero p{max-width:830px;margin:17px auto 0;color:var(--fg-muted);font-size:19px;line-height:1.68}
+.fg-crumb{margin-top:21px;font-size:13px;color:var(--fg-muted)}
+.fg-crumb a{color:var(--fg-gold);text-underline-offset:4px}
+.fg-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:27px;align-items:start;padding:38px 0 75px}
+.fg-nav{position:sticky;top:91px;align-self:start;max-height:calc(100vh - 115px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#bd9b65 #162027;background:#161f26;border:1px solid var(--fg-line);padding:20px;border-radius:15px}
+.fg-nav h2{font-size:18px;color:var(--fg-gold);margin:0 0 13px}
+.fg-nav a{display:block;text-decoration:none;color:#dfd9cf;font-size:14px;line-height:1.45;padding:9px 10px;margin:6px 0;border:1px solid rgba(255,255,255,.10);border-radius:7px;background:rgba(255,255,255,.02)}
+.fg-nav a:hover,.fg-nav a:focus-visible{background:rgba(216,183,124,.12);border-color:var(--fg-line)}
+.fg-body{min-width:0}
+.fg-status{padding:16px 20px;border:1px solid #6a5942;border-left:4px solid var(--fg-gold);background:#212720;border-radius:9px;font-size:14px;color:#e6dec9;line-height:1.7}
+.fg-section{margin-top:21px;padding:30px 34px;border:1px solid rgba(215,187,137,.20);border-radius:15px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.016))}
+.fg-section h2{font-size:27px;line-height:1.25;color:#efd5a5;margin:0 0 17px}
+.fg-section h3{font-size:19px;color:#e9dcc9;margin:25px 0 10px}
+.fg-section p,.fg-section li{font-size:17px;line-height:1.78;color:#d7d1c8;margin:0 0 15px}
+.fg-section strong{color:#f3e3c7}
+.fg-section a{color:#e9c990;text-underline-offset:3px}
+.fg-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 14px}
+.fg-map-card{padding:19px;border:1px solid var(--fg-line);background:#1e2a30;border-radius:11px}
+.fg-map-card small{color:var(--fg-gold);text-transform:uppercase;font-size:11px;letter-spacing:1px;font-weight:bold}
+.fg-map-card strong{display:block;font-size:19px;margin:7px 0;color:#fff1d6}
+.fg-map-card p{font-size:14px;line-height:1.6;margin:0;color:#cbd2d1}
+.fg-note{padding:17px 20px;border-left:4px solid var(--fg-gold);background:rgba(216,183,124,.095);color:#e4ddce;font-size:16px;line-height:1.7;margin:22px 0;border-radius:0 9px 9px 0}
+.fg-faces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:17px 0}
+.fg-face{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:16px;background:#1b252b}
+.fg-face h3{margin:0 0 8px;font-size:17px;color:#e7cc96}
+.fg-face p{margin:0;font-size:14px;line-height:1.6}
+.fg-table{overflow-x:auto;margin:19px 0}
+.fg-table table{width:100%;border-collapse:collapse;min-width:560px}
+.fg-table th,.fg-table td{padding:12px 15px;border-bottom:1px solid rgba(255,255,255,.13);text-align:left;vertical-align:top;font-size:15px;line-height:1.5}
+.fg-table th{color:#f7ddb1;background:rgba(255,255,255,.06)}
+.fg-table td{color:#d5d0c8}
+.fg-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:14px 0}
+.fg-topics li{padding:14px 16px;background:#1c282c;border:1px solid rgba(217,189,133,.23);border-radius:8px;margin:0;font-size:15px;line-height:1.55}
+.fg-topics li b{display:block;margin-bottom:3px;color:#eacb91}
+.fg-source-list{padding-left:22px;margin:14px 0}
+.fg-source-list li{font-size:15px;margin-bottom:10px}
+.fg-foot{padding:22px 0 64px;border-top:1px solid var(--fg-line);color:var(--fg-muted);font-size:14px}
+.fg-foot a{color:var(--fg-gold)}
+@media(max-width:900px){.fg-layout{grid-template-columns:1fr}.fg-nav{position:static;max-height:none;overflow:visible}.fg-map,.fg-faces{grid-template-columns:1fr 1fr}}
+@media(max-width:570px){.fg-hero{padding-top:46px}.fg-section{padding:22px 18px}.fg-map,.fg-faces,.fg-topics{grid-template-columns:1fr}}
+@media print{header,.fg-nav{display:none!important}.fg-layout{display:block}.fg-section{break-inside:avoid;background:#fff;color:#111;border-color:#bbb}.fg-section p,.fg-section li{color:#111}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="fg-hero">
+    <span class="fg-label">Estado e Poder · Teoria Política e Constitucional</span>
+    <h1>Formas de Estado e de Governo, <span>Sistemas e Regimes Políticos</span></h1>
+    <p>Uma investigação sobre a constituição, a distribuição, a legitimidade e os limites do poder político: da filosofia clássica ao constitucionalismo contemporâneo.</p>
+    <p class="fg-crumb"><a href="/filosofia/estado-e-poder.html">Estado e Poder</a> / Formas e regimes políticos</p>
+  </section>
+  <div class="fg-layout">
+    <aside class="fg-nav" aria-label="Navegação do estudo">
+      <h2>Índice do estudo</h2>
+      <a href="#distincoes">01 · Quatro perguntas diferentes</a>
+      <a href="#classificacoes">02 · Formas de Estado e governo</a>
+      <a href="#sistemas">03 · Sistemas de governo</a>
+      <a href="#regimes">04 · Regimes e poder social</a>
+      <a href="#republicanismo">05 · As tradições republicanas</a>
+      <a href="#filosofia">06 · Filosofia política clássica</a>
+      <a href="#plebiscito">07 · O plebiscito de 1993</a>
+      <a href="#roteiro">08 · Programa de aprofundamento</a>
+      <a href="#fontes">09 · Fontes para estudo</a>
+    </aside>
+    <article class="fg-body">
+      <div class="fg-status"><strong>Estudo em desenvolvimento.</strong> A estrutura temática e os conceitos introdutórios já estão disponíveis. Os capítulos históricos, as análises doutrinárias e os estudos comparados serão aprofundados progressivamente, com referências documentais.</div>
+
+      <section class="fg-section" id="distincoes">
+        <h2>1. Quatro perguntas diferentes sobre o poder</h2>
+        <p>As expressões <em>república</em>, <em>democracia</em>, <em>parlamentarismo</em> e <em>federação</em> frequentemente aparecem lado a lado no debate público. Não designam, contudo, o mesmo aspecto da organização política. O rigor conceitual exige identificar qual problema cada classificação procura responder.</p>
+        <div class="fg-map">
+          <div class="fg-map-card"><small>Distribuição territorial</small><strong>Forma de Estado</strong><p>Como o poder se distribui entre o centro político e as unidades territoriais?</p></div>
+          <div class="fg-map-card"><small>Chefatura do Estado</small><strong>Forma de governo</strong><p>Como se estabelece e legitima a chefia do Estado: monarquia ou república?</p></div>
+          <div class="fg-map-card"><small>Executivo e Legislativo</small><strong>Sistema de governo</strong><p>Como são estruturadas as relações de direção política e responsabilidade governamental?</p></div>
+          <div class="fg-map-card"><small>Exercício e controle</small><strong>Regime político</strong><p>Como o poder é conquistado, exercido, disputado e juridicamente limitado?</p></div>
+        </div>
+        <div class="fg-note"><strong>Distinção indispensável:</strong> um Estado pode ser simultaneamente federativo, republicano, presidencialista e democrático. As qualificações se referem a dimensões diferentes de uma mesma ordem política.</div>
+      </section>
+
+      <section class="fg-section" id="classificacoes">
+        <h2>2. Formas de Estado e formas de governo</h2>
+        <h3>Formas de Estado</h3>
+        <p>No <strong>Estado unitário</strong>, a ordem constitucional possui um centro político fundamental, ainda que haja descentralização administrativa ou política. Na <strong>federação</strong>, unidades integrantes do Estado recebem autonomia constitucionalmente garantida, sem soberania internacional própria. Formas regionais e outras soluções intermediárias exigem exame comparado de cada organização constitucional. A confederação, por sua vez, é tradicionalmente compreendida como associação de Estados soberanos e não se confunde com um Estado federal.</p>
+        <h3>Formas de governo</h3>
+        <p>A distinção entre <strong>monarquia</strong> e <strong>república</strong> costuma considerar a forma de investidura da chefia estatal, a hereditariedade, a duração do mandato e a responsabilidade política ou jurídica das autoridades. Nenhuma dessas categorias, isoladamente, determina o caráter democrático de um regime. Monarquias constitucionais podem ser democráticas, e repúblicas podem operar sob autoritarismo.</p>
+        <p>A <strong>monarquia absolutista</strong> identifica uma configuração histórica de concentração do poder na Coroa; não deve ser confundida com a monarquia constitucional parlamentar, em que funções e limites do monarca são radicalmente distintos.</p>
+      </section>
+
+      <section class="fg-section" id="sistemas">
+        <h2>3. Sistemas de governo: presidencialismo e parlamentarismo</h2>
+        <div class="fg-table">
+          <table>
+            <thead><tr><th>Presidencialismo</th><th>Parlamentarismo</th><th>Semipresidencialismo</th></tr></thead>
+            <tbody><tr>
+            <td>O presidente acumula, em regra, as funções de chefe de Estado e de governo; o mandato do Executivo não depende ordinariamente de confiança parlamentar.</td>
+            <td>Há distinção entre chefia de Estado e chefia de governo; a permanência do gabinete depende da relação de confiança política com o Parlamento.</td>
+            <td>Combina presidente eleito com primeiro-ministro e governo politicamente responsáveis perante o Parlamento, com distribuição de competências variável conforme a Constituição.</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <p>Esses modelos não devem ser classificados apenas pela existência de presidente ou primeiro-ministro. O aspecto decisivo é a <strong>estrutura constitucional de investidura, responsabilidade e permanência do governo</strong>, bem como a relação entre Executivo e Legislativo.</p>
+      </section>
+
+      <section class="fg-section" id="regimes">
+        <h2>4. Regimes políticos e outras estruturas de poder</h2>
+        <p>Democracia, autoritarismo e totalitarismo dizem respeito a problemas como participação popular, competição pelo poder, pluralismo, liberdades públicas e mecanismos de controle. Já expressões como <strong>teocracia</strong>, <strong>plutocracia</strong> e <strong>oligarquia</strong> enfatizam aspectos distintos da fundamentação ou concentração da autoridade; por isso, não formam necessariamente uma lista homogênea de regimes políticos.</p>
+        <div class="fg-faces">
+          <div class="fg-face"><h3>Democracia</h3><p>Associa legitimidade política à soberania popular, à participação, ao pluralismo e a mecanismos institucionais de limitação do poder.</p></div>
+          <div class="fg-face"><h3>Teocracia</h3><p>Modelo em que a autoridade política é fundamentada ou exercida a partir de uma ordem religiosa institucionalizada.</p></div>
+          <div class="fg-face"><h3>Plutocracia</h3><p>Termo crítico ou analítico para a predominância política dos detentores de riqueza; não equivale a uma forma constitucional única.</p></div>
+          <div class="fg-face"><h3>Oligarquia</h3><p>Domínio político concentrado em grupo relativamente restrito, em sentido variável na filosofia clássica e na ciência política atual.</p></div>
+          <div class="fg-face"><h3>Oclocracia</h3><p>Na tradição de Políbio, degeneração da democracia associada à prevalência desordenada da multidão sobre o governo das leis.</p></div>
+          <div class="fg-face"><h3>Autocracia</h3><p>Concentração de autoridade política em um governante ou centro de poder, com restrições à competição e ao controle efetivo.</p></div>
+        </div>
+      </section>
+
+      <section class="fg-section" id="republicanismo">
+        <h2>5. Republicanismo: muito além da ausência de um rei</h2>
+        <p>O vocábulo <em>res publica</em> remete à coisa pública, mas o republicanismo abriga tradições diversas. Em sentido institucional moderno, a república costuma associar-se à não hereditariedade da chefia estatal, à temporariedade dos mandatos e à responsabilidade dos governantes. Em sentido filosófico, a questão é mais ampla: como impedir que a comunidade política seja submetida à vontade arbitrária de pessoas ou facções?</p>
+        <p>O <strong>republicanismo clássico</strong> valoriza temas como virtude cívica, participação e corrupção do governo. As contribuições de Cícero, Maquiavel e autores posteriores não são equivalentes, mas integram uma história intelectual conectada pela preocupação com a liberdade política e a preservação das instituições comuns.</p>
+        <p>Na filosofia contemporânea, autores como Quentin Skinner e Philip Pettit desenvolveram leituras da <strong>liberdade como não dominação</strong>: a sujeição à possibilidade de interferência arbitrária pode comprometer a liberdade mesmo quando a interferência não se realiza. Esse problema oferece um elo especialmente fértil entre republicanismo e constitucionalismo.</p>
+        <div class="fg-note"><strong>Questão para aprofundamento:</strong> uma sociedade é politicamente livre apenas porque suas autoridades se abstêm de interferir, ou porque existem instituições que impedem interferências arbitrárias?</div>
+      </section>
+
+      <section class="fg-section" id="filosofia">
+        <h2>6. Da filosofia clássica às classificações contemporâneas</h2>
+        <p>As classificações políticas de Platão, Aristóteles e Políbio pertencem a contextos próprios e não correspondem integralmente às categorias utilizadas pela dogmática constitucional moderna. O estudo comparado exige distinguir critérios quantitativos (governo de um, de poucos ou de muitos), finalidades do governo e concepções de justiça, participação e bem comum.</p>
+        <p>Na conhecida <strong>anaciclose</strong>, Políbio descreveu movimentos de transformação e degeneração das formas de governo, incluindo a oclocracia. A tipologia aristotélica, entretanto, não é idêntica à de Políbio. A palavra <em>democracia</em>, em particular, não possui necessariamente o mesmo valor normativo em todas essas tradições e épocas.</p>
+        <p>O aprofundamento futuro acompanhará a passagem dessas formulações para as discussões sobre soberania, constitucionalismo liberal, representação, separação dos poderes e legitimidade democrática.</p>
+      </section>
+
+      <section class="fg-section" id="plebiscito">
+        <h2>7. Brasil, 21 de abril de 1993: a escolha sobre forma e sistema de governo</h2>
+        <p>O art. 2º do Ato das Disposições Constitucionais Transitórias da Constituição de 1988 determinou uma consulta popular sobre a <strong>forma</strong> e o <strong>sistema</strong> de governo. A data originalmente prevista era 7 de setembro de 1993, antecipada para 21 de abril pela Emenda Constitucional nº 2/1992; a Lei nº 8.624/1993 regulamentou o plebiscito.</p>
+        <div class="fg-map">
+          <div class="fg-map-card"><small>Primeira escolha</small><strong>Forma de governo</strong><p>República ou monarquia constitucional.</p></div>
+          <div class="fg-map-card"><small>Segunda escolha</small><strong>Sistema de governo</strong><p>Presidencialismo ou parlamentarismo.</p></div>
+        </div>
+        <p>O resultado manteve a <strong>república</strong> e o <strong>presidencialismo</strong>. A consulta constitui um exemplo concreto de soberania popular e democracia semidireta, além de evidenciar que as duas classificações não se confundem.</p>
+        <div class="fg-note"><strong>Documento na Biblioteca Documental:</strong> <a href="/biblioteca/#plebiscito-1993-forma-sistema-governo">Plebiscito de 1993 — registro, contexto e fontes oficiais</a>.</div>
+      </section>
+
+      <section class="fg-section" id="roteiro">
+        <h2>8. Programa de aprofundamento</h2>
+        <p>O roteiro está registrado para desenvolvimento em partes, sem perder o encadeamento entre teoria política, história institucional e Direito Constitucional.</p>
+        <ol class="fg-topics">
+          <li><b>I · Antiguidade</b>Platão, Aristóteles, Políbio e a classificação clássica das constituições.</li>
+          <li><b>II · Organização territorial</b>Estados unitários, federados, regionais e confederações.</li>
+          <li><b>III · Monarquia e república</b>Absolutismo, monarquia constitucional e tradições do republicanismo.</li>
+          <li><b>IV · Sistemas de governo</b>Presidencialismo, parlamentarismo e semipresidencialismo.</li>
+          <li><b>V · Regimes políticos</b>Democracia, autoritarismo, totalitarismo e configurações híbridas.</li>
+          <li><b>VI · Dominação e elites</b>Teocracia, plutocracia, oligarquia, autocracia e oclocracia.</li>
+          <li><b>VII · Republicanismo</b>Roma, Maquiavel, virtude cívica e liberdade como não dominação.</li>
+          <li><b>VIII · Constitucionalismo comparado</b>Arranjos institucionais no Brasil, Reino Unido, França e outros Estados.</li>
+          <li><b>IX · Experiência brasileira</b>1824, 1891, parlamentarismo de 1961 e plebiscito de 1993.</li>
+        </ol>
+      </section>
+
+      <section class="fg-section" id="fontes">
+        <h2>9. Fontes e referências iniciais</h2>
+        <ul class="fg-source-list">
+          <li><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm" target="_blank" rel="noopener noreferrer">Constituição Federal de 1988, arts. 1º, 2º, 14 e ADCT</a> — texto constitucional.</li>
+          <li><a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc02.htm" target="_blank" rel="noopener noreferrer">Emenda Constitucional nº 2/1992</a> — antecipação da consulta.</li>
+          <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8624.htm" target="_blank" rel="noopener noreferrer">Lei nº 8.624/1993</a> — regulamentação do plebiscito.</li>
+          <li><a href="https://www.tse.jus.br/eleicoes/plebiscitos-e-referendos/plebiscito-1993" target="_blank" rel="noopener noreferrer">Tribunal Superior Eleitoral: Plebiscito de 1993</a> — registro histórico e documentação eleitoral.</li>
+          <li><a href="https://plato.stanford.edu/entries/republicanism/" target="_blank" rel="noopener noreferrer">Stanford Encyclopedia of Philosophy: Republicanism</a> — introdução às tradições contemporâneas da teoria republicana.</li>
+          <li><a href="https://www.perseus.tufts.edu/hopper/text?doc=Plb.+6" target="_blank" rel="noopener noreferrer">Políbio, Histórias, Livro VI</a> — fonte clássica sobre formas de governo e constituição mista.</li>
+        </ul>
+      </section>
+    </article>
+  </div>
+  <footer class="fg-foot"><a href="/filosofia/estado-e-poder.html">← Voltar a Estado e Poder</a><p>Notas de um Estudante de Direito · Estudo temático em desenvolvimento · 2026</p></footer>
+</main>
+<script src="/menu.js"></script>
+<script>
+fetch("/header.html")
+  .then(r=>{if(!r.ok)throw new Error("Falha ao carregar cabeçalho");return r.text()})
+  .then(data=>{document.getElementById("header-container").innerHTML=data;if(typeof iniciarMenu==="function")iniciarMenu()})
+  .catch(err=>console.warn(err));
+</script>
+</body>
+</html>
