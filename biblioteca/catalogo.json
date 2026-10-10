@@ -66,7 +66,8 @@
         }
       ],
       "relacionados": [
-        "manifesto-constituinte-1823"
+        "manifesto-constituinte-1823",
+        "plebiscito-1993-forma-sistema-governo"
       ]
     },
     {
@@ -256,6 +257,67 @@
         "magna-carta-1215"
       ],
       "estudo": "/filosofia/estado-e-poder/direito-constitucional/petition-of-right-1628.html"
+    },
+    {
+      "id": "plebiscito-1993-forma-sistema-governo",
+      "titulo": "Plebiscito de 1993 — República, monarquia, presidencialismo e parlamentarismo",
+      "tipo": "Consulta popular",
+      "area": "Direito Constitucional",
+      "data": "1993-04-21",
+      "dataExibicao": "21 abr. 1993",
+      "orgao": "Justiça Eleitoral · Tribunal Superior Eleitoral",
+      "referencia": "Art. 2º do ADCT (CF/1988) · EC nº 2/1992 · Lei nº 8.624/1993",
+      "resumo": "Consulta popular nacional em que o eleitorado brasileiro decidiu manter a república como forma de governo e o presidencialismo como sistema de governo, distinguindo constitucionalmente essas duas categorias.",
+      "relevancia": "Episódio de exercício direto da soberania popular, expressamente previsto pelo constituinte de 1988. Permite estudar formas e sistemas de governo, democracia participativa, normas constitucionais transitórias, emendas à Constituição e organização da consulta plebiscitária.",
+      "recorte": "O art. 2º original do ADCT previa a votação em 7 de setembro de 1993. A EC nº 2/1992 antecipou-a para 21 de abril de 1993, e a Lei nº 8.624/1993 regulou o procedimento. A consulta teve duas questões independentes: forma (república ou monarquia constitucional) e sistema (presidencialismo ou parlamentarismo). O TSE oferece tabela arquivística de resultados; algumas publicações institucionais apresentam totais numéricos diferentes, razão pela qual esta ficha registra as opções vencedoras sem fixar contagens divergentes.",
+      "etiquetas": [
+        "Plebiscito",
+        "Democracia semidireta",
+        "Forma de governo",
+        "Sistema de governo",
+        "República",
+        "Monarquia",
+        "Presidencialismo",
+        "Parlamentarismo",
+        "Art. 2º do ADCT",
+        "Soberania popular",
+        "1993"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Plebiscito de 1993 · TSE",
+          "url": "https://www.tse.jus.br/eleicoes/plebiscitos-e-referendos/plebiscito-1993",
+          "natureza": "Registro e contexto histórico"
+        },
+        {
+          "rotulo": "Resultados gerais · Arquivo do TSE (PDF)",
+          "url": "https://www.justicaeleitoral.jus.br/arquivos/plebiscito-de-1993",
+          "natureza": "Tabela arquivística de resultados"
+        },
+        {
+          "rotulo": "ADCT de 1988, art. 2º · Câmara",
+          "url": "https://www2.camara.leg.br/legin/fed/conadc/1988/constituicao.adct-1988-5-outubro-1988-322234-publicacaooriginal-1-pl.html",
+          "natureza": "Texto constitucional original"
+        },
+        {
+          "rotulo": "Emenda Constitucional nº 2/1992 · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc02.htm",
+          "natureza": "Texto de emenda constitucional"
+        },
+        {
+          "rotulo": "Lei nº 8.624/1993 · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8624.htm",
+          "natureza": "Legislação regulamentadora"
+        },
+        {
+          "rotulo": "Cédulas eleitorais históricas · TSE",
+          "url": "https://www.tse.jus.br/servicos-eleitorais/glossario/termos/cedula-eleitoral-1",
+          "natureza": "Acervo iconográfico"
+        }
+      ],
+      "relacionados": [
+        "constituicao-imperio-1824"
+      ]
     }
   ]
 }
