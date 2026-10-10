@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Biblioteca documental de Notas de um Estudante de Direito: decisões, sentenças, constituições, documentos históricos e fontes primárias comentadas.">
+<title>Biblioteca Documental | Notas de um Estudante de Direito</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{--ar-paper:#f6f1e8;--ar-bg:#e9e3d8;--ar-green:#193f33;--ar-green2:#2b5948;--ar-ink:#302e2b;--ar-muted:#6a655c;--ar-line:#d7c9b2;--ar-gold:#b18b4b}
+body{background:var(--ar-bg);color:var(--ar-ink)}
+header{background:#f7f3ea;border-bottom:1px solid #d2c6b6}
+main.wrap{max-width:1280px}
+.ar-hero{padding:55px 0 28px;border-bottom:1px solid var(--ar-line)}
+.ar-eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ar-green2)}
+.ar-hero h1{font-size:clamp(36px,5vw,64px);line-height:1.1;color:var(--ar-green);margin:8px 0 17px}
+.ar-hero p{max-width:900px;font-size:19px;line-height:1.72;color:#555047;margin:0}
+.ar-hero-note{display:flex;align-items:center;gap:9px;margin-top:19px;font-size:14px;color:#666050}
+.ar-hero-note:before{content:"§";font-size:22px;color:var(--ar-gold)}
+.ar-stats{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 30px}
+.ar-stat{display:flex;align-items:baseline;gap:8px;border:1px solid var(--ar-line);border-radius:12px;background:#f8f4ec;padding:9px 15px;color:#5e594e;font-size:14px}
+.ar-stat strong{font-size:23px;color:var(--ar-green)}
+.ar-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:25px;align-items:start;padding-bottom:80px}
+.ar-side{position:sticky;top:95px;max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain;background:#203c33;border-radius:16px;padding:22px;color:#f8f3e7;box-shadow:0 10px 30px rgba(30,30,30,.10)}
+.ar-side h2{margin:0 0 17px;color:#eee1bf;font-size:21px}
+.ar-side p{font-size:14px;line-height:1.6;color:#e2dac8}
+.ar-chips{display:grid;gap:8px}
+.ar-chip{display:block;width:100%;padding:10px 13px;border:1px solid #4b685d;color:#f3ead9;background:rgba(255,255,255,.035);border-radius:10px;text-align:left;cursor:pointer;font:inherit;font-size:14px}
+.ar-chip:hover,.ar-chip:focus-visible{background:rgba(255,255,255,.1)}
+.ar-chip[aria-pressed="true"]{background:#f3ebd9;color:#183b2d;font-weight:700;border-color:#f3ebd9}
+.ar-side-rule{border:0;border-top:1px solid rgba(255,255,255,.18);margin:21px 0}
+.ar-side a{color:#fff0c5}
+.ar-content{min-width:0}
+.ar-tools{background:var(--ar-paper);border:1px solid var(--ar-line);border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.035)}
+.ar-tools label{display:block;color:#514c44;font-size:13px;font-weight:700;letter-spacing:.3px;margin-bottom:7px}
+.ar-tool-grid{display:grid;grid-template-columns:minmax(0,1fr) 170px 170px;gap:12px}
+.ar-tools input,.ar-tools select{width:100%;box-sizing:border-box;padding:12px;border:1px solid #cabb9e;border-radius:10px;background:#fffdf8;font:inherit;color:#302d27;min-width:0}
+.ar-tools input:focus,.ar-tools select:focus{outline:3px solid rgba(40,97,69,.15);border-color:#47785e}
+.ar-toolbar-end{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:15px 0 13px;flex-wrap:wrap}
+.ar-count{font-size:14px;color:#6e6558}
+.ar-reset{border:0;background:transparent;color:var(--ar-green);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer}
+.ar-cards{display:grid;gap:17px}
+.ar-card{background:var(--ar-paper);border:1px solid var(--ar-line);border-radius:16px;padding:23px 25px;box-shadow:0 11px 25px rgba(25,25,25,.035);scroll-margin-top:100px}
+.ar-card-head{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.ar-badge{font-size:11px;letter-spacing:.5px;text-transform:uppercase;font-weight:700;border:1px solid #c7b99e;border-radius:6px;padding:4px 8px;color:#3a5648;background:#eae4d6}
+.ar-date{font-size:13px;color:#797064}
+.ar-card h2{font-size:24px;line-height:1.3;margin:12px 0 6px;color:var(--ar-green)}
+.ar-meta{font-size:13px;color:#6c665b;margin:0 0 12px}
+.ar-card p{font-size:16px;line-height:1.75;margin:10px 0;color:#423f38}
+.ar-lead{font-weight:500}
+.ar-label{font-size:11px;font-weight:700;color:#82765f;text-transform:uppercase;letter-spacing:.7px}
+.ar-tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 16px}
+.ar-tag{display:inline-block;border:1px solid #dfd2bd;color:#6d6251;border-radius:999px;padding:4px 9px;font-size:12px}
+.ar-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}
+.ar-source{display:inline-flex;align-items:center;gap:6px;padding:9px 12px;border:1px solid #315a49;background:#25503f;color:#fff9e9;text-decoration:none;border-radius:8px;font-size:13px;line-height:1.3}
+.ar-source:hover{background:#173b2c;color:#fff}
+.ar-study{background:#eee7d8;color:#315644;border-color:#b8ad92}
+.ar-study:hover{background:#e2d6bd;color:#244534}
+.ar-card details{border-top:1px solid #ded3bd;margin-top:17px;padding-top:14px}
+.ar-card summary{cursor:pointer;font-size:14px;color:#234c3b;font-weight:700}
+.ar-card details p{font-size:15px}
+.ar-related{font-size:13px;color:#665e52;border-top:1px solid #e6d9c5;margin-top:14px;padding-top:12px}
+.ar-related a{color:#234b3b}
+.ar-empty{padding:35px;text-align:center;border:1px dashed #bdad94;border-radius:16px;background:#f8f4eb;color:#615b52}
+.ar-foot{padding:20px 0 60px;border-top:1px solid var(--ar-line);color:#706a5e;font-size:14px}
+.ar-foot a{color:#284d3a}
+@media(max-width:980px){.ar-layout{grid-template-columns:1fr}.ar-side{position:static;max-height:none;overflow:visible}.ar-chips{display:flex;flex-wrap:wrap}.ar-chip{width:auto}}
+@media(max-width:760px){.ar-tool-grid{grid-template-columns:1fr}.ar-hero{padding-top:35px}.ar-card{padding:19px}.ar-card h2{font-size:21px}.ar-tools{padding:14px}}
+@media print{header,.ar-side,.ar-tools,.ar-reset{display:none!important}.ar-layout{display:block}.ar-card{break-inside:avoid;box-shadow:none}.ar-hero{padding-top:0}}
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<main class="wrap">
+  <section class="ar-hero" aria-labelledby="ar-title">
+    <div class="ar-eyebrow">Acervo de fontes e referências</div>
+    <h1 id="ar-title">Biblioteca documental</h1>
+    <p>Documentos que ajudam a compreender o Direito em sua formação histórica e em sua aplicação concreta: sentenças, acórdãos, textos constitucionais, manifestos e outras fontes de pesquisa.</p>
+    <div class="ar-hero-note">Catálogo de referência: os documentos permanecem nos acervos e repositórios de origem.</div>
+    <div class="ar-stats">
+      <div class="ar-stat"><strong id="ar-total">—</strong> documentos catalogados</div>
+      <div class="ar-stat"><strong id="ar-tipos">—</strong> tipos documentais</div>
+      <div class="ar-stat"><strong id="ar-areas">—</strong> áreas de estudo</div>
+    </div>
+  </section>
+  <div class="ar-layout">
+    <aside class="ar-side" aria-label="Categorias da biblioteca">
+      <h2>Explorar o acervo</h2>
+      <div class="ar-chips" id="ar-chips">
+        <button class="ar-chip" type="button" aria-pressed="true" data-type="Todos">Todos os documentos</button>
+      </div>
+      <hr class="ar-side-rule">
+      <p><strong>Como funciona</strong></p>
+      <p>Cada registro informa a natureza jurídica, a data, o órgão de origem, o assunto e por que merece leitura. Os links conduzem às fontes externas, distinguindo textos integrais de simples registros de acervo.</p>
+      <p><a href="/filosofia/estado-e-poder/direito-constitucional/">Ver estudos constitucionais →</a></p>
+    </aside>
+    <div class="ar-content">
+      <div class="ar-tools">
+        <div class="ar-tool-grid">
+          <div><label for="ar-search">Pesquisar no catálogo</label><input id="ar-search" type="search" autocomplete="off" placeholder="Ex.: nascituro, Tiradentes, ADPF 347, Constituinte..."></div>
+          <div><label for="ar-area">Área do Direito</label><select id="ar-area"><option value="Todas">Todas as áreas</option></select></div>
+          <div><label for="ar-order">Ordenar por</label><select id="ar-order"><option value="recentes">Data · mais recentes</option><option value="antigos">Data · mais antigos</option><option value="alfabetica">Ordem alfabética</option></select></div>
+        </div>
+      </div>
+      <div class="ar-toolbar-end"><span class="ar-count" id="ar-count" role="status" aria-live="polite">Carregando o catálogo...</span><button type="button" class="ar-reset" id="ar-reset">Limpar filtros</button></div>
+      <div id="ar-cards" class="ar-cards" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="ar-foot"><p><strong>Nota editorial.</strong> A biblioteca distingue a fonte primária de estudos e comentários. A descrição de um acórdão não substitui a leitura do inteiro teor, e um registro arquivístico pode não disponibilizar o documento completo. Textos históricos devem ser interpretados à luz de seu contexto.</p><p><a href="/">Voltar à página inicial</a> · Notas de um Estudante de Direito, 2026</p></div>
+</main>
+<script src="/menu.js"></script>
+<script>
+(function(){
+  "use strict";
+  var registros=[],tipo="Todos";
+  var input=document.getElementById("ar-search"), area=document.getElementById("ar-area"), order=document.getElementById("ar-order");
+  var cards=document.getElementById("ar-cards"), count=document.getElementById("ar-count"), chips=document.getElementById("ar-chips");
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function normal(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();}
+  function linkOK(url){return /^https:\/\//.test(url)||url.charAt(0)==="/";}
+  function nome(id){var item=registros.find(function(r){return r.id===id;});return item?item.titulo:id;}
+  function htmlFonte(f){if(!linkOK(f.url))return "";return '<a class="ar-source" target="_blank" rel="noopener noreferrer" href="'+esc(f.url)+'">↗ '+esc(f.rotulo)+'</a>';}
+  function card(r){
+    var tags=(r.etiquetas||[]).map(function(t){return '<span class="ar-tag">'+esc(t)+'</span>';}).join("");
+    var relacionados=(r.relacionados||[]).filter(function(id){return registros.some(function(i){return i.id===id;});}).map(function(id){return '<a href="#'+esc(id)+'">'+esc(nome(id))+'</a>';}).join(" · ");
+    var estudos=r.estudo&&linkOK(r.estudo)?'<a class="ar-source ar-study" href="'+esc(r.estudo)+'">Ler estudo no site →</a>':"";
+    return '<article class="ar-card" id="'+esc(r.id)+'">'+
+      '<div class="ar-card-head"><span class="ar-badge">'+esc(r.tipo)+'</span><span class="ar-date">'+esc(r.dataExibicao)+'</span></div>'+
+      '<h2>'+esc(r.titulo)+'</h2>'+
+      '<div class="ar-meta">'+esc(r.orgao)+' · '+esc(r.referencia)+'</div>'+
+      '<p class="ar-lead">'+esc(r.resumo)+'</p>'+
+      '<div class="ar-tags">'+tags+'</div>'+
+      '<div class="ar-actions">'+(r.fontes||[]).map(htmlFonte).join("")+estudos+'</div>'+
+      '<details><summary>Por que consultar este documento? · Nota de leitura</summary>'+
+      '<p><span class="ar-label">Relevância para o estudo</span><br>'+esc(r.relevancia)+'</p>'+
+      '<p><span class="ar-label">Contexto e cautela de interpretação</span><br>'+esc(r.recorte)+'</p>'+
+      ((r.fontes||[]).length?'<p><span class="ar-label">Natureza dos links</span><br>'+esc(r.fontes.map(function(f){return f.natureza;}).join(" · "))+'</p>':"")+
+      (relacionados?'<div class="ar-related">Documentos relacionados: '+relacionados+'</div>':"")+
+      '</details></article>';
+  }
+  function render(){
+    var q=normal(input.value.trim()), a=area.value;
+    var found=registros.filter(function(r){
+      if(tipo!=="Todos"&&r.tipo!==tipo)return false;
+      if(a!=="Todas"&&r.area!==a)return false;
+      if(!q)return true;
+      return normal([r.titulo,r.tipo,r.area,r.orgao,r.referencia,r.resumo,r.relevancia,r.recorte].concat(r.etiquetas||[]).join(" ")).includes(q);
+    });
+    found.sort(function(a,b){
+      if(order.value==="alfabetica")return a.titulo.localeCompare(b.titulo,"pt-BR");
+      return order.value==="antigos"?a.data.localeCompare(b.data):b.data.localeCompare(a.data);
+    });
+    count.textContent=found.length+" de "+registros.length+" registros encontrados";
+    cards.innerHTML=found.length?found.map(card).join(""):'<div class="ar-empty">Nenhum registro corresponde aos filtros. Tente outro termo ou limpe a pesquisa.</div>';
+    chips.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.type===tipo));});
+  }
+  input.addEventListener("input",render);
+  area.addEventListener("change",render);
+  order.addEventListener("change",render);
+  chips.addEventListener("click",function(e){var b=e.target.closest("button[data-type]");if(b){tipo=b.dataset.type;render();}});
+  document.getElementById("ar-reset").addEventListener("click",function(){tipo="Todos";input.value="";area.value="Todas";order.value="recentes";render();});
+  fetch("/header.html").then(function(r){if(!r.ok)throw new Error("Cabeçalho não disponível");return r.text();}).then(function(s){document.getElementById("header-container").innerHTML=s;if(typeof iniciarMenu==="function")iniciarMenu();}).catch(function(e){console.warn(e);});
+  fetch("/biblioteca/catalogo.json").then(function(r){if(!r.ok)throw new Error("Falha ao obter catálogo");return r.json();}).then(function(data){
+    registros=Array.isArray(data.registros)?data.registros:[];
+    document.getElementById("ar-total").textContent=registros.length;
+    var tipos=Array.from(new Set(registros.map(function(r){return r.tipo;}))).sort(function(a,b){return a.localeCompare(b,"pt-BR");});
+    var areas=Array.from(new Set(registros.map(function(r){return r.area;}))).sort(function(a,b){return a.localeCompare(b,"pt-BR");});
+    document.getElementById("ar-tipos").textContent=tipos.length;
+    document.getElementById("ar-areas").textContent=areas.length;
+    tipos.forEach(function(t){var b=document.createElement("button");b.type="button";b.className="ar-chip";b.dataset.type=t;b.setAttribute("aria-pressed","false");b.textContent=t;chips.appendChild(b);});
+    areas.forEach(function(a){var o=document.createElement("option");o.value=a;o.textContent=a;area.appendChild(o);});
+    render();
+    if(location.hash){var id=decodeURIComponent(location.hash.slice(1));var el=document.getElementById(id);if(el)el.scrollIntoView({block:"start"});}
+  }).catch(function(e){count.textContent="Não foi possível carregar o catálogo.";cards.innerHTML='<div class="ar-empty">O catálogo está temporariamente indisponível. Tente atualizar a página.</div>';console.error(e);});
+})();
+</script>
+</body>
+</html>
