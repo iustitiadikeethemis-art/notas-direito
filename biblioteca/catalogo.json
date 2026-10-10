@@ -1,0 +1,260 @@
+{
+  "versao": 1,
+  "atualizado": "2026-10-10",
+  "nota": "Catálogo de referências; a biblioteca não armazena os documentos originais.",
+  "registros": [
+    {
+      "id": "manifesto-constituinte-1823",
+      "titulo": "Manifesto de D. Pedro I sobre a dissolução da Constituinte",
+      "tipo": "Documento histórico",
+      "area": "Direito Constitucional",
+      "data": "1823-11-16",
+      "dataExibicao": "16 nov. 1823",
+      "orgao": "Império do Brasil · D. Pedro I",
+      "referencia": "Manifesto de 16 de novembro de 1823",
+      "resumo": "Após dissolver a Assembleia Constituinte e Legislativa, o imperador apresentou publicamente suas razões, alegando desordem política e necessidade de preservar o Império.",
+      "relevancia": "Fonte primária para investigar a ruptura do processo constituinte de 1823, a invocação da necessidade política e o caminho para a outorga da Constituição de 1824.",
+      "recorte": "O texto apresenta a dissolução como recurso extremo para a 'salvação da pátria', fórmula que deve ser lida como justificativa do próprio monarca, e não como descrição imparcial dos acontecimentos.",
+      "etiquetas": [
+        "Constituinte de 1823",
+        "D. Pedro I",
+        "Poder constituinte",
+        "Outorga",
+        "Monarquia"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Transcrição oficial · Câmara dos Deputados",
+          "url": "https://www2.camara.leg.br/legin/fed/manife_sn/anterioresa1824/manifestosemnumero-41275-16-novembro-1823-575691-publicacaooriginal-98958-pe.html",
+          "natureza": "Texto do documento"
+        },
+        {
+          "rotulo": "Coleção das Leis do Império de 1823 · Câmara",
+          "url": "https://bd.camara.leg.br/bd/items/458bc0b7-216b-49ff-b9a1-aa413c745026",
+          "natureza": "Acervo digital"
+        }
+      ],
+      "relacionados": [
+        "constituicao-imperio-1824"
+      ]
+    },
+    {
+      "id": "constituicao-imperio-1824",
+      "titulo": "Constituição Política do Império do Brasil",
+      "tipo": "Constituição",
+      "area": "Direito Constitucional",
+      "data": "1824-03-25",
+      "dataExibicao": "25 mar. 1824",
+      "orgao": "Império do Brasil",
+      "referencia": "Carta de Lei de 25 de março de 1824",
+      "resumo": "Primeira Constituição brasileira, outorgada por D. Pedro I. Instituiu um Estado monárquico e unitário, com o Poder Moderador como elemento central do sistema político.",
+      "relevancia": "Permite confrontar as justificativas apresentadas no manifesto de 1823 com a estrutura constitucional resultante, especialmente o Poder Moderador e o processo de reforma.",
+      "recorte": "O art. 98 disciplina o Poder Moderador; o art. 178 fundamenta a classificação tradicional da Carta como semirrígida.",
+      "etiquetas": [
+        "Poder Moderador",
+        "Constituição de 1824",
+        "Monarquia",
+        "Semirrigidez",
+        "Outorga"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Texto histórico · Câmara dos Deputados",
+          "url": "https://www2.camara.leg.br/legin/fed/consti/1824-1899/constituicao-35041-25-marco-1824-532540-publicacaooriginal-14770-pl.html",
+          "natureza": "Texto do documento"
+        }
+      ],
+      "relacionados": [
+        "manifesto-constituinte-1823"
+      ]
+    },
+    {
+      "id": "sentenca-tiradentes-1792",
+      "titulo": "Sentença da Conjuração Mineira — Tiradentes e os demais acusados",
+      "tipo": "Sentença",
+      "area": "História do Direito",
+      "data": "1792-04-18",
+      "dataExibicao": "18 abr. 1792",
+      "orgao": "Justiça colonial portuguesa",
+      "referencia": "Autos da Devassa · BR RJANRIO NP.COD.0.005.v.09",
+      "resumo": "Decisão relativa aos réus implicados na Conjuração Mineira, entre eles Joaquim José da Silva Xavier, o Tiradentes.",
+      "relevancia": "Documento para estudar a repressão penal colonial, a relação entre poder político e justiça e a historicidade das garantias processuais.",
+      "recorte": "A referência do Arquivo Nacional descreve a sentença de 18 de abril de 1792. O primeiro link remete a uma descrição de acervo, não a uma reprodução integral da sentença.",
+      "etiquetas": [
+        "Tiradentes",
+        "Conjuração Mineira",
+        "Direito Penal",
+        "Brasil Colonial",
+        "Sentença histórica"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Referência arquivística · Arquivo Nacional",
+          "url": "https://historialuso.arquivonacional.gov.br/index.php/hlb/2055-gloss%C3%A1rio/2092-x/5550-xavier-joaquim-jose-da-silva-1746-1792",
+          "natureza": "Registro de acervo"
+        },
+        {
+          "rotulo": "Cópia manuscrita incompleta · Biblioteca Nacional",
+          "url": "https://acervo.bn.gov.br/Sophia_web/acervo/detalhe/1539004?i=8",
+          "natureza": "Registro de acervo"
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "adpf-347",
+      "titulo": "ADPF 347 — Estado de coisas inconstitucional no sistema prisional",
+      "tipo": "Acórdão",
+      "area": "Direito Constitucional",
+      "data": "2023-10-04",
+      "dataExibicao": "Out. 2023",
+      "orgao": "Supremo Tribunal Federal · Plenário",
+      "referencia": "ADPF 347/DF",
+      "resumo": "Julgamento em que o STF reconheceu um quadro estrutural de violações de direitos fundamentais no sistema prisional brasileiro e determinou medidas de enfrentamento.",
+      "relevancia": "Exemplo relevante de jurisdição constitucional, direitos fundamentais, políticas públicas, controle de omissões e remédios estruturais.",
+      "recorte": "O julgamento de mérito ocorreu em outubro de 2023. O acórdão é distinto das decisões cautelares anteriormente proferidas no processo.",
+      "etiquetas": [
+        "ADPF",
+        "Controle concentrado",
+        "Direitos fundamentais",
+        "Sistema prisional",
+        "Estado de coisas inconstitucional"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor do acórdão · Governo Federal (PDF)",
+          "url": "https://www.gov.br/senappen/pt-br/assuntos/pena-justa/arquivos/acordam-adpf-347.pdf",
+          "natureza": "Inteiro teor"
+        },
+        {
+          "rotulo": "Consulta processual · STF",
+          "url": "https://portal.stf.jus.br/peticaoInicial/verPeticaoInicial.asp?base=ADPF&numProcesso=347",
+          "natureza": "Registro processual"
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "stj-nascituro-dpvat-2014",
+      "titulo": "STJ — REsp 1.415.727/SC: direitos do nascituro e indenização DPVAT",
+      "tipo": "Acórdão",
+      "area": "Direito Civil",
+      "data": "2014-09-04",
+      "dataExibicao": "4 set. 2014",
+      "orgao": "Superior Tribunal de Justiça · Quarta Turma",
+      "referencia": "REsp 1.415.727/SC · Rel. Min. Luis Felipe Salomão",
+      "resumo": "O STJ reconheceu o direito à indenização securitária em decorrência de morte intrauterina causada por acidente, examinando a proteção jurídica conferida ao nascituro.",
+      "relevancia": "Permite relacionar o art. 2º do Código Civil às correntes natalista e concepcionista e à proteção de direitos do nascituro na jurisprudência.",
+      "recorte": "Trata-se de acórdão de recurso especial, não de sentença de primeiro grau. É um precedente documentado sobre o tema, sem pressupor que corresponda à sentença mencionada pelo estudante.",
+      "etiquetas": [
+        "Nascituro",
+        "Personalidade civil",
+        "DPVAT",
+        "Art. 2º do Código Civil",
+        "Jurisprudência do STJ"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor · Revista de Jurisprudência do STJ",
+          "url": "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20140929&formato=HTML&nreg=201303604913&salvar=false&seq=1346306&tipo=0",
+          "natureza": "Inteiro teor"
+        }
+      ],
+      "relacionados": [
+        "stj-nascituro-moral-2008"
+      ]
+    },
+    {
+      "id": "stj-nascituro-moral-2008",
+      "titulo": "STJ — REsp 931.556/RS: dano moral devido ao filho nascituro",
+      "tipo": "Acórdão",
+      "area": "Direito Civil",
+      "data": "2008-06-17",
+      "dataExibicao": "17 jun. 2008",
+      "orgao": "Superior Tribunal de Justiça · Terceira Turma",
+      "referencia": "REsp 931.556/RS · Rel. Min. Nancy Andrighi",
+      "resumo": "Acórdão sobre indenização por dano moral ao filho nascituro em razão da morte do pai em acidente de trabalho, vedada a redução baseada apenas na condição de não nascido.",
+      "relevancia": "Exemplo concreto de tutela jurídica do nascituro e de aplicação da responsabilidade civil, com distinção entre direito protegido e extensão da indenização.",
+      "recorte": "O tribunal analisou o valor indenizatório em relação aos filhos já nascidos e ao nascituro; não é uma sentença de primeiro grau.",
+      "etiquetas": [
+        "Nascituro",
+        "Dano moral",
+        "Responsabilidade civil",
+        "Art. 2º do Código Civil",
+        "Jurisprudência do STJ"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor do acórdão · STJ (PDF)",
+          "url": "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?dt=20080805&formato=PDF&nreg=200700483006&salvar=false&seq=780826&tipo=0",
+          "natureza": "Inteiro teor"
+        }
+      ],
+      "relacionados": [
+        "stj-nascituro-dpvat-2014"
+      ]
+    },
+    {
+      "id": "magna-carta-1215",
+      "titulo": "Magna Carta de 1215",
+      "tipo": "Documento histórico",
+      "area": "História do Direito",
+      "data": "1215-06-15",
+      "dataExibicao": "Jun. 1215",
+      "orgao": "João, rei da Inglaterra",
+      "referencia": "Magna Carta · Runnymede, 1215",
+      "resumo": "Carta medieval resultante do conflito entre João Sem Terra e os barões ingleses, posteriormente reinterpretada como marco da limitação jurídica do poder.",
+      "relevancia": "Base histórica para compreender as reivindicações de legalidade, justiça e proteção contra privações arbitrárias retomadas em séculos posteriores.",
+      "recorte": "O texto de 1215 não corresponde à versão estatutária de 1297. As divisões numeradas por cláusulas são posteriores à redação original.",
+      "etiquetas": [
+        "Constitucionalismo",
+        "João Sem Terra",
+        "Inglaterra",
+        "Law of the land",
+        "História constitucional"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Texto latino e edição crítica · Magna Carta Project",
+          "url": "https://magnacartaresearch.org/read/magna_carta_1215/%21all",
+          "natureza": "Edição documental"
+        }
+      ],
+      "relacionados": [
+        "petition-of-right-1628"
+      ],
+      "estudo": "/filosofia/estado-e-poder/direito-constitucional/magna-carta-1215.html"
+    },
+    {
+      "id": "petition-of-right-1628",
+      "titulo": "Petition of Right de 1628",
+      "tipo": "Documento histórico",
+      "area": "História do Direito",
+      "data": "1628-06-07",
+      "dataExibicao": "7 jun. 1628",
+      "orgao": "Parlamento inglês e Carlos I",
+      "referencia": "Petition of Right · 3 Car. I, c. 1",
+      "resumo": "Documento estatutário que reivindicou limites à tributação sem consentimento, às prisões arbitrárias, ao alojamento compulsório de tropas e às comissões de lei marcial.",
+      "relevancia": "Permite analisar a proteção das liberdades e o confronto entre prerrogativa real, Parlamento e tradição jurídica inglesa.",
+      "recorte": "Embora usualmente denominada Petition of Right de 1628, a base legislativa britânica a cataloga sob 1627 em razão da datação histórica das sessões.",
+      "etiquetas": [
+        "Carlos I",
+        "Parlamento inglês",
+        "Habeas corpus",
+        "Lei marcial",
+        "Constitucionalismo"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Texto estatutário · legislation.gov.uk",
+          "url": "https://www.legislation.gov.uk/aep/Cha1/3/1?view=plain",
+          "natureza": "Texto do documento"
+        }
+      ],
+      "relacionados": [
+        "magna-carta-1215"
+      ],
+      "estudo": "/filosofia/estado-e-poder/direito-constitucional/petition-of-right-1628.html"
+    }
+  ]
+}
