@@ -311,7 +311,7 @@
       "era": "VG",
       "nome": "José Linhares",
       "nomeCompleto": "José Linhares",
-      "inicio": "1945-10-30",
+      "inicio": "1945-10-29",
       "fim": "1946-01-31",
       "nascimento": "Ceará (CE)",
       "vinculo": "Ceará",
@@ -446,13 +446,13 @@
     {
       "era": "RE",
       "nome": "Ranieri Mazzilli",
-      "nomeCompleto": "Pascoal Ranieri Mazzilli",
+      "nomeCompleto": "Paschoal Ranieri Mazzilli",
       "inicio": "1961-08-25",
       "fim": "1961-09-08",
       "nascimento": "São Paulo (SP)",
       "vinculo": "São Paulo",
-      "profissao": "Jornalista e político",
-      "formacao": "Formação superior não confirmada nesta síntese",
+      "profissao": "Advogado, jornalista e político",
+      "formacao": "Direito — Faculdade de Direito de Niterói (1940)",
       "anterior": "Presidente da Câmara dos Deputados",
       "partido": "Partido Social Democrático (PSD)",
       "wiki": "Ranieri Mazzilli",
@@ -480,13 +480,13 @@
     {
       "era": "DM",
       "nome": "Ranieri Mazzilli",
-      "nomeCompleto": "Pascoal Ranieri Mazzilli",
+      "nomeCompleto": "Paschoal Ranieri Mazzilli",
       "inicio": "1964-04-02",
       "fim": "1964-04-15",
       "nascimento": "São Paulo (SP)",
       "vinculo": "São Paulo",
-      "profissao": "Jornalista e político",
-      "formacao": "Formação superior não confirmada nesta síntese",
+      "profissao": "Advogado, jornalista e político",
+      "formacao": "Direito — Faculdade de Direito de Niterói (1940)",
       "anterior": "Presidente da Câmara dos Deputados",
       "partido": "Partido Social Democrático (PSD)",
       "wiki": "Ranieri Mazzilli",
@@ -770,6 +770,14 @@
     {
       "titulo": "Senado Federal — História constitucional",
       "url": "https://www12.senado.leg.br/"
+    },
+    {
+      "titulo": "Supremo Tribunal Federal — José Linhares",
+      "url": "https://portal.stf.jus.br/ministro/presidente.asp?id=147&periodo=stf"
+    },
+    {
+      "titulo": "FGV CPDOC — Ranieri Mazzilli",
+      "url": "https://cpdoc.fgv.br/biografias/ranieri-mazzilli"
     }
   ]
 }
