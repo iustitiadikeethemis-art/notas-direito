@@ -93,7 +93,7 @@ main.wrap{max-width:1280px}
   <div class="lg-control"><label for="lg-order">Ordenar</label><select id="lg-order"><option value="asc">Do Império ao presente</option><option value="desc">Do presente ao Império</option></select></div>
 </div>
 <div class="lg-layout">
-<aside class="lg-aside"><h2>Explorar por período</h2><div id="lg-side-filters" class="lg-aside-nav"><button type="button" data-era="TODOS" aria-pressed="true">Todos os governos</button></div><p>Os retratos são consultados na Wikimedia, quando disponíveis. Em caso de indisponibilidade, permanece o monograma de identificação.</p><p><a href="/filosofia/estado-e-poder.html">← Voltar a Estado e Poder</a></p></aside>
+<aside class="lg-aside"><h2>Explorar por período</h2><div id="lg-side-filters" class="lg-aside-nav"><button type="button" data-era="TODOS" aria-pressed="true">Todos os governos</button></div><p>Os retratos históricos e as fotografias estão vinculados a arquivos identificados no Wikimedia Commons. O monograma permanece quando não há imagem individual ou se o servidor externo estiver indisponível.</p><p><a href="/filosofia/estado-e-poder.html">← Voltar a Estado e Poder</a></p></aside>
 <section style="padding:0;min-width:0">
 <div class="lg-results"><span id="lg-count" aria-live="polite">Carregando a cronologia...</span><button class="lg-clear" id="lg-clear" type="button">Limpar filtros</button></div>
 <div class="lg-timeline" id="lg-timeline"></div>
@@ -103,7 +103,7 @@ main.wrap{max-width:1280px}
 <h2>Fontes e notas editoriais</h2>
 <p>As datas e funções foram organizadas a partir de acervos da Presidência da República, Arquivo Nacional e Fundação Getulio Vargas. A formação informada é uma síntese biográfica; a ausência de diploma não significa ausência de formação profissional. O campo de partido refere-se ao período de exercício, não necessariamente à filiação atual ou a todas as legendas da trajetória da pessoa.</p>
 <ul id="lg-sources-list"></ul>
-<p><strong>Retratos:</strong> obtidos do projeto Wikimedia, associados aos respectivos verbetes biográficos; fotografias e pinturas históricas são identificadas como tal. As imagens permanecem nos repositórios de origem e podem depender de sua disponibilidade.</p>
+<p><strong>Retratos:</strong> vinculados individualmente a arquivos do Wikimedia Commons. A ficha de cada governante indica a página da imagem para consulta de autoria e licença. As juntas de 1930 e 1969 aparecem sem retrato individual, por se tratarem de governos colegiados. As imagens não são armazenadas no site.</p>
 <p><strong>Nota constitucional:</strong> D. Pedro II foi imperador desde 1831, embora o poder tenha sido exercido por regentes durante sua menoridade. Presidentes eleitos que não tomaram posse, como Júlio Prestes e Tancredo Neves, não integram os períodos de exercício, mas suas circunstâncias são registradas nas notas de transição.</p>
 </section>
 </main>
@@ -111,24 +111,26 @@ main.wrap{max-width:1280px}
 <script>
 (function(){
 "use strict";
-var all=[],images={};
+var all=[];
 var tl=document.getElementById("lg-timeline"),find=document.getElementById("lg-search"),era=document.getElementById("lg-era"),order=document.getElementById("lg-order"),side=document.getElementById("lg-side-filters");
 function esc(x){return String(x==null?"":x).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
 function norm(x){return String(x||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();}
 function dateBR(s){if(!s)return "em exercício";var p=s.split("-");return p[2]+"/"+p[1]+"/"+p[0];}
 function initials(n){return String(n).replace(/^D\.\s+/,"").split(" ").filter(Boolean).slice(0,2).map(function(s){return s[0];}).join("").toUpperCase();}
 function thumb(r){
-var html='<span class="lg-initials">'+esc(initials(r.nome))+'<small>'+esc(r.era==="IMP"?"Império":r.era==="JT"?"Junta":"Brasil")+'</small></span>';
-var url=images[r.wiki];
-if(url&&/^https:\/\/upload\.wikimedia\.org\//.test(url))html+='<img loading="lazy" src="'+esc(url)+'" alt="Retrato de '+esc(r.nome)+'" referrerpolicy="no-referrer" onerror="this.remove()">';
-return '<div class="lg-photo">'+html+'</div><div class="lg-photo-note">'+(r.era==="IMP"?"Retrato histórico":"Imagem de arquivo")+'</div>';
+var mono='<span class="lg-initials">'+esc(initials(r.nome))+'<small>'+esc(r.era==="IMP"?"Império":r.era==="JT"?"Junta":"Brasil")+'</small></span>';
+var arquivo=typeof r.fotoArquivo==="string"?r.fotoArquivo:"";
+var foto=arquivo?'<img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/'+encodeURIComponent(arquivo)+'?width=280" alt="Retrato de '+esc(r.nome)+'" onerror="this.remove()">':"";
+var caption=arquivo?(r.era==="IMP"?"Pintura histórica · Commons":"Retrato de arquivo · Commons"):"Governo colegiado";
+return '<div class="lg-photo">'+mono+foto+'</div><div class="lg-photo-note">'+caption+'</div>';
 }
 function card(r){
 var notes=r.nota?'<div class="lg-person-note">'+esc(r.nota)+'</div>':"";
 var prev='<div class="lg-field"><b>Ocupação anterior</b>'+esc(r.anterior)+'</div>';
 var birth='<div class="lg-field"><b>Origem</b>'+esc(r.nascimento)+'</div>';
 var pol=r.vinculo===r.nascimento?"":'<div class="lg-field"><b>Vínculo político</b>'+esc(r.vinculo)+'</div>';
-var wikiLink='<a class="lg-link" target="_blank" rel="noopener noreferrer" href="https://pt.wikipedia.org/wiki/'+encodeURIComponent(r.wiki.replaceAll(" ","_"))+'">Consultar verbete e crédito da imagem ↗</a>';
+var wikiLink='<a class="lg-link" target="_blank" rel="noopener noreferrer" href="https://pt.wikipedia.org/wiki/'+encodeURIComponent(r.wiki.replaceAll(" ","_"))+'">Consultar verbete biográfico ↗</a>';
+var fotoCredito=r.fotoArquivo?'<br><a class="lg-link" target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(r.fotoArquivo.replaceAll(" ","_"))+'">Fonte do retrato · Autoria e licença (Wikimedia Commons) ↗</a>':"";
 return '<article class="lg-item" data-kind="'+esc(r.era)+'">'+
 '<div class="lg-card"><div>'+thumb(r)+'</div><div>'+
 '<div class="lg-date-line"><span class="lg-date">'+esc(dateBR(r.inicio))+' — '+esc(dateBR(r.fim))+'</span><span class="lg-tag">'+esc(r.eraNome)+'</span>'+(!r.fim?'<span class="lg-tag lg-current">Em exercício · 10/10/2026</span>':"")+'</div>'+
@@ -138,7 +140,7 @@ return '<article class="lg-item" data-kind="'+esc(r.era)+'">'+
 '<details class="lg-more"><summary>Formação, carreira anterior e contexto</summary><div class="lg-fields">'+birth+pol+
 '<div class="lg-field"><b>Formação acadêmica ou militar</b>'+esc(r.formacao)+'</div>'+
 prev+'<div class="lg-field"><b>Filiação partidária no período</b>'+esc(r.partido)+'</div></div>'+
-notes+wikiLink+'</details></div></div></article>';
+notes+wikiLink+fotoCredito+'</details></div></div></article>';
 }
 function refresh(){
 var q=norm(find.value.trim()),e=era.value;
@@ -150,22 +152,7 @@ document.getElementById("lg-count").textContent=list.length+" de "+all.length+" 
 tl.innerHTML=list.length?list.map(card).join(""):'<div class="lg-empty">Nenhum governante corresponde à pesquisa. Experimente limpar os filtros.</div>';
 side.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.era===e));});
 }
-function fetchPortraits(){
-var titles=[...new Set(all.map(function(r){return r.wiki;}))].filter(function(x){return !/Junta/.test(x);});
-var segments=[];
-for(var i=0;i<titles.length;i+=25)segments.push(titles.slice(i,i+25));
-segments.forEach(function(group){
-var url="https://pt.wikipedia.org/w/api.php?action=query&format=json&origin=*&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=400&pilicense=free&titles="+encodeURIComponent(group.join("|"));
-fetch(url).then(function(r){if(!r.ok)throw Error("Wikimedia indisponível");return r.json();}).then(function(data){
-var trans={},q=data.query||{};
-(q.normalized||[]).concat(q.redirects||[]).forEach(function(x){trans[x.from]=x.to;});
-var pages=Object.values(q.pages||{});
-pages.forEach(function(p){if(p.thumbnail&&p.thumbnail.source)images[p.title]=p.thumbnail.source;});
-group.forEach(function(t){var resolved=t;for(var j=0;j<5&&trans[resolved];j++)resolved=trans[resolved];if(images[resolved])images[t]=images[resolved];});
-refresh();
-}).catch(function(){/* O monograma permanece visível. */});
-});
-}
+
 [find,era,order].forEach(function(el){el.addEventListener(el===find?"input":"change",refresh);});
 side.addEventListener("click",function(ev){var b=ev.target.closest("button[data-era]");if(!b)return;era.value=b.dataset.era;refresh();});
 document.getElementById("lg-clear").addEventListener("click",function(){find.value="";era.value="TODOS";order.value="asc";refresh();});
@@ -179,7 +166,7 @@ var o=document.createElement("option");o.value=k;o.textContent=data.eras[k];era.
 var b=document.createElement("button");b.dataset.era=k;b.type="button";b.textContent=data.eras[k];b.setAttribute("aria-pressed","false");side.appendChild(b);
 });
 (data.referencias||[]).forEach(function(r){if(!/^https:\/\//.test(r.url))return;var li=document.createElement("li");var a=document.createElement("a");a.href=r.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=r.titulo;li.appendChild(a);document.getElementById("lg-sources-list").appendChild(li);});
-refresh();fetchPortraits();
+refresh();
 }).catch(function(){document.getElementById("lg-count").textContent="Não foi possível carregar a cronologia.";tl.innerHTML='<div class="lg-empty">A base da linha do tempo está temporariamente indisponível.</div>';});
 })();
 </script>
