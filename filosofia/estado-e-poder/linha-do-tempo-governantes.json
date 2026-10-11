@@ -752,11 +752,11 @@
   ],
   "referencias": [
     {
-      "titulo": "Biblioteca da Presidência da República — Galeria dos Ex-Presidentes",
-      "url": "https://www.gov.br/secretariageral/pt-br/centrais-de-conteudo/biblioteca-da-pr/galeria-dos-ex-presidentes"
+      "titulo": "Serviço oficial — Galeria dos Ex-Presidentes da República",
+      "url": "https://www.gov.br/pt-br/servicos/acessar-a-galeria-dos-ex-presidentes-da-republica-biblioteca-digital"
     },
     {
-      "titulo": "Arquivo Nacional — Acervo Presidencial",
+      "titulo": "Arquivo Nacional — Acervo Presidencial (acesso temporariamente suspenso no período eleitoral)",
       "url": "https://presidentes.an.gov.br/"
     },
     {
@@ -782,6 +782,10 @@
     {
       "titulo": "Senado Federal — Pronunciamento de posse de João Goulart, 7/9/1961",
       "url": "https://www12.senado.leg.br/noticias/materias/2013/12/10/veja-discurso-de-posse-de-goulart-na-presidencia-da-republica-em-1961"
+    },
+    {
+      "titulo": "Senado Federal — História e perfis dos governantes",
+      "url": "https://www12.senado.leg.br/"
     }
   ]
 }
