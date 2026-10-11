@@ -448,7 +448,7 @@
       "nome": "Ranieri Mazzilli",
       "nomeCompleto": "Paschoal Ranieri Mazzilli",
       "inicio": "1961-08-25",
-      "fim": "1961-09-08",
+      "fim": "1961-09-07",
       "nascimento": "São Paulo (SP)",
       "vinculo": "São Paulo",
       "profissao": "Advogado, jornalista e político",
@@ -464,7 +464,7 @@
       "era": "RE",
       "nome": "João Goulart",
       "nomeCompleto": "João Belchior Marques Goulart",
-      "inicio": "1961-09-08",
+      "inicio": "1961-09-07",
       "fim": "1964-04-02",
       "nascimento": "Rio Grande do Sul (RS)",
       "vinculo": "Rio Grande do Sul",
@@ -473,7 +473,7 @@
       "anterior": "Vice-presidente da República",
       "partido": "Partido Trabalhista Brasileiro (PTB)",
       "wiki": "João Goulart",
-      "nota": "Governou inicialmente em regime parlamentarista e depois presidencialista; deposto pelo golpe de 1964.",
+      "nota": "Governou inicialmente em regime parlamentarista e depois presidencialista; deposto pelo golpe de 1964. A posse ocorreu em 7 de setembro de 1961, conforme registro do Senado.",
       "eraNome": "República de 1946",
       "indice": 27
     },
@@ -778,6 +778,10 @@
     {
       "titulo": "FGV CPDOC — Ranieri Mazzilli",
       "url": "https://cpdoc.fgv.br/biografias/ranieri-mazzilli"
+    },
+    {
+      "titulo": "Senado Federal — Pronunciamento de posse de João Goulart, 7/9/1961",
+      "url": "https://www12.senado.leg.br/noticias/materias/2013/12/10/veja-discurso-de-posse-de-goulart-na-presidencia-da-republica-em-1961"
     }
   ]
 }
