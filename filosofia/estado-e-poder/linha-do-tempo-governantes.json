@@ -6,7 +6,7 @@
     "mandato": "São exibidos períodos contínuos de exercício. Reeleições consecutivas da mesma pessoa são agrupadas. Passagens não consecutivas aparecem novamente.",
     "partido": "Filiação ou vínculo político no exercício do governo, com ressalvas quando necessário. Agremiações históricas não equivalem às atuais.",
     "educacao": "Resumo da formação acadêmica ou militar, sem confundir títulos universitários e carreiras profissionais.",
-    "imagem": "Retratos consultados no acervo Wikimedia, carregados no navegador conforme disponibilidade."
+    "imagem": "Arquivo de imagem individual, associado ao registro e carregado diretamente da Wikimedia Commons; não depende da API da Wikipédia. Cada fotografia possui página própria com informações de licença e autoria."
   },
   "eras": {
     "IMP": "Império do Brasil",
@@ -33,7 +33,9 @@
       "wiki": "Pedro I do Brasil",
       "nota": "Primeiro imperador do Brasil; abdicou em 1831.",
       "eraNome": "Império do Brasil",
-      "indice": 1
+      "indice": 1,
+      "fotoArquivo": "DpedroI-brasil-full.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "IMP",
@@ -50,7 +52,9 @@
       "wiki": "Pedro II do Brasil",
       "nota": "Reinou desde 1831; regências governaram durante sua menoridade até 1840.",
       "eraNome": "Império do Brasil",
-      "indice": 2
+      "indice": 2,
+      "fotoArquivo": "Dom Pedro II do Brasil.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -67,7 +71,9 @@
       "wiki": "Deodoro da Fonseca",
       "nota": "Chefiou o Governo Provisório e depois presidiu o país sob a Constituição de 1891.",
       "eraNome": "Primeira República",
-      "indice": 3
+      "indice": 3,
+      "fotoArquivo": "Deodoro da Fonseca (1889).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -84,7 +90,9 @@
       "wiki": "Floriano Peixoto",
       "nota": "Assumiu após a renúncia de Deodoro.",
       "eraNome": "Primeira República",
-      "indice": 4
+      "indice": 4,
+      "fotoArquivo": "Floriano Peixoto (1891).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -101,7 +109,9 @@
       "wiki": "Prudente de Morais",
       "nota": "Primeiro presidente civil da República.",
       "eraNome": "Primeira República",
-      "indice": 5
+      "indice": 5,
+      "fotoArquivo": "Prudentedemorais.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -118,7 +128,9 @@
       "wiki": "Campos Sales",
       "nota": "",
       "eraNome": "Primeira República",
-      "indice": 6
+      "indice": 6,
+      "fotoArquivo": "Campos Sales.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -135,7 +147,9 @@
       "wiki": "Rodrigues Alves",
       "nota": "Reeleito em 1918, não tomou posse no segundo mandato por motivo de saúde; faleceu em 1919.",
       "eraNome": "Primeira República",
-      "indice": 7
+      "indice": 7,
+      "fotoArquivo": "Rodrigues Alves.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -152,7 +166,9 @@
       "wiki": "Afonso Pena",
       "nota": "Faleceu durante o mandato.",
       "eraNome": "Primeira República",
-      "indice": 8
+      "indice": 8,
+      "fotoArquivo": "Afonso Pena.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -169,7 +185,9 @@
       "wiki": "Nilo Peçanha",
       "nota": "Sucedera Afonso Pena.",
       "eraNome": "Primeira República",
-      "indice": 9
+      "indice": 9,
+      "fotoArquivo": "Nilo Peçanha.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -186,7 +204,9 @@
       "wiki": "Hermes da Fonseca",
       "nota": "",
       "eraNome": "Primeira República",
-      "indice": 10
+      "indice": 10,
+      "fotoArquivo": "Hermes da Fonseca (1910).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -203,7 +223,9 @@
       "wiki": "Venceslau Brás",
       "nota": "",
       "eraNome": "Primeira República",
-      "indice": 11
+      "indice": 11,
+      "fotoArquivo": "Venceslau Brás (retrato oval).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -220,7 +242,9 @@
       "wiki": "Delfim Moreira",
       "nota": "Exerceu a Presidência porque Rodrigues Alves, eleito em 1918, não chegou a tomar posse.",
       "eraNome": "Primeira República",
-      "indice": 12
+      "indice": 12,
+      "fotoArquivo": "Delfim Moreira (1918).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -237,7 +261,9 @@
       "wiki": "Epitácio Pessoa",
       "nota": "",
       "eraNome": "Primeira República",
-      "indice": 13
+      "indice": 13,
+      "fotoArquivo": "Epitacio Pessoa (1919).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -254,7 +280,9 @@
       "wiki": "Artur Bernardes",
       "nota": "",
       "eraNome": "Primeira República",
-      "indice": 14
+      "indice": 14,
+      "fotoArquivo": "Artur Bernardes (1922).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "PR",
@@ -271,7 +299,9 @@
       "wiki": "Washington Luís",
       "nota": "Nascido em Macaé (RJ), consolidou sua carreira política em São Paulo; deposto em 1930.",
       "eraNome": "Primeira República",
-      "indice": 15
+      "indice": 15,
+      "fotoArquivo": "Washington Luís (foto).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "JT",
@@ -305,7 +335,9 @@
       "wiki": "Getúlio Vargas",
       "nota": "Governo provisório, fase constitucional de 1934 e Estado Novo, instaurado em 1937; deposto em 1945.",
       "eraNome": "Era Vargas e transição",
-      "indice": 17
+      "indice": 17,
+      "fotoArquivo": "Getúlio Vargas - retrato oficial de 1930.JPG",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "VG",
@@ -322,7 +354,9 @@
       "wiki": "José Linhares",
       "nota": "Assumiu na transição posterior ao fim do Estado Novo.",
       "eraNome": "Era Vargas e transição",
-      "indice": 18
+      "indice": 18,
+      "fotoArquivo": "Jose Linhares.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -339,7 +373,9 @@
       "wiki": "Eurico Gaspar Dutra",
       "nota": "",
       "eraNome": "República de 1946",
-      "indice": 19
+      "indice": 19,
+      "fotoArquivo": "Eurico Gaspar Dutra.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -356,7 +392,9 @@
       "wiki": "Getúlio Vargas",
       "nota": "Retornou à Presidência por eleição direta; morreu durante o mandato.",
       "eraNome": "República de 1946",
-      "indice": 20
+      "indice": 20,
+      "fotoArquivo": "Getúlio Vargas - retrato oficial de 1930.JPG",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -373,7 +411,9 @@
       "wiki": "Café Filho",
       "nota": "Assumiu após a morte de Vargas; afastou-se por razões de saúde.",
       "eraNome": "República de 1946",
-      "indice": 21
+      "indice": 21,
+      "fotoArquivo": "Café Filho.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -390,7 +430,9 @@
       "wiki": "Carlos Luz",
       "nota": "Exerceu a Presidência por três dias.",
       "eraNome": "República de 1946",
-      "indice": 22
+      "indice": 22,
+      "fotoArquivo": "CarlosLuz.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -407,7 +449,9 @@
       "wiki": "Nereu Ramos",
       "nota": "Presidência exercida durante a crise sucessória de 1955.",
       "eraNome": "República de 1946",
-      "indice": 23
+      "indice": 23,
+      "fotoArquivo": "Presidente Nereu Ramos.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -424,7 +468,9 @@
       "wiki": "Juscelino Kubitschek",
       "nota": "",
       "eraNome": "República de 1946",
-      "indice": 24
+      "indice": 24,
+      "fotoArquivo": "Juscelino Kubitschek in 1956 (3x4).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -441,7 +487,9 @@
       "wiki": "Jânio Quadros",
       "nota": "Renunciou após cerca de sete meses na Presidência.",
       "eraNome": "República de 1946",
-      "indice": 25
+      "indice": 25,
+      "fotoArquivo": "Jânio Quadros, presidente do Brasil em 1961 (foto oficial).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -458,7 +506,9 @@
       "wiki": "Ranieri Mazzilli",
       "nota": "Assumiu interinamente diante da renúncia de Jânio Quadros.",
       "eraNome": "República de 1946",
-      "indice": 26
+      "indice": 26,
+      "fotoArquivo": "Ranieri Mazzilli (1961).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "RE",
@@ -475,7 +525,9 @@
       "wiki": "João Goulart",
       "nota": "Governou inicialmente em regime parlamentarista e depois presidencialista; deposto pelo golpe de 1964. A posse ocorreu em 7 de setembro de 1961, conforme registro do Senado.",
       "eraNome": "República de 1946",
-      "indice": 27
+      "indice": 27,
+      "fotoArquivo": "João “Jango” Goulart, Presidente do Brasil, foto oficial, 1961.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "DM",
@@ -492,7 +544,9 @@
       "wiki": "Ranieri Mazzilli",
       "nota": "Segunda passagem interina pela Presidência, após a deposição de João Goulart.",
       "eraNome": "Regime militar",
-      "indice": 28
+      "indice": 28,
+      "fotoArquivo": "Ranieri Mazzilli (1961).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "DM",
@@ -509,7 +563,9 @@
       "wiki": "Humberto Castelo Branco",
       "nota": "Primeiro presidente do regime militar iniciado com o golpe de 1964.",
       "eraNome": "Regime militar",
-      "indice": 29
+      "indice": 29,
+      "fotoArquivo": "Humberto Castelo Branco, presidente do Brasil, 1964.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "DM",
@@ -526,7 +582,9 @@
       "wiki": "Artur da Costa e Silva",
       "nota": "",
       "eraNome": "Regime militar",
-      "indice": 30
+      "indice": 30,
+      "fotoArquivo": "Costa e Silva presidential portrait.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "JT",
@@ -560,7 +618,9 @@
       "wiki": "Emílio Garrastazu Médici",
       "nota": "",
       "eraNome": "Regime militar",
-      "indice": 32
+      "indice": 32,
+      "fotoArquivo": "Garrastazu médici.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "DM",
@@ -577,7 +637,9 @@
       "wiki": "Ernesto Geisel",
       "nota": "",
       "eraNome": "Regime militar",
-      "indice": 33
+      "indice": 33,
+      "fotoArquivo": "Ernesto Geisel.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "DM",
@@ -594,7 +656,9 @@
       "wiki": "João Figueiredo",
       "nota": "",
       "eraNome": "Regime militar",
-      "indice": 34
+      "indice": 34,
+      "fotoArquivo": "João Figueiredo, presidente do Brasil, 1979.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -611,7 +675,9 @@
       "wiki": "José Sarney",
       "nota": "Assumiu inicialmente em lugar de Tancredo Neves, eleito indiretamente mas não empossado.",
       "eraNome": "Nova República",
-      "indice": 35
+      "indice": 35,
+      "fotoArquivo": "Foto Oficial Sarney EBC.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -628,7 +694,9 @@
       "wiki": "Fernando Collor",
       "nota": "Primeiro presidente eleito por voto direto após o regime militar; renunciou em 1992.",
       "eraNome": "Nova República",
-      "indice": 36
+      "indice": 36,
+      "fotoArquivo": "Fernando Collor official portrait.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -645,7 +713,9 @@
       "wiki": "Itamar Franco",
       "nota": "Nasceu a bordo de navio; sua carreira política esteve associada a Minas Gerais.",
       "eraNome": "Nova República",
-      "indice": 37
+      "indice": 37,
+      "fotoArquivo": "Itamar Franco Faixa Presidencial.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -662,7 +732,9 @@
       "wiki": "Fernando Henrique Cardoso",
       "nota": "Dois mandatos consecutivos: 1995–1998 e 1999–2002.",
       "eraNome": "Nova República",
-      "indice": 38
+      "indice": 38,
+      "fotoArquivo": "Fernando Henrique Cardoso 1999.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -679,7 +751,9 @@
       "wiki": "Luiz Inácio Lula da Silva",
       "nota": "Dois mandatos consecutivos: 2003–2006 e 2007–2010.",
       "eraNome": "Nova República",
-      "indice": 39
+      "indice": 39,
+      "fotoArquivo": "Foto oficial do primeiro mandato do presidente Luiz Inácio Lula da Silva - 53155479999.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -696,7 +770,9 @@
       "wiki": "Dilma Rousseff",
       "nota": "Primeira mulher a presidir o Brasil; afastada definitivamente após impeachment em 2016.",
       "eraNome": "Nova República",
-      "indice": 40
+      "indice": 40,
+      "fotoArquivo": "Dilma Rousseff - foto oficial 2011-01-09.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -713,7 +789,9 @@
       "wiki": "Michel Temer",
       "nota": "Exerceu interinamente o cargo desde maio de 2016 e o assumiu definitivamente em agosto.",
       "eraNome": "Nova República",
-      "indice": 41
+      "indice": 41,
+      "fotoArquivo": "Michel Temer (foto oficial).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -730,7 +808,9 @@
       "wiki": "Jair Bolsonaro",
       "nota": "",
       "eraNome": "Nova República",
-      "indice": 42
+      "indice": 42,
+      "fotoArquivo": "2019-01-10 Retrato Oficial do Presidente da República - Jair Messias Bolsonaro.jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     },
     {
       "era": "NR",
@@ -747,7 +827,9 @@
       "wiki": "Luiz Inácio Lula da Silva",
       "nota": "Mandato iniciado em 1º de janeiro de 2023. Presidente em exercício na atualização de 10 de outubro de 2026.",
       "eraNome": "Nova República",
-      "indice": 43
+      "indice": 43,
+      "fotoArquivo": "Foto oficial de Luiz Inácio Lula da Silva (rosto).jpg",
+      "fotoOrigem": "Wikimedia Commons — consultar autoria e licença no arquivo"
     }
   ],
   "referencias": [
@@ -786,6 +868,10 @@
     {
       "titulo": "Senado Federal — História e perfis dos governantes",
       "url": "https://www12.senado.leg.br/"
+    },
+    {
+      "titulo": "Wikimedia Commons — acervo de retratos presidenciais do Brasil",
+      "url": "https://commons.wikimedia.org/wiki/Presidents_of_Brazil"
     }
   ]
 }
