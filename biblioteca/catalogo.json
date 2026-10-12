@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizado": "2026-10-10",
+  "atualizado": "2026-10-12",
   "nota": "Catálogo de referências; a biblioteca não armazena os documentos originais.",
   "registros": [
     {
@@ -132,6 +132,54 @@
           "rotulo": "Consulta processual · STF",
           "url": "https://portal.stf.jus.br/peticaoInicial/verPeticaoInicial.asp?base=ADPF&numProcesso=347",
           "natureza": "Registro processual"
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "stf-adi-2076-ac-2002",
+      "titulo": "STF — ADI 2.076/AC: preâmbulo constitucional e invocação da proteção de Deus",
+      "tipo": "Acórdão",
+      "area": "Direito Constitucional",
+      "data": "2002-08-15",
+      "dataExibicao": "15 ago. 2002",
+      "orgao": "Supremo Tribunal Federal · Tribunal Pleno",
+      "referencia": "ADI 2.076/AC · Rel. Min. Carlos Velloso · DJ de 8 ago. 2003",
+      "resumo": "O STF julgou improcedente a ação que questionava a ausência da expressão «sob a proteção de Deus» no preâmbulo da Constituição do Acre. Assentou que o preâmbulo da Constituição Federal não constitui norma central de reprodução obrigatória pelos estados e que a invocação religiosa não possui força normativa própria.",
+      "relevancia": "Precedente fundamental para estudar a natureza jurídica do preâmbulo constitucional, a distinção entre enunciados preambulares e normas constitucionais obrigatórias, a autonomia constitucional dos estados e os limites do poder constituinte decorrente.",
+      "recorte": "A ação foi proposta pelo Partido Social Liberal (PSL) contra a Assembleia Legislativa do Acre. O Plenário julgou o pedido improcedente em 15/08/2002, por unanimidade dos votantes; o acórdão foi publicado em 08/08/2003. A decisão afirma a inexistência de força normativa própria do preâmbulo e afasta a reprodução obrigatória da invocação «sob a proteção de Deus». Isso não significa que o preâmbulo seja destituído de relevância histórica, política ou interpretativa. O link de pesquisa de inteiro teor remete à lista oficial do STF: nela, é preciso selecionar a classe ADI 2076 para consultar o acórdão; não é um PDF diretamente hospedado nesta biblioteca.",
+      "etiquetas": [
+        "ADI 2.076/AC",
+        "Preâmbulo constitucional",
+        "Controle concentrado",
+        "Poder constituinte decorrente",
+        "Constituição do Acre",
+        "Normas de reprodução obrigatória",
+        "Força normativa",
+        "Laicidade do Estado",
+        "STF",
+        "2002"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Consulta processual e resultado · STF",
+          "url": "https://portal.stf.jus.br/peticaoInicial/verPeticaoInicial.asp?base=ADI&numProcesso=2076",
+          "natureza": "Ficha processual oficial, ementa e resultado"
+        },
+        {
+          "rotulo": "Acórdão integral · pesquisa oficial do STF",
+          "url": "https://portal.stf.jus.br/jurisprudencia/pesquisarInteiroTeor.asp?numeroInteiroTeor=2076",
+          "natureza": "Pesquisa do inteiro teor; selecionar ADI 2076 na lista"
+        },
+        {
+          "rotulo": "Preâmbulo constitucional · jurisprudência do STF",
+          "url": "https://portal.stf.jus.br/constituicao-supremo/artigo.asp?abrirArtigo=PRE&abrirBase=CF",
+          "natureza": "Jurisprudência constitucional oficial"
+        },
+        {
+          "rotulo": "Notícia do julgamento · STF (15/08/2002)",
+          "url": "https://noticias.stf.jus.br/postsnoticias/pleno-mantem-supressao-da-frase-sob-a-protecao-de-deus-na-constituicao-do-acre/",
+          "natureza": "Registro institucional do julgamento"
         }
       ],
       "relacionados": []
