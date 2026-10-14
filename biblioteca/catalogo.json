@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizado": "2026-10-12",
+  "atualizado": "2026-10-13",
   "nota": "Catálogo de referências; a biblioteca não armazena os documentos originais.",
   "registros": [
     {
@@ -468,6 +468,56 @@
       "relacionados": [
         "constituicao-imperio-1824"
       ]
+    },
+    {
+      "id": "stf-rhc-117566-sp-2013",
+      "titulo": "STF — RHC 117.566/SP: arma desmuniciada e abolitio criminis temporária",
+      "tipo": "Acórdão",
+      "area": "Direito Penal",
+      "data": "2013-09-24",
+      "dataExibicao": "24 set. 2013",
+      "orgao": "Supremo Tribunal Federal · Primeira Turma",
+      "referencia": "RHC 117.566/SP · Rel. Min. Luiz Fux · DJe de 16 out. 2013",
+      "resumo": "A Primeira Turma do STF negou provimento a recurso contra a persecução penal por posse irregular de arma de fogo de uso permitido (art. 12 da Lei 10.826/2003). A circunstância de o revólver estar desmuniciado não afastou a tipicidade, por se tratar de delito de perigo abstrato; também não incidiu a descriminalização temporária associada aos prazos legais de regularização.",
+      "relevancia": "Caso concreto para estudar tipicidade penal, crimes de perigo abstrato, tutela da segurança pública, princípio da ofensividade e a delimitação temporal dos efeitos favoráveis do Estatuto do Desarmamento. O histórico de medidas provisórias e leis de prorrogação permite examinar criticamente a vedação constitucional de medidas provisórias sobre Direito Penal (art. 62, § 1º, I, b, da Constituição).",
+      "recorte": "Em 27/04/2010, durante cumprimento de mandados judiciais, foi encontrado na residência do recorrente um revólver Rossi calibre .38, desmuniciado e em situação irregular. A Lei 11.922/2009 havia prorrogado até 31/12/2009 o prazo do art. 30 da Lei 10.826/2003, já expirado na data do fato. A previsão de entrega voluntária do art. 32 não tornava lícita, por si só, toda posse irregular posterior. O acórdão refere precedentes sobre porte, mas o enquadramento do caso é o de posse irregular (art. 12). A ementa registra corretamente o prazo final de 2009, embora passagem do voto mencione 2008. A decisão não equivale a pronunciamento abstrato e geral do STF sobre a constitucionalidade de medidas provisórias penais favoráveis. O portal oficial exige pesquisar o número 117566 e selecionar a classe RHC; o link alternativo reproduz o inteiro teor fora do domínio do Tribunal.",
+      "etiquetas": [
+        "RHC 117.566/SP",
+        "Estatuto do Desarmamento",
+        "Posse irregular de arma de fogo",
+        "Arma desmuniciada",
+        "Crime de perigo abstrato",
+        "Tipicidade",
+        "Abolitio criminis temporária",
+        "Lei 10.826/2003",
+        "Art. 12",
+        "Medida provisória",
+        "Legalidade penal",
+        "2013"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Acórdão integral · pesquisa oficial do STF",
+          "url": "https://portal.stf.jus.br/jurisprudencia/pesquisarInteiroTeor.asp",
+          "natureza": "Consulta oficial; digitar 117566 e selecionar RHC"
+        },
+        {
+          "rotulo": "Inteiro teor reproduzido · Jusbrasil",
+          "url": "https://www.jusbrasil.com.br/jurisprudencia/stf/24271834/inteiro-teor-111959787",
+          "natureza": "Reprodução do inteiro teor do acórdão (fonte secundária)"
+        },
+        {
+          "rotulo": "Estatuto do Desarmamento · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826.htm",
+          "natureza": "Texto legal (arts. 12, 30 e 32)"
+        },
+        {
+          "rotulo": "Lei 11.922/2009 · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11922.htm",
+          "natureza": "Art. 20; prorrogação do prazo até 31/12/2009"
+        }
+      ],
+      "relacionados": []
     }
   ]
 }
