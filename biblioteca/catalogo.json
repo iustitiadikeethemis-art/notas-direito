@@ -574,6 +574,58 @@
         }
       ],
       "relacionados": []
+    },
+    {
+      "id": "stj-sumula-241-2000",
+      "titulo": "STJ — Súmula nº 241: reincidência, maus antecedentes e vedação ao bis in idem",
+      "tipo": "Súmula",
+      "area": "Direito Penal",
+      "data": "2000-08-23",
+      "dataExibicao": "23 ago. 2000",
+      "orgao": "Superior Tribunal de Justiça · Terceira Seção",
+      "referencia": "Súmula 241/STJ · julgada em 23/08/2000 · DJ de 15/09/2000, p. 229",
+      "resumo": "A reincidência penal não pode ser considerada como circunstância agravante e, simultaneamente, como circunstância judicial.",
+      "relevancia": "Enunciado fundamental para a dosimetria da pena no sistema trifásico (art. 68 do Código Penal). Na primeira fase, o juiz fixa a pena-base considerando as circunstâncias judiciais do art. 59, entre elas os antecedentes. Na segunda, examina agravantes e atenuantes, inclusive a reincidência (art. 61, I). A Súmula 241 impede valorar a mesma condenação anterior nas duas fases em prejuízo do réu, pois isso configura dupla valoração punitiva (bis in idem).",
+      "recorte": "A vedação incide sobre o uso duplicado da mesma condenação ou do mesmo título condenatório como mau antecedente e como reincidência. Havendo condenações definitivas distintas que preencham os requisitos legais pertinentes, uma pode fundamentar os maus antecedentes e outra, a agravante da reincidência, sem contrariedade à súmula (por exemplo, REsp 2.199.514/RJ, Sexta Turma, julgado em 18/06/2025). A reincidência é disciplinada pelos arts. 63 e 64 do CP; a valoração de antecedentes possui requisitos próprios. A súmula foi editada pela Terceira Seção em 23/08/2000 e publicada no DJ de 15/09/2000. Integram seus precedentes originários o HC 9.219/SE, o REsp 160.171/RS, o REsp 95.479/AM e o RHC 3.947/SP. Trata-se de súmula ordinária do STJ, não de súmula vinculante do STF (art. 103-A da Constituição). Os links fornecem o enunciado e os precedentes oficiais; a biblioteca não hospeda o documento original.",
+      "etiquetas": [
+        "Súmula 241/STJ",
+        "STJ",
+        "Dosimetria da pena",
+        "Reincidência",
+        "Maus antecedentes",
+        "Bis in idem",
+        "Pena-base",
+        "Circunstância judicial",
+        "Circunstância agravante",
+        "Sistema trifásico",
+        "Art. 59 do CP",
+        "Art. 61, I, do CP",
+        "Art. 68 do CP",
+        "2000"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Enunciado e precedentes originários · STJ",
+          "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&livre=%40num%3D241&operador=AND&ordenacao=-%40NUM&p=false",
+          "natureza": "Texto integral e precedentes, repositório oficial do STJ"
+        },
+        {
+          "rotulo": "Dossiê arquivístico da Súmula 241 · STJ",
+          "url": "https://arquivocidadao.stj.jus.br/index.php/sumula-241-2?sf_culture=pt_BR",
+          "natureza": "Registro oficial com data, publicação e referências históricas"
+        },
+        {
+          "rotulo": "Código Penal, arts. 59, 61, 63, 64 e 68 · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "natureza": "Legislação federal consolidada"
+        },
+        {
+          "rotulo": "REsp 2.199.514/RJ · STJ",
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202500614292",
+          "natureza": "Jurisprudência posterior sobre condenações distintas"
+        }
+      ],
+      "relacionados": []
     }
   ]
 }
