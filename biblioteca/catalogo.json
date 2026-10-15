@@ -626,6 +626,58 @@
         }
       ],
       "relacionados": []
+    },
+    {
+      "id": "stf-hc-112563-sc-2012",
+      "titulo": "STF — HC 112.563/SC: insignificância em crime ambiental (12 camarões)",
+      "tipo": "Acórdão",
+      "area": "Direito Penal",
+      "data": "2012-08-21",
+      "dataExibicao": "21 ago. 2012",
+      "orgao": "Supremo Tribunal Federal · Segunda Turma",
+      "referencia": "HC 112.563/SC · Rel. Min. Ricardo Lewandowski · Red. p/ acórdão Min. Cezar Peluso · DJe de 10 dez. 2012",
+      "resumo": "A Segunda Turma do STF concedeu habeas corpus, por maioria, para absolver um pescador condenado por infração ao art. 34, parágrafo único, II, da Lei 9.605/1998, após ser flagrado com 12 camarões e rede de pesca em desacordo com a Portaria Ibama 84/2002. Prevaleceu o reconhecimento do princípio da insignificância, com afastamento da tipicidade material da conduta.",
+      "relevancia": "Precedente para estudar tipicidade material, princípio da insignificância (bagatela), ofensividade, proporcionalidade e intervenção mínima na tutela penal do meio ambiente, um bem jurídico difuso e supraindividual. Demonstra a importância de avaliar as circunstâncias concretas mesmo nos crimes ambientais e de diferenciar irregularidade administrativa de relevância penal.",
+      "recorte": "O julgamento foi realizado em 21/08/2012; 10/12/2012 é a data de publicação no DJe, não a data da sessão. O relator originário, ministro Ricardo Lewandowski, votou pela denegação da ordem, destacando a proteção da fauna durante o período de defeso e o risco ecológico da pesca com petrecho proibido. Ficou vencido após divergência de Cezar Peluso, acompanhada por Gilmar Mendes; Cezar Peluso foi o redator do acórdão. O paciente havia recebido condenação a um ano e dois meses de detenção, substituída por penas restritivas de direitos. A decisão considerou juridicamente inexpressiva a conduta nas particularidades examinadas; não estabelece que toda captura de poucos animais ou toda pesca irregular seja automaticamente atípica. A eventual infração administrativa e a proteção ambiental não se confundem com a necessidade de pena criminal. Na ficha, o link do PDF aponta ao repositório do STF, mas sua disponibilidade pode variar; há também uma notícia oficial e a pesquisa de acórdãos como alternativas.",
+      "etiquetas": [
+        "HC 112.563/SC",
+        "Crimes ambientais",
+        "Princípio da insignificância",
+        "Bagatela",
+        "Tipicidade material",
+        "Bem jurídico supraindividual",
+        "Ofensividade",
+        "Ultima ratio",
+        "Lei 9.605/1998",
+        "Art. 34",
+        "Pesca em período de defeso",
+        "Doze camarões",
+        "Proteção da fauna",
+        "2012"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor do acórdão · STF (PDF)",
+          "url": "https://redir.stf.jus.br/paginadorpub/paginador.jsp?docTP=TP&docID=3172637",
+          "natureza": "Documento judicial original; acesso sujeito à disponibilidade do STF"
+        },
+        {
+          "rotulo": "Notícia oficial do julgamento · STF",
+          "url": "https://noticias.stf.jus.br/postsnoticias/2a-turma-aplica-principio-da-insignificancia-em-crime-ambiental/",
+          "natureza": "Resumo institucional do caso e dos votos (21/08/2012)"
+        },
+        {
+          "rotulo": "Pesquisa de inteiro teor · STF",
+          "url": "https://portal.stf.jus.br/jurisprudencia/pesquisarInteiroTeor.asp",
+          "natureza": "Consultar o número 112563 e selecionar a classe HC"
+        },
+        {
+          "rotulo": "Lei de Crimes Ambientais · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+          "natureza": "Legislação federal, art. 34, parágrafo único, II"
+        }
+      ],
+      "relacionados": []
     }
   ]
 }
