@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizado": "2026-10-14",
+  "atualizado": "2026-10-15",
   "nota": "Catálogo de referências; a biblioteca não armazena os documentos originais.",
   "registros": [
     {
@@ -678,6 +678,58 @@
         }
       ],
       "relacionados": []
+    },
+    {
+      "id": "stj-sumula-502-2013",
+      "titulo": "STJ — Súmula nº 502: pirataria de CDs e DVDs e princípio da adequação social",
+      "tipo": "Súmula",
+      "area": "Direito Penal",
+      "data": "2013-10-23",
+      "dataExibicao": "23 out. 2013",
+      "orgao": "Superior Tribunal de Justiça · Terceira Seção",
+      "referencia": "Súmula 502/STJ · aprovada em 23/10/2013 · DJe de 28/10/2013 · Tema Repetitivo 593",
+      "resumo": "Presentes a materialidade e a autoria, afigura-se típica, em relação ao crime previsto no art. 184, § 2º, do CP, a conduta de expor à venda CDs e DVDs piratas.",
+      "relevancia": "Enunciado relevante para o estudo dos limites do princípio da adequação social, da tipicidade formal e material e da tutela penal dos direitos autorais. A comercialização ilícita de mídias, embora difundida ou socialmente tolerada, não deixa de constituir crime por esse motivo. O STJ considera que a adequação social, isoladamente, não revoga tipos penais; eventual revisão da incriminação compete ao legislador.",
+      "recorte": "O enunciado foi aprovado pela Terceira Seção em 23/10/2013 e publicado no DJe de 28/10/2013. Deriva, entre outros julgados, do REsp 1.193.196/MG (Tema Repetitivo 593), julgado em 26/09/2012. A tipificação corresponde ao art. 184, § 2º, do Código Penal, que contempla a exposição à venda de exemplares de obra intelectual ou fonograma reproduzidos com violação de direito autoral, com intuito de lucro direto ou indireto e sem a devida autorização. A súmula pressupõe a comprovação da autoria e da materialidade; não constitui presunção automática de culpabilidade. É súmula ordinária do STJ, distinta das súmulas vinculantes do STF. A referência a CDs e DVDs reproduz o contexto dos precedentes e não deve ser automaticamente estendida a outras tecnologias sem examinar a tipicidade legal.",
+      "etiquetas": [
+        "Súmula 502/STJ",
+        "Adequação social",
+        "Direitos autorais",
+        "Pirataria",
+        "CDs e DVDs",
+        "Tipicidade material",
+        "Tipicidade formal",
+        "Art. 184, § 2º, do Código Penal",
+        "Tema Repetitivo 593",
+        "REsp 1.193.196/MG",
+        "Legalidade",
+        "Intervenção mínima",
+        "2013"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Enunciado e precedentes originários · STJ",
+          "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&h=true&i=1&l=10&livre=SUMULA+INPATH%28TIPO%29+AND+502+INPATH%28NUM%29&ordenacao=-%40NUM&p=false",
+          "natureza": "Texto integral oficial, data, publicação e precedentes"
+        },
+        {
+          "rotulo": "Tema Repetitivo 593 · STJ",
+          "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&num_processo_classe=1193196&sg_classe=REsp&tipo_pesquisa=T",
+          "natureza": "Tese repetitiva firmada no REsp 1.193.196/MG"
+        },
+        {
+          "rotulo": "Código Penal, art. 184, § 2º · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "natureza": "Dispositivo incriminador vigente"
+        },
+        {
+          "rotulo": "REsp 1.435.872/MG · STJ (PDF)",
+          "url": "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ATC?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20140701&formato=PDF&nreg=201400373319&salvar=false&seq=36026074&tipo=5",
+          "natureza": "Jurisprudência complementar sobre limites do princípio da adequação social"
+        }
+      ],
+      "relacionados": [],
+      "estudo": "/direito-penal/principios-do-direito-penal.html#adequacao-social"
     }
   ]
 }
