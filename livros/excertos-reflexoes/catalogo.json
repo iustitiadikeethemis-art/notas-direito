@@ -3,7 +3,7 @@
   "titulo": "Excertos & Reflexões",
   "descricao": "Arquivo independente de passagens selecionadas durante leituras, com referência, pergunta de estudo, comentário pessoal e conexões entre obras.",
   "atualizado": "2026-10-15",
-  "politicaEditorial": "Os registros públicos apresentam apenas excertos breves e comentários revisados; notas pessoais em preparação não são atribuídas ao leitor sem revisão conjunta.",
+  "politicaEditorial": "Caderno de passagens selecionadas, referências bibliográficas, comentários e questões de pesquisa, organizados durante as leituras.",
   "registros": [
     {
       "id": "roque-taliao-cristianismo-poder-punitivo",
@@ -16,7 +16,7 @@
       "dataExibicao": "15 out. 2026",
       "status": "reflexão em elaboração",
       "trecho": "Em que pese o cristianismo possuir matriz hebraica, cumpre ressaltar que a Lei de Talião foi defenestrada por essa corrente de pensamento, na medida em que, para Jesus Cristo, nas palavras do apóstolo Mateus, in verbis: “Ouviste que foi dito: olho por olho, e dente por dente. Eu, porém, vos digo que não resistais ao mal; mas se qualquer te bater na face direita, oferece-lhe também a outra; e ao que quiser pleitear contigo, e tirar-te o vestido, larga-lhe também a capa”²⁵.",
-      "atribuicaoTrecho": "Excerto integral transcrito da imagem da obra enviada para este registro. A citação bíblica e a chamada de nota 25 foram preservadas conforme impressas na página 140.",
+      "atribuicaoTrecho": null,
       "passagemRelacionada": null,
       "fontePassagem": null,
       "notaInterpretativa": "O autor contrapõe a lógica da retaliação à exortação evangélica. Como questão de estudo, importa distinguir o ensinamento moral sobre a reação pessoal à ofensa da discussão jurídico-política sobre a legitimidade das penas estatais. A Lei de Talião também merece exame em seu contexto histórico, inclusive como possível limite à vingança desmedida.",
@@ -40,9 +40,10 @@
           "descricao": "Fonte religiosa mencionada pelo autor; requer leitura no contexto do texto bíblico."
         }
       ],
-      "observacaoReferencia": "Referência bibliográfica: ARAÚJO, Fábio Roque. Direito Penal Didático: Parte Geral. 4. ed. Salvador: JusPodivm, 2021. p. 140. ISBN 9786556803593. Os dados de edição e ISBN foram extraídos da identificação da obra apresentada pelo leitor; o trecho foi transcrito da página fotografada. A chamada de nota 25 foi mantida, mas o teor da nota não foi fornecido.",
+      "observacaoReferencia": "ARAÚJO, Fábio Roque. Direito Penal Didático: Parte Geral. 4. ed. Salvador: JusPodivm, 2021. p. 140. ISBN 9786556803593.",
       "isbn": "9786556803593",
-      "citacaoIntegral": true
+      "citacaoIntegral": true,
+      "indicarRecorte": true
     }
   ]
 }
