@@ -209,12 +209,14 @@ fetch("/header.html").then(function(r){return r.text();}).then(function(data){
     var ref=r.autor+" — "+r.obra;
     if(r.edicao)ref+=" · "+r.edicao;
     if(r.pagina)ref+=" · p. "+r.pagina;
+    if(r.isbn)ref+=" · ISBN "+r.isbn;
     top.appendChild(paragraph(ref,"ficha-meta"));
     top.appendChild(elem("span","ficha-status",r.status));
     card.appendChild(top);
     var body=elem("div","ficha-corpo");
     var quoteBox=elem("div","");
-    var quote=elem("blockquote","citacao","“"+r.trecho+"”");
+    var quoteText=r.citacaoIntegral?r.trecho:("“"+r.trecho+"”");
+    var quote=elem("blockquote","citacao",quoteText);
     quoteBox.appendChild(quote);
     quoteBox.appendChild(paragraph(r.atribuicaoTrecho,"citacao-fonte"));
     if(r.passagemRelacionada){
