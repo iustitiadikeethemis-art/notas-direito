@@ -10,15 +10,15 @@
       "titulo": "Lei de Talião, cristianismo e poder punitivo",
       "autor": "Fábio Roque Araújo",
       "obra": "Direito Penal Didático: Parte Geral",
-      "edicao": null,
-      "pagina": null,
+      "edicao": "4ª edição, 2021 · Editora JusPodivm",
+      "pagina": "140",
       "dataRegistro": "2026-10-15",
       "dataExibicao": "15 out. 2026",
       "status": "reflexão em elaboração",
-      "trecho": "a Lei de Talião foi defenestrada por essa corrente de pensamento",
-      "atribuicaoTrecho": "Formulação do professor Fábio Roque em comentário sobre o cristianismo e a Lei de Talião (excerto breve).",
-      "passagemRelacionada": "Ouvistes que foi dito: olho por olho, e dente por dente.",
-      "fontePassagem": "Mateus 5:38, passagem citada na obra.",
+      "trecho": "Em que pese o cristianismo possuir matriz hebraica, cumpre ressaltar que a Lei de Talião foi defenestrada por essa corrente de pensamento, na medida em que, para Jesus Cristo, nas palavras do apóstolo Mateus, in verbis: “Ouviste que foi dito: olho por olho, e dente por dente. Eu, porém, vos digo que não resistais ao mal; mas se qualquer te bater na face direita, oferece-lhe também a outra; e ao que quiser pleitear contigo, e tirar-te o vestido, larga-lhe também a capa”²⁵.",
+      "atribuicaoTrecho": "Excerto integral transcrito da imagem da obra enviada para este registro. A citação bíblica e a chamada de nota 25 foram preservadas conforme impressas na página 140.",
+      "passagemRelacionada": null,
+      "fontePassagem": null,
       "notaInterpretativa": "O autor contrapõe a lógica da retaliação à exortação evangélica. Como questão de estudo, importa distinguir o ensinamento moral sobre a reação pessoal à ofensa da discussão jurídico-política sobre a legitimidade das penas estatais. A Lei de Talião também merece exame em seu contexto histórico, inclusive como possível limite à vingança desmedida.",
       "pergunta": "Como analisar a tensão entre discursos contemporâneos de identidade cristã e propostas de punição severa, sem confundir ética pessoal, função da pena e deveres de proteção do Estado?",
       "reflexaoPessoal": null,
@@ -40,7 +40,9 @@
           "descricao": "Fonte religiosa mencionada pelo autor; requer leitura no contexto do texto bíblico."
         }
       ],
-      "observacaoReferencia": "Edição e página ainda não informadas. Antes de consolidar a citação no fichamento acadêmico, conferir esses dados diretamente no exemplar consultado."
+      "observacaoReferencia": "Referência bibliográfica: ARAÚJO, Fábio Roque. Direito Penal Didático: Parte Geral. 4. ed. Salvador: JusPodivm, 2021. p. 140. ISBN 9786556803593. Os dados de edição e ISBN foram extraídos da identificação da obra apresentada pelo leitor; o trecho foi transcrito da página fotografada. A chamada de nota 25 foi mantida, mas o teor da nota não foi fornecido.",
+      "isbn": "9786556803593",
+      "citacaoIntegral": true
     }
   ]
 }
