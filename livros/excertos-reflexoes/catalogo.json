@@ -1,0 +1,46 @@
+{
+  "versao": 1,
+  "titulo": "Excertos & Reflexões",
+  "descricao": "Arquivo independente de passagens selecionadas durante leituras, com referência, pergunta de estudo, comentário pessoal e conexões entre obras.",
+  "atualizado": "2026-10-15",
+  "politicaEditorial": "Os registros públicos apresentam apenas excertos breves e comentários revisados; notas pessoais em preparação não são atribuídas ao leitor sem revisão conjunta.",
+  "registros": [
+    {
+      "id": "roque-taliao-cristianismo-poder-punitivo",
+      "titulo": "Lei de Talião, cristianismo e poder punitivo",
+      "autor": "Fábio Roque Araújo",
+      "obra": "Direito Penal Didático: Parte Geral",
+      "edicao": null,
+      "pagina": null,
+      "dataRegistro": "2026-10-15",
+      "dataExibicao": "15 out. 2026",
+      "status": "reflexão em elaboração",
+      "trecho": "a Lei de Talião foi defenestrada por essa corrente de pensamento",
+      "atribuicaoTrecho": "Formulação do professor Fábio Roque em comentário sobre o cristianismo e a Lei de Talião (excerto breve).",
+      "passagemRelacionada": "Ouvistes que foi dito: olho por olho, e dente por dente.",
+      "fontePassagem": "Mateus 5:38, passagem citada na obra.",
+      "notaInterpretativa": "O autor contrapõe a lógica da retaliação à exortação evangélica. Como questão de estudo, importa distinguir o ensinamento moral sobre a reação pessoal à ofensa da discussão jurídico-política sobre a legitimidade das penas estatais. A Lei de Talião também merece exame em seu contexto histórico, inclusive como possível limite à vingança desmedida.",
+      "pergunta": "Como analisar a tensão entre discursos contemporâneos de identidade cristã e propostas de punição severa, sem confundir ética pessoal, função da pena e deveres de proteção do Estado?",
+      "reflexaoPessoal": null,
+      "etiquetas": [
+        "Direito Penal",
+        "Cristianismo",
+        "Filosofia moral",
+        "Lei de Talião",
+        "Poder punitivo",
+        "Pena e retribuição"
+      ],
+      "conexoes": [
+        {
+          "titulo": "Cesare Beccaria — Dos delitos e das penas",
+          "descricao": "Possível comparação futura sobre proporcionalidade, humanidade e finalidade da pena."
+        },
+        {
+          "titulo": "Evangelho segundo Mateus — 5:38–42",
+          "descricao": "Fonte religiosa mencionada pelo autor; requer leitura no contexto do texto bíblico."
+        }
+      ],
+      "observacaoReferencia": "Edição e página ainda não informadas. Antes de consolidar a citação no fichamento acadêmico, conferir esses dados diretamente no exemplar consultado."
+    }
+  ]
+}
