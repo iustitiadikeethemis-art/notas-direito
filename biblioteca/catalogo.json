@@ -828,6 +828,115 @@
         }
       ],
       "relacionados": []
+    },
+    {
+      "id": "stj-resp-2095584-sp-2024",
+      "titulo": "STJ — REsp 2.095.584/SP: comoriência e direito de representação no seguro de vida",
+      "tipo": "Acórdão",
+      "area": "Direito Civil",
+      "data": "2024-09-10",
+      "dataExibicao": "10 set. 2024",
+      "orgao": "Superior Tribunal de Justiça · Terceira Turma",
+      "referencia": "REsp 2.095.584/SP (2023/0322675-7) · Rel. Min. Nancy Andrighi · julgamento unânime em 10/09/2024 · DJe 12/09/2024",
+      "resumo": "Morto o segurado em acidente automobilístico juntamente com uma de suas irmãs, sem possibilidade de apurar a ordem das mortes, os filhos menores dessa irmã puderam exercer direito de representação para receber a parcela da indenização securitária correspondente à estirpe materna. O segurado não havia indicado beneficiários no contrato e não deixou cônjuge, descendentes nem ascendentes. A Terceira Turma, por unanimidade, deu provimento ao recurso especial e afastou a atribuição integral do seguro à única irmã sobrevivente.",
+      "relevancia": "O acórdão distingue duas regras frequentemente confundidas: na comoriência (art. 8º do CC), não ocorre transmissão hereditária entre as pessoas presumidamente mortas ao mesmo tempo; isso não impede, porém, que descendentes representem parente premorto ou comoriente nos limites do direito de representação (arts. 1.851 a 1.854). Em seguro de vida sem beneficiário designado, o art. 792 do CC utiliza a ordem de vocação sucessória como critério de identificação dos destinatários, embora o capital segurado não constitua herança (art. 794). A relatora ressaltou a isonomia e a proteção de crianças e adolescentes, alinhada ao Enunciado 610 da VII Jornada de Direito Civil.",
+      "recorte": "Em 27/06/2017, um homem faleceu no mesmo acidente de trânsito que sua irmã, mãe de dois menores. O contrato de seguro de vida era omisso quanto aos beneficiários; havia outra irmã sobrevivente, a quem a seguradora pagou a totalidade do capital. Os sobrinhos ajuizaram ação de cobrança de metade da indenização; obtiveram sentença favorável, posteriormente reformada pelo TJSP. O STJ reconheceu o direito de representação dos dois menores e restabeleceu a repartição de 50% do seguro em favor da estirpe da irmã comoriente. A decisão não afirma que houve herança transmitida da irmã falecida aos filhos: é a aplicação legal da ordem sucessória para identificar beneficiários do seguro. O julgamento não torna a representação automática em qualquer seguro com beneficiário expressamente designado.",
+      "etiquetas": [
+        "REsp 2.095.584/SP",
+        "Comoriência",
+        "Premoriência",
+        "Direito de representação",
+        "Seguro de vida",
+        "Art. 8º do CC",
+        "Art. 792 do CC",
+        "Art. 794 do CC",
+        "Arts. 1.851 a 1.854 do CC",
+        "Herdeiros colaterais",
+        "Sobrinhos",
+        "Enunciado 610/CJF",
+        "Nancy Andrighi",
+        "Informativo 825/STJ",
+        "2024"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor do acórdão · STJ (PDF)",
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202303226757",
+          "natureza": "Acórdão judicial oficial integral, disponibilizado em PDF (julgamento de 10/09/2024)"
+        },
+        {
+          "rotulo": "Informativo 825 · STJ",
+          "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=%40CNOT%3D020999",
+          "natureza": "Resumo oficial da tese e da fundamentação"
+        },
+        {
+          "rotulo": "Notícia institucional do julgamento · STJ",
+          "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/25092024-Morte-simultanea-de-segurado-e-herdeira-nao-afasta-direito-dos-filhos-dela-a-divisao-do-seguro.aspx",
+          "natureza": "Relato oficial dos fatos do processo e do resultado"
+        },
+        {
+          "rotulo": "Código Civil · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "natureza": "Arts. 8º, 792, 794 e 1.851 a 1.854"
+        }
+      ],
+      "relacionados": [
+        "stj-resp-1726577-sp-2021"
+      ]
+    },
+    {
+      "id": "stj-resp-1726577-sp-2021",
+      "titulo": "STJ — REsp 1.726.577/SP: comoriência, meação e partilha de PGBL",
+      "tipo": "Acórdão",
+      "area": "Direito Civil",
+      "data": "2021-09-14",
+      "dataExibicao": "14 set. 2021",
+      "orgao": "Superior Tribunal de Justiça · Terceira Turma",
+      "referencia": "REsp 1.726.577/SP (2018/0043522-8) · Rel. Min. Nancy Andrighi · julgamento por maioria em 14/09/2021 · DJe 01/10/2021",
+      "resumo": "Em inventário decorrente de mortes simultâneas de cônjuges e filhos, a Terceira Turma considerou que valores acumulados em plano aberto de previdência privada PGBL, enquanto ainda em fase de formação da reserva, têm natureza predominante de investimento e integram, conforme o regime matrimonial, o patrimônio partilhável. O saldo, embora formalmente em nome do marido, compunha a meação da esposa, a ser considerada na sucessão de seus próprios ascendentes. Recurso especial conhecido e desprovido.",
+      "relevancia": "Julgado útil para distinguir, em cenário de comoriência, a ausência de transmissão sucessória entre os mortos simultâneos e a existência prévia da meação matrimonial. No casamento sob comunhão parcial de bens, patrimônio comum não se transforma integralmente em herança de quem figura como titular de uma aplicação financeira. O STJ entendeu que o PGBL aberto, antes de convertido em benefício de renda periódica, assemelha-se predominantemente a investimento e não se inclui, nessa fase, na exclusão do art. 1.659, VII, do Código Civil. Diferenciou previdência aberta (PGBL/VGBL) de determinados planos fechados, cuja natureza e disciplina podem conduzir a análise diversa.",
+      "recorte": "O caso envolveu acidente aéreo em 2016 no qual marido, esposa e filhos morreram na mesma ocasião. Os herdeiros chamados à sucessão eram ascendentes de cada cônjuge: a mãe do marido e os pais da esposa. Discutia-se a inclusão no inventário de reserva de PGBL mantida em nome do marido, de modo que a parte comunicável do patrimônio também fosse reconhecida como meação da esposa, com reflexos na sucessão dos pais dela. O STJ, por maioria, manteve o entendimento que permitiu a partilha, negando provimento ao recurso especial. A controvérsia não foi sobre filhos representarem herdeiros comorientes, nem sobre capital de seguro de vida com beneficiário omisso; foi sobre a titularidade patrimonial da reserva financeira antes da conversão em renda. A palavra 'colação', empregada no acórdão, aparece no contexto de trazer os valores ao inventário para partilha, não devendo ser confundida automaticamente com a colação de liberalidades em adiantamento de legítima.",
+      "etiquetas": [
+        "REsp 1.726.577/SP",
+        "Comoriência",
+        "Meação",
+        "Regime de bens",
+        "Comunhão parcial de bens",
+        "PGBL",
+        "Previdência privada aberta",
+        "Inventário",
+        "Partilha",
+        "Ascendentes",
+        "Art. 1.659, VII, do CC",
+        "Nancy Andrighi",
+        "Informativo 709/STJ",
+        "2021"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Informativo 709 · STJ (PDF oficial)",
+          "url": "https://processo.stj.jus.br/SCON/GetPDFINFJ?edicao=0709",
+          "natureza": "Síntese institucional em PDF, com fundamentos do REsp 1.726.577/SP; não substitui o inteiro teor do acórdão"
+        },
+        {
+          "rotulo": "Registro jurisprudencial do REsp 1.726.577 · STJ",
+          "url": "https://scon.stj.jus.br/SCON/jurisprudencia/toc.jsp?livre=%28RESP+INPATH%28CLAS%29+AND+1726577+INPATH%28NUM%29%29+OR+%28NEAR%28%28RESP%2C1726577%29%2C0%2CTRUE%29+INPATH%28SUCE%29%29",
+          "natureza": "Consulta oficial de jurisprudência pelo número do processo; pesquisar REsp 1726577 se o sistema redirecionar"
+        },
+        {
+          "rotulo": "Acórdão posterior no mesmo processo · STJ (2023)",
+          "url": "https://processo.stj.jus.br/processo/julgamento/eletronico/documento/?documento_sequencial=214924853&documento_tipo=integra&peticao_numero=202300255704&publicacao_data=20231030&registro_numero=201800435228",
+          "natureza": "AgInt nos embargos de divergência, peça judicial posterior que reproduz e contextualiza o julgado de 2021; não é o acórdão original"
+        },
+        {
+          "rotulo": "Código Civil · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "natureza": "Arts. 8º, 1.658 e 1.659 e disposições sucessórias"
+        }
+      ],
+      "relacionados": [
+        "stj-resp-2095584-sp-2024"
+      ]
     }
   ]
 }
