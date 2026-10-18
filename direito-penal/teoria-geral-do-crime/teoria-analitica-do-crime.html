@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teoria Analítica do Crime — Concepção Tripartida | Notas de um Estudante de Direito</title>
+<meta name="description" content="Estudo aprofundado da teoria tripartida do crime: fato típico, dolo, culpa, causalidade, tipicidade, ilicitude, culpabilidade, iter criminis, teoria do erro e jurisprudência.">
+<link rel="stylesheet" href="/style.css"><style>:root{--navy:#08243d;--wine:#7b1425;--gold:#b78b54;--paper:#fff9f1;--cream:#f2e8d9;--muted:#61554c;--ink:#262421;--line:#decbb5;--deep:#101b28}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{color:#f5eee5;background:linear-gradient(175deg,#162a3a 0%,#162638 33%,#290e17 100%);font-family:Georgia,"Times New Roman",serif}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 7px)}
+#header-container header{background:#132335!important;border-color:#b78b54!important}
+.brand,.brand a,.menu-links a{color:#f4e8d8!important}
+.menu-botao{color:#f4e8d8!important;border-color:#b78b54!important}
+.menu-links{background:#15283a!important;border-color:#b78b54!important}
+.menu-fechar{color:#f4e8d8!important}
+article{min-width:0}
+.penal-edicao{max-width:1260px;margin:auto;padding:30px 24px 70px}
+.penal-heroi{text-align:center;padding:62px 20px 43px;border-bottom:1px solid #937858}
+.penal-etiqueta{font:600 12px Arial,sans-serif;letter-spacing:.23em;text-transform:uppercase;color:#dabb89}
+.penal-heroi h1{font-size:clamp(40px,5.4vw,82px);line-height:1.08;max-width:1050px;margin:18px auto 16px;color:#fff8ef;text-wrap:balance}
+.penal-heroi h1 em{color:#d8a6a9;font-style:normal}
+.penal-heroi .sub{font-size:20px;line-height:1.6;max-width:820px;margin:auto;color:#ebdcd2}
+.penal-heroi .meta{font:13px Arial,sans-serif;color:#d7c1ad;letter-spacing:.04em;margin-top:23px}
+.ornamento{margin:22px auto 0;color:#c6a46b;font-size:27px}
+.arranjo{display:grid;grid-template-columns:260px minmax(0,1fr);align-items:start;gap:25px;margin-top:32px}
+.indice{position:sticky;top:90px;max-height:calc(100vh - 115px);overflow:auto;scrollbar-width:thin;scrollbar-color:#c3a277 #13283b;background:#142b3c;border:1px solid #8d785f;padding:24px 18px;border-radius:14px}
+.indice h2{font-size:19px;margin:0 0 14px;color:#f6ead7}
+.indice a{display:block;padding:8px 7px;color:#e7c8ad;text-decoration:none;font:14px/1.35 Arial,sans-serif;border-bottom:1px solid #ffffff1d}
+.indice a:hover,.indice a:focus{background:#ffffff19;color:white}
+.indice .volta{margin-top:18px;border-top:1px solid #b59572;padding-top:12px}
+.miolo{background:var(--paper);color:var(--ink);border:1px solid var(--gold);box-shadow:0 20px 65px #0009;border-radius:16px;padding:clamp(24px,4vw,58px);min-width:0}
+.miolo p{font-size:18px;line-height:1.81;margin:0 0 18px;text-align:justify;hyphens:auto}
+.miolo h2{margin:49px 0 19px;padding:13px 0 8px;border-top:1px solid var(--line);font-size:clamp(26px,2.8vw,37px);color:var(--navy);line-height:1.15;scroll-margin-top:95px}
+.miolo h3{margin:30px 0 13px;font-size:24px;color:var(--wine);line-height:1.28}
+.miolo h4{margin:23px 0 10px;font-size:20px;color:var(--navy)}
+.miolo strong{color:#382325}
+.miolo em{color:#63343a}
+.miolo a{color:#65401c;text-underline-offset:3px}
+.miolo li{font-size:17px;line-height:1.65;margin:7px 0}
+.miolo ul{padding-left:26px}
+.entrada{font-size:20px!important;line-height:1.85!important}
+.entrada:first-letter{float:left;color:var(--wine);font-size:3.6em;line-height:.86;padding:6px 11px 0 0}
+.fonte-inline{font:13px Arial,sans-serif;color:#796c5e}
+.citavel{font-style:italic;background:#f6eee1;padding:16px 19px;border-left:4px solid var(--gold);margin:22px 0;font-size:18px;line-height:1.6}
+.aviso{margin:26px 0;padding:18px 21px;background:#fff0e3;border-left:5px solid var(--wine);border-radius:0 9px 9px 0}
+.aviso p,.nota p{margin:0;font-size:16.5px;line-height:1.65;text-align:left}
+.nota{margin:23px 0;padding:18px 21px;border:1px solid #d7c6af;background:#f7efe1;border-radius:10px}
+.nota strong,.aviso strong{color:var(--wine)}
+.secao-resumo{margin:27px 0;border:1px solid #dbc5a8;padding:23px;border-radius:12px;background:#f9f1e4}
+.secao-resumo h3{margin:0 0 10px}
+.secao-resumo p{font-size:16.5px;line-height:1.7;margin:0;text-align:left}
+.grelha{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:25px 0}
+.quadro{padding:17px 15px;border:1px solid #d6c1a6;border-top:5px solid var(--navy);background:#fff;box-shadow:0 4px 18px #00000010;border-radius:5px}
+.quadro:nth-child(2){border-top-color:var(--wine)}
+.quadro:nth-child(3){border-top-color:#246143}
+.quadro b{display:block;font-size:20px;color:var(--navy);line-height:1.15;margin-bottom:10px}
+.quadro p{font-size:15.5px;line-height:1.55;text-align:left;margin:0}
+.quadro small{display:block;margin-top:12px;font:12px Arial,sans-serif;color:#765c4d}
+.tabela{width:100%;overflow-x:auto;margin:21px 0 29px;border:1px solid #d7c1a5;border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:555px}
+th{background:var(--navy);color:#fff8ed;font:600 14px Arial,sans-serif;padding:13px;text-align:left}
+td{font-size:15.5px;line-height:1.52;padding:12px 13px;vertical-align:top;border-top:1px solid #e8d8c7}
+tr:nth-child(even) td{background:#f7eee2}
+.metodo{margin:28px 0;padding:26px 22px;background:#efe5d7;border:1px solid #d8bea2;border-radius:9px}
+.metodo h3{margin:0 0 16px;font-size:21px}
+.pergunta{display:grid;grid-template-columns:37px 1fr;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid #d8c8b3}
+.pergunta:last-child{border-bottom:0}
+.numero{height:33px;width:33px;display:grid;place-items:center;border-radius:50%;background:var(--wine);color:white;font:700 15px Arial,sans-serif}
+.pergunta div:last-child{font:16px/1.5 Arial,sans-serif;color:#302a28}
+.fluxo{margin:25px 0;padding:23px;background:#f2e8d8;border:1px solid #d5bfa6;text-align:center;border-radius:10px}
+.fluxo .passo{display:inline-block;background:var(--navy);color:white;font:600 15px Arial,sans-serif;padding:13px 14px;border-radius:5px}
+.fluxo .passo.wine{background:var(--wine)}
+.fluxo .passo.green{background:#215b46}
+.fluxo .seta{padding:0 10px;color:var(--wine);font-weight:bold;font-size:22px}
+.fluxo p{font-size:14px;margin:14px 0 0;text-align:center;color:#65564a}
+.exemplo{margin:24px 0;padding:20px 23px;border:1px solid #c9b29a;border-radius:10px;background:#fffcf7}
+.exemplo h4{margin:0 0 11px;color:#74222b}
+.exemplo p{font-size:16.5px;line-height:1.74;margin-bottom:7px}
+.exemplo .rotulo{font:700 12px Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:#775e41;display:block;margin-bottom:8px}
+.julgados{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:24px 0}
+.julgado{padding:21px;border:1px solid #d9c3a9;border-radius:10px;background:#fff}
+.julgado h4{margin:0 0 9px}
+.julgado p{font-size:15.5px;line-height:1.64;text-align:left;margin:0 0 9px}
+.julgado a{font:700 13px Arial,sans-serif}
+.grafico{margin:27px 0;padding:24px;background:#fff;border:1px solid #dbc6a7;border-radius:12px}
+.grafico h4{margin:0 0 16px}
+.grafico .linha{display:flex;align-items:center;gap:11px;margin:11px 0;font:14px Arial,sans-serif}
+.grafico .linha span{width:116px;flex:none}
+.grafico .barra{height:18px;border-radius:3px;background:linear-gradient(90deg,#163752,#7e2434);min-width:30px}
+.grafico .linha small{font-size:12px;color:#7c6b58}
+.grafico figcaption{font:12px/1.5 Arial,sans-serif;color:#756b5c;margin-top:12px}
+.ilustracao{margin:29px auto;padding:20px 17px 17px;border:1px solid #cfb491;border-radius:14px;background:#fffdf7;max-width:100%}
+.ilustracao h4{color:var(--wine);text-align:center;margin:0 0 14px;text-transform:uppercase;letter-spacing:.045em}
+.ilustracao figcaption{font:14px/1.6 Georgia,serif;color:#625548;text-align:center;margin:13px auto 0;max-width:680px}
+.esquema-tres{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.esquema-tres>div{display:grid;place-items:center;min-height:95px;padding:13px 8px;background:#0c2d46;color:#fff;font-size:19px;text-align:center;font-weight:bold;border-radius:5px}
+.esquema-tres>div:nth-child(2){background:#7b1425}
+.esquema-tres>div:nth-child(3){background:#1e5a44}
+.esquema-tres small{display:block;margin-top:8px;font:13px/1.4 Arial,sans-serif;color:#f6e6cf}
+.legenda{font:14px/1.6 Arial,sans-serif;color:#64594e;text-align:center;margin-top:16px}
+.fases{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+.fase{padding:15px 5px;background:#ece0cc;border-top:5px solid #8e6334;text-align:center}
+.fase:nth-child(2){border-top-color:#7e3d26}
+.fase:nth-child(3){border-top-color:#852335}
+.fase:nth-child(4){border-top-color:#2b5b43}
+.fase:nth-child(5){border-top-color:#63415e}
+.fase b{display:block;font:700 13px Arial,sans-serif;margin-bottom:6px}
+.fase small{font:12px/1.5 Arial,sans-serif}
+.fontes{border-top:2px solid #b69773;padding:26px 0 8px;margin-top:48px}
+.fontes h2{margin:0 0 17px;border:none}
+.fontes ul{padding-left:23px}
+.fontes li{font-size:15.5px;line-height:1.65}
+.rodape-artigo{text-align:center;margin:40px 0;color:#dec7b1}
+.rodape-artigo a{color:#eacda4}
+@media(max-width:980px){.arranjo{grid-template-columns:1fr}.indice{position:static;max-height:none}.indice{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}.indice h2,.indice .volta{grid-column:1/-1}}
+@media(max-width:690px){.penal-edicao{padding:13px 12px 46px}.penal-heroi{padding:43px 9px 30px}.penal-heroi h1{font-size:40px}.miolo{padding:23px 18px}.miolo p{font-size:16.5px;text-align:left}.miolo h2{font-size:27px}.grelha,.julgados,.esquema-tres{grid-template-columns:1fr}.indice{grid-template-columns:1fr}.fases{grid-template-columns:repeat(2,1fr)}.pergunta{grid-template-columns:32px 1fr}.fluxo .passo{display:block;margin:8px auto}.fluxo .seta{display:block;transform:rotate(90deg)}}
+@media print{body{background:white;color:black}.indice,#header-container,.rodape-artigo,.nao-imprimir{display:none!important}.arranjo{display:block}.miolo{box-shadow:none;border:0;padding:0}.penal-edicao{padding:0}.penal-heroi{color:#000}.penal-heroi h1{color:#000}.penal-heroi h1 em{color:#700}.penal-heroi .sub,.penal-heroi .meta{color:#000}.miolo h2{break-after:avoid}.grelha,.tabela,.exemplo,.ilustracao,.julgado,.nota,.aviso{break-inside:avoid}.tabela th{print-color-adjust:exact}}</style></head>
+<body><div id="header-container"></div>
+<main class="penal-edicao">
+<header class="penal-heroi"><span class="penal-etiqueta">Direito Penal · Teoria Geral do Crime · Capítulo doutrinário</span>
+<h1>Teoria <em>Analítica</em> do Crime</h1>
+<p class="sub">A concepção tripartida: fato típico, ilicitude e culpabilidade. Fundamentos, estrutura, problemas de imputação e aplicação à jurisprudência brasileira.</p>
+<p class="meta">Notas de um Estudante de Direito · Texto-base de estudo · Outubro de 2026</p><div class="ornamento" aria-hidden="true">⚖</div></header>
+<section class="arranjo"><aside class="indice" aria-label="Índice do capítulo"><h2>Índice de leitura</h2><a href="#fundamentos">I. Conceito de crime e método</a>
+<a href="#evolucao">II. Causalismo e finalismo</a>
+<a href="#fato-tipico">III. Fato típico e conduta</a>
+<a href="#dolo-culpa">IV. Dolo e culpa</a>
+<a href="#resultado-nexo">V. Resultado, nexo e concausas</a>
+<a href="#tipicidade">VI. Tipicidade e princípios</a>
+<a href="#ilicitude">VII. Ilicitude e justificantes</a>
+<a href="#culpabilidade">VIII. Culpabilidade</a>
+<a href="#iter">IX. Iter criminis</a>
+<a href="#erros">X. Teoria do erro</a>
+<a href="#jurisprudencia">XI. Jurisprudência real</a>
+<a href="#caso-integrador">XII. Caso integrador</a>
+<a href="#sintese">XIII. Síntese sistemática</a>
+<a href="#fontes">XIV. Fontes</a><div class="volta"><a href="/direito-penal/teoria-geral-do-crime/">← Teoria Geral do Crime</a></div></aside>
+<div class="miolo"><article>
+<p class="entrada">O ato de causar um resultado não é, por si só, suficiente para fazer nascer a responsabilidade penal. Entre a ocorrência de um acontecimento e sua qualificação como crime existe uma sequência de perguntas jurídicas: houve uma conduta humana penalmente relevante? Essa conduta preenche um tipo legal? O fato era contrário ao Direito? Pode ser pessoalmente reprovado ao agente? A <strong>teoria analítica do crime</strong>, também chamada teoria estratificada, organiza essas respostas em categorias sucessivas, assegurando que a gravidade social de um evento não substitua a demonstração dos pressupostos do delito.</p>
+<p>Adotaremos, como eixo central desta exposição, a <strong>concepção tripartida: crime é fato típico, ilícito e culpável</strong>. É a estrutura utilizada no material de estudo da disciplina, em diálogo com a doutrina penal brasileira contemporânea. A escolha não encobre divergências doutrinárias nem dispensa os demais requisitos para eventual imposição de sanção. Ao contrário: sua finalidade é tornar explícito o que precisa ser examinado — e em que ordem — antes de se concluir que alguém praticou um crime.</p>
+<figure class="ilustracao"><h4>Teoria analítica do crime</h4><div class="esquema-tres"><div>1. Fato típico<small>O fato corresponde ao tipo penal?</small></div><div>2. Ilicitude<small>O fato era juridicamente proibido ou justificado?</small></div><div>3. Culpabilidade<small>É possível reprovação pessoal?</small></div></div><figcaption>Concepção tripartida: cada estrato possui requisitos próprios. A falta de qualquer deles impede o reconhecimento de crime nessa concepção.</figcaption></figure>
+
+<h2 id="fundamentos">I — O crime como problema jurídico: conceito, limites e método</h2>
+<p>O conceito de crime muda conforme o plano de investigação. A <strong>criminologia</strong> investiga padrões de criminalidade, processos de criminalização e formas de controle social; a <strong>filosofia penal</strong> discute a legitimidade moral e política da punição; a <strong>política criminal</strong> avalia quais comportamentos devem ser criminalizados e quais respostas são adequadas; e a <strong>dogmática penal</strong> procura identificar se, diante de determinado fato concreto, estão presentes os requisitos de incidência do Direito Penal vigente. A teoria analítica pertence primordialmente a este último plano.</p>
+<p>Historicamente, a limitação racional do poder punitivo ganhou particular relevo com o Iluminismo. Cesare Beccaria, em <em>Dos delitos e das penas</em> (1764), questionou a arbitrariedade, a tortura e a desproporção entre infração e pena. Essa preocupação permanece na base constitucional brasileira: o <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">art. 5º, XXXIX, da Constituição</a> e o <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm" target="_blank" rel="noopener">art. 1º do Código Penal</a> vedam a criação de crimes ou penas sem lei anterior. A exigência de responsabilidade pessoal decorre também do princípio da culpabilidade e da vedação, como regra, da responsabilidade penal objetiva.</p>
+<div class="tabela"><table><thead><tr><th>Conceito de crime</th><th>Pergunta central</th><th>Aspecto decisivo</th></tr></thead><tbody>
+<tr><td><strong>Formal</strong></td><td>O ordenamento prevê esta conduta como crime?</td><td>Classificação segundo a lei penal, sob a legalidade.</td></tr>
+<tr><td><strong>Material</strong></td><td>Há lesão ou perigo penalmente relevante a bem jurídico?</td><td>Ofensividade e legitimidade material da tutela.</td></tr>
+<tr><td><strong>Analítico</strong></td><td>Quais componentes do delito estão presentes no fato?</td><td>Fato típico, ilicitude e culpabilidade.</td></tr>
+</tbody></table></div>
+<p>Não se deve confundir o conceito analítico com a classificação legal das infrações penais. O <strong>art. 1º do Decreto-Lei nº 3.914/1941</strong> diferencia crimes de contravenções pelas espécies de pena cominadas: reclusão ou detenção, para crimes, e prisão simples ou multa, conforme a disciplina das contravenções. O gênero é <em>infração penal</em>; crime e contravenção são suas espécies no sistema brasileiro. Nem todo ilícito civil ou administrativo é infração penal.</p>
+<h3>Três concepções analíticas e a questão da punibilidade</h3>
+<p>A teoria <strong>bipartida</strong> compreende o crime, segundo sua organização clássica, como fato típico e ilícito, tratando a culpabilidade como pressuposto da pena. A <strong>tripartida</strong> a integra como terceiro elemento do crime. Existem formulações <strong>quadripartidas</strong> que acrescentam a punibilidade, embora esta seja, em construção amplamente adotada, consequência ou condição da imposição de sanção, não elemento constitutivo do delito. A extinção da punibilidade não significa, automaticamente, que o fato típico e ilícito nunca ocorreu.</p>
+<p>A fórmula tripartida deve ser entendida como <strong>método de análise</strong>, não como disposição literal do Código Penal em um único artigo. O sistema distribui seus requisitos por diversos dispositivos, especialmente os arts. 13 a 28 do Código Penal e, quanto a determinados erros na execução e no resultado, os arts. 73 e 74.</p>
+<div class="nota"><p><strong>Ponto metodológico:</strong> a ordem didática fato típico → ilicitude → culpabilidade não autoriza presumir definitivamente a existência dos estratos seguintes. A tipicidade funciona, na concepção indiciária, como sinal inicial de possível ilicitude, mas a prova e a avaliação das justificantes continuam indispensáveis.</p></div>
+
+<h2 id="evolucao">II — Da ação causal à ação final: por que dolo e culpa estão no fato típico?</h2>
+<p>As categorias do delito não permaneceram inalteradas. No <strong>causalismo</strong>, a ação foi compreendida predominantemente como movimento corporal voluntário e processo causal, com dolo e culpa tratados na culpabilidade. O <strong>neokantismo</strong> reforçou a leitura valorativa das categorias e a ideia de reprovação normativa. O <strong>finalismo</strong>, associado a Hans Welzel, partiu da orientação da conduta humana a fins, deslocando dolo e culpa para o fato típico e reorganizando a culpabilidade em termos normativos.</p>
+<p>Essa reorganização explica uma distinção que atravessará todo o estudo: <strong>querer um resultado é diferente de poder compreender sua ilicitude</strong>. O dolo relaciona-se à realização consciente e voluntária dos elementos do tipo; a potencial consciência da ilicitude pertence à culpabilidade. Por isso o erro de tipo e o erro de proibição produzem efeitos distintos. Construções funcionalistas posteriores, associadas a autores como Claus Roxin e Günther Jakobs, introduziram novas formas de compreender a imputação e as funções da norma, sem eliminar a necessidade de identificar claramente os pressupostos legais da responsabilidade.</p>
+<div class="tabela"><table><thead><tr><th>Modelo</th><th>Centro da análise</th><th>Posição de dolo e culpa</th></tr></thead><tbody>
+<tr><td>Causalismo</td><td>Movimento voluntário e causalidade</td><td>Tradicionalmente, culpabilidade</td></tr>
+<tr><td>Neokantismo</td><td>Valoração jurídica e reprovabilidade</td><td>Modelos anteriores ao finalismo, com variações</td></tr>
+<tr><td>Finalismo</td><td>Conduta orientada a fins</td><td>Fato típico</td></tr>
+</tbody></table></div>
+
+<h2 id="fato-tipico">III — Fato típico: a primeira verificação do delito</h2>
+<p>É no fato típico que se examina a correspondência da conduta à descrição legal e os requisitos objetivos e subjetivos de sua realização. Didaticamente, apresentam-se <strong>conduta, resultado naturalístico, nexo causal e tipicidade</strong>. É indispensável, porém, a ressalva: <strong>resultado naturalístico distinto da conduta e nexo causal não são exigidos em toda espécie de crime</strong>. Sua centralidade é maior nos delitos materiais, nos quais o resultado integra a consumação.</p>
+<figure class="ilustracao"><h4>Os componentes do fato típico</h4><div class="esquema-tres" style="grid-template-columns:repeat(2,1fr)"><div>Conduta<small>Ação ou omissão juridicamente relevante</small></div><div>Resultado<small>Quando necessário ao tipo</small></div><div>Nexo causal<small>Vínculo causal, quando exigido</small></div><div>Tipicidade<small>Correspondência legal e relevância material</small></div></div><figcaption>Esquema de estudo. A estrutura concreta depende da espécie de delito, inclusive de seus elementos subjetivos.</figcaption></figure>
+<h3>3.1. Conduta: ação, omissão e ausência de voluntariedade</h3>
+<p>A conduta humana penalmente relevante pode apresentar-se como <strong>ação</strong>, na qual o sujeito faz o que a norma proíbe, ou <strong>omissão</strong>, pela qual deixa de cumprir um dever de agir quando lhe era possível fazê-lo. O simples movimento corporal não equivale a conduta voluntária: a <em>vis absoluta</em> (força física absolutamente irresistível), certos atos reflexos e movimentos involuntários podem excluir a conduta imputável naquele instante.</p>
+<div class="exemplo"><span class="rotulo">Exemplo hipotético</span><h4>Dois movimentos de braço; duas soluções jurídicas</h4><p>Um indivíduo soca voluntariamente outra pessoa: há conduta, prosseguindo-se na análise típica. Em situação distinta, um terceiro segura-lhe o braço e o movimenta mediante força física invencível contra a vítima. Nesse segundo caso, a pessoa instrumentalizada não realizou voluntariamente o movimento e, nessa perspectiva, falta-lhe conduta penalmente relevante. Diferente é a coação <strong>moral</strong> irresistível, que será analisada no âmbito da culpabilidade.</p></div>
+<h3>3.2. Crimes omissivos e posição de garantidor</h3>
+<p>Nos <strong>crimes omissivos próprios</strong>, o tipo penal incrimina a não realização da ação exigida. O art. 135 do CP, por exemplo, descreve hipóteses de omissão de socorro, dentro de requisitos específicos. Nos <strong>omissivos impróprios</strong>, também chamados comissivos por omissão, o resultado pode ser imputado a alguém que, embora não o tenha produzido por ação direta, tinha <strong>dever jurídico especial de impedi-lo</strong>, podia agir e preenche os demais pressupostos da responsabilização.</p>
+<p>O <strong>art. 13, § 2º, do CP</strong> indica três fontes da posição de garantidor: <strong>(a)</strong> obrigação legal de cuidado, proteção ou vigilância; <strong>(b)</strong> responsabilidade assumida de impedir o resultado; <strong>(c)</strong> comportamento anterior que criou o risco de sua ocorrência. O rótulo profissional ou a mera presença no local não substituem a demonstração desse dever especial, da possibilidade concreta de agir e dos elementos subjetivos exigidos.</p>
+<div class="grelha">
+<div class="quadro"><b>Dever legal</b><p>Responsável legal pela criança diante de risco que tinha o dever jurídico de evitar.</p><small>CP, art. 13, § 2º, a</small></div>
+<div class="quadro"><b>Dever assumido</b><p>Salva-vidas encarregado da vigilância de banhistas, nos limites concretos da função assumida.</p><small>CP, art. 13, § 2º, b</small></div>
+<div class="quadro"><b>Risco criado</b><p>Quem abre uma escavação perigosa cria risco e deve tomar medidas de proteção.</p><small>CP, art. 13, § 2º, c</small></div>
+</div>
+<div class="aviso"><p><strong>Distinção decisiva:</strong> na omissão própria pune-se, nos limites do tipo, a abstenção de agir. Na omissão imprópria, observados seus pressupostos, o resultado típico pode ser imputado ao garantidor. Não se converte toda omissão moralmente censurável em homicídio por omissão.</p></div>
+
+<h2 id="dolo-culpa">IV — Dolo e culpa: a dimensão subjetiva do fato típico</h2>
+<p>O <strong>art. 18, I, do CP</strong> considera doloso o crime quando o agente quis o resultado ou assumiu o risco de produzi-lo. O dolo direto de primeiro grau está presente quando a finalidade é produzir o resultado; o dolo direto de segundo grau alcança consequências necessárias do meio escolhido, ainda que secundárias ao objetivo principal. No <strong>dolo eventual</strong>, o sujeito representa a possibilidade do resultado e assume o risco de sua realização. A simples previsibilidade de um evento não equivale, isoladamente, à assunção de risco dolosa.</p>
+<p>Na <strong>culpa</strong>, o agente viola o dever objetivo de cuidado por imprudência, negligência ou imperícia, realizando resultado não desejado nem assumido, quando presentes previsibilidade, vínculo causal, imputação e os demais requisitos legais. Pelo parágrafo único do art. 18, salvo casos expressos, não se pune a título de culpa um fato previsto como crime. Em outras palavras, a culpa penal não se presume a partir de acidente, dano ou falha profissional.</p>
+<div class="tabela"><table><thead><tr><th>Modalidade</th><th>Previsão do resultado</th><th>Atitude do agente</th></tr></thead><tbody>
+<tr><td>Dolo direto</td><td>Conhecimento relevante à realização típica</td><td>Quer o resultado típico ou o assume como necessário</td></tr>
+<tr><td>Dolo eventual</td><td>Prevê a possibilidade</td><td>Assume o risco de produzir o resultado</td></tr>
+<tr><td>Culpa consciente</td><td>Prevê a possibilidade</td><td>Confia sinceramente que o resultado não ocorrerá ou será evitado</td></tr>
+<tr><td>Culpa inconsciente</td><td>Não prevê</td><td>O resultado, todavia, era objetivamente previsível e há violação do dever de cuidado</td></tr>
+</tbody></table></div>
+<p>As formas clássicas de violação do dever objetivo de cuidado são: <strong>imprudência</strong> (atuação positiva arriscada), <strong>negligência</strong> (falta de cautela exigida) e <strong>imperícia</strong> (deficiência técnica relevante no desempenho de atividade que a pressupõe). Elas podem coexistir; o essencial é demonstrar qual cuidado era objetivamente exigível, como foi descumprido e sua relação com o resultado típico.</p>
+<div class="exemplo"><span class="rotulo">Exemplo hipotético comparativo</span><h4>O motorista e o pedestre: dolo eventual ou culpa consciente?</h4><p>Um motorista atravessa uma via movimentada em velocidade excessiva e vê pedestres à frente. Se, ciente da possibilidade concreta de atropelamento, age assumindo o risco do resultado, pode-se discutir dolo eventual. Se prevê a possibilidade, mas confia seriamente que conseguirá evitar o impacto, a hipótese pode ser de culpa consciente. A velocidade, a mera gravidade da morte ou o uso de uma expressão coloquial não determinam automaticamente a modalidade subjetiva: é indispensável reconstruir as circunstâncias.</p></div>
+<h3>4.1. Requisitos do crime culposo</h3>
+<p>Como roteiro de verificação, a doutrina utiliza: <strong>conduta humana voluntária</strong>; <strong>violação de dever objetivo de cuidado</strong>; <strong>resultado naturalístico não querido</strong>, nas modalidades que dele dependem; <strong>nexo causal e atribuição normativa</strong>; <strong>previsibilidade objetiva</strong>; e <strong>previsão legal da forma culposa</strong>. A fórmula deve ser empregada com atenção à configuração específica do tipo penal.</p>
+<div class="nota"><p><strong>Terminologia:</strong> culpa, enquanto modalidade subjetiva do fato típico, <strong>não é sinônimo de culpabilidade</strong>, que corresponde a outro estrato da teoria analítica.</p></div>
+
+<h2 id="resultado-nexo">V — Resultado naturalístico, resultado jurídico e nexo causal</h2>
+<p>O <strong>resultado naturalístico</strong> é a alteração no mundo exterior decorrente da conduta, quando separável desta e exigida pela configuração do delito; no homicídio, corresponde à morte. O <strong>resultado jurídico</strong>, sob uma formulação material do delito, identifica lesão ou perigo de lesão ao bem jurídico, como vida, liberdade ou patrimônio. Todo crime pode ser analisado quanto à ofensa jurídica relevante, mas nem todo tipo exige resultado naturalístico autônomo para consumar-se.</p>
+<div class="tabela"><table><thead><tr><th>Classificação</th><th>Consumação</th><th>Exemplo</th></tr></thead><tbody>
+<tr><td>Crime material</td><td>Depende do resultado naturalístico previsto no tipo</td><td>Homicídio — morte da vítima (CP, art. 121)</td></tr>
+<tr><td>Crime formal</td><td>A consumação não depende da obtenção do resultado ou proveito ulterior contemplado na descrição</td><td>Extorsão mediante sequestro, sem necessidade de pagamento do resgate (CP, art. 159)</td></tr>
+<tr><td>Crime de mera conduta</td><td>Basta a realização da conduta tipificada, sem resultado naturalístico dela separado</td><td>Violação de domicílio (CP, art. 150)</td></tr>
+</tbody></table></div>
+<p>Nos delitos em que o resultado integra a estrutura típica, exige-se examinar a relação causal. O <strong>art. 13, caput, do Código Penal</strong> parte da teoria da <strong>equivalência das condições</strong> (<em>conditio sine qua non</em>): considera-se causa a ação ou omissão sem a qual o resultado não teria ocorrido. O método hipotético de eliminação auxilia a investigar essa relação: suprimida mentalmente a conduta, o resultado ocorreria da mesma maneira, no mesmo contexto?</p>
+<p>A causalidade naturalística não encerra a análise da responsabilidade. As construções de <strong>imputação objetiva</strong> procuram, em diversas formulações, limitar a atribuição penal de resultados mediante critérios como criação de risco juridicamente desaprovado e realização desse risco dentro do âmbito de proteção da norma. A teoria é relevante, mas não deve ser confundida com texto literal do art. 13 nem tomada como dispensa da prova dos elementos subjetivos.</p>
+<h3>5.1. Concausas e a intervenção de acontecimentos adicionais</h3>
+<p>Chamam-se <strong>concausas</strong> os acontecimentos que concorrem com a conduta para a produção do resultado. Podem ser <strong>preexistentes</strong>, <strong>concomitantes</strong> ou <strong>supervenientes</strong>, conforme o momento de atuação; e <strong>absolutamente</strong> ou <strong>relativamente independentes</strong>, conforme sua relação causal com a conduta. Essas dimensões não são classificações mutuamente excludentes.</p>
+<div class="tabela"><table><thead><tr><th>Natureza</th><th>Exemplo didático</th><th>Conseqüência analítica</th></tr></thead><tbody>
+<tr><td>Absolutamente independente</td><td>Vítima ferida superficialmente falece exclusivamente por veneno previamente administrado por terceiro, sem contribuição causal da lesão.</td><td>A morte não é atribuída ao autor do ferimento; os atos por ele praticados seguem em exame.</td></tr>
+<tr><td>Relativamente independente preexistente</td><td>Vítima hemofílica morre em razão de hemorragia produzida por ferimento.</td><td>A condição anterior não afasta automaticamente a relação causal.</td></tr>
+<tr><td>Relativamente independente concomitante</td><td>Duas circunstâncias agem no mesmo momento, contribuindo para o resultado.</td><td>É necessário verificar a contribuição causal específica.</td></tr>
+<tr><td>Relativamente independente superveniente</td><td>Após lesão, ocorre outro fato relevante à morte.</td><td>Incide a investigação do art. 13, § 1º: se a causa superveniente por si só produziu o resultado, a imputação desse resultado é excluída quanto à conduta anterior.</td></tr>
+</tbody></table></div>
+<p>A expressão <strong>“por si só”</strong> é decisiva. Nem toda intercorrência hospitalar rompe o nexo de imputação e nem toda infecção ocorrida após um ferimento produz resultado autônomo. O enquadramento exige reconstrução médica e jurídica dos fatos. A generalização de exemplos é especialmente perigosa nesse ponto.</p>
+
+<h2 id="tipicidade">VI — Tipicidade formal, tipicidade material e os limites da incriminação</h2>
+<p>A <strong>tipicidade formal</strong> consiste na correspondência dos fatos aos elementos descritos pela lei penal. A <strong>tipicidade material</strong> examina a relevância jurídico-penal da ofensa ao bem jurídico. O tipo não pode ser interpretado isoladamente de seus pressupostos constitucionais, especialmente ofensividade, legalidade, intervenção mínima e proporcionalidade.</p>
+<p>O <strong>princípio da insignificância</strong> é um dos principais instrumentos de exclusão da tipicidade material. A jurisprudência do STF considera, tradicionalmente, quatro vetores: mínima ofensividade da conduta; ausência de periculosidade social da ação; reduzidíssimo grau de reprovabilidade do comportamento; e inexpressividade da lesão jurídica provocada. Não se trata de um limite monetário invariável, nem se pode afirmar que toda subtração de valor reduzido seja penalmente atípica.</p>
+<p>A <strong>adequação social</strong>, associada a Hans Welzel, integra a reflexão sobre o sentido social dos comportamentos ao interpretar tipos penais. A sua força como excludente autônoma de tipicidade é discutida; não equivale à revogação judicial de incriminação porque a conduta se tornou frequente. O exemplo do furo de orelha para colocação de brinco mostra que <em>aceitação cultural</em>, <em>consentimento juridicamente válido</em>, exercício profissional regular e interpretação do tipo podem interagir, não havendo solução automática fundada apenas na prática social.</p>
+<p>A <strong>tipicidade conglobante</strong>, associada a Eugenio Raúl Zaffaroni, propõe interpretar a tipicidade no conjunto do ordenamento, evitando atribuir caráter penalmente proibido ao que o próprio sistema ordena ou promove. Trata-se de construção doutrinária específica e controvertida em sua localização dogmática, não sinônimo indiferenciado de tipicidade material.</p>
+<div class="julgados"><div class="julgado"><h4>STF · HC 84.412/SP</h4><p>O caso envolveu subtração de fita de videogame avaliada em R$ 25. Tornou-se referência para a análise da insignificância em face da pequena expressão patrimonial e das circunstâncias do fato.</p><a href="https://noticias.stf.jus.br/postsnoticias/supremo-aplica-principio-da-insignificancia-penal-em-liminar-de-hc/" target="_blank" rel="noopener">Notícia oficial do STF sobre o HC ↗</a></div><div class="julgado"><h4>Dois filtros distintos</h4><p>Tipicidade formal responde se a conduta se ajusta à definição legal; tipicidade material examina a relevância penal da ofensa. A adequação social discute outro aspecto interpretativo e não substitui esses filtros.</p></div></div>
+
+<h2 id="ilicitude">VII — Ilicitude: quando um fato típico é ou não contrário ao Direito?</h2>
+<p>A <strong>ilicitude</strong>, também chamada antijuridicidade, consiste na contrariedade do fato típico ao ordenamento. Na leitura indiciária (<em>ratio cognoscendi</em>), a realização do tipo penal é <strong>indício</strong> de ilicitude, e não uma conclusão inafastável. O passo seguinte consiste em verificar se existe alguma <strong>causa de justificação</strong> aplicável ao caso. Outras posições, inclusive a chamada <em>ratio essendi</em>, atribuem relação conceitual diferente entre tipicidade e ilicitude.</p>
+<p>O <strong>art. 23 do CP</strong> estabelece quatro causas gerais de exclusão da ilicitude: <strong>estado de necessidade</strong>, <strong>legítima defesa</strong>, <strong>estrito cumprimento do dever legal</strong> e <strong>exercício regular de direito</strong>. A ocorrência de justificante não elimina necessariamente a adequação típica: o fato pode manter-se típico, mas deixar de ser ilícito. O parágrafo único do art. 23 prevê responsabilidade por <strong>excesso doloso ou culposo</strong>.</p>
+<div class="grelha">
+<div class="quadro"><b>Legítima defesa</b><p>Reação à agressão injusta, atual ou iminente, a direito próprio ou alheio, usando moderadamente os meios necessários.</p><small>CP, art. 25</small></div>
+<div class="quadro"><b>Estado de necessidade</b><p>Proteção de direito contra perigo atual nas condições do art. 24, quando não era razoável exigir o sacrifício do direito ameaçado.</p><small>CP, art. 24</small></div>
+<div class="quadro"><b>Dever e direito</b><p>Estrito cumprimento de dever legal e exercício regular de direito: condutas juridicamente autorizadas dentro de seus limites.</p><small>CP, art. 23, III</small></div>
+</div>
+<div class="exemplo"><span class="rotulo">Exemplos comparativos</span><h4>Agressão injusta × situação de perigo</h4><p>Uma pessoa é atacada com faca e utiliza moderadamente meio necessário para repelir a agressão. A investigação se dirige à <strong>legítima defesa</strong>. Outra pessoa rompe a porta de uma casa para retirar alguém de incêndio atual, sem alternativa eficaz. A análise se volta ao <strong>estado de necessidade</strong>. A presença de dano, lesão ou morte não permite ignorar as circunstâncias justificantes.</p></div>
+<p>O <strong>consentimento do ofendido</strong> merece exame separado: dependendo da disponibilidade do bem jurídico, da validade e anterioridade do consentimento e da configuração do tipo, pode influenciar a própria tipicidade ou ser examinado como possível justificante supralegal, conforme a construção doutrinária utilizada. Não é uma autorização geral para ofensas a bens indisponíveis.</p>
+
+<h2 id="culpabilidade">VIII — Culpabilidade: o juízo de reprovação pessoal</h2>
+<p>Mesmo diante de fato típico e ilícito, a conclusão sobre a responsabilidade penal exige verificar se o comportamento pode ser <strong>pessoalmente reprovado ao agente</strong>. Na concepção finalista normativa, esse juízo se estrutura em três elementos: <strong>imputabilidade</strong>, <strong>potencial consciência da ilicitude</strong> e <strong>exigibilidade de conduta diversa</strong>. A ausência de um deles afasta a culpabilidade na estrutura tripartida.</p>
+<figure class="ilustracao"><h4>As três dimensões da culpabilidade</h4><div class="esquema-tres"><div>Imputabilidade<small>Capacidade penal de entender e determinar-se</small></div><div>Consciência potencial<small>Possibilidade de compreender a ilicitude</small></div><div>Exigibilidade<small>Possibilidade de exigir outra conduta</small></div></div><figcaption>Juízo pessoal formulado apenas após o exame da tipicidade e da ilicitude.</figcaption></figure>
+<h3>8.1. Imputabilidade, semi-imputabilidade e embriaguez</h3>
+<p>Imputabilidade é a capacidade de compreender o caráter ilícito do fato e de determinar-se de acordo com essa compreensão. O <strong>art. 26, caput</strong>, prevê isenção de pena para quem, por doença mental ou desenvolvimento mental incompleto ou retardado, era <strong>inteiramente incapaz</strong>, ao tempo da ação ou omissão, de entender esse caráter ou determinar-se conforme o entendimento. O diagnóstico clínico não basta: exige-se relação entre a condição e a incapacidade no momento do fato. Na <strong>semi-imputabilidade</strong> (art. 26, parágrafo único), a capacidade não é inteiramente suprimida, mas significativamente reduzida nos termos da lei, admitindo redução de pena de um a dois terços.</p>
+<p>Os <strong>menores de 18 anos</strong> são penalmente inimputáveis (art. 27 do CP e art. 228 da Constituição), sujeitos à legislação especial. A <strong>embriaguez voluntária ou culposa</strong> não exclui a imputabilidade por si só (art. 28, II). Já a <strong>embriaguez completa decorrente de caso fortuito ou força maior</strong> pode isentar de pena quando causa incapacidade total nos termos do art. 28, § 1º; a incapacidade parcial decorrente dessas causas admite a redução prevista no § 2º. Essas hipóteses pressupõem exame concreto e não se confundem com mero consumo de álcool.</p>
+<p>Na <strong>embriaguez preordenada</strong>, o agente embriaga-se deliberadamente para praticar o crime, o que pode configurar a agravante do <strong>art. 61, II, l</strong>, do CP. A locução <a href="/vocabulario/#actio-libera-in-causa"><em>actio libera in causa</em></a> designa construção dogmática sobre a ação livre em sua origem e a consideração de comportamento anterior à incapacidade. Não autoriza responsabilidade penal objetiva nem significa que toda embriaguez voluntária seja preordenada.</p>
+<h3>8.2. Potencial consciência da ilicitude</h3>
+<p>Não se exige que o agente conheça o artigo exato do Código Penal. A <strong>potencial consciência da ilicitude</strong> verifica se, nas circunstâncias pessoais e concretas, havia possibilidade de compreender que a conduta contrariava o Direito. A expressão <strong>valoração paralela na esfera do profano</strong> ilustra a compreensão do significado jurídico-social do fato por alguém leigo, sem conhecimento técnico de dogmática ou legislação penal.</p>
+<p>O <strong>erro de proibição</strong>, previsto no art. 21, incide sobre a compreensão do caráter ilícito do fato. Se <strong>inevitável</strong>, exclui a culpabilidade e isenta de pena; se <strong>evitável</strong>, admite diminuição de um sexto a um terço. A mera alegação de desconhecimento da lei não basta: deve-se investigar a efetiva possibilidade de alcançar a consciência da proibição.</p>
+<h3>8.3. Exigibilidade de conduta diversa</h3>
+<p>O terceiro elemento pergunta se era razoável exigir que o indivíduo agisse conforme o Direito. O <strong>art. 22</strong> disciplina a <strong>coação moral irresistível</strong> e a <strong>obediência hierárquica a ordem não manifestamente ilegal</strong>, observados seus pressupostos. Na coação moral irresistível, existe comportamento fisicamente voluntário, porém sob ameaça de tal gravidade que não se exige conduta diversa. Não se confunde com a força <em>física</em> irresistível, que pode excluir a conduta do próprio fato típico.</p>
+<div class="tabela"><table><thead><tr><th>Hipótese</th><th>Estrato afetado</th><th>Razão</th></tr></thead><tbody>
+<tr><td>Força física irresistível</td><td>Fato típico</td><td>Ausência de conduta voluntária</td></tr>
+<tr><td>Legítima defesa</td><td>Ilicitude</td><td>Justificação da reação, preenchidos os requisitos</td></tr>
+<tr><td>Doença mental com incapacidade total</td><td>Culpabilidade</td><td>Inimputabilidade (art. 26)</td></tr>
+<tr><td>Erro de proibição inevitável</td><td>Culpabilidade</td><td>Ausência da potencial consciência da ilicitude</td></tr>
+<tr><td>Coação moral irresistível</td><td>Culpabilidade</td><td>Inexigibilidade de conduta diversa</td></tr>
+</tbody></table></div>
+
+<h2 id="iter">IX — <em>Iter criminis</em>: o percurso da realização do crime</h2>
+<p><em>Iter criminis</em>, ou <strong>caminho do crime</strong>, é o estudo das etapas pelas quais determinado delito pode passar. Não constitui um quarto elemento da teoria analítica, mas relaciona-se especialmente à realização do fato típico, à consumação e à tentativa. Em sua exposição clássica, distinguem-se <strong>cogitação, preparação, execução, consumação e exaurimento eventual</strong>. Nem todos os delitos percorrem todas essas etapas da mesma maneira.</p>
+<figure class="ilustracao"><h4>O caminho do crime</h4><div class="fases"><div class="fase"><b>1. Cogitação</b><small>Mera ideia, impunível</small></div><div class="fase"><b>2. Preparação</b><small>Em regra, atos não puníveis como tentativa</small></div><div class="fase"><b>3. Execução</b><small>Início da realização típica</small></div><div class="fase"><b>4. Consumação</b><small>Preenchimento do tipo</small></div><div class="fase"><b>5. Exaurimento</b><small>Efeito ulterior eventual</small></div></div><figcaption>O exaurimento é eventual e não integra a consumação dos delitos para os quais a vantagem posterior não é exigida.</figcaption></figure>
+<h3>9.1. Tentativa, desistência, arrependimentos e crime impossível</h3>
+<div class="tabela"><table><thead><tr><th>Instituto</th><th>Condição nuclear</th><th>Efeito penal</th></tr></thead><tbody>
+<tr><td><strong>Tentativa</strong> (art. 14, II)</td><td>Início da execução sem consumação por circunstância alheia à vontade do agente.</td><td>Em regra, pena do consumado reduzida de 1/3 a 2/3.</td></tr>
+<tr><td><strong>Desistência voluntária</strong> (art. 15)</td><td>O agente abandona voluntariamente a execução antes de esgotá-la.</td><td>Responde apenas pelos atos já praticados.</td></tr>
+<tr><td><strong>Arrependimento eficaz</strong> (art. 15)</td><td>Após praticar atos executórios, impede efetivamente a produção do resultado.</td><td>Responde apenas pelos atos já praticados.</td></tr>
+<tr><td><strong>Arrependimento posterior</strong> (art. 16)</td><td>Crime sem violência ou grave ameaça à pessoa; reparação ou restituição voluntária até o recebimento da denúncia ou queixa.</td><td>Redução de pena de 1/3 a 2/3.</td></tr>
+<tr><td><strong>Crime impossível</strong> (art. 17)</td><td>Impossibilidade de consumação por ineficácia absoluta do meio ou impropriedade absoluta do objeto.</td><td>Não se pune a tentativa.</td></tr>
+</tbody></table></div>
+<p>A tentativa não se confunde com atos meramente preparatórios, em regra não punidos enquanto tentativa do delito pretendido. Entretanto, atos de preparação podem, em certas hipóteses, preencher tipos penais autônomos. O arrependimento posterior, por sua vez, não retira retroativamente a consumação nem exclui automaticamente o crime: atua sobre a resposta penal, quando satisfeitos os requisitos do art. 16.</p>
+<h3>9.2. Consumação do furto, inversão da posse e vigilância eletrônica</h3>
+<p>Na <a href="/vocabulario/#apprehensio-ou-amotio"><strong>teoria da <em>apprehensio</em> ou <em>amotio</em></strong></a>, a consumação do furto exige a efetiva <strong>inversão da posse de fato</strong>, ainda que por breve período. Conforme o <strong>Tema Repetitivo 934 do STJ</strong>, não é necessária posse mansa, pacífica ou desvigiada. A simples colocação da mão sobre um objeto, porém, não dispensa o exame concreto de ter havido inversão da posse.</p>
+<p>A <strong>Súmula 567 do STJ</strong> assenta que câmeras e vigilantes no interior de estabelecimento comercial <strong>não tornam, por si sós, impossível o crime de furto</strong>. Vigilância pode frustrar uma subtração e conduzir à tentativa punível, sem tornar o meio absolutamente ineficaz. O resultado concreto pode ser tentativa ou consumação, conforme a efetiva execução e a inversão da posse.</p>
+
+<h2 id="erros">X — Teoria do erro: erro de tipo, erro de proibição e desvios acidentais</h2>
+<p>Para identificar a consequência jurídica de um erro, a primeira pergunta é: <strong>sobre o que incidiu o equívoco?</strong> Um erro sobre elementos do tipo penal não equivale a um erro sobre o caráter proibido do comportamento. E erros na identidade da vítima, na execução ou no resultado possuem disciplinas próprias.</p>
+<div class="tabela"><table><thead><tr><th>Figura</th><th>Objeto do equívoco</th><th>Base normativa</th></tr></thead><tbody>
+<tr><td>Erro de tipo essencial</td><td>Elemento constitutivo do tipo penal</td><td>CP, art. 20, caput</td></tr>
+<tr><td>Erro de proibição</td><td>Ilicitude do fato praticado</td><td>CP, art. 21</td></tr>
+<tr><td>Descriminante putativa sobre situação de fato</td><td>Pressupostos fáticos que, se reais, justificariam a ação</td><td>CP, art. 20, § 1º</td></tr>
+<tr><td><em>Error in persona</em></td><td>Identidade da pessoa visada</td><td>CP, art. 20, § 3º</td></tr>
+<tr><td><em>Aberratio ictus</em></td><td>Execução atinge pessoa diversa da visada</td><td>CP, art. 73</td></tr>
+<tr><td><em>Aberratio criminis</em></td><td>Resultado de natureza diversa do pretendido</td><td>CP, art. 74</td></tr>
+</tbody></table></div>
+<h3>10.1. Erro de tipo × erro de proibição</h3>
+<p>No <strong>erro de tipo essencial</strong>, o sujeito se engana sobre um elemento da descrição típica. Quem leva um guarda-chuva alheio acreditando sinceramente que é o seu não conhece a circunstância “alheia” exigida no furto doloso. O erro essencial exclui o dolo; quando evitável, pode subsistir modalidade culposa somente se prevista em lei — o furto, por exemplo, não possui modalidade culposa.</p>
+<p>No <strong>erro de proibição</strong>, o agente conhece as circunstâncias relevantes do que faz, mas acredita, erroneamente, que o Direito permite sua conduta. A lei distingue erro inevitável, que isenta de pena, e erro evitável, que pode reduzi-la. Assim, <strong>erro de tipo incide na tipicidade subjetiva; erro de proibição incide na culpabilidade</strong>.</p>
+<h3>10.2. Descriminantes putativas</h3>
+<p><em>Putativa</em> significa suposta, imaginada. A pessoa age acreditando existir situação que autorizaria sua atuação. Exemplo: vê alguém levar a mão à cintura e, equivocadamente, supõe que está prestes a sofrer agressão armada. A classificação depende da natureza do erro. Na <strong>teoria limitada da culpabilidade</strong>, o erro sobre pressupostos <strong>fáticos</strong> de uma justificante é frequentemente classificado como erro de tipo permissivo, à luz do art. 20, § 1º; o erro sobre a <strong>existência jurídica ou os limites</strong> da permissão costuma ser tratado como erro de proibição indireto. Existem divergências doutrinárias relevantes, inclusive em face da teoria extremada.</p>
+<h3>10.3. <em>Error in persona</em>, <em>aberratio ictus</em> e <em>aberratio criminis</em></h3>
+<div class="exemplo"><span class="rotulo">Exemplo hipotético · art. 20, § 3º</span><h4><em>Error in persona</em> — erro sobre a pessoa</h4><p>O autor deseja atingir Bruno, mas confunde Carlos, fisicamente semelhante, com Bruno e ataca Carlos. Seu equívoco está na identidade da vítima. Para os efeitos disciplinados pela lei, consideram-se as condições ou qualidades da pessoa contra quem queria praticar o crime, não as da pessoa efetivamente atingida.</p></div>
+<div class="exemplo"><span class="rotulo">Exemplo hipotético · art. 73</span><h4><em>Aberratio ictus</em> — erro na execução</h4><p>O autor identifica corretamente Bruno e dispara em sua direção, porém erra a execução e atinge Carlos. A pessoa inicialmente visada é conhecida, mas o desvio executivo produz lesão em terceiro. Se ambas as pessoas forem atingidas, incide a disciplina própria do art. 73, que remete ao concurso formal nas condições legais.</p></div>
+<div class="exemplo"><span class="rotulo">Exemplo hipotético · art. 74</span><h4><em>Aberratio criminis</em> — resultado diverso do pretendido</h4><p>O autor arremessa uma pedra para quebrar uma vitrine, mas a pedra atinge um pedestre e lhe provoca lesão. Trata-se de resultado de natureza diversa. Nos limites do art. 74, responde pelo resultado produzido a título de culpa se o fato for previsto como crime culposo; se ocorrer também o resultado pretendido, aplica-se a regra do concurso formal indicada pela lei.</p></div>
+<div class="aviso"><p><strong>Cuidado dogmático:</strong> <em>error in persona</em> não é erro na pontaria; <em>aberratio ictus</em> não é simples desconhecimento de que a vítima é outra pessoa; <em>aberratio criminis</em> não se restringe a atingir pessoa diversa, mas diz respeito à natureza do resultado produzido.</p></div>
+
+<h2 id="jurisprudencia">XI — Julgados reais: como a teoria se manifesta nos tribunais?</h2>
+<p>Precedentes não substituem o exame do caso concreto. Sua utilidade aqui é evidenciar como as categorias da teoria analítica operam sobre problemas reais. Os registros abaixo distinguem teses firmadas, súmulas e casos paradigmáticos; decisões vinculantes, repetitivas e referências persuasivas não têm o mesmo regime de obrigatoriedade.</p>
+<div class="julgados">
+<div class="julgado"><h4>STF · HC 84.412/SP</h4><p><strong>Tipicidade material.</strong> A subtração de uma fita de videogame de R$ 25 tornou-se referência para o controle de ofensividade e a aplicação do princípio da insignificância.</p><a href="https://noticias.stf.jus.br/postsnoticias/supremo-aplica-principio-da-insignificancia-penal-em-liminar-de-hc/" target="_blank" rel="noopener">Fonte oficial ↗</a></div>
+<div class="julgado"><h4>STJ · Tema 934</h4><p><strong>Consumação do furto.</strong> Posse de fato da coisa subtraída, ainda que por pouco tempo e seguida de perseguição, sem exigir posse mansa e pacífica.</p><a href="https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=934&cod_tema_inicial=934&novaConsulta=true&tipo_pesquisa=T" target="_blank" rel="noopener">Tese do repetitivo ↗</a></div>
+<div class="julgado"><h4>STJ · Súmula 567</h4><p><strong>Crime impossível.</strong> Vigilância eletrônica ou presença de segurança em comércio não torna, por si só, impossível o furto. Uma tentativa pode permanecer punível.</p><a href="https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&livre=SUMULA.tipo.+e+%40num%3D%22000567%22&operador=E&ordenacao=-%40NUM&p=false" target="_blank" rel="noopener">Enunciado oficial ↗</a></div>
+<div class="julgado"><h4>STJ · Súmula 96</h4><p><strong>Crime formal.</strong> A extorsão consuma-se independentemente da obtenção da vantagem indevida. O recebimento posterior pode integrar o exaurimento.</p><a href="https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=%40NUM%3D%2796%27" target="_blank" rel="noopener">Enunciado oficial ↗</a></div>
+</div>
+<p>O contato com os julgados evidencia que a dogmática não se limita a definições. O valor patrimonial não decide sozinho a insignificância; o monitoramento não transforma automaticamente o furto em crime impossível; e a posse de fato, não sua pacificação, orienta a consumação do furto no Tema 934.</p>
+
+<h2 id="caso-integrador">XII — Caso integrador: um acontecimento, vários estratos</h2>
+<div class="exemplo"><span class="rotulo">Caso didático integral · Situação hipotética</span><h4>A subtração na loja e a recuperação do objeto</h4><p>Ana, maior e imputável, entra em uma loja, coloca um celular alheio em sua bolsa com intenção de apropriá-lo e tenta deixar o estabelecimento. A câmera registra o fato. O segurança a aborda, e o celular é recuperado. Não há informação de ameaça, violência, erro ou causa justificante.</p><p><strong>Primeiro:</strong> há conduta voluntária e descrição inicialmente compatível com furto, devendo ser examinados o dolo e a tipicidade material. <strong>Segundo:</strong> a mera existência das câmeras não basta para caracterizar crime impossível, conforme a Súmula 567. <strong>Terceiro:</strong> a conclusão sobre tentativa ou consumação depende da efetiva inversão da posse de fato, à luz do Tema 934 e das circunstâncias comprovadas. <strong>Quarto:</strong> caso exista fato típico, prossegue-se à análise da ilicitude e, depois, da culpabilidade. A retirada posterior do objeto pela segurança não funciona, por si só, como causa de exclusão do crime já consumado.</p></div>
+<div class="metodo"><h3>Roteiro de análise para qualquer caso prático</h3>
+<div class="pergunta"><div class="numero">1</div><div>Qual conduta concreta foi praticada? Houve ação ou omissão voluntária?</div></div>
+<div class="pergunta"><div class="numero">2</div><div>Qual tipo penal incide? Estão presentes seus elementos objetivos e subjetivos?</div></div>
+<div class="pergunta"><div class="numero">3</div><div>O tipo exige resultado naturalístico e nexo causal? Há concausas?</div></div>
+<div class="pergunta"><div class="numero">4</div><div>A tipicidade formal vem acompanhada de relevância material?</div></div>
+<div class="pergunta"><div class="numero">5</div><div>Há causa de justificação ou excesso juridicamente relevante?</div></div>
+<div class="pergunta"><div class="numero">6</div><div>Há imputabilidade, potencial consciência da ilicitude e exigibilidade de conduta diversa?</div></div>
+<div class="pergunta"><div class="numero">7</div><div>O delito foi tentado ou consumado? Existe erro, desistência ou arrependimento juridicamente relevante?</div></div>
+<div class="pergunta"><div class="numero">8</div><div>Quais provas, precedentes e consequências legais específicos do caso precisam ser examinados?</div></div>
+</div>
+
+<h2 id="sintese">XIII — Síntese sistemática: o que cada excludente realmente afasta?</h2>
+<div class="fluxo"><span class="passo">Fato típico</span><span class="seta">→</span><span class="passo wine">Ilicitude</span><span class="seta">→</span><span class="passo green">Culpabilidade</span><p>Três perguntas sucessivas e juridicamente distintas. A tentativa, a consumação, o erro e as consequências da pena exigem análises adicionais.</p></div>
+<p>O estudo torna-se mais seguro quando cada instituto é colocado em seu estrato correto. A força física irresistível pode afastar a conduta; a insignificância pode excluir a tipicidade material; a legítima defesa afasta a ilicitude; a inimputabilidade, o erro de proibição inevitável e a coação moral irresistível podem afastar a culpabilidade. A desistência voluntária e o arrependimento eficaz não são causas gerais de exclusão da culpabilidade: submetem-se ao regime específico do art. 15. O arrependimento posterior atua na pena. O crime impossível impede a punição da tentativa.</p>
+<p>Também é necessário reconhecer os limites da abstração. Conceitos como dolo eventual, risco proibido, consumação pela inversão da posse, inexigibilidade de conduta diversa e erro inevitável precisam ser argumentados a partir de fatos demonstrados. A teoria não oferece uma máquina automática de condenar ou absolver; fornece um <strong>método racional de qualificação e controle da imputação penal</strong>.</p>
+<div class="citavel">A Teoria Analítica do Crime não pergunta apenas se alguém causou um mal: pergunta se praticou fato típico, contrário ao Direito e pessoalmente reprovável, dentro das garantias que condicionam o poder de punir.</div>
+
+<section class="fontes" id="fontes"><h2>XIV — Fontes, legislação e leituras complementares</h2>
+<p><strong>Base editorial:</strong> redação de estudo integrada e reescrita a partir dos quatro documentos de apoio encaminhados: <em>Apostila Direito Penal — Parte Geral</em>; <em>Princípios do Direito Penal — Guia de Estudo</em>; <em>Teoria Criminológica e Penal: fundamentos, escolas, sistemas jurídicos e o conceito brasileiro de crime</em>; e <em>Teoria Geral do Crime — Fundamentos, conceitos e aplicação prática</em>. As referências são tratadas como materiais independentes, sem atribuição de autoria doutrinária específica a professores quando não verificada diretamente.</p>
+<p><strong>Legislação e jurisprudência primárias:</strong></p>
+<ul>
+<li><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Constituição da República Federativa do Brasil de 1988</a> — especialmente art. 5º, XXXIX e XL, e art. 228.</li>
+<li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm" target="_blank" rel="noopener">Código Penal, Decreto-Lei nº 2.848/1940, texto compilado</a> — especialmente arts. 1º, 13 a 28, 61, 73, 74, 121, 135, 150, 155, 158 e 159.</li>
+<li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del3914.htm" target="_blank" rel="noopener">Decreto-Lei nº 3.914/1941</a> — definição classificatória de crime e contravenção.</li>
+<li><a href="https://noticias.stf.jus.br/postsnoticias/supremo-aplica-principio-da-insignificancia-penal-em-liminar-de-hc/" target="_blank" rel="noopener">STF, HC 84.412/SP</a> — princípio da insignificância.</li>
+<li><a href="https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=934&cod_tema_inicial=934&novaConsulta=true&tipo_pesquisa=T" target="_blank" rel="noopener">STJ, Tema Repetitivo 934, REsp 1.524.450/RJ</a> — consumação do furto.</li>
+<li><a href="https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&livre=SUMULA.tipo.+e+%40num%3D%22000567%22&operador=E&ordenacao=-%40NUM&p=false" target="_blank" rel="noopener">STJ, Súmula 567</a> — monitoramento eletrônico e crime impossível.</li>
+<li><a href="https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=%40NUM%3D%2796%27" target="_blank" rel="noopener">STJ, Súmula 96</a> — extorsão e consumação.</li>
+</ul>
+<p><strong>Autores de referência e tradições doutrinárias:</strong> Cesare Beccaria, Franz von Liszt, Edmund Mezger, Hans Welzel, Francisco de Assis Toledo, Nelson Hungria, Claus Roxin, Eugenio Raúl Zaffaroni, Cezar Roberto Bitencourt, Rogério Greco, Guilherme de Souza Nucci e Fábio Roque. As teorias são apresentadas com sua vinculação intelectual e as ressalvas pertinentes, sem sugerir concordância integral entre os autores.</p>
+<p class="fonte-inline">Nota editorial: o texto é material didático independente; referências a institutos legais e julgados não dispensam a consulta à versão oficial vigente, à data do fato e à íntegra de cada precedente. Exemplos hipotéticos são expressamente identificados para não serem confundidos com processos reais.</p>
+</section></article></div></section>
+<footer class="rodape-artigo"><a href="/direito-penal/teoria-geral-do-crime/">← Voltar ao índice do módulo</a><p>Notas de um Estudante de Direito · 2026</p></footer></main>
+<script src="/menu.js"></script><script>fetch("/header.html").then(r=>r.text()).then(data=>{document.getElementById("header-container").innerHTML=data;if(typeof iniciarMenu==="function")iniciarMenu()}).catch(()=>{});</script>
+</body></html>
