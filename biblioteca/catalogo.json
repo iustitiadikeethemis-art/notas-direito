@@ -776,6 +776,58 @@
         }
       ],
       "relacionados": []
+    },
+    {
+      "id": "stj-resp-1924451-sp-2021",
+      "titulo": "STJ — REsp 1.924.451/SP: sucessão definitiva direta de ausente octogenário",
+      "tipo": "Acórdão",
+      "area": "Direito Civil",
+      "data": "2021-10-19",
+      "dataExibicao": "19 out. 2021",
+      "orgao": "Superior Tribunal de Justiça · Terceira Turma",
+      "referencia": "REsp 1.924.451/SP (2021/0056088-9) · Rel. Min. Nancy Andrighi · julgamento unânime em 19/10/2021 · DJe de 22/10/2021",
+      "resumo": "O STJ decidiu que, quando o ausente tem ao menos 80 anos na data do requerimento e suas últimas notícias datam de pelo menos cinco anos, é possível requerer diretamente a sucessão definitiva, sem prévia sucessão provisória, nos termos do art. 38 do Código Civil. O recurso especial foi provido para determinar o prosseguimento da sucessão definitiva.",
+      "relevancia": "Precedente decisivo para distinguir as duas hipóteses legais de sucessão definitiva. O art. 37 do Código Civil, como regra, pressupõe a sucessão provisória e o decurso de dez anos do trânsito em julgado da sentença que autorizou sua abertura. Já o art. 38 estabelece via autônoma: comprovadas cumulativamente a idade mínima de 80 anos e a ausência de notícias por cinco anos, dispensa-se a etapa sucessória provisória. A interpretação considera a finalidade protetiva do procedimento e evita impor espera desnecessária a sucessores de pessoa cuja morte se presume. O art. 39 resguarda o eventual retorno do ausente durante dez anos contados da abertura da sucessão definitiva, nos limites legais.",
+      "recorte": "No caso concreto, o desaparecido nascera em 1940 e estava sem notícias desde 2000. Sua irmã, nomeada curadora e indicada nos autos como única herdeira, requereu em junho de 2020 a sucessão definitiva. O primeiro grau e o TJSP exigiram a abertura anterior da sucessão provisória, apesar de reconhecerem os requisitos do art. 38. A Terceira Turma reformou essa interpretação e deu provimento ao recurso para determinar o prosseguimento da sucessão definitiva; o STJ não declarou, ele próprio, a conclusão do inventário ou da partilha. A idade de 80 anos deve estar atingida no momento do requerimento, não necessariamente quando ocorreu o desaparecimento. Trata-se de hipótese especial: não elimina a disciplina ordinária dos arts. 22 a 39 nem afasta as exigências probatórias e judiciais do caso concreto. Julgamento em 19/10/2021; publicação em 22/10/2021.",
+      "etiquetas": [
+        "REsp 1.924.451/SP",
+        "Ausência",
+        "Sucessão definitiva",
+        "Sucessão provisória",
+        "Art. 38 do Código Civil",
+        "Art. 37 do Código Civil",
+        "Art. 39 do Código Civil",
+        "80 anos",
+        "Cinco anos sem notícias",
+        "Morte presumida",
+        "Curadoria",
+        "Nancy Andrighi",
+        "Informativo 716/STJ",
+        "2021"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor do acórdão · STJ (PDF)",
+          "url": "https://www.stj.jus.br/websecstj/cgi/revista/rej.cgi/ita?dt=20211022&formato=pdf&nreg=202100560889&salvar=false&seq=2108770&tipo=0",
+          "natureza": "Acórdão judicial original, publicado no DJe em 22/10/2021 (13 páginas no arquivo oficial)"
+        },
+        {
+          "rotulo": "Informativo de Jurisprudência 716 · STJ",
+          "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&from=feed&livre=0716.cod.",
+          "natureza": "Síntese jurisprudencial oficial e destaque da tese"
+        },
+        {
+          "rotulo": "Notícia institucional sobre o julgamento · STJ",
+          "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/14022022-Sucessao-definitiva-de-idoso-com-80-anos-e-ausente-ha-cinco-independe-de-sucessao-provisoria.aspx",
+          "natureza": "Explicação institucional publicada em 14/02/2022"
+        },
+        {
+          "rotulo": "Código Civil, arts. 22 a 39 · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "natureza": "Legislação federal consolidada: ausência, curadoria e sucessões"
+        }
+      ],
+      "relacionados": []
     }
   ]
 }
