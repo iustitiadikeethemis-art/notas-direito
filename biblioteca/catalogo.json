@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizado": "2026-10-15",
+  "atualizado": "2026-10-18",
   "nota": "Catálogo de referências; a biblioteca não armazena os documentos originais.",
   "registros": [
     {
@@ -730,6 +730,52 @@
       ],
       "relacionados": [],
       "estudo": "/direito-penal/principios-do-direito-penal.html#adequacao-social"
+    },
+    {
+      "id": "stj-sumula-567-2016",
+      "titulo": "STJ — Súmula nº 567: vigilância em estabelecimento comercial e crime impossível",
+      "tipo": "Súmula",
+      "area": "Direito Penal",
+      "data": "2016-02-24",
+      "dataExibicao": "24 fev. 2016",
+      "orgao": "Superior Tribunal de Justiça · Terceira Seção",
+      "referencia": "Súmula 567/STJ · julgada em 24/02/2016 · DJe de 29/02/2016",
+      "resumo": "Sistema de vigilância realizado por monitoramento eletrônico ou por existência de segurança no interior de estabelecimento comercial, por si só, não torna impossível a configuração do crime de furto.",
+      "relevancia": "Enunciado central para estudar o crime impossível (art. 17 do Código Penal) em confronto com a tentativa de furto (art. 14, II). A presença de câmeras, alarmes ou vigilantes não significa, por si só, ineficácia absoluta do meio empregado pelo agente: a vigilância pode dificultar ou interromper a subtração sem torná-la absolutamente impossível. É útil para diferenciar meio absolutamente ineficaz, tentativa punível e furto consumado.",
+      "recorte": "A ressalva «por si só» é decisiva: a súmula não determina que toda subtração em estabelecimento monitorado será consumada, nem elimina a análise das circunstâncias concretas. É preciso verificar se houve início da execução, efetiva inversão da posse e eventual impedimento por causa alheia à vontade do agente, à luz dos arts. 14 e 17 do CP e da orientação do STJ sobre consumação do furto (Tema Repetitivo 934, REsp 1.524.450/RJ). O enunciado foi julgado pela Terceira Seção em 24/02/2016 e publicado no DJe de 29/02/2016. Trata-se de súmula ordinária do STJ, não de súmula vinculante do STF. A biblioteca apresenta o texto do enunciado e encaminha à fonte oficial, sem hospedar o documento original.",
+      "etiquetas": [
+        "Súmula 567/STJ",
+        "Crime impossível",
+        "Furto",
+        "Monitoramento eletrônico",
+        "Câmeras de segurança",
+        "Vigilância",
+        "Tentativa",
+        "Ineficácia absoluta do meio",
+        "Art. 17 do Código Penal",
+        "Art. 14, II, do Código Penal",
+        "Tema 934/STJ",
+        "Apprehensio ou amotio",
+        "2016"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Enunciado oficial · Súmula 567/STJ",
+          "url": "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=%27567%27.num.",
+          "natureza": "Texto do enunciado, data de julgamento e publicação no sistema oficial de súmulas do STJ"
+        },
+        {
+          "rotulo": "Código Penal, arts. 14 e 17 · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "natureza": "Legislação federal: tentativa e crime impossível"
+        },
+        {
+          "rotulo": "REsp 1.524.450/RJ · STJ (Tema 934)",
+          "url": "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?dt=20151029&formato=HTML&nreg=201500731057&salvar=false&seq=1452519&tipo=0",
+          "natureza": "Acórdão repetitivo sobre momento da consumação do furto e teoria da apprehensio ou amotio"
+        }
+      ],
+      "relacionados": []
     }
   ]
 }
