@@ -234,6 +234,57 @@
       "relacionados": []
     },
     {
+      "id": "stj-sumula-403-2009",
+      "titulo": "STJ — Súmula nº 403: uso comercial não autorizado da imagem e dano presumido",
+      "tipo": "Súmula",
+      "area": "Direito Civil",
+      "data": "2009-10-28",
+      "dataExibicao": "28 out. 2009",
+      "orgao": "Superior Tribunal de Justiça · Segunda Seção",
+      "referencia": "Súmula 403/STJ · julgada em 28/10/2009 · DJe de 24/11/2009",
+      "resumo": "Independe de prova do prejuízo a indenização pela publicação não autorizada de imagem de pessoa com fins econômicos ou comerciais.",
+      "relevancia": "Enunciado de referência para os direitos da personalidade, especialmente o direito à imagem (art. 5º, X, da Constituição e arts. 20 e 21 do Código Civil), a responsabilidade civil e a presunção de dano pela exploração comercial não consentida. Ajuda a distinguir a prova da conduta lesiva da prova de consequências concretas do prejuízo.",
+      "recorte": "A Súmula 403 foi aprovada pela Segunda Seção em 28/10/2009 e publicada no DJe em 24/11/2009. Seu alcance se refere à publicação não autorizada da imagem de uma pessoa com finalidade econômica ou comercial: nessa hipótese, não é necessária prova de prejuízo concreto para o reconhecimento do dever de indenizar. A existência de finalidade comercial e de uso juridicamente indevido da imagem deve ser examinada no caso concreto; não se conclui que toda reprodução de imagem, inclusive jornalística, histórica ou biográfica, gera automaticamente indenização. É importante distinguir este enunciado do julgamento da ADI 4.815/DF, que afastou a exigência de autorização prévia para publicação de biografias, sem excluir a responsabilização por eventuais abusos. Trata-se de súmula ordinária do STJ, não de súmula vinculante do STF.",
+      "etiquetas": [
+        "Súmula 403/STJ",
+        "Direito à imagem",
+        "Direitos da personalidade",
+        "Dano moral presumido",
+        "Dano in re ipsa",
+        "Uso comercial da imagem",
+        "Publicação não autorizada",
+        "Responsabilidade civil",
+        "Art. 5º, X, da Constituição",
+        "Arts. 20 e 21 do Código Civil",
+        "2009"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Enunciado e precedentes originários · STJ",
+          "url": "https://scon.stj.jus.br/SCON/SearchBRS?b=SUMU&livre=%40NUM%3D403",
+          "natureza": "Consulta oficial do enunciado, precedentes, data e publicação"
+        },
+        {
+          "rotulo": "Súmula 403 · publicação institucional do STJ (PDF)",
+          "url": "https://www.stj.jus.br/publicacaoinstitucional/index.php/sumstj/article/viewFile/5336/5460",
+          "natureza": "Documento institucional com texto e fundamentação da súmula"
+        },
+        {
+          "rotulo": "Dossiê arquivístico da Súmula 403 · STJ",
+          "url": "https://arquivocidadao.stj.jus.br/index.php/sumula-403-2",
+          "natureza": "Registro de acervo do tribunal"
+        },
+        {
+          "rotulo": "Código Civil, arts. 20, 21, 186 e 927 · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "natureza": "Legislação federal consolidada"
+        }
+      ],
+      "relacionados": [
+        "stf-adi-4815-df-2015"
+      ]
+    },
+    {
       "id": "stf-adi-4277-df-2011",
       "titulo": "STF — ADI 4.277/DF: reconhecimento da união estável entre pessoas do mesmo sexo",
       "tipo": "Acórdão",
