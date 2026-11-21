@@ -377,6 +377,65 @@
       ]
     },
     {
+      "id": "stj-resp-1299580-rj-2012",
+      "titulo": "STJ — REsp 1.299.580/RJ: desconsideração da personalidade jurídica e penhora de imóvel de sócio",
+      "tipo": "Acórdão",
+      "area": "Direito Civil",
+      "data": "2012-03-20",
+      "dataExibicao": "20 mar. 2012",
+      "orgao": "Superior Tribunal de Justiça · Terceira Turma",
+      "referencia": "REsp 1.299.580/RJ (2011/0306213-1) · Rel. Min. Nancy Andrighi · DJe de 25 out. 2012",
+      "resumo": "Em execução contra a construtora Seaplan Construções Participações e Empreendimentos Ltda., cuja obrigação decorria de negócio envolvendo apartamento na planta não construído, foi deferida a desconsideração da personalidade jurídica para alcançar o patrimônio dos sócios. Um imóvel de propriedade de Tito Donati foi efetivamente penhorado. O STJ negou provimento ao recurso especial e manteve, nas circunstâncias de fraude reconhecidas nas instâncias ordinárias, a penhora do bem alegadamente protegido como bem de família.",
+      "relevancia": "Exemplo concreto de superação pontual da autonomia patrimonial da sociedade e de constrição judicial sobre bem particular de sócio. Permite estudar a execução de obrigação originalmente societária, os pressupostos materiais da desconsideração (art. 50 do Código Civil), a fraude à execução, os limites da penhora, a proteção do bem de família e a distinção entre o julgamento específico de um caso e as regras gerais atuais.",
+      "recorte": "Na ação de origem, proposta em 1995, o comprador de unidade imobiliária não recebeu o imóvel e o acordo judicial foi descumprido. O acórdão registra alienações patrimoniais e a inexistência de bens suficientes da empresa; o pedido de desconsideração foi deferido antes do julgamento do REsp. O objeto central do recurso especial foi a possibilidade de manter a penhora do imóvel do sócio diante da alegação de bem de família, e não um novo julgamento de todos os requisitos da desconsideração. A Terceira Turma negou provimento ao recurso em 20/03/2012. Cautela temporal: decisão anterior ao CPC/2015 e à redação do art. 50 dada pela Lei 13.874/2019. O Tema Repetitivo 1.210/STJ, julgado em 07/05/2026, reafirma que a teoria maior exige prova de desvio de finalidade ou confusão patrimonial, não bastando inexistência de bens ou encerramento irregular. A mera desconsideração tampouco afasta automaticamente a impenhorabilidade de bem de família, como ressalta o AgInt no AREsp 935.235/RJ (DJe 10/06/2020). A biblioteca não hospeda o acórdão original: o primeiro link abre diretamente o PDF oficial do STJ.",
+      "etiquetas": [
+        "REsp 1.299.580/RJ",
+        "Desconsideração da personalidade jurídica",
+        "Art. 50 do Código Civil",
+        "Penhora de imóvel de sócio",
+        "Autonomia patrimonial",
+        "Fraude à execução",
+        "Bem de família",
+        "Lei 8.009/1990",
+        "Cumprimento de sentença",
+        "Seaplan",
+        "Tito Donati",
+        "Teoria maior",
+        "Tema 1210/STJ",
+        "Incidente de desconsideração",
+        "CPC arts. 133 a 137",
+        "2012"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Acórdão integral · STJ (PDF, acesso direto)",
+          "url": "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20121025&formato=PDF&nreg=201103062131&salvar=false&seq=1131883&tipo=0",
+          "natureza": "Inteiro teor oficial do REsp 1.299.580/RJ"
+        },
+        {
+          "rotulo": "Código Civil, art. 50 · Câmara dos Deputados",
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10406-10-janeiro-2002-432893-normaatualizada-pl.html",
+          "natureza": "Texto atualizado dos pressupostos materiais da desconsideração"
+        },
+        {
+          "rotulo": "CPC, arts. 133 a 137 · Senado Federal",
+          "url": "https://legis.senado.gov.br/norma/584917/publicacao/34619046",
+          "natureza": "Procedimento judicial do incidente de desconsideração"
+        },
+        {
+          "rotulo": "Tema 1.210/STJ · precedente repetitivo (2026)",
+          "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1210&cod_tema_inicial=1210&novaConsulta=true&tipo_pesquisa=T",
+          "natureza": "Orientação atual vinculante sobre necessidade de prova do abuso"
+        },
+        {
+          "rotulo": "AgInt no AREsp 935.235/RJ · STJ (PDF)",
+          "url": "https://processo.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=10%2F06%2F2020&num_registro=201601558840",
+          "natureza": "Precedente posterior sobre proteção do bem de família"
+        }
+      ],
+      "relacionados": []
+    },
+    {
       "id": "stj-nascituro-dpvat-2014",
       "titulo": "STJ — REsp 1.415.727/SC: direitos do nascituro e indenização DPVAT",
       "tipo": "Acórdão",
