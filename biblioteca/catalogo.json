@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizado": "2026-10-18",
+  "atualizado": "2026-11-21",
   "nota": "Catálogo de referências; a biblioteca não armazena os documentos originais.",
   "registros": [
     {
@@ -180,6 +180,55 @@
           "rotulo": "Notícia do julgamento · STF (15/08/2002)",
           "url": "https://noticias.stf.jus.br/postsnoticias/pleno-mantem-supressao-da-frase-sob-a-protecao-de-deus-na-constituicao-do-acre/",
           "natureza": "Registro institucional do julgamento"
+        }
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "stf-adi-4815-df-2015",
+      "titulo": "STF — ADI 4.815/DF: biografias não autorizadas e direitos da personalidade",
+      "tipo": "Acórdão",
+      "area": "Direito Civil",
+      "data": "2015-06-10",
+      "dataExibicao": "10 jun. 2015",
+      "orgao": "Supremo Tribunal Federal · Tribunal Pleno",
+      "referencia": "ADI 4.815/DF · Rel. Min. Cármen Lúcia · acórdão publicado em 1º fev. 2016",
+      "resumo": "O STF, por unanimidade, julgou procedente a ação proposta pela Associação Nacional dos Editores de Livros (ANEL) e conferiu interpretação conforme à Constituição, sem redução de texto, aos arts. 20 e 21 do Código Civil. Declarou inexigível autorização prévia para publicar biografias literárias ou audiovisuais, inclusive quanto às pessoas retratadas como coadjuvantes e, em caso de falecimento, seus familiares.",
+      "relevancia": "Precedente essencial para estudar direitos da personalidade (imagem, honra, intimidade e vida privada), liberdade de expressão, criação intelectual, direito à informação e interpretação conforme à Constituição. Permite examinar os limites da autonomia privada na circulação de obras biográficas e a distinção entre censura prévia e responsabilização posterior.",
+      "recorte": "Julgamento concluído em 10/06/2015, com acórdão publicado em 01/02/2016. A decisão não revogou os arts. 20 e 21 do Código Civil: afastou a interpretação que subordinava a publicação de biografias ao consentimento prévio do biografado, de coadjuvantes ou de familiares. A inexigibilidade de autorização não significa licença para violar honra, imagem ou privacidade: eventuais abusos continuam sujeitos a tutela jurídica e responsabilização posterior. O primeiro link conduz diretamente ao inteiro teor oficial do acórdão (PDF, 268 páginas); o segundo, à ficha processual.",
+      "etiquetas": [
+        "ADI 4.815/DF",
+        "Biografias não autorizadas",
+        "Direitos da personalidade",
+        "Arts. 20 e 21 do Código Civil",
+        "Liberdade de expressão",
+        "Direito à informação",
+        "Privacidade",
+        "Direito à imagem",
+        "Interpretação conforme",
+        "Controle concentrado",
+        "2015"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor do acórdão · STF (PDF, 268 páginas)",
+          "url": "https://portal.stf.jus.br/jurisprudencia/obterInteiroTeor.asp?idDocumento=10162709",
+          "natureza": "Inteiro teor oficial do acórdão"
+        },
+        {
+          "rotulo": "Ficha processual e resultado · STF",
+          "url": "https://portal.stf.jus.br/peticaoInicial/verPeticaoInicial.asp?base=ADI&numProcesso=4815",
+          "natureza": "Consulta processual e resultado oficial"
+        },
+        {
+          "rotulo": "Notícia institucional do julgamento · STF (10/06/2015)",
+          "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=293336&ori=1",
+          "natureza": "Síntese oficial do julgamento"
+        },
+        {
+          "rotulo": "Código Civil · Planalto (arts. 20 e 21)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "natureza": "Legislação federal aplicável"
         }
       ],
       "relacionados": []
