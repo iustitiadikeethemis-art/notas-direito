@@ -260,24 +260,14 @@
       ],
       "fontes": [
         {
-          "rotulo": "Enunciado e precedentes originários · STJ",
-          "url": "https://scon.stj.jus.br/SCON/SearchBRS?b=SUMU&livre=%40NUM%3D403",
-          "natureza": "Consulta oficial do enunciado, precedentes, data e publicação"
+          "rotulo": "Súmula 403/STJ — enunciado integral e precedentes (página direta)",
+          "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?livre=%40num%3D%27403%27",
+          "natureza": "Texto do verbete e precedentes originários diretamente na página oficial do STJ"
         },
         {
-          "rotulo": "Súmula 403 · publicação institucional do STJ (PDF)",
-          "url": "https://www.stj.jus.br/publicacaoinstitucional/index.php/sumstj/article/viewFile/5336/5460",
-          "natureza": "Documento institucional com texto e fundamentação da súmula"
-        },
-        {
-          "rotulo": "Dossiê arquivístico da Súmula 403 · STJ",
-          "url": "https://arquivocidadao.stj.jus.br/index.php/sumula-403-2",
-          "natureza": "Registro de acervo do tribunal"
-        },
-        {
-          "rotulo": "Código Civil, arts. 20, 21, 186 e 927 · Planalto",
+          "rotulo": "Código Civil — arts. 20, 21, 186 e 927 · Planalto",
           "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
-          "natureza": "Legislação federal consolidada"
+          "natureza": "Legislação federal de referência; não é o texto da súmula"
         }
       ],
       "relacionados": [
