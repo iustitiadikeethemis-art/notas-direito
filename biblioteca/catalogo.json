@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizado": "2026-11-21",
+  "atualizado": "2026-11-22",
   "nota": "Catálogo de referências; a biblioteca não armazena os documentos originais.",
   "registros": [
     {
@@ -1142,6 +1142,114 @@
       ],
       "relacionados": [
         "stj-resp-2095584-sp-2024"
+      ]
+    },
+    {
+      "id": "jfsp-herzog-acao-declaratoria-136-1976-1978",
+      "titulo": "Justiça Federal — Caso Vladimir Herzog: sentença na Ação Declaratória nº 136/1976",
+      "tipo": "Sentença",
+      "area": "Direito Constitucional",
+      "data": "1978-10-27",
+      "dataExibicao": "27 out. 1978",
+      "orgao": "Justiça Federal de Primeira Instância · Seção Judiciária de São Paulo",
+      "referencia": "Ação Declaratória nº 136/1976 · Clarice Herzog, Ivo Herzog e André Herzog contra União Federal · Juiz federal Márcio José de Moraes · sentença de 27/10/1978",
+      "resumo": "Em ação proposta por Clarice Herzog e seus filhos, a Justiça Federal declarou a existência de obrigação da União de indenizar os danos materiais e morais decorrentes da morte do jornalista Vladimir Herzog, em outubro de 1975, enquanto se encontrava sob custódia de agentes da repressão. A sentença rejeitou a suficiência da versão oficial de suicídio, examinou a prisão, os depoimentos e as graves deficiências da prova pericial, e determinou a remessa de peças à Procuradoria-Geral da Justiça Militar para providências legais.",
+      "relevancia": "Documento primário para o estudo da responsabilidade civil do Estado por atos de seus agentes, dos limites da prova pericial, do controle judicial de versões oficiais e da possibilidade de resistência institucional em contexto autoritário. A decisão enfrentou alegações de carência da ação e de inadequação da via declaratória; o juízo distinguiu o arquivamento de inquérito policial-militar, que não produzira coisa julgada civil, da apuração autônoma da obrigação reparatória. A sentença declarou a relação jurídica obrigacional indenizatória, sem liquidar o montante devido. A determinação de remessa de peças à Justiça Militar também deve ser distinguida de uma condenação penal de agentes repressivos.",
+      "recorte": "Vladimir Herzog morreu em 25/10/1975, nas dependências do DOI-CODI do II Exército, em São Paulo. A família ajuizou a ação em 1976. O documento foi proferido em 27/10/1978, quando ainda vigorava o AI-5. As páginas finais da sentença declaram procedente o pedido para reconhecer o dever de indenizar, fixam honorários e determinam a remessa da sentença e de depoimentos à Procuradoria-Geral da Justiça Militar, além do reexame pelo Tribunal Federal de Recursos. Não se trata de sentença penal e o reconhecimento judicial da obrigação de indenizar não deve ser apresentado como condenação criminal dos torturadores. Documento original datilografado, digitalizado; manter a distinção entre conteúdo da sentença e reconstruções históricas posteriores.",
+      "etiquetas": [
+        "Ditadura militar",
+        "Vladimir Herzog",
+        "Clarice Herzog",
+        "Ação Declaratória 136/1976",
+        "Márcio José de Moraes",
+        "Justiça Federal",
+        "Responsabilidade civil do Estado",
+        "Prisão ilegal",
+        "Tortura",
+        "Prova pericial",
+        "Dano moral",
+        "Dano material",
+        "DOI-CODI",
+        "Direitos humanos",
+        "AI-5",
+        "1978",
+        "História do Judiciário"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor da sentença de 1978 · SBDP (PDF, 67 páginas)",
+          "url": "https://sbdp.org.br/wp-content/uploads/2023/07/SentencaHerzog.pdf",
+          "natureza": "Reprodução digitalizada integral da sentença original, hospedada pela Sociedade Brasileira de Direito Público"
+        },
+        {
+          "rotulo": "Sentença e apresentação · Instituto Vladimir Herzog",
+          "url": "https://vladimirherzog.org/o-processo-herzog/",
+          "natureza": "Página do instituto de memória da vítima que disponibiliza a sentença integral"
+        },
+        {
+          "rotulo": "Contextualização do julgamento · TRF da 3ª Região",
+          "url": "https://web.trf3.jus.br/noticias/Noticiar/ExibirNoticia/447598-emag-promove-reconstituicao-historica-do-caso-wladimir",
+          "natureza": "Notícia institucional do tribunal sobre a reconstrução histórica do caso"
+        },
+        {
+          "rotulo": "Ato Institucional nº 5 (1968) · Planalto",
+          "url": "https://www.planalto.gov.br/ccivil_03/ait/ait-05-68.htm",
+          "natureza": "Texto normativo histórico de contextualização; não é a fonte da sentença"
+        }
+      ],
+      "relacionados": [
+        "stf-hc-41296-df-1964"
+      ]
+    },
+    {
+      "id": "stf-hc-41296-df-1964",
+      "titulo": "STF — HC 41.296/DF: caso Mauro Borges e limites à persecução político-militar",
+      "tipo": "Acórdão",
+      "area": "Direito Constitucional",
+      "data": "1964-11-23",
+      "dataExibicao": "23 nov. 1964",
+      "orgao": "Supremo Tribunal Federal · Tribunal Pleno",
+      "referencia": "Habeas Corpus nº 41.296/DF · Paciente: Mauro Borges Teixeira · Impetrantes: Heráclito Fontoura Sobral Pinto e José Crispim Borges · Rel. Min. Gonçalves de Oliveira · julgado em 23/11/1964, por unanimidade",
+      "resumo": "O STF concedeu habeas corpus preventivo ao então governador de Goiás, Mauro Borges Teixeira, para obstar seu processamento pela Justiça comum ou militar sem o pronunciamento prévio da Assembleia Legislativa, conforme as garantias aplicáveis à época. O ministro relator concedera medida liminar diante da urgência da situação, posteriormente confirmada pelo Plenário. O acórdão examinou o foro constitucional do governador e os limites da atuação da Justiça Militar contra autoridade estadual nos primeiros meses do regime instaurado em 1964.",
+      "relevancia": "O documento permite estudar o habeas corpus como instrumento de contenção de constrangimento ilegal, a proteção das prerrogativas de governadores, o controle de competência jurisdicional e a separação de poderes durante uma ruptura institucional. A Corte distinguiu crimes de responsabilidade, sujeitos a regime próprio de impeachment, dos crimes comuns, submetidos à jurisdição competente com a condição de procedibilidade prevista no direito estadual então vigente. É também um registro relevante da aplicação de medida liminar em habeas corpus preventivo. O julgamento não absolveu o governador de eventuais acusações, mas impôs requisitos institucionais prévios à persecução penal.",
+      "recorte": "O julgamento ocorreu em 23/11/1964, sob a Constituição de 1946 e a ordem estadual de Goiás, não sob a Constituição de 1988. A decisão foi unânime quanto à concessão da ordem para impedir o processamento sem o pronunciamento da Assembleia. Segundo a síntese jurisprudencial, o STF não conheceu da alegada coação imputada ao presidente da República, mas conheceu da ameaça de constrangimento processual analisada no feito. A leitura deve respeitar as regras de competência e imunidades vigentes em 1964; não se deve generalizar automaticamente sua solução a governadores contemporâneos. Acórdão e votos disponíveis em reprodução digitalizada no acervo histórico do STF.",
+      "etiquetas": [
+        "Ditadura militar",
+        "HC 41.296/DF",
+        "Mauro Borges Teixeira",
+        "Habeas corpus preventivo",
+        "Liminar em habeas corpus",
+        "Gonçalves de Oliveira",
+        "Heráclito Sobral Pinto",
+        "Governo militar",
+        "Justiça Militar",
+        "Prerrogativas de governador",
+        "Assembleia Legislativa",
+        "Competência jurisdicional",
+        "Separação de poderes",
+        "Constituição de 1946",
+        "1964",
+        "História do STF"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Inteiro teor do acórdão · STF (PDF, 73 páginas)",
+          "url": "https://www.stf.jus.br/arquivo/cms/sobreStfConhecaStfJulgamentoHistorico/anexo/HC_41296.pdf",
+          "natureza": "Reprodução oficial do acórdão e dos votos, disponibilizada no acervo histórico do STF"
+        },
+        {
+          "rotulo": "Catálogo de julgamentos históricos · STF",
+          "url": "https://portal.stf.jus.br/textos/verTexto.asp?pagina=STFLISTA2_1&servico=sobreStfConhecaStfJulgamentoHistorico",
+          "natureza": "Registro institucional que relaciona o HC 41.296 ao caso do governador Mauro Borges"
+        },
+        {
+          "rotulo": "Página documental do HC 41.296 · STF",
+          "url": "https://cms.stf.jus.br/post-sobreostf/habeas-corpus-no-41296-de-1964/",
+          "natureza": "Página oficial de acesso a documentos históricos do mesmo processo"
+        }
+      ],
+      "relacionados": [
+        "jfsp-herzog-acao-declaratoria-136-1976-1978"
       ]
     }
   ]
