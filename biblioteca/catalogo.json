@@ -436,6 +436,63 @@
       "relacionados": []
     },
     {
+      "id": "stj-resp-279273-sp-2003",
+      "titulo": "STJ — REsp 279.273/SP: teoria menor da desconsideração e explosão no Shopping Center de Osasco",
+      "tipo": "Acórdão",
+      "area": "Direito do Consumidor",
+      "data": "2003-12-04",
+      "dataExibicao": "4 dez. 2003",
+      "orgao": "Superior Tribunal de Justiça · Terceira Turma",
+      "referencia": "REsp 279.273/SP (2000/0097184-7) · Rel. Min. Ari Pargendler · Rel. p/ acórdão Min. Nancy Andrighi · DJ de 29 mar. 2004",
+      "resumo": "Precedente relativo à ação indenizatória decorrente da explosão ocorrida no Shopping Center de Osasco (SP). O STJ manteve o resultado que admitiu a desconsideração da personalidade jurídica e firmou a compreensão de que, nas relações de consumo, o art. 28, § 5º, do CDC permite aplicar a teoria menor quando a pessoa jurídica constitui obstáculo ao ressarcimento dos consumidores, sem exigir a prova de desvio de finalidade ou confusão patrimonial. Os recursos especiais não foram conhecidos.",
+      "relevancia": "Caso paradigmático para comparar a teoria maior do art. 50 do Código Civil e a teoria menor do art. 28, § 5º, do Código de Defesa do Consumidor, examinando proteção dos consumidores, responsabilidade civil, risco da atividade empresarial, autonomia patrimonial e alcance da desconsideração sobre responsáveis pela pessoa jurídica.",
+      "recorte": "A explosão no Shopping Center de Osasco deu origem a demanda indenizatória e ao debate sobre responsabilização patrimonial de administradores e integrantes da estrutura empresarial. Em 04/12/2003, a Terceira Turma não conheceu dos recursos especiais, preservando o resultado da origem. A ratio decidendi reconheceu autonomia do § 5º do art. 28 do CDC em relação às hipóteses do caput: a falta de bens para indenizar consumidores pode justificar a teoria menor sem comprovação de abuso da personalidade jurídica. Cautela: precedente de 2003 que não afasta limites subjetivos posteriormente explicitados pelo STJ; no REsp 1.900.843/DF, julgado em 23/05/2023, decidiu-se que a teoria menor não alcança automaticamente o sócio que não atua na gestão, ressalvada sua contribuição, ao menos culposa, para atos de administração. Tampouco se deve confundir a manutenção da desconsideração com prova de penhora, expropriação ou pagamento efetivo dos valores. O primeiro link abre diretamente o acórdão oficial do STJ em PDF.",
+      "etiquetas": [
+        "REsp 279.273/SP",
+        "Teoria menor",
+        "Desconsideração da personalidade jurídica",
+        "Art. 28, § 5º, do CDC",
+        "Direito do Consumidor",
+        "Explosão Shopping Center Osasco",
+        "Autonomia patrimonial",
+        "Responsabilidade civil",
+        "Risco empresarial",
+        "Proteção do consumidor",
+        "REsp 1.900.843/DF",
+        "2003"
+      ],
+      "fontes": [
+        {
+          "rotulo": "Acórdão integral · STJ (PDF, acesso direto)",
+          "url": "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?dt=20040329&formato=PDF&nreg=200000971847&salvar=false&seq=112916&tipo=0",
+          "natureza": "Inteiro teor oficial do julgamento do REsp 279.273/SP"
+        },
+        {
+          "rotulo": "Entenda a teoria menor · STJ (2024)",
+          "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/12052024-Teoria-menor-da-desconsideracao-apontamentos-sobre-o-CDC-na-jurisprudencia-do-STJ.aspx",
+          "natureza": "Explicação institucional e delimitações posteriores"
+        },
+        {
+          "rotulo": "REsp 1.900.843/DF · STJ (PDF, 2023)",
+          "url": "https://sv03.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=30%2F05%2F2023&num_registro=201903211127",
+          "natureza": "Precedente posterior: limites quanto ao sócio sem atuação de gestão"
+        },
+        {
+          "rotulo": "Código de Defesa do Consumidor · art. 28, § 5º (Planalto)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+          "natureza": "Fundamento legal da teoria menor"
+        },
+        {
+          "rotulo": "Código Civil · art. 50 (Planalto)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "natureza": "Referência comparativa da teoria maior"
+        }
+      ],
+      "relacionados": [
+        "stj-resp-1299580-rj-2012"
+      ]
+    },
+    {
       "id": "stj-nascituro-dpvat-2014",
       "titulo": "STJ — REsp 1.415.727/SC: direitos do nascituro e indenização DPVAT",
       "tipo": "Acórdão",
